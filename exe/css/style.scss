@@ -59,6 +59,7 @@ a:hover{text-decoration: none
 		fill: $info-link-color;
 	}
 	svg{
+		margin-bottom: 4px;
 		fill: inherit;
 	}
 
@@ -71,9 +72,16 @@ a:hover{text-decoration: none
 .nav-bg{
 	background:#fff;
 }
+.li-line{
+	box-sizing: margin-box;
+	height: 3px;
+	width: 0%;
+	transition: width 0.3s;
+	background:$red-bg;
+}
 .navbar{
-	 
-			ul{ 
+
+			ul{
 				li.nav-item{
 					a{@include navbar-text;
 						text-transform: uppercase;
@@ -83,13 +91,12 @@ a:hover{text-decoration: none
 					a.nav-link:hover{color:$red-bg ;
 					}
 					}
-				[class^="li-line"]{
-					box-sizing: margin-box;
-					height: 3px;
-					width: 0%;
-					transition: width 1s;
-					background:$red-bg; 
-				}	
+				li.nav-item:hover{
+					.li-line{
+						width: 100%;
+					}
+				}
+
 				span{
 					@include navbar-text;
 					font-weight: 800;
@@ -121,32 +128,43 @@ a:hover{text-decoration: none
 .carouselimg{
 	opacity: 0.5;
 }
-	.carousel-control-prev-icon{
-	background-image: url(../images/vector/arrow_704.svg);
-	@include control-icon;
-	
-		 }
-	.carousel-control-next-icon{
-	background-image: url(../images/vector/arrow_703.svg);
-	@include control-icon;
-	
-		}
-	a.carousel-control-prev:hover{
-			.carousel-control-prev-icon{
-		background-image: url(../images/vector/bg_701.svg);
+.carousel-control-prev {
+	justify-content: flex-start;
+
+	.carousel-control-prev-icon {
+		box-sizing: margin-box;
+		border-radius: 4px;
 		@include control-bg;
-		
+		padding-top: 7px;
+		background-image: none;
+	}
+}
+.carousel-control-next {
+	justify-content: flex-end;
+
+	.carousel-control-next-icon {
+		box-sizing: margin-box;
+		border-radius: 4px;
+		@include control-bg;
+		padding-top: 7px;
+		background-image: none;
+	}
+}
+	a.carousel-control-prev:hover{
+
+			.carousel-control-prev-icon{
+				background: $dark-bg;
 			 }
 		}
 		
 	a.carousel-control-next:hover{
 			.carousel-control-next-icon{
-		background-image: url(../images/vector/bg_701.svg);
-		@include control-bg;
-		
+				background: $dark-bg;
 			}
 		}
-		
+
+
+
 
 
 
@@ -214,14 +232,52 @@ a:hover{text-decoration: none
 			color: #707070;
 		}
 }
+.portfolio {
+	.portfolio-line {
+		display: inline-flex;
+		justify-content: center;
+		box-sizing: padding-box;
+		width: 9vw;
+		height: 2px;
+		background: $dark-bg;
+		margin-bottom: 40px;
+		margin-top: 30px;
+	}
+	.text-center{
+		.btn-group{
+			background: #fafafa;
+			margin-bottom: 40px;
+			.btn{
+				background: none;
+				border: none;
+				color: $dark-bg;
+			}
+			.btn:focus{
+				box-shadow: none;
+				color: $red-bg;
+				.li-line{
+					width: 100%;
+					z-index: 999;
+				}
+			}
+		}
+	}
+}
+.portfolio:hover{
+	.portfolio-line{
+		background: $red-bg;
+	}
+}
+
 .underheader-card{
 	background:#fafafa; 
 	fill: $dark-bg;
-	padding-top: 115px;
+
 	
 	.card{
 		color: $dark-bg;
-		border:none; 
+		border:none;
+		margin-top: 115px;
 	}
 	.card:hover{
 		color: $red-bg;
@@ -266,10 +322,11 @@ a:hover{text-decoration: none
 	color:$gray;
 	
 }
-.portfolio{
+.portfolio-title{
 	width: 50vw;
 }
 .portfolio-desk {
+
 	width: 98.44vw;
 	.upper-text{
 		display: none;
@@ -302,10 +359,21 @@ a:hover{text-decoration: none
 		width: 20vw;
 	}
 
-
 	.upper-text{
 		position: absolute;
 		z-index: 4;
+	}
+	.upper-line{
+		position: absolute;
+		z-index: 4;
+		width: 50px;
+		height: 2px;
+		top: 90px;
+		left: 40px;
+		border: solid 0.1px;
+		border-color: $red-bg;
+		background: $red-bg;
+		display: none;
 	}
 	.lupa{
 		left: 65%;
@@ -320,12 +388,14 @@ a:hover{text-decoration: none
 		.upper-text{
 			display: block;
 		}
+		.upper-line{
+			display: block;
+		}
 		}
 		svg {
 			display: block;
 		}
 	.upper-text:first-child {
-
 		top:30px;
 		left:40px;
 		font-family: Raleway;
@@ -360,6 +430,44 @@ a:hover{text-decoration: none
 			line-height: 3.04vw;
 		}
 	}
+	}
+	@media (max-width: 767px) {
+
+				#carousel {
+					height: 100vh;
+					width: 100%;
+					overflow: hidden;
+
+					.carousel-caption {
+						padding-bottom: 80vh;
+
+						.string1 {
+							font-size: 8vw;
+						}
+
+						.string2 {
+							font-size: 7vw;
+							line-height: 8vh;
+						}
+
+						.string3 {
+							font-size: 5vw;
+						}
+					}
+				}
+
+				.carouselimg {
+					display: block;
+					position: relative;
+					height: 1024px;
+					width: 1920px !important;
+					left: -960px;
+					top: -200px;
+					margin: 0 0 0 50%;
+				}
+
+
+
 	}
 
 
