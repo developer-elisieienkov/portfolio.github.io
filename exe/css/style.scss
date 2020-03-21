@@ -227,14 +227,15 @@ a:hover{text-decoration: none
 	padding-top: 40px;
 	height: 158px;
 	background:$dark-bg;
-		
+
 		table{
-		height: 158;	
+		height: 158;
 		}
+
 		.under-car-1{
 			font-family: Raleway;
 			font-size: 32px;
-			line-height: 20px;
+			line-height: 30px;
 			font-weight: 700;
 			color: $gray;
 		}
@@ -342,7 +343,7 @@ a:hover{text-decoration: none
 }
 .portfolio-desk {
 
-	width: 98.44vw;
+	width: 99.9%;
 	.upper-text{
 		display: none;
 	}
@@ -371,7 +372,7 @@ a:hover{text-decoration: none
 	}
 	img {
 		position: relative;
-		width: 20vw;
+		width: 19.8vw;
 	}
 
 	.upper-text{
@@ -463,15 +464,31 @@ a:hover{text-decoration: none
 	}
 }
 .stuff-about{
+	height: 635px;
 	margin-top: 82px;
 	background: $red-bg;
 	overflow: hidden;
 	img{
+		z-index: 1;
 		opacity: 0.5;
 		position: relative;
 		width: 110%;
 		left: -20px;
 	}
+.container-fluid{
+	z-index: 9;
+	padding: 80px 28vw 0 28vw;
+	position: absolute;
+	p:first-child{
+		color: #ffffff;
+		@include title-font;
+
+	}
+	p:nth-child(2){
+		@include small-text;
+		color: $gray;
+	}
+}
 }
 	@media (max-width: 767px) {
 
@@ -507,9 +524,19 @@ a:hover{text-decoration: none
 					top: -200px;
 					margin: 0 0 0 50%;
 				}
-.dark-title{
-line-height: 30px;
-}
+				.dark-title{
+				line-height: 30px;
+				}
+						.under-car {
+			padding-top: 10px;
+
+			.under-car-1 {
+				font-size: 7vw;
+			}
+			.under-car-2 {
+				font-size: 5vw;
+			}
+		}
 
 	}
 

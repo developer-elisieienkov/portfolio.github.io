@@ -183,7 +183,7 @@ a.carousel-control-next:hover .carousel-control-next-icon {
 .under-car .under-car-1 {
   font-family: Raleway;
   font-size: 32px;
-  line-height: 20px;
+  line-height: 30px;
   font-weight: 700;
   color: #959595;
 }
@@ -293,7 +293,7 @@ a.carousel-control-next:hover .carousel-control-next-icon {
 }
 
 .portfolio-desk {
-  width: 98.44vw;
+  width: 99.9%;
 }
 .portfolio-desk .upper-text {
   display: none;
@@ -320,7 +320,7 @@ a.carousel-control-next:hover .carousel-control-next-icon {
 }
 .portfolio-desk img {
   position: relative;
-  width: 20vw;
+  width: 19.8vw;
 }
 .portfolio-desk .upper-text {
   position: absolute;
@@ -407,15 +407,35 @@ a.carousel-control-next:hover .carousel-control-next-icon {
 }
 
 .stuff-about {
+  height: 635px;
   margin-top: 82px;
   background: #e5493a;
   overflow: hidden;
 }
 .stuff-about img {
+  z-index: 1;
   opacity: 0.5;
   position: relative;
   width: 110%;
   left: -20px;
+}
+.stuff-about .container-fluid {
+  z-index: 9;
+  padding: 80px 28vw 0 28vw;
+  position: absolute;
+}
+.stuff-about .container-fluid p:first-child {
+  color: #ffffff;
+  font-family: Raleway;
+  font-size: 30px;
+  font-weight: 700;
+}
+.stuff-about .container-fluid p:nth-child(2) {
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #959595;
 }
 
 @media (max-width: 767px) {
@@ -450,5 +470,15 @@ a.carousel-control-next:hover .carousel-control-next-icon {
 
   .dark-title {
     line-height: 30px;
+  }
+
+  .under-car {
+    padding-top: 10px;
+  }
+  .under-car .under-car-1 {
+    font-size: 7vw;
+  }
+  .under-car .under-car-2 {
+    font-size: 5vw;
   }
 }
