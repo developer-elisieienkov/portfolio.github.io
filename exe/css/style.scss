@@ -27,7 +27,6 @@ width: 9px;
 @mixin title-font{
 font-family: Raleway;
 font-size: 30px;
-line-height: 20px;
 font-weight: 700;
 }
 
@@ -314,6 +313,7 @@ a:hover{text-decoration: none
 }
 .dark-title{
 	@include title-font;
+	line-height: 20px;
 	color:$dark-bg;
 	margin-top:80px;
 }
@@ -465,7 +465,9 @@ a:hover{text-decoration: none
 					top: -200px;
 					margin: 0 0 0 50%;
 				}
-
+.dark-title{
+line-height: 30px;
+}
 
 
 	}

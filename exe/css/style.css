@@ -258,8 +258,8 @@ a.carousel-control-next:hover .carousel-control-next-icon {
 .dark-title {
   font-family: Raleway;
   font-size: 30px;
-  line-height: 20px;
   font-weight: 700;
+  line-height: 20px;
   color: #363636;
   margin-top: 80px;
 }
@@ -401,5 +401,9 @@ a.carousel-control-next:hover .carousel-control-next-icon {
     left: -960px;
     top: -200px;
     margin: 0 0 0 50%;
+  }
+
+  .dark-title {
+    line-height: 30px;
   }
 }
