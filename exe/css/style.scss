@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap');
+@font-face {
+font-family: axis;
+	src: url("../fonts/axis.otf");
+}
 
 $info-font: 13px 20px 400;
 $info-color:#898989;
@@ -78,16 +82,31 @@ a:hover{text-decoration: none
 	transition: width 0.3s;
 	background:$red-bg;
 }
-.navbar{
 
+.navbar{
+	padding: 40px 0 40px 0;
+.navbar-brand{
+	font-family: Axis;
+	font-size: 56px;
+	line-height: 20px;
+	font-weight: 400;
+	color: $dark-bg;
+}
 			ul{
+				svg{
+					fill: iherit;
+				}
 				li.nav-item{
+					fill: $gray;
 					a{@include navbar-text;
-						text-transform: uppercase;
 						font-weight: 800;
 						color: #555555;
 					}
 					a.nav-link:hover{color:$red-bg ;
+						fill: $red-bg;
+					}
+					a.nav-link:focus{color:$red-bg ;
+						fill: $red-bg;
 					}
 					}
 				li.nav-item:hover{
@@ -96,12 +115,8 @@ a:hover{text-decoration: none
 					}
 				}
 
-				span{
-					@include navbar-text;
-					font-weight: 800;
-					text-transform: uppercase;
-					color: #555555;
-				}
+
+
 	}
 }
 
@@ -431,6 +446,33 @@ a:hover{text-decoration: none
 		}
 	}
 	}
+.loadmore{
+	margin-top: 41px;
+	button {
+		width: 170px;
+		height: 41px;
+		background: $dark-bg;
+		font-family: Raleway;
+		font-size: 12px;
+		font-weight: 800;
+		text-transform: uppercase;
+		color: #ffffff;
+	}
+	button:focus{
+		box-shadow: none;
+	}
+}
+.stuff-about{
+	margin-top: 82px;
+	background: $red-bg;
+	overflow: hidden;
+	img{
+		opacity: 0.5;
+		position: relative;
+		width: 110%;
+		left: -20px;
+	}
+}
 	@media (max-width: 767px) {
 
 				#carousel {
@@ -469,7 +511,7 @@ a:hover{text-decoration: none
 line-height: 30px;
 }
 
-
 	}
+
 
 

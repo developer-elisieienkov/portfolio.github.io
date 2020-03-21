@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap");
+@font-face {
+  font-family: axis;
+  src: url("../fonts/axis.otf");
+}
 a {
   text-decoration: none;
 }
@@ -45,27 +49,39 @@ a:hover {
   background: #e5493a;
 }
 
+.navbar {
+  padding: 40px 0 40px 0;
+}
+.navbar .navbar-brand {
+  font-family: Axis;
+  font-size: 56px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #363636;
+}
+.navbar ul svg {
+  fill: iherit;
+}
+.navbar ul li.nav-item {
+  fill: #959595;
+}
 .navbar ul li.nav-item a {
   font-family: Raleway;
   font-size: 14px;
   line-height: 20px;
-  text-transform: uppercase;
   font-weight: 800;
   color: #555555;
 }
 .navbar ul li.nav-item a.nav-link:hover {
   color: #e5493a;
+  fill: #e5493a;
+}
+.navbar ul li.nav-item a.nav-link:focus {
+  color: #e5493a;
+  fill: #e5493a;
 }
 .navbar ul li.nav-item:hover .li-line {
   width: 100%;
-}
-.navbar ul span {
-  font-family: Raleway;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #555555;
 }
 
 .progress-container {
@@ -371,6 +387,35 @@ a.carousel-control-next:hover .carousel-control-next-icon {
     font-size: 2.73vw;
     line-height: 3.04vw;
   }
+}
+
+.loadmore {
+  margin-top: 41px;
+}
+.loadmore button {
+  width: 170px;
+  height: 41px;
+  background: #363636;
+  font-family: Raleway;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.loadmore button:focus {
+  box-shadow: none;
+}
+
+.stuff-about {
+  margin-top: 82px;
+  background: #e5493a;
+  overflow: hidden;
+}
+.stuff-about img {
+  opacity: 0.5;
+  position: relative;
+  width: 110%;
+  left: -20px;
 }
 
 @media (max-width: 767px) {
