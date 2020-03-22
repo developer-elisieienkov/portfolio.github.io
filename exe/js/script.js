@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 $(function() {
        $(window).on("scroll resize", function() {
            var o = $(window).scrollTop() / ($(document).height() - $(window).height());

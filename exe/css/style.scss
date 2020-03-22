@@ -139,9 +139,7 @@ a:hover{text-decoration: none
   display:block;
   height:inherit;
 }
-.carouselimg{
-	opacity: 0.5;
-}
+
 .carousel-control-prev {
 	justify-content: flex-start;
 
@@ -177,16 +175,6 @@ a:hover{text-decoration: none
 			}
 		}
 
-
-
-
-
-
-
-	
-
-
-
 	#carousel{
 		background:$red-bg;
 		.string1{
@@ -217,7 +205,10 @@ a:hover{text-decoration: none
 			color:#fff;
 			background:$dark-bg;
 			border-color:$dark-bg; 
-			decoration:none;
+
+		}
+		.btn-outline-dark:focus{
+			box-shadow: none;
 		}
 	
 	}
@@ -228,9 +219,7 @@ a:hover{text-decoration: none
 	height: 158px;
 	background:$dark-bg;
 
-		table{
-		height: 158;
-		}
+
 
 		.under-car-1{
 			font-family: Raleway;
@@ -464,31 +453,74 @@ a:hover{text-decoration: none
 	}
 }
 .stuff-about{
-	height: 635px;
-	margin-top: 82px;
-	background: $red-bg;
-	overflow: hidden;
-	img{
-		z-index: 1;
-		opacity: 0.5;
-		position: relative;
-		width: 110%;
-		left: -20px;
-	}
-.container-fluid{
-	z-index: 9;
-	padding: 80px 28vw 0 28vw;
-	position: absolute;
-	p:first-child{
-		color: #ffffff;
-		@include title-font;
+	margin-top: 80px;
+	padding-top: 80px;
+	background: url("../images/carousel/polygon_2474.png") no-repeat;
+	background-size: cover;
+	p:first-child {
+			color: #ffffff;
+			@include title-font;
 
+		}
+		p:nth-child(2) {
+			@include small-text;
+			color: $gray;
+		}
+		.line {
+			display: inline-flex;
+			box-sizing: padding-box;
+			background: $dark-bg;
+			width: 170px;
+			height: 2px;
+			margin-top: 30px;
+		}
+
+
+		.circle-numb{
+			position: absolute;
+			top: 55px;
+			left: 41%;
+			font-family: Raleway;
+			font-size: 36px;
+			line-height: 20px;
+			font-weight: 700;
+			color: #ffffff;
+		}
+	.circle-title{
+		font-family: Raleway;
+		font-size: 24px;
+		line-height: 20px;
+		font-weight: 700;
+		color: #e5493a;
+		margin: 35px 0 25px 0;
 	}
-	p:nth-child(2){
+	.circle-caption{
 		@include small-text;
 		color: $gray;
 	}
+	.undercircle-line{
+		box-sizing: border-box;
+		width: 70px;
+		height: 2px;
+		background: $dark-bg;
+		display: inline-flex;
+	}
+	.row{
+		padding-bottom: 95px;
+	}
+	.col-12{
+		margin-top: 70px;
+	}
+	.col-12:hover{
+		.undercircle-line{
+			background: $red-bg;
+		}
+	}
 }
+.stuff-about:hover{
+	.line{
+		background: $red-bg;
+	}
 }
 	@media (max-width: 767px) {
 
