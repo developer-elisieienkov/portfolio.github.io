@@ -11,6 +11,10 @@ $info-link-color:#8dc63f;
 $exe-font:axis;
 $red-bg:#e5493a;
 $gray:#959595;
+$white:#fff;
+$darkerThenWhite:#f2f2f2;
+$muchMoreDarkerThenWhite: #ccc;
+
 
 @mixin navbar-text(){
 font-family: Raleway;
@@ -41,6 +45,10 @@ font-size: 14px;
 line-height: 20px;
 font-weight: 400;}
 
+
+svg{
+	transition: ease 0.5s;
+}
 a{text-decoration:none;
 }
 a:hover{text-decoration: none
@@ -73,7 +81,7 @@ a:hover{text-decoration: none
 		color:$info-color;}
 }
 .nav-bg{
-	background:#fff;
+	background:$white;
 }
 .li-line{
 	box-sizing: margin-box;
@@ -98,9 +106,10 @@ a:hover{text-decoration: none
 				}
 				li.nav-item{
 					fill: $gray;
-					a{@include navbar-text;
+					a.nav-link{@include navbar-text;
 						font-weight: 800;
 						color: #555555;
+
 					}
 					a.nav-link:hover{color:$red-bg ;
 						fill: $red-bg;
@@ -182,27 +191,27 @@ a:hover{text-decoration: none
 			font-size: 68px;
 			line-height: 80px;
 			font-weight: 800;
-			color: #ffffff;}
+			color: $white;}
 		.string2{
 			font-family:Raleway;
 			font-size: 51px;
 			line-height: 80px;
 			font-weight: 800;
-			color: #ffffff;
+			color: $white;
 			}
 		.string3{
 			font-family:Raleway;
 			font-size: 27px;
 			line-height: 30px;
 			font-weight: 400;
-			color: #ffffff;
+			color: $white;
 			}
 		.btn-outline-dark{
-			color:#fff;
-			border-color: #fff;
+			color:$white;
+			border-color: $white;
 		}
 		.btn-outline-dark:hover{
-			color:#fff;
+			color:$white;
 			background:$dark-bg;
 			border-color:$dark-bg; 
 
@@ -236,17 +245,18 @@ a:hover{text-decoration: none
 			color: #707070;
 		}
 }
+.line {
+	display: inline-flex;
+	justify-content: center;
+	box-sizing: padding-box;
+	width: 170px;
+	height: 2px;
+	background: $dark-bg;
+	margin-bottom: 40px;
+	margin-top: 30px;
+}
 .portfolio {
-	.portfolio-line {
-		display: inline-flex;
-		justify-content: center;
-		box-sizing: padding-box;
-		width: 9vw;
-		height: 2px;
-		background: $dark-bg;
-		margin-bottom: 40px;
-		margin-top: 30px;
-	}
+
 	.text-center{
 		.btn-group{
 			background: #fafafa;
@@ -268,7 +278,7 @@ a:hover{text-decoration: none
 	}
 }
 .portfolio:hover{
-	.portfolio-line{
+	.line{
 		background: $red-bg;
 	}
 }
@@ -407,7 +417,7 @@ a:hover{text-decoration: none
 		font-size: 1.25vw;
 		line-height: 1.04vw;
 		font-weight: 700;
-		color: #ffffff;
+		color: $white;
 	}
 
 	.upper-text {
@@ -446,10 +456,14 @@ a:hover{text-decoration: none
 		font-size: 12px;
 		font-weight: 800;
 		text-transform: uppercase;
-		color: #ffffff;
+		color: $white;
 	}
+	button:hover{
+	color:$white;
+}
 	button:focus{
 		box-shadow: none;
+
 	}
 }
 .stuff-about{
@@ -458,21 +472,13 @@ a:hover{text-decoration: none
 	background: url("../images/carousel/polygon_2474.png") no-repeat;
 	background-size: cover;
 	p:first-child {
-			color: #ffffff;
+			color: $white;
 			@include title-font;
 
 		}
 		p:nth-child(2) {
 			@include small-text;
 			color: $gray;
-		}
-		.line {
-			display: inline-flex;
-			box-sizing: padding-box;
-			background: $dark-bg;
-			width: 170px;
-			height: 2px;
-			margin-top: 30px;
 		}
 
 
@@ -484,7 +490,7 @@ a:hover{text-decoration: none
 			font-size: 36px;
 			line-height: 20px;
 			font-weight: 700;
-			color: #ffffff;
+			color: $white;
 		}
 	.circle-title{
 		font-family: Raleway;
@@ -521,6 +527,81 @@ a:hover{text-decoration: none
 	.line{
 		background: $red-bg;
 	}
+}
+
+#why-us:hover{
+.line{
+	background: $red-bg;
+}
+}
+#carousel1{
+	height: 410px;
+	width: 43vw;
+	overflow: hidden;
+	.carousel-indicators{
+		left: -80%;
+		.active{
+			background: $red-bg;
+		}
+		li{
+			box-sizing: margin-box;
+			width:10px;
+			height:10px;
+			margin-right:3px;
+			margin-left:3px;
+			text-indent:-999px;
+			cursor:pointer;
+			background-color:$darkerThenWhite;
+			background-clip:border-box;
+			border-right:2px solid ;
+			border-left:2px solid ;
+			border-top:2px solid ;
+			border-bottom:2px solid ;
+			border-radius: 10px;
+			opacity:1;
+			-webkit-transition:opacity .6s ease;
+			-o-transition:opacity .6s ease;
+			transition:opacity .6s ease;
+			border-color:transparent;
+			transition: ease 0.5s;
+		}
+	}
+	.carousel-caption{
+		text-align: left;
+		right: 0;
+		left: 0;
+
+		.media:nth-child(2){
+			margin-top: 35px;
+		}
+	}
+	.d-block{
+		opacity: 0;
+		display: block;
+		position: relative;
+		height: 389px;
+		width: 600px !important;
+
+
+	}
+.media {
+	padding: 30px 30px 15px 30px;
+	background: $darkerThenWhite;
+	.media-body {
+		table {
+			font-family: Raleway;
+			font-size: 18px;
+			line-height: 20px;
+			font-weight: 600;
+			color: $dark-bg;
+			margin-bottom: 15px;
+			a{
+				@include small-text;
+				color:$muchMoreDarkerThenWhite;
+			}
+		}
+	}
+}
 }
 	@media (max-width: 767px) {
 
