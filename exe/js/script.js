@@ -8,7 +8,6 @@ $(function() {
        })
    });
 
-
 var app = new Vue({
     el: '#app',
     data: {
@@ -22,3 +21,18 @@ var app = new Vue({
 
     }
 })
+
+$('.collapse-card-toggler').click(function()
+{
+        let clickClass = "." + this.id;
+        let clickId = "#collapse-row" + this.id;
+
+        $(clickClass).click(function ()
+    {
+        $(clickClass).addClass('clickbg-1');
+    });
+    $(clickId).on('hidden.bs.collapse', function ()
+    {
+        $('.justify-content-between').removeClass('clickbg-1');
+    });
+});
