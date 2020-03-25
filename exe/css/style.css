@@ -388,8 +388,17 @@ a.carousel-control-next:hover .carousel-control-next-icon {
 #why-us:hover .line {
   background: #e5493a; }
 
+.collapse-card .row:hover .col-11 {
+  background: #363636; }
+  .collapse-card .row:hover .col-11 p {
+    color: #fff; }
+
+.collapse-card .row:hover button {
+  background: #e5493a !important; }
+
 .collapse-card .row {
-  height: 43px; }
+  height: 43px;
+  margin-bottom: 5px; }
 
 .collapse-card .clickbg-1 .col-11 {
   background: #363636; }
@@ -398,10 +407,14 @@ a.carousel-control-next:hover .carousel-control-next-icon {
 
 .collapse-card .clickbg-1 button {
   background: #e5493a !important; }
+  .collapse-card .clickbg-1 button svg {
+    transform: rotate(90deg); }
 
 .collapse-card .col-11 {
   height: 43px;
-  background: #f2f2f2; }
+  background: #f2f2f2;
+  transition: ease 0.5s;
+  border-radius: 3px 0 0 3px; }
   .collapse-card .col-11 p {
     margin-top: 10px;
     font-family: Raleway;
@@ -423,8 +436,10 @@ a.carousel-control-next:hover .carousel-control-next-icon {
   height: 43px; }
   .collapse-card .col-1 button {
     background: #363636;
+    transition: ease 0.5s;
     width: 43px;
-    height: 43px; }
+    height: 43px;
+    border-radius: 0 3px 3px 0; }
   .collapse-card .col-1 button:hover {
     box-shadow: none; }
   .collapse-card .col-1 button:focus {
@@ -518,3 +533,7 @@ a.carousel-control-next:hover .carousel-control-next-icon {
       font-size: 7vw; }
     .under-car .under-car-2 {
       font-size: 5vw; } }
+
+@media (max-width: 991px) {
+  #carousel1 {
+    width: 100%; } }

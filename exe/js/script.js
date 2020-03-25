@@ -24,15 +24,18 @@ var app = new Vue({
 
 $('.collapse-card-toggler').click(function()
 {
-        let clickClass = "." + this.id;
-        let clickId = "#collapse-row" + this.id;
 
-        $(clickClass).click(function ()
+        let collapseId = "#collapse-row" + this.id,
+            clickClass = "." + this.id,
+            clickId = "#" + this.id;
+
+        $(clickId).click(function ()
     {
         $(clickClass).addClass('clickbg-1');
     });
-    $(clickId).on('hidden.bs.collapse', function ()
+
+    $(collapseId).on('hide.bs.collapse', function ()
     {
-        $('.justify-content-between').removeClass('clickbg-1');
+        $(clickClass).removeClass('clickbg-1');
     });
 });

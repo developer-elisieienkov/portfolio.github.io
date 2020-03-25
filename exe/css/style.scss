@@ -534,6 +534,80 @@ a:hover{text-decoration: none
 	background: $red-bg;
 }
 }
+
+.collapse-card{
+	.row:hover{
+		.col-11 {
+			background: $dark-bg;
+			p{
+				color: $white;
+			}
+		}
+		button{
+			background: $red-bg!important;
+		}
+	}
+	.row{
+		height: 43px;
+		margin-bottom: 5px;
+	}
+	.clickbg-1 {
+		.col-11 {
+			background: $dark-bg;
+			p{
+				color: $white;
+			}
+		}
+		button{
+			background: $red-bg!important;
+			svg{
+				transform: rotate(90deg);
+			}
+		}
+	}
+	.col-11{
+		height: 43px;
+		background: $darkerThenWhite;
+		transition: ease 0.5s;
+		border-radius: 3px 0 0 3px;
+		p{
+			margin-top: 10px;
+			font-family: Raleway;
+			font-size: 18px;
+			line-height: 20px;
+			font-weight: 700;
+			color: dark-bg;
+			span{
+				margin-left: 20px;
+				@include small-text;
+				color: $muchMoreDarkerThenWhite;
+			}
+		}
+
+	}
+	.col-1{
+		padding: 0 0 0 0;
+		box-sizing: content-box;
+		height: 43px;
+
+		button{
+			background: $dark-bg;
+			transition: ease 0.5s;
+			width: 43px;
+			height: 43px;
+			border-radius: 0 3px 3px 0;
+		}
+		button:hover{
+			box-shadow: none;
+		}
+		button:focus{
+			box-shadow: none;
+		}
+
+	}
+}
+
+
 #carousel1{
 	height: 410px;
 	width: 43vw;
@@ -642,7 +716,6 @@ a:hover{text-decoration: none
 				}
 						.under-car {
 			padding-top: 10px;
-
 			.under-car-1 {
 				font-size: 7vw;
 			}
@@ -650,8 +723,12 @@ a:hover{text-decoration: none
 				font-size: 5vw;
 			}
 		}
-
 	}
+@media (max-width: 991px){
+#carousel1{
+	width: 100%;
+}
+}
 
 
 
