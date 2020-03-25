@@ -536,20 +536,12 @@ a:hover{text-decoration: none
 }
 
 .collapse-card{
-	.row:hover{
-		.col-11 {
-			background: $dark-bg;
-			p{
-				color: $white;
-			}
-		}
-		button{
-			background: $red-bg!important;
-		}
-	}
 	.row{
 		height: 43px;
 		margin-bottom: 5px;
+		button:hover{
+			background: $red-bg;
+		}
 	}
 	.clickbg-1 {
 		.col-11 {
@@ -608,10 +600,25 @@ a:hover{text-decoration: none
 }
 
 
-#carousel1{
-	height: 410px;
-	width: 43vw;
-	overflow: hidden;
+#owl{
+	.owl-dot{
+		width: 10px;
+		height: 10px;
+		border-radius: 10px;
+		margin: 0 4px 0 4px;
+		background-color: $darkerThenWhite;
+	}
+	.owl-dot:focus{
+		outline: none;
+	}
+	.owl-dots{
+		.active{
+			background: $red-bg;
+		}
+
+	}
+
+	/*
 	.carousel-indicators{
 		left: -80%;
 		.active{
@@ -639,28 +646,19 @@ a:hover{text-decoration: none
 			border-color:transparent;
 			transition: ease 0.5s;
 		}
-	}
-	.carousel-caption{
-		text-align: left;
-		right: 0;
-		left: 0;
+	}*/
 
 		.media:nth-child(2){
 			margin-top: 35px;
 		}
-	}
-	.d-block{
-		opacity: 0;
-		display: block;
-		position: relative;
-		height: 389px;
-		width: 600px !important;
 
-
-	}
 .media {
 	padding: 30px 30px 15px 30px;
 	background: $darkerThenWhite;
+	img{
+		width: 92px;
+		height: 92px;
+	}
 	.media-body {
 		table {
 			font-family: Raleway;
