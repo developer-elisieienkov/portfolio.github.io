@@ -4,7 +4,6 @@ font-family: axis;
 	src: url("../fonts/axis.otf");
 }
 
-$info-font: 13px 20px 400;
 $info-color:#898989;
 $dark-bg:#363636;
 $info-link-color:#8dc63f;
@@ -12,8 +11,10 @@ $exe-font:axis;
 $red-bg:#e5493a;
 $gray:#959595;
 $white:#fff;
+$littleDarkerThenWhite:#fafafa;
 $darkerThenWhite:#f2f2f2;
 $muchMoreDarkerThenWhite: #ccc;
+$unitrans: ease 0.3s;
 
 
 @mixin navbar-text(){
@@ -43,24 +44,29 @@ font-weight: 700;
 font-family: Roboto;
 font-size: 14px;
 line-height: 20px;
-font-weight: 400;}
+font-weight: 400;
+}
 
 
 svg{
-	transition: ease 0.5s;
+	transition: $unitrans;
 }
 a{text-decoration:none;
 }
 a:hover{text-decoration: none
 }
+
 .header-info{
 
 	fill: $info-color;
 	font-family: roboto;
-	font: $info-font;
+	font-size: 13px;
+	line-height: 20px;
+	font-weight: 400;
+	color: $info-color;
 	background: $dark-bg;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
 	
 	a{
 		color:$info-color;
@@ -87,10 +93,9 @@ a:hover{text-decoration: none
 	box-sizing: margin-box;
 	height: 3px;
 	width: 0%;
-	transition: width 0.3s;
+	transition: $unitrans;
 	background:$red-bg;
 }
-
 .navbar{
 	padding: 40px 0 40px 0;
 .navbar-brand{
@@ -100,6 +105,10 @@ a:hover{text-decoration: none
 	font-weight: 400;
 	color: $dark-bg;
 }
+	.navbar-toggler{
+		border: none;
+		outline: none;
+	}
 			ul{
 				svg{
 					fill: iherit;
@@ -259,7 +268,7 @@ a:hover{text-decoration: none
 
 	.text-center{
 		.btn-group{
-			background: #fafafa;
+			background: $littleDarkerThenWhite;
 			margin-bottom: 40px;
 			.btn{
 				background: none;
@@ -330,7 +339,7 @@ a:hover{text-decoration: none
 	@include title-font;
 	line-height: 20px;
 	color:$dark-bg;
-	margin-top:80px;
+	padding-top:80px;
 }
 .undertitle{
 	@include small-text;
@@ -357,6 +366,7 @@ a:hover{text-decoration: none
 		width: 35px;
 		z-index: 9;
 		border-radius: 20px;
+		transition: $unitrans;
 	}
 	.bg-box:hover{
 		background: $red-bg;
@@ -372,6 +382,7 @@ a:hover{text-decoration: none
 	img {
 		position: relative;
 		width: 19.8vw;
+		transition: $unitrans;
 	}
 
 	.upper-text{
@@ -381,7 +392,7 @@ a:hover{text-decoration: none
 	.upper-line{
 		position: absolute;
 		z-index: 4;
-		width: 50px;
+		width: 25%;
 		height: 2px;
 		top: 90px;
 		left: 40px;
@@ -390,13 +401,10 @@ a:hover{text-decoration: none
 		background: $red-bg;
 		display: none;
 	}
-	.lupa{
-		left: 65%;
-		top: 65%;
-	}
-	.link{
-		left: 80%;
-		top: 65%;
+	@media (max-width: 500px) {
+		.lupa{
+			left: 55%;
+		}
 	}
 
 	.col:hover {
@@ -446,6 +454,14 @@ a:hover{text-decoration: none
 		}
 	}
 	}
+.lupa{
+	left: 65%;
+	top: 65%;
+}
+.link{
+	left: 80%;
+	top: 65%;
+}
 .loadmore{
 	margin-top: 41px;
 	button {
@@ -528,8 +544,10 @@ a:hover{text-decoration: none
 		background: $red-bg;
 	}
 }
-
-#why-us:hover{
+.why-us{
+	background: $littleDarkerThenWhite;
+}
+.why-us:hover{
 .line{
 	background: $red-bg;
 }
@@ -560,7 +578,7 @@ a:hover{text-decoration: none
 	.col-11{
 		height: 43px;
 		background: $darkerThenWhite;
-		transition: ease 0.5s;
+		transition: $unitrans;
 		border-radius: 3px 0 0 3px;
 		p{
 			margin-top: 10px;
@@ -584,7 +602,7 @@ a:hover{text-decoration: none
 
 		button{
 			background: $dark-bg;
-			transition: ease 0.5s;
+			transition: $unitrans;
 			width: 43px;
 			height: 43px;
 			border-radius: 0 3px 3px 0;
@@ -597,10 +615,14 @@ a:hover{text-decoration: none
 		}
 
 	}
+	[id*="collapse-row"]{
+		@include small-text;
+		color: $gray;
+	}
 }
 
 
-#owl{
+#owl1,#owl2{
 	.owl-dot{
 		width: 10px;
 		height: 10px;
@@ -615,39 +637,7 @@ a:hover{text-decoration: none
 		.active{
 			background: $red-bg;
 		}
-
 	}
-
-	/*
-	.carousel-indicators{
-		left: -80%;
-		.active{
-			background: $red-bg;
-		}
-		li{
-			box-sizing: margin-box;
-			width:10px;
-			height:10px;
-			margin-right:3px;
-			margin-left:3px;
-			text-indent:-999px;
-			cursor:pointer;
-			background-color:$darkerThenWhite;
-			background-clip:border-box;
-			border-right:2px solid ;
-			border-left:2px solid ;
-			border-top:2px solid ;
-			border-bottom:2px solid ;
-			border-radius: 10px;
-			opacity:1;
-			-webkit-transition:opacity .6s ease;
-			-o-transition:opacity .6s ease;
-			transition:opacity .6s ease;
-			border-color:transparent;
-			transition: ease 0.5s;
-		}
-	}*/
-
 		.media:nth-child(2){
 			margin-top: 35px;
 		}
@@ -675,8 +665,26 @@ a:hover{text-decoration: none
 	}
 }
 }
+#owl2{
+	.card{
+		border: none;
+		height: 270px;
+		background: $littleDarkerThenWhite;
+		img{
+			width: 270px;
+			height: 270px;
+			border-radius: 0px;
+		}
+	}
+}
 	@media (max-width: 767px) {
-
+		header {
+			.fixed-top {
+				nav {
+					padding: 20px 0 20px 0;
+				}
+			}
+		}
 				#carousel {
 					height: 100vh;
 					width: 100%;
@@ -721,12 +729,18 @@ a:hover{text-decoration: none
 				font-size: 5vw;
 			}
 		}
+#accordion1{
+	span{
+		display: none;
+	}
+}
 	}
 @media (max-width: 991px){
 #carousel1{
 	width: 100%;
 }
 }
+
 
 
 

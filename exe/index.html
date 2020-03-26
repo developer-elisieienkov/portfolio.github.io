@@ -10,11 +10,13 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
-<header class="fixed-top">
-    <div class="container-fluid">
+<header>
+<div class="fixed-top">
+    <div class="container-fluid header-info d-none d-lg-flex">
+    <div class="container">
 
-        <div class="header-info row align-items-center d-none d-lg-flex" >
-            <div  class="col">
+        <div class="header-info mx-5 row align-items-center justify-content-center " >
+            <div  class="col mr-n5">
                 <a data-toggle="collapse" href="#collapse-lang" role="button" aria-expanded="false" aria-controls="collapse-lang">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -35,7 +37,7 @@
                     <li><a href="#">ukrainskii</a></li>
                 </ul>
             </div>
-            <div class="col">
+            <div class="col mx-n4">
                 <a href="tel:+440 875369208">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -47,7 +49,7 @@
                 </a>
             </div>
 
-            <div class="col">
+            <div class="col ml-n3 mr-5">
                 <a href="mailto:eliseenkovandrej@gmail.com">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -59,7 +61,7 @@
                 </a>
             </div>
 
-            <div class="col">
+            <div class="col ml-5 mr-n4">
                 <a href="#">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -95,7 +97,7 @@
                     <li> <a href="#">r</a> </li>
                 </ul>
             </div>
-            <div class="col social-networks">
+            <div class="col ml-n2 mr-n3 social-networks">
                 <a href="">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -148,19 +150,20 @@
         </div>
 
     </div>
+</div>
 
 
 
-    <div class="d-flex justify-content-around nav-bg container-fluid">
+    <div class="d-flex justify-content-center lg-justify-content-around nav-bg container-fluid">
 
-        <nav class="navbar navbar-expand-lg navbar-light ">
+        <nav class="navbar justify-content-center navbar-expand-lg navbar-light ">
 
-            <a class="exe navbar-brand pr-lg-5" href="#">èxe</a>
+            <a class="navbar-brand pr-lg-5" href="#">èxe</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class=" collapse navbar-collapse" id="navbarNav">
+            <div class="text-center collapse navbar-collapse" id="navbarNav">
 
                 <ul class="navbar-nav ">
                     <li class="nav-item">
@@ -1087,12 +1090,13 @@
         </div>
     </div>
 </section>
+<section class="why-us">
 <div class="container-fluid text-center">
     <p class="dark-title">Why Choose Us</p>
     <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
 
 </div>
-<div class="container-fluid" id="why-us">
+<div class="container-fluid" >
     <div class="container-fluid text-center">
         <div class=" line">
 
@@ -1123,7 +1127,7 @@
                        Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in  nam liber tempor cum soluta nobis eleifend option.
                    </p>
                    <p>
-
+                       Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
                    </p>
                </div>
             </div>
@@ -1206,7 +1210,7 @@
 
 
         <div class="col">
-            <div class="owl-carousel owl-theme" id="owl">
+            <div class="owl-carousel owl-theme" id="owl1">
                 <div class="item">
                     <div class="media">
                     <img src="images/card/bg_photo_2214.png" class="mr-3" alt="...">
@@ -1214,8 +1218,15 @@
                         <table width="100%">
                             <tr>
                                 <td align="left">Jonathan Smith</td>
-                                <td align="right">
-                                    <a href="">
+                                <td align="right" class="d-none d-sm-block">
+                                    <a href="#">
+                                        www.themeforest.net
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="d-block d-sm-none">
+                                <td>
+                                    <a href="#">
                                         www.themeforest.net
                                     </a>
                                 </td>
@@ -1231,8 +1242,15 @@
                             <table width="100%">
                                 <tr>
                                     <td align="left">Britney Doe</td>
-                                    <td align="right">
-                                        <a href="">
+                                    <td align="right" class="d-none d-sm-block">
+                                        <a href="#">
+                                            www.themeforest.net
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="d-block d-sm-none">
+                                    <td>
+                                        <a href="#">
                                             www.themeforest.net
                                         </a>
                                     </td>
@@ -1250,8 +1268,15 @@
                             <table width="100%">
                                 <tr>
                                     <td align="left">Jonathan Smith</td>
-                                    <td align="right">
-                                        <a href="">
+                                    <td align="right" class="d-none d-sm-block">
+                                        <a href="#">
+                                            www.themeforest.net
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="d-block d-sm-none">
+                                    <td>
+                                        <a href="#">
                                             www.themeforest.net
                                         </a>
                                     </td>
@@ -1267,80 +1292,15 @@
                             <table width="100%">
                                 <tr>
                                     <td align="left">Britney Doe</td>
-                                    <td align="right">
-                                        <a href="">
+                                    <td align="right" class="d-none d-sm-block">
+                                        <a href="#">
                                             www.themeforest.net
                                         </a>
                                     </td>
                                 </tr>
-                            </table>
-                            <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore etiam processus dynamicus, qui sequitur.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                                    <div class="media">
-                    <img src="images/card/bg_photo_2214.png" class="mr-3" alt="...">
-                    <div class="media-body">
-                        <table width="100%">
-                            <tr>
-                                <td align="left">Jonathan Smith</td>
-                                <td align="right">
-                                    <a href="">
-                                        www.themeforest.net
-                                    </a>
-                                </td>
-                            </tr>
-                        </table>
-                        <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore etiam processus dynamicus, qui sequitur.
-                        </p>
-                    </div>
-                </div>
-                    <div class="media">
-                        <img src="images/card/bg_photo_2229.png" class="mr-3" alt="...">
-                        <div class="media-body">
-                            <table width="100%">
-                                <tr>
-                                    <td align="left">Britney Doe</td>
-                                    <td align="right">
-                                        <a href="">
-                                            www.themeforest.net
-                                        </a>
-                                    </td>
-                                </tr>
-                            </table>
-                            <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore etiam processus dynamicus, qui sequitur.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                                    <div class="media">
-                    <img src="images/card/bg_photo_2214.png" class="mr-3" alt="...">
-                    <div class="media-body">
-                        <table width="100%">
-                            <tr>
-                                <td align="left">Jonathan Smith</td>
-                                <td align="right">
-                                    <a href="">
-                                        www.themeforest.net
-                                    </a>
-                                </td>
-                            </tr>
-                        </table>
-                        <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore etiam processus dynamicus, qui sequitur.
-                        </p>
-                    </div>
-                </div>
-                    <div class="media">
-                        <img src="images/card/bg_photo_2229.png" class="mr-3" alt="...">
-                        <div class="media-body">
-                            <table width="100%">
-                                <tr>
-                                    <td align="left">Britney Doe</td>
-                                    <td align="right">
-                                        <a href="">
+                                <tr class="d-block d-sm-none">
+                                    <td>
+                                        <a href="#">
                                             www.themeforest.net
                                         </a>
                                     </td>
@@ -1358,8 +1318,15 @@
                             <table width="100%">
                                 <tr>
                                     <td align="left">Jonathan Smith</td>
-                                    <td align="right">
-                                        <a href="">
+                                    <td align="right" class="d-none d-sm-block">
+                                        <a href="#">
+                                            www.themeforest.net
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="d-block d-sm-none">
+                                    <td>
+                                        <a href="#">
                                             www.themeforest.net
                                         </a>
                                     </td>
@@ -1375,8 +1342,115 @@
                             <table width="100%">
                                 <tr>
                                     <td align="left">Britney Doe</td>
-                                    <td align="right">
-                                        <a href="">
+                                    <td align="right" class="d-none d-sm-block">
+                                        <a href="#">
+                                            www.themeforest.net
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="d-block d-sm-none">
+                                    <td>
+                                        <a href="#">
+                                            www.themeforest.net
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore etiam processus dynamicus, qui sequitur.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="media">
+                        <img src="images/card/bg_photo_2214.png" class="mr-3" alt="...">
+                        <div class="media-body">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left">Jonathan Smith</td>
+                                    <td align="right" class="d-none d-sm-block">
+                                        <a href="#">
+                                            www.themeforest.net
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="d-block d-sm-none">
+                                    <td>
+                                        <a href="#">
+                                            www.themeforest.net
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore etiam processus dynamicus, qui sequitur.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <img src="images/card/bg_photo_2229.png" class="mr-3" alt="...">
+                        <div class="media-body">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left">Britney Doe</td>
+                                    <td align="right" class="d-none d-sm-block">
+                                        <a href="#">
+                                            www.themeforest.net
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="d-block d-sm-none">
+                                    <td>
+                                        <a href="#">
+                                            www.themeforest.net
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore etiam processus dynamicus, qui sequitur.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="media">
+                        <img src="images/card/bg_photo_2214.png" class="mr-3" alt="...">
+                        <div class="media-body">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left">Jonathan Smith</td>
+                                    <td align="right" class="d-none d-sm-block">
+                                        <a href="#">
+                                            www.themeforest.net
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="d-block d-sm-none">
+                                    <td>
+                                        <a href="#">
+                                            www.themeforest.net
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore etiam processus dynamicus, qui sequitur.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <img src="images/card/bg_photo_2229.png" class="mr-3" alt="...">
+                        <div class="media-body">
+                            <table width="100%">
+                                <tr>
+                                    <td align="left">Britney Doe</td>
+                                    <td align="right" class="d-none d-sm-block">
+                                        <a href="#">
+                                            www.themeforest.net
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="d-block d-sm-none">
+                                    <td>
+                                        <a href="#">
                                             www.themeforest.net
                                         </a>
                                     </td>
@@ -1388,220 +1462,37 @@
                     </div>
                 </div>
             </div>
-
-            <!--
-            <div id="carousel1" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel1" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel1" data-slide-to="1"></li>
-                    <li data-target="#carousel1" data-slide-to="2"></li>
-                    <li data-target="#carousel1" data-slide-to="3"></li>
-                    <li data-target="#carousel1" data-slide-to="4"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="images/carousel/polygon_2474.png" class=" d-block w-100" alt="...">
-                        <div class="carousel-caption ">
-                            <div class="media">
-                                <img src="images/card/bg_photo_2214.png" class="mr-3" alt="...">
-                                <div class="media-body">
-                                    <table width="100%">
-                                        <tr>
-                                            <td align="left">Jonathan Smith</td>
-                                            <td align="right">
-                                                <a href="">
-                                                    www.themeforest.net
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore etiam processus dynamicus, qui sequitur.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <img src="images/card/bg_photo_2229.png" class="mr-3" alt="...">
-                                <div class="media-body">
-                                    <table width="100%">
-                                        <tr>
-                                            <td align="left">Britney Doe</td>
-                                            <td align="right">
-                                                <a href="">
-                                                    www.themeforest.net
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore etiam processus dynamicus, qui sequitur.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/carousel/polygon_2474.png" class=" d-block w-100" alt="...">
-                        <div class="carousel-caption ">
-                            <div class="media">
-                                <img src="images/card/bg_photo_2214.png" class="mr-3" alt="...">
-                                <div class="media-body">
-                                    <table width="100%">
-                                        <tr>
-                                            <td align="left">Jonathan Smith</td>
-                                            <td align="right">
-                                                <a href="">
-                                                    www.themeforest.net
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore etiam processus dynamicus, qui sequitur.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <img src="images/card/bg_photo_2229.png" class="mr-3" alt="...">
-                                <div class="media-body">
-                                    <table width="100%">
-                                        <tr>
-                                            <td align="left">Britney Doe</td>
-                                            <td align="right">
-                                                <a href="">
-                                                    www.themeforest.net
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore etiam processus dynamicus, qui sequitur.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/carousel/polygon_2474.png" class=" d-block w-100" alt="...">
-                        <div class="carousel-caption ">
-                            <div class="media">
-                                <img src="images/card/bg_photo_2214.png" class="mr-3" alt="...">
-                                <div class="media-body">
-                                    <table width="100%">
-                                        <tr>
-                                            <td align="left">Jonathan Smith</td>
-                                            <td align="right">
-                                                <a href="">
-                                                    www.themeforest.net
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore etiam processus dynamicus, qui sequitur.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <img src="images/card/bg_photo_2229.png" class="mr-3" alt="...">
-                                <div class="media-body">
-                                    <table width="100%">
-                                        <tr>
-                                            <td align="left">Britney Doe</td>
-                                            <td align="right">
-                                                <a href="">
-                                                    www.themeforest.net
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore etiam processus dynamicus, qui sequitur.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/carousel/polygon_2474.png" class=" d-block w-100" alt="...">
-                        <div class="carousel-caption ">
-                            <div class="media">
-                                <img src="images/card/bg_photo_2214.png" class="mr-3" alt="...">
-                                <div class="media-body">
-                                    <table width="100%">
-                                        <tr>
-                                            <td align="left">Jonathan Smith</td>
-                                            <td align="right">
-                                                <a href="">
-                                                    www.themeforest.net
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore etiam processus dynamicus, qui sequitur.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <img src="images/card/bg_photo_2229.png" class="mr-3" alt="...">
-                                <div class="media-body">
-                                    <table width="100%">
-                                        <tr>
-                                            <td align="left">Britney Doe</td>
-                                            <td align="right">
-                                                <a href="">
-                                                    www.themeforest.net
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore etiam processus dynamicus, qui sequitur.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/carousel/polygon_2474.png" class=" d-block w-100" alt="...">
-                        <div class="carousel-caption ">
-                            <div class="media">
-                                <img src="images/card/bg_photo_2214.png" class="mr-3" alt="...">
-                                <div class="media-body">
-                                    <table width="100%">
-                                        <tr>
-                                            <td align="left">Jonathan Smith</td>
-                                            <td align="right">
-                                                <a href="">
-                                                    www.themeforest.net
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore etiam processus dynamicus, qui sequitur.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <img src="images/card/bg_photo_2229.png" class="mr-3" alt="...">
-                                <div class="media-body">
-                                    <table width="100%">
-                                        <tr>
-                                            <td align="left">Britney Doe</td>
-                                            <td align="right">
-                                                <a href="">
-                                                    www.themeforest.net
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore etiam processus dynamicus, qui sequitur.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            -->
         </div>
     </div>
 </div>
+</section>
 
+
+<section class="last-post">
+    <div class="container-fluid text-center">
+        <p class="dark-title">Latest Blog Posts</p>
+        <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    </div>
+</section>
+<div class="owl-carousel owl-theme owl" id="owl2">
+    <div class="item">
+        <div class="card mb-3" >
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="images/card/bg_photo_2365.png" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Название карточки</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" style="height: 300px"></div>
 </main>
 
 <footer>
