@@ -708,6 +708,21 @@ a.carousel-control-next:hover .carousel-control-next-icon {
 
 .clients {
   background: url("../images/bg/partnersBg.jpg"); }
+  .clients #owl3 .item {
+    height: 255px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
   .clients #owl3 .item-img-1 {
     width: 135px;
     height: 85px; }
@@ -715,6 +730,7 @@ a.carousel-control-next:hover .carousel-control-next-icon {
     width: 200px;
     height: 77px; }
   .clients #owl3 .item-img-3 {
+    margin-left: 65px;
     width: 88px;
     height: 88px; }
   .clients #owl3 .item-img-4 {
