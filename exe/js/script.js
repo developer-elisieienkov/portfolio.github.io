@@ -27,6 +27,26 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function(){
+    $('#owl3').owlCarousel({
+        items:5,
+        loop:true,
+        autoplay:true,
+        margin:30,
+        autoplayHoverPause:true,
+        nav:true,
+        responsive: {
+            0: {
+                items: 2
+            },
+            600: {
+                items: 5
+            },
+
+        }
+    });
+});
+
 $(function() {
        $(window).on("scroll resize", function() {
            var o = $(window).scrollTop() / ($(document).height() - $(window).height());
