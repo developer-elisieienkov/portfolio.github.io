@@ -787,7 +787,6 @@ a:hover{text-decoration: none
 	background: url("../images/bg/themeBg.jpg") no-repeat;
 	background-size: cover;
 	.themes {
-		padding-top: 80px;
 		.bg-circle1 {
 			padding: 28px 0 0 25px;
 		}
@@ -820,7 +819,7 @@ a:hover{text-decoration: none
 		}
 
 		.right-theme-caption {
-			margin-top: 30px;
+			margin-top: 20px;
 
 			p:first-child {
 				font-family: Raleway;
@@ -837,6 +836,9 @@ a:hover{text-decoration: none
 				color: $gray;
 				transition: $unitrans;
 			}
+		}
+		.right-theme-caption:last-child{
+			margin-bottom: 80px;
 		}
 
 		.right-theme-caption:hover {
@@ -856,6 +858,7 @@ a:hover{text-decoration: none
 		}
 	}
 }
+
 .many-theme:hover{
 	.line{
 		background: $red-bg;
@@ -869,6 +872,7 @@ a:hover{text-decoration: none
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		align-items: center;
 	}
 	.item-img-1{
 		width: 135px;
@@ -879,7 +883,6 @@ a:hover{text-decoration: none
 		height: 77px;
 	}
 	.item-img-3{
-		margin-left: 65px;
 		width: 88px;
 		height: 88px;
 	}
@@ -891,6 +894,34 @@ a:hover{text-decoration: none
 		width: 79px;
 		height: 86px;
 	}
+	.owl-prev, .owl-next{
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		top: 40%;
+		border-radius: 4px;
+	}
+	.owl-prev:hover, .owl-next:hover{
+		background-color: $dark-bg;
+	}
+	.owl-next{
+		right: -40px;
+		background: url("../images/carousel/arrow_1511.svg") no-repeat;
+		background-position: center;
+		i{
+			height: 30px;
+			width: 30px;
+		}
+	}
+	.owl-prev{
+		left: -40px;
+		background: url("../images/carousel/arrow_1507.svg") no-repeat;
+		background-position: center;
+		i{
+			height: 30px;
+			width: 30px;
+		}
+	}
 }
 }
 	@media (max-width: 767px) {
@@ -898,6 +929,19 @@ a:hover{text-decoration: none
 			.fixed-top {
 				nav {
 					padding: 8px 0 8px 0;
+					li.nav-item:hover {
+						.li-line {
+							margin-left: 0px;
+						}
+					}
+					.li-line{
+						margin-left: 50%;
+					}
+					.active-nav{
+						.li-line{
+							width: 0%;
+						}
+					}
 				}
 			}
 		}
@@ -907,15 +951,16 @@ a:hover{text-decoration: none
 					overflow: hidden;
 
 					.carousel-caption {
-						bottom: 50vh;
+						bottom: 80vh;
 
 						.string1 {
 							font-size: 8vw;
+							margin-bottom: 0px;
 						}
 
 						.string2 {
 							font-size: 7vw;
-							line-height: 8vh;
+							line-height: 5vh;
 						}
 
 						.string3 {
@@ -943,6 +988,11 @@ a:hover{text-decoration: none
 			}
 			.under-car-2 {
 				font-size: 5vw;
+			}
+		}
+		.underheader-card{
+			.card{
+				margin-top: 50px;
 			}
 		}
 #accordion1{
@@ -982,9 +1032,7 @@ a:hover{text-decoration: none
 		}
 
 		}
-		#screens{
-			width: 95vw;
-		}
+
 
 	}
 @media (max-width: 991px){
@@ -992,7 +1040,9 @@ a:hover{text-decoration: none
 	width: 100%;
 }
 }
-
+#screens{
+	width: 105%;
+}
 
 
 

@@ -32,17 +32,21 @@ $(document).ready(function(){
         items:5,
         loop:true,
         autoplay:true,
-        margin:30,
         autoplayHoverPause:true,
         nav:true,
+        navText:false,
+        center:true,
         responsive: {
-            0: {
-                items: 2
+            1: {
+                items: 1,
+                nav: false,
             },
-            600: {
+            700: {
+                items: 3
+            },
+            990:{
                 items: 5
             },
-
         }
     });
 });
