@@ -16,6 +16,10 @@ $littleDarkerThenWhite:#fafafa;
 $darkerThenWhite:#f2f2f2;
 $muchMoreDarkerThenWhite: #ccc;
 $unitrans: ease 0.3s;
+$secondaryBrandColor: #464646;
+$footer-bg: #252525;
+$secondary-footer-font-color:#636363;
+$formBg:#171717;
 
 
 @mixin navbar-text(){
@@ -49,14 +53,12 @@ font-weight: 400;
 }
 
 
-
 a{text-decoration:none;
 }
 a:hover{text-decoration: none
 }
 
 .header-info{
-
 	fill: $info-color;
 	font-family: roboto;
 	font-size: 13px;
@@ -66,9 +68,10 @@ a:hover{text-decoration: none
 	background: $dark-bg;
 	padding-top: 3px;
 	padding-bottom: 3px;
-	
+
 	a{
 		color:$info-color;
+		transition: $unitrans;
 	}
 	a:hover{
 		color:$info-link-color;
@@ -95,16 +98,8 @@ a:hover{text-decoration: none
 	transition: $unitrans;
 	background:$red-bg;
 }
-
 .navbar{
 	padding: 40px 0 40px 0;
-.navbar-brand{
-	font-family: Axis;
-	font-size: 56px;
-	line-height: 20px;
-	font-weight: 400;
-	color: $dark-bg;
-}
 	.navbar-toggler{
 		border: none;
 		outline: none;
@@ -114,16 +109,17 @@ a:hover{text-decoration: none
 					fill: iherit;
 				}
 				.nav-item{
-					fill: $gray;
+
 					.nav-link{@include navbar-text;
 						font-weight: 800;
 						color: $nav-color;
-
+						transition: $unitrans;
+						fill: $gray;
 					}
-					a.nav-link:hover{color:$red-bg ;
+					.nav-link:hover{color:$red-bg ;
 						fill: $red-bg;
 					}
-					a.nav-link:focus{color:$red-bg ;
+					.nav-link:focus{color:$red-bg ;
 						fill: $red-bg;
 					}
 					}
@@ -145,7 +141,16 @@ a:hover{text-decoration: none
 
 	}
 }
-
+.my-navbar-brand{
+	font-family: Axis;
+	font-size: 56px;
+	line-height: 20px;
+	font-weight: 400;
+	color: $dark-bg;
+}
+.my-navbar-brand:hover,.my-navbar-brand:active{
+	color: $dark-bg;
+}
 
 
 .progress-container{
@@ -204,6 +209,8 @@ a:hover{text-decoration: none
 	#carousel{
 		.carousel-caption{
 			bottom: 17%;
+			left: 0%;
+			right: 1.2%;
 		}
 		.string1{
 			top: -100px;
@@ -271,6 +278,18 @@ a:hover{text-decoration: none
 			color: #707070;
 		}
 }
+.with-triangle {
+	background: $littleDarkerThenWhite;
+	.triangle {
+		box-sizing: border-box;
+		width: 85px;
+		height: 85px;
+		background: $littleDarkerThenWhite;
+		transform: rotate(45deg);
+		z-index: 9;
+		display: inline-flex;
+	}
+}
 .line {
 	display: inline-flex;
 	justify-content: center;
@@ -317,7 +336,7 @@ a:hover{text-decoration: none
 	.card{
 		color: $dark-bg;
 		border:none;
-		margin-top: 115px;
+		margin-top: 45px;
 	}
 	.card:hover{
 		color: $red-bg;
@@ -472,7 +491,7 @@ a:hover{text-decoration: none
 	position: absolute;
 	box-sizing: padding-box;
 	padding: 9px;
-	background:#252525;
+	background: $footer-bg;
 	height: 35px;
 	width: 35px;
 	z-index: 9;
@@ -924,11 +943,195 @@ a:hover{text-decoration: none
 	}
 }
 }
+footer{
+	.footer-title{
+		font-family: Raleway;
+		font-size: 24px;
+		line-height: 20px;
+		font-weight: 700;
+		color: $white;
+
+	}
+	.line{
+		background: $red-bg;
+		width: 70px;
+		display: inline-flex;
+	}
+	.container-fluid{
+		background: $footer-bg;
+		.container{
+			padding: 80px 10px 0 10px;
+		}
+	}
+	.twitter-link{
+		color: $white;
+	}
+	.first-footer-col {
+		padding-right: 50px;
+		p {
+			font-family: Roboto;
+			font-size: 14px;
+			line-height: 20px;
+			font-weight: 400;
+			color: $secondary-footer-font-color;
+		}
+
+		.footer-link{
+			@include small-text;
+			color: $secondaryBrandColor;
+			transition: $unitrans;
+		}
+
+		.footer-link:hover, .footer-link:focus {
+			color: $red-bg;
+		}
+		.my-navbar-brand{
+			margin-bottom: 30px;
+		}
+		.my-navbar-brand, .my-navbar-brand:hover, .my-navbar-brand:active {
+			color: $secondaryBrandColor;
+		}
+
+		.righter-logo {
+			margin-top: 8px;
+			font-family: Roboto;
+			font-size: 10px;
+			line-height: 10px;
+			font-weight: 700;
+			color: $dark-bg;
+		}
+		.form-title{
+			margin: 50px 0 20px -15px;
+			font-family: Roboto;
+			font-size: 18px;
+			line-height: 20px;
+			font-weight: 700;
+			color: $white;
+		}
+		.form{
+			margin-bottom: 20px;
+			form{
+				background: $formBg;
+				height: 42px;
+			}
+			input {
+				background: $formBg;
+				border: none;
+				padding: 9px 0 0 20px;
+				outline: none;
+				color: $secondaryBrandColor;
+
+			}
+			button{
+				background: $formBg;
+				outline: none;
+				border: none;
+				fill: $dark-bg;
+				transition: $unitrans;
+				width: 42px;
+			}
+			button:hover{
+			svg{
+				fill: $red-bg
+			}
+			}
+		}
+	}
+
+	.caption{
+		@include small-text;
+		color: $gray;
+		margin: 0 0 0 0px;
+		transition: $unitrans;
+	}
+	.date{
+		font-family: Roboto;
+		font-size: 13px;
+		line-height: 20px;
+		font-weight: 400;
+		color: $secondaryBrandColor;
+		margin: 0 0 0 0px;
+		transition: $unitrans;
+	}
+	svg{
+		fill: $secondaryBrandColor;
+		transition: $unitrans;
+	}
+		.footer-media {
+			margin-bottom: 40px;
+			img{
+				transition: $unitrans;
+			}
+			.footer-lupa {
+				display: none;
+				position: absolute;
+				box-sizing: border-box;
+				width: 30px;
+				height: 30px;
+				border-radius: 30px;
+				background: $footer-bg;
+				top: 28%;
+				left: 50%;
+				transition: $unitrans;
+
+				div {
+					width: 30px;
+					height: 30px;
+					background: url("../images/footer/icon_2487.svg") no-repeat;
+					background-position: center;
+				}
+			}
+
+			.footer-lupa:hover {
+				background: $red-bg;
+			}
+			.contacts{
+				color: $gray;
+			}
+		}
+		.footer-media:hover{
+			svg{
+				fill: $red-bg;
+			}
+
+			.footer-lupa{
+				display: block;
+				z-index: 99;
+			}
+			img{
+				filter: brightness(0.5);
+			}
+			.caption{
+				color: $red-bg;
+			}
+			.date{
+				color: $white;
+			}
+			.contacts{
+				color: $red-bg;
+			}
+		}
+	.follow{
+		svg:hover{
+			fill: $red-bg;
+		}
+	}
+	.follow:hover{
+		.date{
+			color: $white;
+		}
+	}
+.third-footer-col{
+	.date{
+		font-size: 14px;
+	}
+}
+}
 	@media (max-width: 767px) {
 		header {
 			.fixed-top {
 				nav {
-					padding: 8px 0 8px 0;
+					padding: 9px 0 6px 0;
 					li.nav-item:hover {
 						.li-line {
 							margin-left: 0px;
@@ -951,7 +1154,7 @@ a:hover{text-decoration: none
 					overflow: hidden;
 
 					.carousel-caption {
-						bottom: 80vh;
+						top: 150px;
 
 						.string1 {
 							font-size: 8vw;
