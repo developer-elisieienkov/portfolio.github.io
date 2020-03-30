@@ -73,11 +73,13 @@ a:hover {
     fill: #e5493a; }
   .navbar ul li.nav-item:hover .li-line {
     width: 100%; }
-  .navbar ul .active-nav .nav-link {
-    color: #e5493a;
-    fill: #e5493a; }
-  .navbar ul .active-nav .li-line {
-    width: 15%; }
+
+.active-nav .li-line {
+  width: 15%; }
+
+.active-link {
+  color: #e5493a !important;
+  fill: #e5493a !important; }
 
 .my-navbar-brand {
   font-family: Axis;
@@ -173,7 +175,8 @@ a.carousel-control-next:hover .carousel-control-next-icon {
   font-weight: 800;
   text-transform: uppercase;
   color: #fff;
-  border-color: #fff; }
+  border-color: #fff;
+  margin-bottom: 2px; }
 
 #carousel button:hover {
   color: #fff;
@@ -778,6 +781,8 @@ a.carousel-control-next:hover .carousel-control-next-icon {
     border-radius: 4px; }
   .clients #owl3 .owl-prev:hover, .clients #owl3 .owl-next:hover {
     background-color: #363636; }
+  .clients #owl3 .owl-prev:focus, .clients #owl3 .owl-next:focus {
+    outline: none; }
   .clients #owl3 .owl-next {
     right: -40px;
     background: url("../images/carousel/arrow_1511.svg") no-repeat;
@@ -809,9 +814,11 @@ footer .line {
   display: inline-flex; }
 
 footer .container-fluid {
-  background: #252525; }
-  footer .container-fluid .container {
-    padding: 80px 10px 0 10px; }
+  background: #252525;
+  position: relative; }
+  footer .container-fluid .footer-info-bar {
+    padding-top: 80px;
+    padding-bottom: 80px; }
 
 footer .twitter-link {
   color: #fff; }
@@ -823,7 +830,8 @@ footer .first-footer-col {
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
-    color: #636363; }
+    color: #636363;
+    margin-top: 30px; }
   footer .first-footer-col .footer-link {
     font-family: Roboto;
     font-size: 14px;
@@ -835,8 +843,6 @@ footer .first-footer-col {
     transition: ease 0.3s; }
   footer .first-footer-col .footer-link:hover, footer .first-footer-col .footer-link:focus {
     color: #e5493a; }
-  footer .first-footer-col .my-navbar-brand {
-    margin-bottom: 30px; }
   footer .first-footer-col .my-navbar-brand, footer .first-footer-col .my-navbar-brand:hover, footer .first-footer-col .my-navbar-brand:active {
     color: #464646; }
   footer .first-footer-col .righter-logo {
@@ -846,8 +852,10 @@ footer .first-footer-col {
     line-height: 10px;
     font-weight: 700;
     color: #363636; }
+  footer .first-footer-col .footer-link {
+    margin-bottom: 50px; }
   footer .first-footer-col .form-title {
-    margin: 50px 0 20px -15px;
+    margin: 0px 0 20px -15px;
     font-family: Roboto;
     font-size: 18px;
     line-height: 20px;
@@ -863,7 +871,8 @@ footer .first-footer-col {
       border: none;
       padding: 9px 0 0 20px;
       outline: none;
-      color: #464646; }
+      color: #464646;
+      width: 160px; }
     footer .first-footer-col .form button {
       background: #171717;
       outline: none;
@@ -963,27 +972,69 @@ footer .follow:hover .date {
 footer .third-footer-col .date {
   font-size: 14px; }
 
+footer .anchor {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 49px;
+  height: 49px;
+  border-radius: 5px;
+  background: black;
+  position: absolute;
+  left: 105%;
+  bottom: 50%;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg); }
+  footer .anchor .anchor-inner {
+    width: 49px;
+    height: 49px;
+    background: url("../images/carousel/arrow_1507.svg") no-repeat;
+    background-position: center; }
+
+.footer-nav {
+  background: #111111;
+  padding: 30px 0px 30px 30px; }
+  .footer-nav .left-of-footer-nav p {
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #464646; }
+    .footer-nav .left-of-footer-nav p span {
+      color: #959595; }
+  .footer-nav .links a {
+    font-family: Raleway;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #555;
+    margin-right: 20px; }
+
+@media (max-height: 470px) {
+  #carousel .string3 {
+    display: none; } }
+
+@media (min-width: 767px) {
+  .footer-info-bar {
+    padding: 80px 80px 0 80px; }
+  .footer-nav {
+    padding: 30px 0px 15px 100px; } }
+
 @media (max-width: 767px) {
   header .fixed-top nav {
     padding: 9px 0 6px 0; }
-    header .fixed-top nav li.nav-item:hover .li-line {
-      margin-left: 0px; }
-    header .fixed-top nav .li-line {
-      margin-left: 50%; }
-    header .fixed-top nav .active-nav .li-line {
-      width: 0%; }
   #carousel {
     height: 100vh;
     width: 100%;
     overflow: hidden; }
     #carousel .carousel-caption {
-      top: 150px; }
+      top: 25vh; }
       #carousel .carousel-caption .string1 {
         font-size: 8vw;
         margin-bottom: 0px; }
       #carousel .carousel-caption .string2 {
         font-size: 7vw;
-        line-height: 5vh; }
+        line-height: 6vh; }
       #carousel .carousel-caption .string3 {
         font-size: 5vw; }
   .carouselimg {
@@ -1018,11 +1069,47 @@ footer .third-footer-col .date {
   #owl2 .card p:nth-child(3) {
     margin-bottom: 3px; }
   #owl2 .card:hover .col .line {
-    width: 88vw; } }
+    width: 88vw; }
+  body footer .footer-info-bar {
+    padding: 80px 40px 0 20px; }
+    body footer .footer-info-bar .anchor {
+      left: 100%;
+      height: 30px;
+      width: 30px; }
+      body footer .footer-info-bar .anchor .anchor-inner {
+        width: 30px;
+        height: 30px; } }
+
+@media (orientation: landscape) and (max-width: 767px) {
+  #carousel {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden; }
+    #carousel .carousel-caption {
+      top: 15px; }
+      #carousel .carousel-caption .string1 {
+        font-size: 8vh;
+        margin-bottom: -20px; }
+      #carousel .carousel-caption .string2 {
+        font-size: 7vh;
+        line-height: 5vh; }
+      #carousel .carousel-caption .string3 {
+        font-size: 5vh; }
+  .under-car {
+    height: 55vh;
+    padding-top: 10px; }
+    .under-car .under-car-1 {
+      font-size: 9vh; }
+    .under-car .under-car-2 {
+      font-size: 7vh; } }
 
 @media (max-width: 991px) {
-  #carousel1 {
-    width: 100%; } }
+  li.nav-item:hover .li-line {
+    margin-left: 0px; }
+  .li-line {
+    margin-left: 50%; }
+  .active-nav .li-line {
+    width: 0% !important; } }
 
 #screens {
   width: 105%; }

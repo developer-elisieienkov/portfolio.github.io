@@ -20,6 +20,7 @@ $secondaryBrandColor: #464646;
 $footer-bg: #252525;
 $secondary-footer-font-color:#636363;
 $formBg:#171717;
+$footer-navbar-bg: #111111;
 
 
 @mixin navbar-text(){
@@ -110,7 +111,8 @@ a:hover{text-decoration: none
 				}
 				.nav-item{
 
-					.nav-link{@include navbar-text;
+					.nav-link{
+						@include navbar-text;
 						font-weight: 800;
 						color: $nav-color;
 						transition: $unitrans;
@@ -128,18 +130,19 @@ a:hover{text-decoration: none
 						width: 100%;
 					}
 				}
-				.active-nav{
-					.nav-link{
-						color: $red-bg;
-						fill: $red-bg;
-					}
-					.li-line{
-						width: 15%;
-					}
-				}
+
 
 
 	}
+}
+.active-nav{
+	.li-line{
+		width: 15%;
+	}
+}
+.active-link{
+	color: $red-bg!important;
+	fill: $red-bg!important;
 }
 .my-navbar-brand{
 	font-family: Axis;
@@ -242,6 +245,7 @@ a:hover{text-decoration: none
 			text-transform: uppercase;
 			color:$white;
 			border-color: $white;
+			margin-bottom: 2px;
 		}
 		button:hover{
 			color:$white;
@@ -923,6 +927,9 @@ a:hover{text-decoration: none
 	.owl-prev:hover, .owl-next:hover{
 		background-color: $dark-bg;
 	}
+  .owl-prev:focus, .owl-next:focus{
+    outline: none;
+  }
 	.owl-next{
 		right: -40px;
 		background: url("../images/carousel/arrow_1511.svg") no-repeat;
@@ -943,8 +950,8 @@ a:hover{text-decoration: none
 	}
 }
 }
-footer{
-	.footer-title{
+footer {
+	.footer-title {
 		font-family: Raleway;
 		font-size: 24px;
 		line-height: 20px;
@@ -952,31 +959,40 @@ footer{
 		color: $white;
 
 	}
-	.line{
+
+	.line {
 		background: $red-bg;
 		width: 70px;
 		display: inline-flex;
 	}
-	.container-fluid{
+
+	.container-fluid {
 		background: $footer-bg;
-		.container{
-			padding: 80px 10px 0 10px;
+		position: relative;
+
+		.footer-info-bar {
+			padding-top: 80px;
+			padding-bottom: 80px;
 		}
 	}
-	.twitter-link{
+
+	.twitter-link {
 		color: $white;
 	}
+
 	.first-footer-col {
 		padding-right: 50px;
+
 		p {
 			font-family: Roboto;
 			font-size: 14px;
 			line-height: 20px;
 			font-weight: 400;
 			color: $secondary-footer-font-color;
+			margin-top: 30px;
 		}
 
-		.footer-link{
+		.footer-link {
 			@include small-text;
 			color: $secondaryBrandColor;
 			transition: $unitrans;
@@ -985,9 +1001,7 @@ footer{
 		.footer-link:hover, .footer-link:focus {
 			color: $red-bg;
 		}
-		.my-navbar-brand{
-			margin-bottom: 30px;
-		}
+
 		.my-navbar-brand, .my-navbar-brand:hover, .my-navbar-brand:active {
 			color: $secondaryBrandColor;
 		}
@@ -1000,29 +1014,38 @@ footer{
 			font-weight: 700;
 			color: $dark-bg;
 		}
-		.form-title{
-			margin: 50px 0 20px -15px;
+
+		.footer-link {
+			margin-bottom: 50px;
+		}
+
+		.form-title {
+			margin: 0px 0 20px -15px;
 			font-family: Roboto;
 			font-size: 18px;
 			line-height: 20px;
 			font-weight: 700;
 			color: $white;
 		}
-		.form{
+
+		.form {
 			margin-bottom: 20px;
-			form{
+
+			form {
 				background: $formBg;
 				height: 42px;
 			}
+
 			input {
 				background: $formBg;
 				border: none;
 				padding: 9px 0 0 20px;
 				outline: none;
 				color: $secondaryBrandColor;
-
+				width: 160px;
 			}
-			button{
+
+			button {
 				background: $formBg;
 				outline: none;
 				border: none;
@@ -1030,21 +1053,23 @@ footer{
 				transition: $unitrans;
 				width: 42px;
 			}
-			button:hover{
-			svg{
-				fill: $red-bg
-			}
+
+			button:hover {
+				svg {
+					fill: $red-bg
+				}
 			}
 		}
 	}
 
-	.caption{
+	.caption {
 		@include small-text;
 		color: $gray;
 		margin: 0 0 0 0px;
 		transition: $unitrans;
 	}
-	.date{
+
+	.date {
 		font-family: Roboto;
 		font-size: 13px;
 		line-height: 20px;
@@ -1053,98 +1078,157 @@ footer{
 		margin: 0 0 0 0px;
 		transition: $unitrans;
 	}
-	svg{
+
+	svg {
 		fill: $secondaryBrandColor;
 		transition: $unitrans;
 	}
-		.footer-media {
-			margin-bottom: 40px;
-			img{
-				transition: $unitrans;
-			}
-			.footer-lupa {
-				display: none;
-				position: absolute;
-				box-sizing: border-box;
+
+	.footer-media {
+		margin-bottom: 40px;
+
+		img {
+			transition: $unitrans;
+		}
+
+		.footer-lupa {
+			display: none;
+			position: absolute;
+			box-sizing: border-box;
+			width: 30px;
+			height: 30px;
+			border-radius: 30px;
+			background: $footer-bg;
+			top: 28%;
+			left: 50%;
+			transition: $unitrans;
+
+			div {
 				width: 30px;
 				height: 30px;
-				border-radius: 30px;
-				background: $footer-bg;
-				top: 28%;
-				left: 50%;
-				transition: $unitrans;
-
-				div {
-					width: 30px;
-					height: 30px;
-					background: url("../images/footer/icon_2487.svg") no-repeat;
-					background-position: center;
-				}
-			}
-
-			.footer-lupa:hover {
-				background: $red-bg;
-			}
-			.contacts{
-				color: $gray;
+				background: url("../images/footer/icon_2487.svg") no-repeat;
+				background-position: center;
 			}
 		}
-		.footer-media:hover{
-			svg{
-				fill: $red-bg;
-			}
 
-			.footer-lupa{
-				display: block;
-				z-index: 99;
-			}
-			img{
-				filter: brightness(0.5);
-			}
-			.caption{
-				color: $red-bg;
-			}
-			.date{
-				color: $white;
-			}
-			.contacts{
-				color: $red-bg;
-			}
+		.footer-lupa:hover {
+			background: $red-bg;
 		}
-	.follow{
-		svg:hover{
+
+		.contacts {
+			color: $gray;
+		}
+	}
+
+	.footer-media:hover {
+		svg {
+			fill: $red-bg;
+		}
+
+		.footer-lupa {
+			display: block;
+			z-index: 99;
+		}
+
+		img {
+			filter: brightness(0.5);
+		}
+
+		.caption {
+			color: $red-bg;
+		}
+
+		.date {
+			color: $white;
+		}
+
+		.contacts {
+			color: $red-bg;
+		}
+	}
+
+	.follow {
+		svg:hover {
 			fill: $red-bg;
 		}
 	}
-	.follow:hover{
-		.date{
+
+	.follow:hover {
+		.date {
 			color: $white;
 		}
 	}
-.third-footer-col{
-	.date{
-		font-size: 14px;
+
+	.third-footer-col {
+		.date {
+			font-size: 14px;
+		}
+	}
+
+	.anchor {
+		box-sizing: border-box;
+		width: 49px;
+		height: 49px;
+		border-radius: 5px;
+		background: black;
+		position: absolute;
+		left: 105%;
+		bottom: 50%;
+		transform: rotate(90deg);
+
+		.anchor-inner {
+			width: 49px;
+			height: 49px;
+			background: url("../images/carousel/arrow_1507.svg") no-repeat;
+			background-position: center;
+		}
 	}
 }
+.footer-nav{
+	background: $footer-navbar-bg;
+	padding: 30px 0px 30px 30px;
+
+	.left-of-footer-nav{
+		p {
+			@include small-text;
+			color: $secondaryBrandColor;
+
+			span {
+				color: $gray;
+			}
+		}
+	}
+	.links{
+		a {
+			@include navbar-text;
+			font-weight: 700;
+			color: $nav-color;
+			margin-right: 20px;
+		}
+	}
+}
+
+@media (max-height: 470px) {
+	#carousel{
+		.string3{
+			display: none;
+		}
+	}
+}
+@media (min-width: 767px){
+	.footer-info-bar{
+		padding: 80px 80px 0 80px;
+	}
+	.footer-nav {
+		padding: 30px 0px 15px 100px;
+	}
 }
 	@media (max-width: 767px) {
 		header {
 			.fixed-top {
 				nav {
 					padding: 9px 0 6px 0;
-					li.nav-item:hover {
-						.li-line {
-							margin-left: 0px;
-						}
-					}
-					.li-line{
-						margin-left: 50%;
-					}
-					.active-nav{
-						.li-line{
-							width: 0%;
-						}
-					}
+
 				}
 			}
 		}
@@ -1154,7 +1238,7 @@ footer{
 					overflow: hidden;
 
 					.carousel-caption {
-						top: 150px;
+						top: 25vh;
 
 						.string1 {
 							font-size: 8vw;
@@ -1163,13 +1247,14 @@ footer{
 
 						.string2 {
 							font-size: 7vw;
-							line-height: 5vh;
+							line-height: 6vh;
 						}
 
 						.string3 {
 							font-size: 5vw;
 						}
 					}
+
 				}
 
 				.carouselimg {
@@ -1235,13 +1320,74 @@ footer{
 		}
 
 		}
-
-
+		body {
+			footer {
+				.footer-info-bar {
+					padding: 80px 40px 0 20px;
+					.anchor {
+						left: 100%;
+						height: 30px;
+						width: 30px;
+						.anchor-inner{
+							width: 30px;
+							height: 30px;
+						}
+					}
+				}
+			}
+		}
 	}
-@media (max-width: 991px){
-#carousel1{
-	width: 100%;
+@media (orientation:landscape) and (max-width: 767px){
+	#carousel {
+		height: 100vh;
+		width: 100%;
+		overflow: hidden;
+
+		.carousel-caption {
+			top: 15px;
+
+			.string1 {
+				font-size: 8vh;
+				margin-bottom: -20px;
+			}
+
+			.string2 {
+				font-size: 7vh;
+				line-height: 5vh;
+			}
+
+			.string3 {
+				font-size: 5vh;
+			}
+		}
+	}
+	.under-car {
+		height: 55vh;
+		padding-top: 10px;
+		.under-car-1 {
+			font-size: 9vh;
+		}
+		.under-car-2 {
+			font-size: 7vh;
+		}
+	}
+
 }
+@media (max-width: 991px){
+
+	li.nav-item:hover {
+		.li-line {
+			margin-left: 0px;
+		}
+	}
+	.li-line{
+		margin-left: 50%;
+	}
+	.active-nav{
+		.li-line{
+			width: 0% !important;
+		}
+	}
 }
 #screens{
 	width: 105%;

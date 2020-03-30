@@ -91,3 +91,27 @@ $('.collapse-card-toggler').click(function()
         $(clickClass).removeClass('clickbg-1');
     });
 });
+/*
+
+var anchor = new Vue({
+    el: '#anchor',
+    data:{
+
+    },
+    methods: {
+        onTop: function () {
+            let topHere = this.$refs['anchorTarget']
+            let top = window.scrollY + topHere.getBoundingClientRect().y;
+            window.scrollTo(0, top)
+        }
+    }
+})*/
+
+$(document).ready(function(){
+    $("#anchor-link").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 800);
+    });
+});
