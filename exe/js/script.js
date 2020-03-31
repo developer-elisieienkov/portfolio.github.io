@@ -1,55 +1,3 @@
-$(document).ready(function(){
-    $('#owl1').owlCarousel({
-        items:1,
-        loop:true,
-        autoplay:true,
-        margin:20,
-        autoplayHoverPause:true,
-    });
-});
-
-$(document).ready(function(){
-    $('#owl2,#portfolioOwl').owlCarousel({
-        items:1,
-        loop:true,
-        autoplay:true,
-        margin:30,
-        autoplayHoverPause:true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            992: {
-                items: 2
-            },
-
-        }
-    });
-});
-
-$(document).ready(function(){
-    $('#owl3').owlCarousel({
-        items:5,
-        loop:true,
-        autoplay:true,
-        autoplayHoverPause:true,
-        nav:true,
-        navText:false,
-        center:true,
-        responsive: {
-            1: {
-                items: 1,
-                nav: false,
-            },
-            700: {
-                items: 3
-            },
-            990:{
-                items: 5
-            },
-        }
-    });
-});
 
 
 $(function() {
@@ -116,3 +64,73 @@ $(document).ready(function(){
         $('body,html').animate({scrollTop: top}, 800);
     });
 });
+
+
+//carousels
+
+$(document).ready(function(){
+    $('#owl1').owlCarousel({
+        items:1,
+        loop:true,
+        autoplay:true,
+        margin:20,
+        autoplayHoverPause:true,
+    });
+});
+
+$(document).ready(function(){
+    // second carousel for grid
+    $('#owl2,#portfolioOwl').owlCarousel({
+        items:1,
+        loop:true,
+        autoplay:true,
+        margin:30,
+        autoplayHoverPause:true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            992: {
+                items: 2
+            },
+
+        }
+    });
+});
+
+$(document).ready(function(){
+    $('#owl3').owlCarousel({
+        items:5,
+        loop:true,
+        autoplay:true,
+        autoplayHoverPause:true,
+        nav:true,
+        navText:false,
+        center:true,
+        responsive: {
+            1: {
+                items: 1,
+                nav: false,
+            },
+            700: {
+                items: 3
+            },
+            990:{
+                items: 5
+            },
+        }
+    });
+});
+
+$(document).ready(function(){
+    $('#portfolioDetails').owlCarousel({
+        items:1,
+        loop:true,
+        autoplay:true,
+        margin:30,
+        autoplayHoverPause:true,
+        nav:true,
+        navText:false,
+    });
+});
+

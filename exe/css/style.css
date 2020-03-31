@@ -55,6 +55,9 @@ a:hover {
     outline: none; }
   .navbar ul svg {
     fill: iherit; }
+  .navbar ul .nav-item ul {
+    list-style: none;
+    margin-right: 50px; }
   .navbar ul .nav-item .nav-link {
     font-family: Raleway;
     font-size: 14px;
@@ -798,6 +801,36 @@ a.carousel-control-next:hover .carousel-control-next-icon {
       height: 30px;
       width: 30px; }
 
+#portfolioDetails .owl-prev:hover, #portfolioDetails .owl-next:hover {
+  background-color: #e5493a; }
+
+#portfolioDetails .owl-prev:focus, #portfolioDetails .owl-next:focus {
+  outline: none; }
+
+#portfolioDetails .owl-next {
+  right: 20px;
+  background: url("../images/carousel/arrow_1511.svg") no-repeat;
+  background-position: center; }
+  #portfolioDetails .owl-next i {
+    height: 42px;
+    width: 42px; }
+
+#portfolioDetails .owl-prev {
+  left: 20px;
+  background: url("../images/carousel/arrow_1507.svg") no-repeat;
+  background-position: center; }
+  #portfolioDetails .owl-prev i {
+    height: 42px;
+    width: 42px; }
+
+#portfolioDetails .owl-prev, #portfolioDetails .owl-next {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  top: 40%;
+  border-radius: 3px;
+  background-color: #363636; }
+
 footer .footer-title {
   font-family: Raleway;
   font-size: 24px;
@@ -1010,6 +1043,16 @@ footer .anchor {
     color: #555;
     margin-right: 20px; }
 
+.secondary-title {
+  font-family: Raleway;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #363636; }
+
+.portfolio-details-projects {
+  padding: 40px 0px 0 70px; }
+
 .you-here {
   color: #f4897e !important; }
 
@@ -1032,6 +1075,12 @@ footer .anchor {
     color: #fff;
     margin-right: 15px; }
 
+.portfolio-details .header-info {
+  background: #fafafa; }
+
+.portfolio-details .pages-head {
+  background: #e5493a; }
+
 @media (max-height: 470px) {
   #carousel .string3 {
     display: none; } }
@@ -1045,6 +1094,8 @@ footer .anchor {
 @media (max-width: 767px) {
   header .fixed-top nav {
     padding: 9px 0 6px 0; }
+  .pages-head {
+    margin-top: 50px; }
   #carousel {
     height: 100vh;
     width: 100%;

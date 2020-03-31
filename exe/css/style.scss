@@ -110,7 +110,10 @@ a:hover{text-decoration: none
 					fill: iherit;
 				}
 				.nav-item{
-
+					ul{
+						list-style: none;
+						margin-right: 50px;
+					}
 					.nav-link{
 						@include navbar-text;
 						font-weight: 800;
@@ -927,9 +930,9 @@ a:hover{text-decoration: none
 	.owl-prev:hover, .owl-next:hover{
 		background-color: $dark-bg;
 	}
-  .owl-prev:focus, .owl-next:focus{
-    outline: none;
-  }
+	.owl-prev:focus, .owl-next:focus{
+		outline: none;
+	}
 	.owl-next{
 		right: -40px;
 		background: url("../images/carousel/arrow_1511.svg") no-repeat;
@@ -949,6 +952,41 @@ a:hover{text-decoration: none
 		}
 	}
 }
+}
+#portfolioDetails{
+
+	.owl-prev:hover, .owl-next:hover{
+		background-color: $red-bg;
+	}
+	.owl-prev:focus, .owl-next:focus{
+		outline: none;
+	}
+	.owl-next{
+		right: 20px;
+		background: url("../images/carousel/arrow_1511.svg") no-repeat;
+		background-position: center;
+		i{
+			height: 42px;
+			width: 42px;
+		}
+	}
+	.owl-prev{
+		left: 20px;
+		background: url("../images/carousel/arrow_1507.svg") no-repeat;
+		background-position: center;
+		i{
+			height: 42px;
+			width: 42px;
+		}
+	}
+	.owl-prev, .owl-next{
+		width: 42px;
+		height:42px;
+		position: absolute;
+		top: 40%;
+		border-radius: 3px;
+		background-color: $dark-bg;
+	}
 }
 footer {
 	.footer-title {
@@ -1207,8 +1245,16 @@ footer {
 		}
 	}
 }
-
-
+.secondary-title{
+	font-family: Raleway;
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: 700;
+	color: $dark-bg;
+}
+.portfolio-details-projects{
+	padding: 40px 0px 0 70px;
+}
 
 //styles for other pages
 .you-here{
@@ -1238,7 +1284,14 @@ margin-top: 155px;
 		margin-right: 15px;
 	}
 }
-
+.portfolio-details{
+	.header-info{
+		background: $littleDarkerThenWhite;
+	}
+	.pages-head{
+		background: $red-bg;
+	}
+}
 
 //all media-styles
 @media (max-height: 470px) {
@@ -1264,6 +1317,9 @@ margin-top: 155px;
 
 				}
 			}
+		}
+		.pages-head{
+			margin-top: 50px;
 		}
 				#carousel {
 					height: 100vh;
