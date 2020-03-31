@@ -30,10 +30,11 @@ $('.collapse-card-toggler').click(function()
             clickClass = "." + this.id,
             clickId = "#" + this.id;
 
-        $(clickId).click(function ()
+    $(collapseId).on('show.bs.collapse', function ()
     {
         $(clickClass).addClass('clickbg-1');
     });
+
 
     $(collapseId).on('hide.bs.collapse', function ()
     {
