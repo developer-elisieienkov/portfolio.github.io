@@ -9,7 +9,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-    $('#owl2').owlCarousel({
+    $('#owl2,#portfolioOwl').owlCarousel({
         items:1,
         loop:true,
         autoplay:true,
@@ -50,6 +50,7 @@ $(document).ready(function(){
         }
     });
 });
+
 
 $(function() {
        $(window).on("scroll resize", function() {

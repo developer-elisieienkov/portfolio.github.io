@@ -406,7 +406,8 @@ a.carousel-control-next:hover .carousel-control-next-icon {
   background: #e5493a; }
 
 .loadmore {
-  margin-top: 41px; }
+  margin-top: 41px;
+  margin-bottom: 80px; }
   .loadmore button {
     width: 170px;
     height: 41px;
@@ -423,7 +424,6 @@ a.carousel-control-next:hover .carousel-control-next-icon {
     box-shadow: none; }
 
 .stuff-about {
-  margin-top: 80px;
   padding-top: 80px;
   background: url("../images/bg/stuffBg.jpg") no-repeat;
   background-size: cover; }
@@ -554,36 +554,36 @@ a.carousel-control-next:hover .carousel-control-next-icon {
   font-weight: 400;
   color: #959595; }
 
-#owl1 .owl-dot, #owl2 .owl-dot {
+#owl1 .owl-dot, #owl2 .owl-dot, #portfolioOwl .owl-dot {
   width: 10px;
   height: 10px;
   border-radius: 10px;
   margin: 0 4px 0 4px;
   background-color: #f2f2f2; }
 
-#owl1 .owl-dot:focus, #owl2 .owl-dot:focus {
+#owl1 .owl-dot:focus, #owl2 .owl-dot:focus, #portfolioOwl .owl-dot:focus {
   outline: none; }
 
-#owl1 .owl-dots .active, #owl2 .owl-dots .active {
+#owl1 .owl-dots .active, #owl2 .owl-dots .active, #portfolioOwl .owl-dots .active {
   background: #e5493a; }
 
-#owl1 .media:nth-child(2), #owl2 .media:nth-child(2) {
+#owl1 .media:nth-child(2), #owl2 .media:nth-child(2), #portfolioOwl .media:nth-child(2) {
   margin-top: 35px; }
 
-#owl1 .media, #owl2 .media {
+#owl1 .media, #owl2 .media, #portfolioOwl .media {
   padding: 30px 30px 15px 30px;
   background: #f2f2f2; }
-  #owl1 .media img, #owl2 .media img {
+  #owl1 .media img, #owl2 .media img, #portfolioOwl .media img {
     width: 92px;
     height: 92px; }
-  #owl1 .media .media-body table, #owl2 .media .media-body table {
+  #owl1 .media .media-body table, #owl2 .media .media-body table, #portfolioOwl .media .media-body table {
     font-family: Raleway;
     font-size: 18px;
     line-height: 20px;
     font-weight: 600;
     color: #363636;
     margin-bottom: 15px; }
-    #owl1 .media .media-body table a, #owl2 .media .media-body table a {
+    #owl1 .media .media-body table a, #owl2 .media .media-body table a, #portfolioOwl .media .media-body table a {
       font-family: Roboto;
       font-size: 14px;
       line-height: 20px;
@@ -1009,6 +1009,28 @@ footer .anchor {
     font-weight: 700;
     color: #555;
     margin-right: 20px; }
+
+.you-here {
+  color: #f4897e !important; }
+
+.pages-head {
+  margin-top: 155px;
+  background: url("../images/bg/slimest.jpg");
+  color: #fff; }
+  .pages-head .container {
+    padding: 40px 0px 40px 70px; }
+  .pages-head .col:first-child {
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 500; }
+  .pages-head .col:nth-child(2), .pages-head a, .pages-head span {
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #fff;
+    margin-right: 15px; }
 
 @media (max-height: 470px) {
   #carousel .string3 {

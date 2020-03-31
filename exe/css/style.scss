@@ -21,7 +21,7 @@ $footer-bg: #252525;
 $secondary-footer-font-color:#636363;
 $formBg:#171717;
 $footer-navbar-bg: #111111;
-
+$for-sec-active:#f4897e;
 
 @mixin navbar-text(){
 font-family: Raleway;
@@ -507,6 +507,7 @@ a:hover{text-decoration: none
 }
 .loadmore{
 	margin-top: 41px;
+	margin-bottom: 80px;
 	button {
 		width: 170px;
 		height: 41px;
@@ -526,7 +527,6 @@ a:hover{text-decoration: none
 	}
 }
 .stuff-about{
-	margin-top: 80px;
 	padding-top: 80px;
 	background: url("../images/bg/stuffBg.jpg") no-repeat;
 	background-size: cover;
@@ -666,7 +666,7 @@ a:hover{text-decoration: none
 }
 
 
-#owl1,#owl2{
+#owl1,#owl2,#portfolioOwl{
 	.owl-dot{
 		width: 10px;
 		height: 10px;
@@ -1208,6 +1208,39 @@ footer {
 	}
 }
 
+
+
+//styles for other pages
+.you-here{
+	color: $for-sec-active!important;
+}
+	//portfolio
+.pages-head{
+margin-top: 155px;
+	background: url("../images/bg/slimest.jpg");
+	color: $white;
+
+	.container{
+		padding: 40px 0px 40px 70px;
+	}
+	.col:first-child{
+		font-family: Roboto;
+		font-size: 18px;
+		line-height: 20px;
+		font-weight: 500;
+	}
+	.col:nth-child(2),a,span{
+		font-family: Roboto;
+		font-size: 12px;
+		line-height: 20px;
+		font-weight: 400;
+		color: $white;
+		margin-right: 15px;
+	}
+}
+
+
+//all media-styles
 @media (max-height: 470px) {
 	#carousel{
 		.string3{
@@ -1392,6 +1425,5 @@ footer {
 #screens{
 	width: 105%;
 }
-
 
 

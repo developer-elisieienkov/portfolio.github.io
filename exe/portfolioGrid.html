@@ -16,7 +16,7 @@
     <div class="container-fluid header-info d-none d-lg-flex">
     <div class="container">
 
-        <div class="header-info mx-5 row align-items-center justify-content-center " >
+        <div class="header-info mx-5 row align-items-center justify-content-center " id="header-info">
             <div  class="col mr-n5">
                 <a data-toggle="collapse" href="#collapse-lang" role="button" aria-expanded="false" aria-controls="collapse-lang">
                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@
                                 d="M1.9732666,1.9612331 C1.9732666,1.9612331 8.995117,1.9612331 8.995117,1.9612331 C8.995117,1.9612331 5.484131,6.0363464 5.484131,6.0363464 C5.484131,6.0363464 1.9732666,1.9612331 1.9732666,1.9612331 Z"/>
                     </svg>
                 </a>
-                <ul class="collapse" id="collapse-lang">
+                <ul class="collapse" id="collapse-lang" data-parent="#header-info">
                     <li><a href="#">ruskii</a></li>
                     <li><a href="#">ukrainskii</a></li>
                 </ul>
@@ -93,7 +93,7 @@
                                 d="M1.9732666,1.9612331 C1.9732666,1.9612331 8.995117,1.9612331 8.995117,1.9612331 C8.995117,1.9612331 5.484131,6.0363464 5.484131,6.0363464 C5.484131,6.0363464 1.9732666,1.9612331 1.9732666,1.9612331 Z"/>
                     </svg>
                 </a>
-                <ul class="collapse" id="collapse-wish">
+                <ul class="collapse" id="collapse-wish" data-parent="#header-info">
                     <li> <a href="#">q</a> </li>
                     <li> <a href="#">r</a> </li>
                 </ul>
@@ -153,8 +153,6 @@
     </div>
 </div>
 
-
-
     <div class="d-flex justify-content-center lg-justify-content-around nav-bg container-fluid">
 
         <nav class="navbar justify-content-center navbar-expand-lg navbar-light ">
@@ -167,9 +165,9 @@
             <div class="text-center collapse navbar-collapse" id="navbarNav">
 
                 <ul class="navbar-nav ">
-                    <li class="nav-item  active-nav">
+                    <li class="nav-item ">
                         <div class="li-line" ></div>
-                        <a class="nav-link active-link" data-toggle="collapse" href="#collapse-home" role="button" aria-expanded="false" aria-controls="collapse-home">HOME
+                        <a class="nav-link " data-toggle="collapse" href="#collapse-home" role="button" aria-expanded="false" aria-controls="collapse-home">HOME
                             <svg xmlns="http://www.w3.org/2000/svg"
                                  xmlns:xlink="http://www.w3.org/1999/xlink"
                                  width="10px" height="8px"  viewBox="0 0 10 8">
@@ -177,8 +175,8 @@
                                         d="M1.9732666,1.9612331 C1.9732666,1.9612331 8.995117,1.9612331 8.995117,1.9612331 C8.995117,1.9612331 5.484131,6.0363464 5.484131,6.0363464 C5.484131,6.0363464 1.9732666,1.9612331 1.9732666,1.9612331 Z"/>
                             </svg>
                         </a>
-                        <ul class="collapse" id="collapse-home">
-                            <li><a class="nav-link" href="#">q</a></li>
+                        <ul class="collapse" id="collapse-home" data-parent="#navbarNav">
+                            <li><a class="nav-link" href="index.html">HOME</a></li>
                             <li><a class="nav-link" href="#">q</a></li>
                             <li><a class="nav-link" href="#">q</a></li>
                             <li><a class="nav-link" href="#">q</a></li>
@@ -198,7 +196,7 @@
                                         d="M1.9732666,1.9612331 C1.9732666,1.9612331 8.995117,1.9612331 8.995117,1.9612331 C8.995117,1.9612331 5.484131,6.0363464 5.484131,6.0363464 C5.484131,6.0363464 1.9732666,1.9612331 1.9732666,1.9612331 Z"/>
                             </svg>
                         </a>
-                        <ul class="collapse" id="collapse-pages">
+                        <ul class="collapse" id="collapse-pages" data-parent="#navbarNav">
                             <li><a class="nav-link" href="#">q</a></li>
                             <li><a class="nav-link" href="#">q</a></li>
                             <li><a class="nav-link" href="#">q</a></li>
@@ -215,16 +213,16 @@
                                         d="M1.9732666,1.9612331 C1.9732666,1.9612331 8.995117,1.9612331 8.995117,1.9612331 C8.995117,1.9612331 5.484131,6.0363464 5.484131,6.0363464 C5.484131,6.0363464 1.9732666,1.9612331 1.9732666,1.9612331 Z"/>
                             </svg>
                         </a>
-                        <ul class="collapse" id="collapse-features">
+                        <ul class="collapse" id="collapse-features" data-parent="#navbarNav">
                             <li><a class="nav-link" href="#">q</a></li>
                             <li><a class="nav-link" href="#">q</a></li>
                             <li><a class="nav-link" href="#">q</a></li>
                             <li><a class="nav-link" href="#">q</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active-nav">
                         <div class="li-line"></div>
-                        <a class="nav-link" href="portfolio.html">PORTFOLIO</a>
+                        <a class="nav-link active-link" href="portfolio.html">PORTFOLIO</a>
                     </li>
                     <li class="nav-item">
                         <div class="li-line"></div>
@@ -240,7 +238,7 @@
                                         d="M1.9732666,1.9612331 C1.9732666,1.9612331 8.995117,1.9612331 8.995117,1.9612331 C8.995117,1.9612331 5.484131,6.0363464 5.484131,6.0363464 C5.484131,6.0363464 1.9732666,1.9612331 1.9732666,1.9612331 Z"/>
                             </svg>
                         </a>
-                        <ul class="collapse" id="collapse-shop">
+                        <ul class="collapse" id="collapse-shop" data-parent="#navbarNav">
                             <li><a class="nav-link" href="#">q</a></li>
                             <li><a class="nav-link" href="#">q</a></li>
                             <li><a class="nav-link" href="#">q</a></li>
@@ -286,173 +284,23 @@
     <div class="progress-container">
         <span class="progress-bar"></span>
     </div>
-
-
-
-
     </div>
 </header>
-
-
-<div id="carousel" class="carousel slide carousel-mobile" data-ride="carousel">
-
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="images/carousel/Background.jpg" class="d-block w-100 carouselimg" alt="...">
-            <div class="container carousel-caption text-center">
-                <p class="string1">Clean & Unique</p>
-                <p class="string2">Everything You Need is Here</p>
-                <p class="string3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                <div class="btn-toolbar " role="toolbar" aria-label="Toolbar with button groups">
-                    <div class="container-fluid">
-                    <div class="row justify-content-center">
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-2 ">
-                            <button type="button " class="btn btn-outline-dark">Buy This Now</button>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-2 ">
-                            <button type="button" class="btn btn-outline-dark">Screenshots</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
+<div class="container-fluid pages-head">
+<div class="container">
+    <div class="row justify-content-between">
+        <div class="col-12 col-md-7 ">
+            Portfolio Grid Full Screen
         </div>
-        <div class="carousel-item">
-            <img src="images/carousel/Background.jpg" class="d-block w-100 carouselimg" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="images/carousel/Background.jpg" class="d-block w-100 carouselimg" alt="...">
+        <div class="col">
+            <span class="you-here">You Are Here:</span> <a href="index.html">Home</a>   • <a  href="#">Portfolio</a>   • Portfolio Grid Full Screen
         </div>
     </div>
-    <a class="carousel-control-prev d-none d-md-block" href="#carousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true">
-    	<svg xmlns="http://www.w3.org/2000/svg"
-             xmlns:xlink="http://www.w3.org/1999/xlink"
-             width="12px" height="18px"  viewBox="0 0 12 18">
-<path fill-rule="evenodd"  fill="#ffffff"
-      d="M1.9996567,9.011963 C1.9996567,8.743042 2.1016235,8.474915 2.305214,8.269653 C2.305214,8.269653 8.715965,1.822937 8.715965,1.822937 C9.123947,1.4127808 9.784958,1.4127808 10.192596,1.822937 C10.600235,2.232727 10.600235,2.897766 10.192596,3.3079224 C10.192596,3.3079224 4.5201035,9.011963 4.5201035,9.011963 C4.5201035,9.011963 10.192368,14.71637 10.192368,14.71637 C10.600006,15.12616 10.600006,15.791199 10.192368,16.200623 C9.784729,16.611145 9.123604,16.611145 8.715965,16.200623 C8.715965,16.200623 2.304985,9.754272 2.304985,9.754272 C2.101509,9.549377 1.9996567,9.280884 1.9996567,9.011963 Z"/>
-</svg>
-    </span>
-    </a>
-    <a class="carousel-control-next d-none d-md-block" href="#carousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true">
-    	<svg xmlns="http://www.w3.org/2000/svg"
-             xmlns:xlink="http://www.w3.org/1999/xlink"
-             width="12px" height="18px"  viewBox="0 0 12 18">
-<path fill-rule="evenodd"  fill="#ffffff"
-      d="M9.706787,9.754272 C9.706787,9.754272 3.2960205,16.200623 3.2960205,16.200623 C2.8883057,16.611145 2.227295,16.611145 1.8197021,16.200623 C1.4119873,15.791199 1.4119873,15.12616 1.8197021,14.71637 C1.8197021,14.71637 7.4920654,9.011963 7.4920654,9.011963 C7.4920654,9.011963 1.8199463,3.3079224 1.8199463,3.3079224 C1.4122314,2.897766 1.4122314,2.232727 1.8199463,1.822937 C2.227417,1.4127808 2.8885498,1.4127808 3.2962646,1.822937 C3.2962646,1.822937 9.707031,8.269653 9.707031,8.269653 C9.910889,8.474915 10.012573,8.743042 10.012573,9.011963 C10.012573,9.280884 9.9104,9.549377 9.706787,9.754272 Z"/>
-</svg>
-    </span>
-    </a>
 </div>
-
-<div class="container-fluid under-car text-center">
-    <p class="under-car-1">The Best Solution for Your Business Projects</p>
-    <p class="under-car-2">Qualitative PSD Template With Unlimited Possibilities</p>
-</div>
-    <div class="container-fluid with-triangle text-center">
-    <div class="triangle"></div>
-    </div>
-<div class="container-fluid underheader-card">
-    <div class="container">
-
-        <div>
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
-
-                <div class="col">
-                    <div class="card text-center">
-                        <img src="images/card/icon_786.svg" class="card-img-top2 align-self-center">
-                        <svg class="card-img-top align-self-center" xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                             width="73px" height="73px"  viewBox="0 0 73 73">
-                            <path
-                                    d="M37.0,1.9996338 C56.329895,1.9996338 71.99994,17.669556 71.99994,36.99939 C71.99994,56.329712 56.329895,71.99988 37.0,71.99988 C17.670013,71.99988 1.9999695,56.329712 1.9999695,36.99939 C1.9999695,17.669556 17.670013,1.9996338 37.0,1.9996338 Z"/>
-                        </svg>
-                        <div class="card-body">
-                            <h5 class="card-title">Clean Design</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunyt dolore.</p>
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="73px" height="5px"  viewBox="0 0 73 5">
-                                <path
-                                        d="M1.9999695,1.9987793 C1.9999695,1.9987793 71.99994,1.9987793 71.99994,1.9987793 C71.99994,1.9987793 71.99994,3.9989014 71.99994,3.9989014 C71.99994,3.9989014 1.9999695,3.9989014 1.9999695,3.9989014 C1.9999695,3.9989014 1.9999695,1.9987793 1.9999695,1.9987793 Z"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card text-center">
-                        <img src="images/card/icon_787.svg" class="card-img-top2 align-self-center">
-                        <svg class="card-img-top align-self-center" xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                             width="73px" height="73px"  viewBox="0 0 73 73">
-                            <path
-                                    d="M37.0,1.9996338 C56.329895,1.9996338 71.99994,17.669556 71.99994,36.99939 C71.99994,56.329712 56.329895,71.99988 37.0,71.99988 C17.670013,71.99988 1.9999695,56.329712 1.9999695,36.99939 C1.9999695,17.669556 17.670013,1.9996338 37.0,1.9996338 Z"/>
-                        </svg>
-                        <div class="card-body">
-                            <h5 class="card-title">Branding</h5>
-                            <p class="card-text">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore feugiat.</p>
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="73px" height="5px"  viewBox="0 0 73 5">
-                                <path
-                                        d="M1.9999695,1.9987793 C1.9999695,1.9987793 71.99994,1.9987793 71.99994,1.9987793 C71.99994,1.9987793 71.99994,3.9989014 71.99994,3.9989014 C71.99994,3.9989014 1.9999695,3.9989014 1.9999695,3.9989014 C1.9999695,3.9989014 1.9999695,1.9987793 1.9999695,1.9987793 Z"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card text-center">
-                        <img src="images/card/icon_788.svg" class="card-img-top2 align-self-center">
-                        <svg class="card-img-top align-self-center" xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                             width="73px" height="73px"  viewBox="0 0 73 73">
-                            <path
-                                    d="M37.0,1.9996338 C56.329895,1.9996338 71.99994,17.669556 71.99994,36.99939 C71.99994,56.329712 56.329895,71.99988 37.0,71.99988 C17.670013,71.99988 1.9999695,56.329712 1.9999695,36.99939 C1.9999695,17.669556 17.670013,1.9996338 37.0,1.9996338 Z"/>
-                        </svg>
-                        <div class="card-body">
-                            <h5 class="card-title">Responsive</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunyt dolore.</p>
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="73px" height="5px"  viewBox="0 0 73 5">
-                                <path
-                                        d="M1.9999695,1.9987793 C1.9999695,1.9987793 71.99994,1.9987793 71.99994,1.9987793 C71.99994,1.9987793 71.99994,3.9989014 71.99994,3.9989014 C71.99994,3.9989014 1.9999695,3.9989014 1.9999695,3.9989014 C1.9999695,3.9989014 1.9999695,1.9987793 1.9999695,1.9987793 Z"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card text-center">
-                        <img src="images/card/icon_789.svg" class="card-img-top2 align-self-center">
-                        <svg class="card-img-top align-self-center" xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                             width="73px" height="73px"  viewBox="0 0 73 73">
-                            <path
-                                    d="M37.0,1.9996338 C56.329895,1.9996338 71.99994,17.669556 71.99994,36.99939 C71.99994,56.329712 56.329895,71.99988 37.0,71.99988 C17.670013,71.99988 1.9999695,56.329712 1.9999695,36.99939 C1.9999695,17.669556 17.670013,1.9996338 37.0,1.9996338 Z"/>
-                        </svg>
-                        <div class="card-body">
-                            <h5 class="card-title">Development</h5>
-                            <p class="card-text">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore feugiat.</p>
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="73px" height="5px"  viewBox="0 0 73 5">
-                                <path
-                                        d="M1.9999695,1.9987793 C1.9999695,1.9987793 71.99994,1.9987793 71.99994,1.9987793 C71.99994,1.9987793 71.99994,3.9989014 71.99994,3.9989014 C71.99994,3.9989014 1.9999695,3.9989014 1.9999695,3.9989014 C1.9999695,3.9989014 1.9999695,1.9987793 1.9999695,1.9987793 Z"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 <div class="portfolio-title container text-center">
     <p class="dark-title">
-        Our Portfolio
+    See Our <span class="active-link">Creative</span> Projects
     </p>
 
     <p class="undertitle">
@@ -1019,82 +867,10 @@
     </div>
 </div>
 
-<section class="section stuff-about">
-    <div class="container-fluid text-center">
-        <p>Some Interesting Stuff About Us</p>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
 
-        <div class="line">
-
-        </div>
-
-        <div class="row justify-content-center">
-            <div class="col-12 col-sm-6 col-md-3">
-                <p class="circle-numb">
-                    6587
-                </p>
-                <img src="images/skill-bar1.png" alt="">
-                <p class="circle-title">
-                    Satisfied Clients
-                </p>
-                <p class="circle-caption">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed diam.
-                </p>
-                <div class="undercircle-line">
-
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3">
-                <p class="circle-numb">
-                    896
-                </p>
-                <img src="images/skill-bar2.png" alt="">
-                <p class="circle-title">
-                    Completed Projects
-                </p>
-                <p class="circle-caption">
-                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.
-                </p>
-                <div class="undercircle-line">
-
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3">
-                <p class="circle-numb">
-                    1674
-                </p>
-                <img src="images/skill-bar3.png" alt="">
-                <p class="circle-title">
-                    Likes on Average
-                </p>
-                <p class="circle-caption">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed diam.
-                </p>
-                <div class="undercircle-line">
-
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3">
-                <p class="circle-numb">
-                    769
-                </p>
-                <img src="images/skill-bar4.png" alt="">
-                <p class="circle-title">
-                    We Launched
-                </p>
-                <p class="circle-caption">
-                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.
-                </p>
-                <div class="undercircle-line">
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <section class="why-us">
 <div class="container-fluid text-center">
-    <p class="dark-title">Why Choose Us</p>
+    <p class="dark-title">What <span class="active-link">Buyers</span> Say About Us</p>
     <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
 
 </div>
@@ -1104,115 +880,9 @@
 
         </div>
     </div>
-    <div class="row row-cols-1 row-cols-lg-2" >
-        <div class=" col-11 collapse-card" id="accordion1">
 
-
-            <div class="container" >
-                <div class="row justify-content-between 1" >
-                    <div class="col-11 collapse-bg-1">
-<p>Our Solution<span>Consectetuer adipiscing sed diam nonummy</span></p>
-                    </div>
-                    <div class="col-1" id="1">
-<button id="1" class="btn collapse-card-toggler" type="button" data-toggle="collapse" data-target="#collapse-row1" aria-expanded="false" aria-controls="collapse-row1">
-    <svg  xmlns="http://www.w3.org/2000/svg"
-         xmlns:xlink="http://www.w3.org/1999/xlink"
-         width="12px" height="18px"  viewBox="0 0 12 18">
-        <path fill-rule="evenodd"  fill="#ffffff"
-              d="M10.000122,9.012207 C10.000122,8.74292 9.898193,8.474609 9.69458,8.269043 C9.69458,8.269043 3.2838135,1.8227539 3.2838135,1.8227539 C2.8758545,1.4125977 2.2148438,1.4125977 1.80719,1.8227539 C1.3995361,2.2324219 1.3995361,2.8972168 1.80719,3.307373 C1.80719,3.307373 7.4796753,9.012207 7.4796753,9.012207 C7.4796753,9.012207 1.8074341,14.716064 1.8074341,14.716064 C1.3997803,15.125488 1.3997803,15.790527 1.8074341,16.200684 C2.215088,16.610596 2.8762207,16.610596 3.2838135,16.200684 C3.2838135,16.200684 9.694824,9.75415 9.694824,9.75415 C9.898315,9.548828 10.000122,9.280518 10.000122,9.012207 Z"/>
-    </svg>
-</button>
-                    </div>
-                </div>
-               <div class="collapse" id="collapse-row1"   data-parent="#accordion1">
-                   <p>
-                       Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in  nam liber tempor cum soluta nobis eleifend option.
-                   </p>
-                   <p>
-                       Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
-                   </p>
-               </div>
-            </div>
-            <div class="container">
-                <div class="row justify-content-between 2">
-                    <div class="col-11 collapse-bg-1">
-                        <p>Our Mission<span>Eodem modo typi qui nunc nobis</span></p>
-                    </div>
-                    <div class="col-1" id="2">
-                        <button id="2" class="btn collapse-card-toggler" type="button" data-toggle="collapse" data-target="#collapse-row2" aria-expanded="false" aria-controls="collapse-row2">
-                            <svg  xmlns="http://www.w3.org/2000/svg"
-                                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                                  width="12px" height="18px"  viewBox="0 0 12 18">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M10.000122,9.012207 C10.000122,8.74292 9.898193,8.474609 9.69458,8.269043 C9.69458,8.269043 3.2838135,1.8227539 3.2838135,1.8227539 C2.8758545,1.4125977 2.2148438,1.4125977 1.80719,1.8227539 C1.3995361,2.2324219 1.3995361,2.8972168 1.80719,3.307373 C1.80719,3.307373 7.4796753,9.012207 7.4796753,9.012207 C7.4796753,9.012207 1.8074341,14.716064 1.8074341,14.716064 C1.3997803,15.125488 1.3997803,15.790527 1.8074341,16.200684 C2.215088,16.610596 2.8762207,16.610596 3.2838135,16.200684 C3.2838135,16.200684 9.694824,9.75415 9.694824,9.75415 C9.898315,9.548828 10.000122,9.280518 10.000122,9.012207 Z"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div class="collapse" id="collapse-row2" data-parent="#accordion1">
-                    <p>
-                        Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in  nam liber tempor cum soluta nobis eleifend option.
-                    </p>
-                    <p>
-                        Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
-                    </p>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row justify-content-between  3">
-                    <div class="col-11 collapse-bg-1">
-                        <p>Our Technology<span>Duis autem vel iriure dolor in hendrerit</span></p>
-                    </div>
-                    <div class="col-1" id="3">
-                        <button id="3" class="btn collapse-card-toggler" type="button" data-toggle="collapse" data-target="#collapse-row3" aria-expanded="false" aria-controls="collapse-row3">
-                            <svg  xmlns="http://www.w3.org/2000/svg"
-                                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                                  width="12px" height="18px"  viewBox="0 0 12 18">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M10.000122,9.012207 C10.000122,8.74292 9.898193,8.474609 9.69458,8.269043 C9.69458,8.269043 3.2838135,1.8227539 3.2838135,1.8227539 C2.8758545,1.4125977 2.2148438,1.4125977 1.80719,1.8227539 C1.3995361,2.2324219 1.3995361,2.8972168 1.80719,3.307373 C1.80719,3.307373 7.4796753,9.012207 7.4796753,9.012207 C7.4796753,9.012207 1.8074341,14.716064 1.8074341,14.716064 C1.3997803,15.125488 1.3997803,15.790527 1.8074341,16.200684 C2.215088,16.610596 2.8762207,16.610596 3.2838135,16.200684 C3.2838135,16.200684 9.694824,9.75415 9.694824,9.75415 C9.898315,9.548828 10.000122,9.280518 10.000122,9.012207 Z"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div class="collapse" id="collapse-row3" data-parent="#accordion1">
-                    <p>
-                        Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in  nam liber tempor cum soluta nobis eleifend option.
-                    </p>
-                    <p>
-                        Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
-                    </p>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row justify-content-between 4">
-                    <div class="col-11 collapse-bg-1">
-                        <p>Our Specification<span>Adipiscing sed diam nonummy</span></p>
-                    </div>
-                    <div class="col-1" id="4">
-                        <button id="4" class="btn collapse-card-toggler" type="button" data-toggle="collapse" data-target="#collapse-row4" aria-expanded="false" aria-controls="collapse-row4">
-                            <svg  xmlns="http://www.w3.org/2000/svg"
-                                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                                  width="12px" height="18px"  viewBox="0 0 12 18">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M10.000122,9.012207 C10.000122,8.74292 9.898193,8.474609 9.69458,8.269043 C9.69458,8.269043 3.2838135,1.8227539 3.2838135,1.8227539 C2.8758545,1.4125977 2.2148438,1.4125977 1.80719,1.8227539 C1.3995361,2.2324219 1.3995361,2.8972168 1.80719,3.307373 C1.80719,3.307373 7.4796753,9.012207 7.4796753,9.012207 C7.4796753,9.012207 1.8074341,14.716064 1.8074341,14.716064 C1.3997803,15.125488 1.3997803,15.790527 1.8074341,16.200684 C2.215088,16.610596 2.8762207,16.610596 3.2838135,16.200684 C3.2838135,16.200684 9.694824,9.75415 9.694824,9.75415 C9.898315,9.548828 10.000122,9.280518 10.000122,9.012207 Z"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div class="collapse" id="collapse-row4" data-parent="#accordion1">
-                    <p>
-                        Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in  nam liber tempor cum soluta nobis eleifend option.
-                    </p>
-                    <p>
-                        Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="col">
-            <div class="owl-carousel owl-theme" id="owl1">
+        <div class="container">
+            <div class="owl-carousel owl-theme" id="portfolioOwl">
                 <div class="item">
                     <div class="media">
                     <img src="images/card/bg_photo_2214.png" class="mr-3" alt="...">
@@ -1238,6 +908,8 @@
                         </p>
                     </div>
                 </div>
+                </div>
+                <div class="item">
                     <div class="media">
                         <img src="images/card/bg_photo_2229.png" class="mr-3" alt="...">
                         <div class="media-body">
@@ -1288,6 +960,8 @@
                             </p>
                         </div>
                     </div>
+                </div>
+                <div class="item">
                     <div class="media">
                         <img src="images/card/bg_photo_2229.png" class="mr-3" alt="...">
                         <div class="media-body">
@@ -1338,6 +1012,8 @@
                             </p>
                         </div>
                     </div>
+                </div>
+                <div class="item">
                     <div class="media">
                         <img src="images/card/bg_photo_2229.png" class="mr-3" alt="...">
                         <div class="media-body">
@@ -1388,6 +1064,8 @@
                             </p>
                         </div>
                     </div>
+                </div>
+                <div class="item">
                     <div class="media">
                         <img src="images/card/bg_photo_2229.png" class="mr-3" alt="...">
                         <div class="media-body">
@@ -1438,6 +1116,8 @@
                             </p>
                         </div>
                     </div>
+                </div>
+                <div class="item">
                     <div class="media">
                         <img src="images/card/bg_photo_2229.png" class="mr-3" alt="...">
                         <div class="media-body">
@@ -1465,698 +1145,12 @@
                 </div>
             </div>
         </div>
-    </div>
+
 </div>
 </section>
 
 
-<section class="last-post">
-    <div class="container-fluid text-center">
-        <p class="dark-title">Latest Blog Posts</p>
-        <p class="undertitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-        <div class="line"></div>
-    </div>
 
-<div class="container">
-<div class="owl-carousel text-center owl-theme owl" id="owl2">
-    <div class="item">
-        <div class="card mb-3" >
-            <div class="row no-gutters">
-                <div class="col ">
-                    <a href="#">
-                    <div class="square-box">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                             width="24px" height="19px"  viewBox="0 0 24 19">
-                            <path fill-rule="evenodd"  fill="#ffffff"
-                                  d="M17.63031,9.23877 C16.654907,9.694824 15.860016,11.07959 14.929962,10.166016 C14.364746,9.563477 13.694092,8.60498 12.923584,7.5200195 C12.090454,6.354492 11.02832,5.352051 9.778748,6.496582 C8.383606,7.786133 7.4252625,11.28418 7.342163,13.084961 C7.342163,13.084961 20.524841,13.088379 20.524841,13.088379 C20.223206,12.03125 19.051544,8.574219 17.63031,9.23877 ZM17.568726,4.022949 C18.46399,4.022949 19.189667,4.736328 19.189667,5.614746 C19.189667,6.494629 18.46399,7.2075195 17.568726,7.2075195 C16.673584,7.2075195 15.947784,6.494629 15.947784,5.614746 C15.947784,4.736328 16.673584,4.022949 17.568726,4.022949 ZM22.509949,1.980957 C22.509949,1.980957 5.357422,1.980957 5.357422,1.980957 C5.091461,1.980957 4.875519,2.192871 4.875519,2.4545898 C4.875519,2.4545898 4.875519,4.8476562 4.875519,4.8476562 C4.875519,4.8476562 2.4690552,4.8476562 2.4690552,4.8476562 C2.2030945,4.8476562 1.9871521,5.0595703 1.9871521,5.321289 C1.9871521,5.321289 1.9871521,17.52295 1.9871521,17.52295 C1.9871521,17.784668 2.2030945,17.996582 2.4690552,17.996582 C2.4690552,17.996582 19.621704,17.996582 19.621704,17.996582 C19.887634,17.996582 20.103607,17.784668 20.103607,17.52295 C20.103607,17.52295 20.103607,15.130371 20.103607,15.130371 C20.103607,15.130371 22.509949,15.130371 22.509949,15.130371 C22.77591,15.130371 22.991974,14.917969 22.991974,14.657227 C22.991974,14.657227 22.991974,2.4545898 22.991974,2.4545898 C22.991974,2.192871 22.77591,1.980957 22.509949,1.980957 ZM18.810059,16.726074 C18.810059,16.726074 3.280548,16.726074 3.280548,16.726074 C3.280548,16.726074 3.280548,6.1186523 3.280548,6.1186523 C3.280548,6.1186523 4.875519,6.1186523 4.875519,6.1186523 C4.875519,6.1186523 4.875519,13.493652 4.875519,13.493652 C4.633484,14.412109 4.484375,15.294922 4.4540405,15.95166 C4.4540405,15.95166 17.636719,15.955078 17.636719,15.955078 C17.57904,15.753418 17.488861,15.462891 17.371552,15.130371 C17.371552,15.130371 18.810059,15.130371 18.810059,15.130371 C18.810059,15.130371 18.810059,16.726074 18.810059,16.726074 ZM21.698456,13.859863 C21.698456,13.859863 6.1689453,13.859863 6.1689453,13.859863 C6.1689453,13.859863 6.1689453,3.2519531 6.1689453,3.2519531 C6.1689453,3.2519531 21.698456,3.2519531 21.698456,3.2519531 C21.698456,3.2519531 21.698456,13.859863 21.698456,13.859863 Z"/>
-                        </svg>
-                    </div>
-                    </a>
-                    <a href="#">
-                    <div class="bg-box owl-lupa">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                             width="17px" height="17px"  viewBox="0 0 17 17">
-                            <path fill-rule="evenodd"  fill="#ffffff"
-                                  d="M14.977051,13.501709 C14.977051,13.501709 12.182617,10.707275 12.182617,10.707275 C12.856079,9.735107 13.192993,8.651611 13.192993,7.456787 C13.192993,6.6796875 13.042236,5.937256 12.740723,5.2282715 C12.439331,4.519287 12.03186,3.9084473 11.518677,3.3947754 C11.005371,2.8815918 10.394531,2.4746094 9.685669,2.1728516 C8.976685,1.871582 8.233887,1.7209473 7.4571533,1.7209473 C6.68042,1.7209473 5.937622,1.871582 5.228882,2.1728516 C4.5198975,2.4746094 3.9089355,2.8815918 3.39563,3.3947754 C2.8822021,3.9084473 2.4749756,4.519287 2.173462,5.2282715 C1.8720703,5.937256 1.7213135,6.6796875 1.7213135,7.456787 C1.7213135,8.233154 1.8720703,8.976318 2.173462,9.684814 C2.4749756,10.393799 2.8822021,11.004639 3.39563,11.517822 C3.9089355,12.031006 4.5200195,12.438965 5.228882,12.73999 C5.937744,13.041748 6.68042,13.192627 7.4571533,13.192627 C8.652222,13.192627 9.73584,12.855469 10.708008,12.182129 C10.708008,12.182129 13.502441,14.968018 13.502441,14.968018 C13.697998,15.174561 13.942139,15.277832 14.235718,15.277832 C14.518066,15.277832 14.762695,15.174561 14.96875,14.968018 C15.175293,14.761963 15.278442,14.517334 15.278442,14.234863 C15.278564,13.947266 15.178223,13.702637 14.977051,13.501709 ZM10.035889,10.035156 C9.321533,10.749512 8.462036,11.106201 7.4571533,11.106201 C6.4523926,11.106201 5.5927734,10.749512 4.87854,10.035156 C4.1641846,9.320801 3.8070068,8.461426 3.8070068,7.456787 C3.8070068,6.45166 4.1643066,5.592285 4.87854,4.8779297 C5.5926514,4.1638184 6.4523926,3.8066406 7.4571533,3.8066406 C8.461914,3.8066406 9.321411,4.1638184 10.035889,4.8779297 C10.75,5.592285 11.1073,6.45166 11.1073,7.456787 C11.1073,8.461426 10.75,9.320801 10.035889,10.035156 Z"/>
-                        </svg>
-                    </div>
-                    </a>
-                    <a href="#">
-                    <div class="bg-box owl-link">
-                        <svg   xmlns="http://www.w3.org/2000/svg"
-                               xmlns:xlink="http://www.w3.org/1999/xlink"
-                               width="18px" height="18px"  viewBox="0 0 18 18">
-                            <path fill-rule="evenodd"  fill="#ffffff"
-                                  d="M14.966675,8.202881 C14.966675,8.202881 12.396362,10.772217 12.396362,10.772217 C10.977539,12.19165 8.676025,12.19165 7.257324,10.772217 C7.0336914,10.549316 6.859009,10.29834 6.7055664,10.039307 C6.7055664,10.039307 7.899658,8.845215 7.899658,8.845215 C7.956421,8.788086 8.026611,8.755127 8.093628,8.716309 C8.176025,8.998535 8.3203125,9.265869 8.542114,9.487549 C9.25061,10.196533 10.403564,10.195801 11.111572,9.487549 C11.111572,9.487549 13.68103,6.918213 13.68103,6.918213 C14.389893,6.2092285 14.389893,5.0563965 13.68103,4.3481445 C12.973022,3.6396484 11.820435,3.6396484 11.111572,4.3481445 C11.111572,4.3481445 10.197632,5.2626953 10.197632,5.2626953 C9.456421,4.974121 8.657471,4.89624 7.8796387,5.010254 C7.8796387,5.010254 9.826782,3.0632324 9.826782,3.0632324 C11.24646,1.644043 13.546997,1.644043 14.966675,3.0632324 C16.385376,4.482666 16.385376,6.7834473 14.966675,8.202881 ZM8.171631,12.4279785 C8.171631,12.4279785 7.257324,13.342529 7.257324,13.342529 C6.548828,14.050293 5.395874,14.050293 4.6875,13.342529 C3.979004,12.633545 3.979004,11.481201 4.6875,10.772217 C4.6875,10.772217 7.257324,8.202881 7.257324,8.202881 C7.9663086,7.4938965 9.118408,7.4938965 9.826782,8.202881 C10.048218,8.424072 10.192383,8.690918 10.275757,8.9729 C10.343262,8.933838 10.412476,8.901855 10.469238,8.845215 C10.469238,8.845215 11.663452,7.651123 11.663452,7.651123 C11.510864,7.3916016 11.335205,7.1413574 11.111572,6.918213 C9.692871,5.4987793 7.3913574,5.4987793 5.972168,6.918213 C5.972168,6.918213 3.40271,9.487549 3.40271,9.487549 C1.9835205,10.906982 1.9835205,13.207764 3.40271,14.627197 C4.8217773,16.045898 7.123047,16.045898 8.542114,14.627197 C8.542114,14.627197 10.489624,12.6796875 10.489624,12.6796875 C9.711548,12.794189 8.912476,12.716064 8.171631,12.4279785 Z"/>
-                        </svg>
-                    </div>
-                    </a>
-                    <img src="images/card/bg_photo_2365.png" class="card-img" alt="...">
-                </div>
-                <div class="col d-none d-md-block text-left">
-                    <div class="card-body">
-                        <p>04 February 2015   /   26&nbsp;Comments</p>
-                        <p>Claritas est processus dynamicus mutationem</p>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
-                        <a href="#">Read More »</a>
-                        <div class="line"></div>
-                    </div>
-                </div>
-                <div class="row d-block d-md-none">
-                    <div class="col text-left">
-                        <div class="card-body">
-                            <p>28 January 2015   /   No&nbsp;Comments</p>
-                            <p>Eodem modo typi, qui nunc nobis videntur parum</p>
-                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-                            <a href="#">Read More »</a>
-                            <div class="line"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="item">
-        <div class="card mb-3" >
-            <div class="row no-gutters">
-                <div class="col">
-                    <a href="#">
-                    <div class="square-box">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                             width="24px" height="18px"  viewBox="0 0 24 18">
-                            <path fill-rule="evenodd"  fill="#ffffff"
-                                  d="M14.740967,6.6430664 C12.943909,6.6430664 11.481628,8.106445 11.481628,9.905273 C11.481628,11.703613 12.943909,13.167969 14.740967,13.167969 C16.53772,13.167969 17.998901,11.703613 17.998901,9.905273 C17.998901,8.105957 16.53772,6.6430664 14.740967,6.6430664 ZM20.080444,2.6625977 C20.080444,2.6625977 18.687256,2.6625977 18.687256,2.6625977 C18.687256,2.6625977 16.91809,1.0029297 16.91809,1.0029297 C16.91809,1.0029297 12.006775,1.0029297 12.006775,1.0029297 C12.006775,1.0029297 10.5703125,2.6625977 10.5703125,2.6625977 C10.5703125,2.6625977 7.604492,2.6625977 7.604492,2.6625977 C7.471924,2.1142578 7.112732,1.7402344 6.682617,1.7402344 C6.682617,1.7402344 4.5863037,1.7402344 4.5863037,1.7402344 C4.1540527,1.7402344 3.7919922,2.1191406 3.6622925,2.6743164 C2.1774292,2.8041992 1.0093384,4.0561523 1.0093384,5.576172 C1.0093384,5.576172 1.0093384,14.080566 1.0093384,14.080566 C1.0093384,15.686523 2.3144531,16.993652 3.9192505,16.993652 C3.9192505,16.993652 20.080444,16.993652 20.080444,16.993652 C21.684937,16.993652 22.98944,15.686523 22.98944,14.080566 C22.98944,14.080566 22.98944,5.576172 22.98944,5.576172 C22.98944,3.9697266 21.684937,2.6625977 20.080444,2.6625977 ZM3.6411133,13.319824 C3.6411133,13.622559 3.394287,13.869141 3.0908203,13.869141 C2.7871704,13.869141 2.5411377,13.622559 2.5411377,13.319824 C2.5411377,13.319824 2.5411377,7.5131836 2.5411377,7.5131836 C2.5411377,7.2089844 2.7871704,6.9628906 3.0908203,6.9628906 C3.394287,6.9628906 3.6411133,7.2089844 3.6411133,7.5131836 C3.6411133,7.5131836 3.6411133,13.319824 3.6411133,13.319824 ZM6.9489746,4.8129883 C6.9489746,5.133301 6.6882324,5.3935547 6.3685303,5.3935547 C6.3685303,5.3935547 4.8775635,5.3935547 4.8775635,5.3935547 C4.557495,5.3935547 4.297119,5.133301 4.297119,4.8129883 C4.297119,4.8129883 4.297119,4.4716797 4.297119,4.4716797 C4.297119,4.1503906 4.557495,3.8901367 4.8775635,3.8901367 C4.8775635,3.8901367 6.3685303,3.8901367 6.3685303,3.8901367 C6.6885986,3.8901367 6.9489746,4.1503906 6.9489746,4.4716797 C6.9489746,4.4716797 6.9489746,4.8129883 6.9489746,4.8129883 ZM14.740967,14.55957 C12.177307,14.55957 10.091248,12.471191 10.091248,9.904785 C10.091248,7.338867 12.177307,5.2504883 14.740967,5.2504883 C17.30426,5.2504883 19.389038,7.338867 19.389038,9.904785 C19.389038,12.471191 17.30426,14.55957 14.740967,14.55957 Z"/>
-                        </svg>
-                    </div>
-                    </a>
-                    <a href="#">
-                    <div class="bg-box owl-lupa">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                             width="17px" height="17px"  viewBox="0 0 17 17">
-                            <path fill-rule="evenodd"  fill="#ffffff"
-                                  d="M14.977051,13.501709 C14.977051,13.501709 12.182617,10.707275 12.182617,10.707275 C12.856079,9.735107 13.192993,8.651611 13.192993,7.456787 C13.192993,6.6796875 13.042236,5.937256 12.740723,5.2282715 C12.439331,4.519287 12.03186,3.9084473 11.518677,3.3947754 C11.005371,2.8815918 10.394531,2.4746094 9.685669,2.1728516 C8.976685,1.871582 8.233887,1.7209473 7.4571533,1.7209473 C6.68042,1.7209473 5.937622,1.871582 5.228882,2.1728516 C4.5198975,2.4746094 3.9089355,2.8815918 3.39563,3.3947754 C2.8822021,3.9084473 2.4749756,4.519287 2.173462,5.2282715 C1.8720703,5.937256 1.7213135,6.6796875 1.7213135,7.456787 C1.7213135,8.233154 1.8720703,8.976318 2.173462,9.684814 C2.4749756,10.393799 2.8822021,11.004639 3.39563,11.517822 C3.9089355,12.031006 4.5200195,12.438965 5.228882,12.73999 C5.937744,13.041748 6.68042,13.192627 7.4571533,13.192627 C8.652222,13.192627 9.73584,12.855469 10.708008,12.182129 C10.708008,12.182129 13.502441,14.968018 13.502441,14.968018 C13.697998,15.174561 13.942139,15.277832 14.235718,15.277832 C14.518066,15.277832 14.762695,15.174561 14.96875,14.968018 C15.175293,14.761963 15.278442,14.517334 15.278442,14.234863 C15.278564,13.947266 15.178223,13.702637 14.977051,13.501709 ZM10.035889,10.035156 C9.321533,10.749512 8.462036,11.106201 7.4571533,11.106201 C6.4523926,11.106201 5.5927734,10.749512 4.87854,10.035156 C4.1641846,9.320801 3.8070068,8.461426 3.8070068,7.456787 C3.8070068,6.45166 4.1643066,5.592285 4.87854,4.8779297 C5.5926514,4.1638184 6.4523926,3.8066406 7.4571533,3.8066406 C8.461914,3.8066406 9.321411,4.1638184 10.035889,4.8779297 C10.75,5.592285 11.1073,6.45166 11.1073,7.456787 C11.1073,8.461426 10.75,9.320801 10.035889,10.035156 Z"/>
-                        </svg>
-                    </div>
-                    </a>
-                    <a href="#">
-                    <div class="bg-box owl-link">
-                        <svg   xmlns="http://www.w3.org/2000/svg"
-                               xmlns:xlink="http://www.w3.org/1999/xlink"
-                               width="18px" height="18px"  viewBox="0 0 18 18">
-                            <path fill-rule="evenodd"  fill="#ffffff"
-                                  d="M14.966675,8.202881 C14.966675,8.202881 12.396362,10.772217 12.396362,10.772217 C10.977539,12.19165 8.676025,12.19165 7.257324,10.772217 C7.0336914,10.549316 6.859009,10.29834 6.7055664,10.039307 C6.7055664,10.039307 7.899658,8.845215 7.899658,8.845215 C7.956421,8.788086 8.026611,8.755127 8.093628,8.716309 C8.176025,8.998535 8.3203125,9.265869 8.542114,9.487549 C9.25061,10.196533 10.403564,10.195801 11.111572,9.487549 C11.111572,9.487549 13.68103,6.918213 13.68103,6.918213 C14.389893,6.2092285 14.389893,5.0563965 13.68103,4.3481445 C12.973022,3.6396484 11.820435,3.6396484 11.111572,4.3481445 C11.111572,4.3481445 10.197632,5.2626953 10.197632,5.2626953 C9.456421,4.974121 8.657471,4.89624 7.8796387,5.010254 C7.8796387,5.010254 9.826782,3.0632324 9.826782,3.0632324 C11.24646,1.644043 13.546997,1.644043 14.966675,3.0632324 C16.385376,4.482666 16.385376,6.7834473 14.966675,8.202881 ZM8.171631,12.4279785 C8.171631,12.4279785 7.257324,13.342529 7.257324,13.342529 C6.548828,14.050293 5.395874,14.050293 4.6875,13.342529 C3.979004,12.633545 3.979004,11.481201 4.6875,10.772217 C4.6875,10.772217 7.257324,8.202881 7.257324,8.202881 C7.9663086,7.4938965 9.118408,7.4938965 9.826782,8.202881 C10.048218,8.424072 10.192383,8.690918 10.275757,8.9729 C10.343262,8.933838 10.412476,8.901855 10.469238,8.845215 C10.469238,8.845215 11.663452,7.651123 11.663452,7.651123 C11.510864,7.3916016 11.335205,7.1413574 11.111572,6.918213 C9.692871,5.4987793 7.3913574,5.4987793 5.972168,6.918213 C5.972168,6.918213 3.40271,9.487549 3.40271,9.487549 C1.9835205,10.906982 1.9835205,13.207764 3.40271,14.627197 C4.8217773,16.045898 7.123047,16.045898 8.542114,14.627197 C8.542114,14.627197 10.489624,12.6796875 10.489624,12.6796875 C9.711548,12.794189 8.912476,12.716064 8.171631,12.4279785 Z"/>
-                        </svg>
-                    </div>
-                    </a>
-                    <img src="images/card/bg_photo_2368.png" class="card-img" alt="...">
-                </div>
-                <div class="col d-none d-md-block text-left">
-                    <div class="card-body">
-                        <p>28 January 2015   /   No&nbsp;Comments</p>
-                        <p>Eodem modo typi, qui nunc nobis videntur parum</p>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-                        <a href="#">Read More »</a>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row d-block d-md-none">
-                <div class="col text-left">
-                <div class="card-body">
-                    <p>28 January 2015   /   No&nbsp;Comments</p>
-                    <p>Eodem modo typi, qui nunc nobis videntur parum</p>
-                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-                    <a href="#">Read More »</a>
-                    <div class="line"></div>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-    <div class="item">
-        <div class="card mb-3" >
-            <div class="row no-gutters">
-                <div class="col ">
-                    <a href="#">
-                        <div class="square-box">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="24px" height="19px"  viewBox="0 0 24 19">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M17.63031,9.23877 C16.654907,9.694824 15.860016,11.07959 14.929962,10.166016 C14.364746,9.563477 13.694092,8.60498 12.923584,7.5200195 C12.090454,6.354492 11.02832,5.352051 9.778748,6.496582 C8.383606,7.786133 7.4252625,11.28418 7.342163,13.084961 C7.342163,13.084961 20.524841,13.088379 20.524841,13.088379 C20.223206,12.03125 19.051544,8.574219 17.63031,9.23877 ZM17.568726,4.022949 C18.46399,4.022949 19.189667,4.736328 19.189667,5.614746 C19.189667,6.494629 18.46399,7.2075195 17.568726,7.2075195 C16.673584,7.2075195 15.947784,6.494629 15.947784,5.614746 C15.947784,4.736328 16.673584,4.022949 17.568726,4.022949 ZM22.509949,1.980957 C22.509949,1.980957 5.357422,1.980957 5.357422,1.980957 C5.091461,1.980957 4.875519,2.192871 4.875519,2.4545898 C4.875519,2.4545898 4.875519,4.8476562 4.875519,4.8476562 C4.875519,4.8476562 2.4690552,4.8476562 2.4690552,4.8476562 C2.2030945,4.8476562 1.9871521,5.0595703 1.9871521,5.321289 C1.9871521,5.321289 1.9871521,17.52295 1.9871521,17.52295 C1.9871521,17.784668 2.2030945,17.996582 2.4690552,17.996582 C2.4690552,17.996582 19.621704,17.996582 19.621704,17.996582 C19.887634,17.996582 20.103607,17.784668 20.103607,17.52295 C20.103607,17.52295 20.103607,15.130371 20.103607,15.130371 C20.103607,15.130371 22.509949,15.130371 22.509949,15.130371 C22.77591,15.130371 22.991974,14.917969 22.991974,14.657227 C22.991974,14.657227 22.991974,2.4545898 22.991974,2.4545898 C22.991974,2.192871 22.77591,1.980957 22.509949,1.980957 ZM18.810059,16.726074 C18.810059,16.726074 3.280548,16.726074 3.280548,16.726074 C3.280548,16.726074 3.280548,6.1186523 3.280548,6.1186523 C3.280548,6.1186523 4.875519,6.1186523 4.875519,6.1186523 C4.875519,6.1186523 4.875519,13.493652 4.875519,13.493652 C4.633484,14.412109 4.484375,15.294922 4.4540405,15.95166 C4.4540405,15.95166 17.636719,15.955078 17.636719,15.955078 C17.57904,15.753418 17.488861,15.462891 17.371552,15.130371 C17.371552,15.130371 18.810059,15.130371 18.810059,15.130371 C18.810059,15.130371 18.810059,16.726074 18.810059,16.726074 ZM21.698456,13.859863 C21.698456,13.859863 6.1689453,13.859863 6.1689453,13.859863 C6.1689453,13.859863 6.1689453,3.2519531 6.1689453,3.2519531 C6.1689453,3.2519531 21.698456,3.2519531 21.698456,3.2519531 C21.698456,3.2519531 21.698456,13.859863 21.698456,13.859863 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="bg-box owl-lupa">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="17px" height="17px"  viewBox="0 0 17 17">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M14.977051,13.501709 C14.977051,13.501709 12.182617,10.707275 12.182617,10.707275 C12.856079,9.735107 13.192993,8.651611 13.192993,7.456787 C13.192993,6.6796875 13.042236,5.937256 12.740723,5.2282715 C12.439331,4.519287 12.03186,3.9084473 11.518677,3.3947754 C11.005371,2.8815918 10.394531,2.4746094 9.685669,2.1728516 C8.976685,1.871582 8.233887,1.7209473 7.4571533,1.7209473 C6.68042,1.7209473 5.937622,1.871582 5.228882,2.1728516 C4.5198975,2.4746094 3.9089355,2.8815918 3.39563,3.3947754 C2.8822021,3.9084473 2.4749756,4.519287 2.173462,5.2282715 C1.8720703,5.937256 1.7213135,6.6796875 1.7213135,7.456787 C1.7213135,8.233154 1.8720703,8.976318 2.173462,9.684814 C2.4749756,10.393799 2.8822021,11.004639 3.39563,11.517822 C3.9089355,12.031006 4.5200195,12.438965 5.228882,12.73999 C5.937744,13.041748 6.68042,13.192627 7.4571533,13.192627 C8.652222,13.192627 9.73584,12.855469 10.708008,12.182129 C10.708008,12.182129 13.502441,14.968018 13.502441,14.968018 C13.697998,15.174561 13.942139,15.277832 14.235718,15.277832 C14.518066,15.277832 14.762695,15.174561 14.96875,14.968018 C15.175293,14.761963 15.278442,14.517334 15.278442,14.234863 C15.278564,13.947266 15.178223,13.702637 14.977051,13.501709 ZM10.035889,10.035156 C9.321533,10.749512 8.462036,11.106201 7.4571533,11.106201 C6.4523926,11.106201 5.5927734,10.749512 4.87854,10.035156 C4.1641846,9.320801 3.8070068,8.461426 3.8070068,7.456787 C3.8070068,6.45166 4.1643066,5.592285 4.87854,4.8779297 C5.5926514,4.1638184 6.4523926,3.8066406 7.4571533,3.8066406 C8.461914,3.8066406 9.321411,4.1638184 10.035889,4.8779297 C10.75,5.592285 11.1073,6.45166 11.1073,7.456787 C11.1073,8.461426 10.75,9.320801 10.035889,10.035156 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="bg-box owl-link">
-                            <svg   xmlns="http://www.w3.org/2000/svg"
-                                   xmlns:xlink="http://www.w3.org/1999/xlink"
-                                   width="18px" height="18px"  viewBox="0 0 18 18">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M14.966675,8.202881 C14.966675,8.202881 12.396362,10.772217 12.396362,10.772217 C10.977539,12.19165 8.676025,12.19165 7.257324,10.772217 C7.0336914,10.549316 6.859009,10.29834 6.7055664,10.039307 C6.7055664,10.039307 7.899658,8.845215 7.899658,8.845215 C7.956421,8.788086 8.026611,8.755127 8.093628,8.716309 C8.176025,8.998535 8.3203125,9.265869 8.542114,9.487549 C9.25061,10.196533 10.403564,10.195801 11.111572,9.487549 C11.111572,9.487549 13.68103,6.918213 13.68103,6.918213 C14.389893,6.2092285 14.389893,5.0563965 13.68103,4.3481445 C12.973022,3.6396484 11.820435,3.6396484 11.111572,4.3481445 C11.111572,4.3481445 10.197632,5.2626953 10.197632,5.2626953 C9.456421,4.974121 8.657471,4.89624 7.8796387,5.010254 C7.8796387,5.010254 9.826782,3.0632324 9.826782,3.0632324 C11.24646,1.644043 13.546997,1.644043 14.966675,3.0632324 C16.385376,4.482666 16.385376,6.7834473 14.966675,8.202881 ZM8.171631,12.4279785 C8.171631,12.4279785 7.257324,13.342529 7.257324,13.342529 C6.548828,14.050293 5.395874,14.050293 4.6875,13.342529 C3.979004,12.633545 3.979004,11.481201 4.6875,10.772217 C4.6875,10.772217 7.257324,8.202881 7.257324,8.202881 C7.9663086,7.4938965 9.118408,7.4938965 9.826782,8.202881 C10.048218,8.424072 10.192383,8.690918 10.275757,8.9729 C10.343262,8.933838 10.412476,8.901855 10.469238,8.845215 C10.469238,8.845215 11.663452,7.651123 11.663452,7.651123 C11.510864,7.3916016 11.335205,7.1413574 11.111572,6.918213 C9.692871,5.4987793 7.3913574,5.4987793 5.972168,6.918213 C5.972168,6.918213 3.40271,9.487549 3.40271,9.487549 C1.9835205,10.906982 1.9835205,13.207764 3.40271,14.627197 C4.8217773,16.045898 7.123047,16.045898 8.542114,14.627197 C8.542114,14.627197 10.489624,12.6796875 10.489624,12.6796875 C9.711548,12.794189 8.912476,12.716064 8.171631,12.4279785 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <img src="images/card/bg_photo_2365.png" class="card-img" alt="...">
-                </div>
-                <div class="col d-none d-md-block text-left">
-                    <div class="card-body">
-                        <p>04 February 2015   /   26&nbsp;Comments</p>
-                        <p>Claritas est processus dynamicus mutationem</p>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
-                        <a href="#">Read More »</a>
-                        <div class="line"></div>
-                    </div>
-                </div>
-                <div class="row d-block d-md-none">
-                    <div class="col text-left">
-                        <div class="card-body">
-                            <p>28 January 2015   /   No&nbsp;Comments</p>
-                            <p>Eodem modo typi, qui nunc nobis videntur parum</p>
-                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-                            <a href="#">Read More »</a>
-                            <div class="line"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="item">
-        <div class="card mb-3" >
-            <div class="row no-gutters">
-                <div class="col">
-                    <a href="#">
-                        <div class="square-box">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="24px" height="18px"  viewBox="0 0 24 18">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M14.740967,6.6430664 C12.943909,6.6430664 11.481628,8.106445 11.481628,9.905273 C11.481628,11.703613 12.943909,13.167969 14.740967,13.167969 C16.53772,13.167969 17.998901,11.703613 17.998901,9.905273 C17.998901,8.105957 16.53772,6.6430664 14.740967,6.6430664 ZM20.080444,2.6625977 C20.080444,2.6625977 18.687256,2.6625977 18.687256,2.6625977 C18.687256,2.6625977 16.91809,1.0029297 16.91809,1.0029297 C16.91809,1.0029297 12.006775,1.0029297 12.006775,1.0029297 C12.006775,1.0029297 10.5703125,2.6625977 10.5703125,2.6625977 C10.5703125,2.6625977 7.604492,2.6625977 7.604492,2.6625977 C7.471924,2.1142578 7.112732,1.7402344 6.682617,1.7402344 C6.682617,1.7402344 4.5863037,1.7402344 4.5863037,1.7402344 C4.1540527,1.7402344 3.7919922,2.1191406 3.6622925,2.6743164 C2.1774292,2.8041992 1.0093384,4.0561523 1.0093384,5.576172 C1.0093384,5.576172 1.0093384,14.080566 1.0093384,14.080566 C1.0093384,15.686523 2.3144531,16.993652 3.9192505,16.993652 C3.9192505,16.993652 20.080444,16.993652 20.080444,16.993652 C21.684937,16.993652 22.98944,15.686523 22.98944,14.080566 C22.98944,14.080566 22.98944,5.576172 22.98944,5.576172 C22.98944,3.9697266 21.684937,2.6625977 20.080444,2.6625977 ZM3.6411133,13.319824 C3.6411133,13.622559 3.394287,13.869141 3.0908203,13.869141 C2.7871704,13.869141 2.5411377,13.622559 2.5411377,13.319824 C2.5411377,13.319824 2.5411377,7.5131836 2.5411377,7.5131836 C2.5411377,7.2089844 2.7871704,6.9628906 3.0908203,6.9628906 C3.394287,6.9628906 3.6411133,7.2089844 3.6411133,7.5131836 C3.6411133,7.5131836 3.6411133,13.319824 3.6411133,13.319824 ZM6.9489746,4.8129883 C6.9489746,5.133301 6.6882324,5.3935547 6.3685303,5.3935547 C6.3685303,5.3935547 4.8775635,5.3935547 4.8775635,5.3935547 C4.557495,5.3935547 4.297119,5.133301 4.297119,4.8129883 C4.297119,4.8129883 4.297119,4.4716797 4.297119,4.4716797 C4.297119,4.1503906 4.557495,3.8901367 4.8775635,3.8901367 C4.8775635,3.8901367 6.3685303,3.8901367 6.3685303,3.8901367 C6.6885986,3.8901367 6.9489746,4.1503906 6.9489746,4.4716797 C6.9489746,4.4716797 6.9489746,4.8129883 6.9489746,4.8129883 ZM14.740967,14.55957 C12.177307,14.55957 10.091248,12.471191 10.091248,9.904785 C10.091248,7.338867 12.177307,5.2504883 14.740967,5.2504883 C17.30426,5.2504883 19.389038,7.338867 19.389038,9.904785 C19.389038,12.471191 17.30426,14.55957 14.740967,14.55957 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="bg-box owl-lupa">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="17px" height="17px"  viewBox="0 0 17 17">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M14.977051,13.501709 C14.977051,13.501709 12.182617,10.707275 12.182617,10.707275 C12.856079,9.735107 13.192993,8.651611 13.192993,7.456787 C13.192993,6.6796875 13.042236,5.937256 12.740723,5.2282715 C12.439331,4.519287 12.03186,3.9084473 11.518677,3.3947754 C11.005371,2.8815918 10.394531,2.4746094 9.685669,2.1728516 C8.976685,1.871582 8.233887,1.7209473 7.4571533,1.7209473 C6.68042,1.7209473 5.937622,1.871582 5.228882,2.1728516 C4.5198975,2.4746094 3.9089355,2.8815918 3.39563,3.3947754 C2.8822021,3.9084473 2.4749756,4.519287 2.173462,5.2282715 C1.8720703,5.937256 1.7213135,6.6796875 1.7213135,7.456787 C1.7213135,8.233154 1.8720703,8.976318 2.173462,9.684814 C2.4749756,10.393799 2.8822021,11.004639 3.39563,11.517822 C3.9089355,12.031006 4.5200195,12.438965 5.228882,12.73999 C5.937744,13.041748 6.68042,13.192627 7.4571533,13.192627 C8.652222,13.192627 9.73584,12.855469 10.708008,12.182129 C10.708008,12.182129 13.502441,14.968018 13.502441,14.968018 C13.697998,15.174561 13.942139,15.277832 14.235718,15.277832 C14.518066,15.277832 14.762695,15.174561 14.96875,14.968018 C15.175293,14.761963 15.278442,14.517334 15.278442,14.234863 C15.278564,13.947266 15.178223,13.702637 14.977051,13.501709 ZM10.035889,10.035156 C9.321533,10.749512 8.462036,11.106201 7.4571533,11.106201 C6.4523926,11.106201 5.5927734,10.749512 4.87854,10.035156 C4.1641846,9.320801 3.8070068,8.461426 3.8070068,7.456787 C3.8070068,6.45166 4.1643066,5.592285 4.87854,4.8779297 C5.5926514,4.1638184 6.4523926,3.8066406 7.4571533,3.8066406 C8.461914,3.8066406 9.321411,4.1638184 10.035889,4.8779297 C10.75,5.592285 11.1073,6.45166 11.1073,7.456787 C11.1073,8.461426 10.75,9.320801 10.035889,10.035156 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="bg-box owl-link">
-                            <svg   xmlns="http://www.w3.org/2000/svg"
-                                   xmlns:xlink="http://www.w3.org/1999/xlink"
-                                   width="18px" height="18px"  viewBox="0 0 18 18">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M14.966675,8.202881 C14.966675,8.202881 12.396362,10.772217 12.396362,10.772217 C10.977539,12.19165 8.676025,12.19165 7.257324,10.772217 C7.0336914,10.549316 6.859009,10.29834 6.7055664,10.039307 C6.7055664,10.039307 7.899658,8.845215 7.899658,8.845215 C7.956421,8.788086 8.026611,8.755127 8.093628,8.716309 C8.176025,8.998535 8.3203125,9.265869 8.542114,9.487549 C9.25061,10.196533 10.403564,10.195801 11.111572,9.487549 C11.111572,9.487549 13.68103,6.918213 13.68103,6.918213 C14.389893,6.2092285 14.389893,5.0563965 13.68103,4.3481445 C12.973022,3.6396484 11.820435,3.6396484 11.111572,4.3481445 C11.111572,4.3481445 10.197632,5.2626953 10.197632,5.2626953 C9.456421,4.974121 8.657471,4.89624 7.8796387,5.010254 C7.8796387,5.010254 9.826782,3.0632324 9.826782,3.0632324 C11.24646,1.644043 13.546997,1.644043 14.966675,3.0632324 C16.385376,4.482666 16.385376,6.7834473 14.966675,8.202881 ZM8.171631,12.4279785 C8.171631,12.4279785 7.257324,13.342529 7.257324,13.342529 C6.548828,14.050293 5.395874,14.050293 4.6875,13.342529 C3.979004,12.633545 3.979004,11.481201 4.6875,10.772217 C4.6875,10.772217 7.257324,8.202881 7.257324,8.202881 C7.9663086,7.4938965 9.118408,7.4938965 9.826782,8.202881 C10.048218,8.424072 10.192383,8.690918 10.275757,8.9729 C10.343262,8.933838 10.412476,8.901855 10.469238,8.845215 C10.469238,8.845215 11.663452,7.651123 11.663452,7.651123 C11.510864,7.3916016 11.335205,7.1413574 11.111572,6.918213 C9.692871,5.4987793 7.3913574,5.4987793 5.972168,6.918213 C5.972168,6.918213 3.40271,9.487549 3.40271,9.487549 C1.9835205,10.906982 1.9835205,13.207764 3.40271,14.627197 C4.8217773,16.045898 7.123047,16.045898 8.542114,14.627197 C8.542114,14.627197 10.489624,12.6796875 10.489624,12.6796875 C9.711548,12.794189 8.912476,12.716064 8.171631,12.4279785 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <img src="images/card/bg_photo_2368.png" class="card-img" alt="...">
-                </div>
-                <div class="col d-none d-md-block text-left">
-                    <div class="card-body">
-                        <p>28 January 2015   /   No&nbsp;Comments</p>
-                        <p>Eodem modo typi, qui nunc nobis videntur parum</p>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-                        <a href="#">Read More »</a>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row d-block d-md-none">
-                <div class="col text-left">
-                    <div class="card-body">
-                        <p>28 January 2015   /   No&nbsp;Comments</p>
-                        <p>Eodem modo typi, qui nunc nobis videntur parum</p>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-                        <a href="#">Read More »</a>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="item">
-        <div class="card mb-3" >
-            <div class="row no-gutters">
-                <div class="col ">
-                    <a href="#">
-                        <div class="square-box">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="24px" height="19px"  viewBox="0 0 24 19">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M17.63031,9.23877 C16.654907,9.694824 15.860016,11.07959 14.929962,10.166016 C14.364746,9.563477 13.694092,8.60498 12.923584,7.5200195 C12.090454,6.354492 11.02832,5.352051 9.778748,6.496582 C8.383606,7.786133 7.4252625,11.28418 7.342163,13.084961 C7.342163,13.084961 20.524841,13.088379 20.524841,13.088379 C20.223206,12.03125 19.051544,8.574219 17.63031,9.23877 ZM17.568726,4.022949 C18.46399,4.022949 19.189667,4.736328 19.189667,5.614746 C19.189667,6.494629 18.46399,7.2075195 17.568726,7.2075195 C16.673584,7.2075195 15.947784,6.494629 15.947784,5.614746 C15.947784,4.736328 16.673584,4.022949 17.568726,4.022949 ZM22.509949,1.980957 C22.509949,1.980957 5.357422,1.980957 5.357422,1.980957 C5.091461,1.980957 4.875519,2.192871 4.875519,2.4545898 C4.875519,2.4545898 4.875519,4.8476562 4.875519,4.8476562 C4.875519,4.8476562 2.4690552,4.8476562 2.4690552,4.8476562 C2.2030945,4.8476562 1.9871521,5.0595703 1.9871521,5.321289 C1.9871521,5.321289 1.9871521,17.52295 1.9871521,17.52295 C1.9871521,17.784668 2.2030945,17.996582 2.4690552,17.996582 C2.4690552,17.996582 19.621704,17.996582 19.621704,17.996582 C19.887634,17.996582 20.103607,17.784668 20.103607,17.52295 C20.103607,17.52295 20.103607,15.130371 20.103607,15.130371 C20.103607,15.130371 22.509949,15.130371 22.509949,15.130371 C22.77591,15.130371 22.991974,14.917969 22.991974,14.657227 C22.991974,14.657227 22.991974,2.4545898 22.991974,2.4545898 C22.991974,2.192871 22.77591,1.980957 22.509949,1.980957 ZM18.810059,16.726074 C18.810059,16.726074 3.280548,16.726074 3.280548,16.726074 C3.280548,16.726074 3.280548,6.1186523 3.280548,6.1186523 C3.280548,6.1186523 4.875519,6.1186523 4.875519,6.1186523 C4.875519,6.1186523 4.875519,13.493652 4.875519,13.493652 C4.633484,14.412109 4.484375,15.294922 4.4540405,15.95166 C4.4540405,15.95166 17.636719,15.955078 17.636719,15.955078 C17.57904,15.753418 17.488861,15.462891 17.371552,15.130371 C17.371552,15.130371 18.810059,15.130371 18.810059,15.130371 C18.810059,15.130371 18.810059,16.726074 18.810059,16.726074 ZM21.698456,13.859863 C21.698456,13.859863 6.1689453,13.859863 6.1689453,13.859863 C6.1689453,13.859863 6.1689453,3.2519531 6.1689453,3.2519531 C6.1689453,3.2519531 21.698456,3.2519531 21.698456,3.2519531 C21.698456,3.2519531 21.698456,13.859863 21.698456,13.859863 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="bg-box owl-lupa">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="17px" height="17px"  viewBox="0 0 17 17">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M14.977051,13.501709 C14.977051,13.501709 12.182617,10.707275 12.182617,10.707275 C12.856079,9.735107 13.192993,8.651611 13.192993,7.456787 C13.192993,6.6796875 13.042236,5.937256 12.740723,5.2282715 C12.439331,4.519287 12.03186,3.9084473 11.518677,3.3947754 C11.005371,2.8815918 10.394531,2.4746094 9.685669,2.1728516 C8.976685,1.871582 8.233887,1.7209473 7.4571533,1.7209473 C6.68042,1.7209473 5.937622,1.871582 5.228882,2.1728516 C4.5198975,2.4746094 3.9089355,2.8815918 3.39563,3.3947754 C2.8822021,3.9084473 2.4749756,4.519287 2.173462,5.2282715 C1.8720703,5.937256 1.7213135,6.6796875 1.7213135,7.456787 C1.7213135,8.233154 1.8720703,8.976318 2.173462,9.684814 C2.4749756,10.393799 2.8822021,11.004639 3.39563,11.517822 C3.9089355,12.031006 4.5200195,12.438965 5.228882,12.73999 C5.937744,13.041748 6.68042,13.192627 7.4571533,13.192627 C8.652222,13.192627 9.73584,12.855469 10.708008,12.182129 C10.708008,12.182129 13.502441,14.968018 13.502441,14.968018 C13.697998,15.174561 13.942139,15.277832 14.235718,15.277832 C14.518066,15.277832 14.762695,15.174561 14.96875,14.968018 C15.175293,14.761963 15.278442,14.517334 15.278442,14.234863 C15.278564,13.947266 15.178223,13.702637 14.977051,13.501709 ZM10.035889,10.035156 C9.321533,10.749512 8.462036,11.106201 7.4571533,11.106201 C6.4523926,11.106201 5.5927734,10.749512 4.87854,10.035156 C4.1641846,9.320801 3.8070068,8.461426 3.8070068,7.456787 C3.8070068,6.45166 4.1643066,5.592285 4.87854,4.8779297 C5.5926514,4.1638184 6.4523926,3.8066406 7.4571533,3.8066406 C8.461914,3.8066406 9.321411,4.1638184 10.035889,4.8779297 C10.75,5.592285 11.1073,6.45166 11.1073,7.456787 C11.1073,8.461426 10.75,9.320801 10.035889,10.035156 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="bg-box owl-link">
-                            <svg   xmlns="http://www.w3.org/2000/svg"
-                                   xmlns:xlink="http://www.w3.org/1999/xlink"
-                                   width="18px" height="18px"  viewBox="0 0 18 18">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M14.966675,8.202881 C14.966675,8.202881 12.396362,10.772217 12.396362,10.772217 C10.977539,12.19165 8.676025,12.19165 7.257324,10.772217 C7.0336914,10.549316 6.859009,10.29834 6.7055664,10.039307 C6.7055664,10.039307 7.899658,8.845215 7.899658,8.845215 C7.956421,8.788086 8.026611,8.755127 8.093628,8.716309 C8.176025,8.998535 8.3203125,9.265869 8.542114,9.487549 C9.25061,10.196533 10.403564,10.195801 11.111572,9.487549 C11.111572,9.487549 13.68103,6.918213 13.68103,6.918213 C14.389893,6.2092285 14.389893,5.0563965 13.68103,4.3481445 C12.973022,3.6396484 11.820435,3.6396484 11.111572,4.3481445 C11.111572,4.3481445 10.197632,5.2626953 10.197632,5.2626953 C9.456421,4.974121 8.657471,4.89624 7.8796387,5.010254 C7.8796387,5.010254 9.826782,3.0632324 9.826782,3.0632324 C11.24646,1.644043 13.546997,1.644043 14.966675,3.0632324 C16.385376,4.482666 16.385376,6.7834473 14.966675,8.202881 ZM8.171631,12.4279785 C8.171631,12.4279785 7.257324,13.342529 7.257324,13.342529 C6.548828,14.050293 5.395874,14.050293 4.6875,13.342529 C3.979004,12.633545 3.979004,11.481201 4.6875,10.772217 C4.6875,10.772217 7.257324,8.202881 7.257324,8.202881 C7.9663086,7.4938965 9.118408,7.4938965 9.826782,8.202881 C10.048218,8.424072 10.192383,8.690918 10.275757,8.9729 C10.343262,8.933838 10.412476,8.901855 10.469238,8.845215 C10.469238,8.845215 11.663452,7.651123 11.663452,7.651123 C11.510864,7.3916016 11.335205,7.1413574 11.111572,6.918213 C9.692871,5.4987793 7.3913574,5.4987793 5.972168,6.918213 C5.972168,6.918213 3.40271,9.487549 3.40271,9.487549 C1.9835205,10.906982 1.9835205,13.207764 3.40271,14.627197 C4.8217773,16.045898 7.123047,16.045898 8.542114,14.627197 C8.542114,14.627197 10.489624,12.6796875 10.489624,12.6796875 C9.711548,12.794189 8.912476,12.716064 8.171631,12.4279785 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <img src="images/card/bg_photo_2365.png" class="card-img" alt="...">
-                </div>
-                <div class="col d-none d-md-block text-left">
-                    <div class="card-body">
-                        <p>04 February 2015   /   26&nbsp;Comments</p>
-                        <p>Claritas est processus dynamicus mutationem</p>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
-                        <a href="#">Read More »</a>
-                        <div class="line"></div>
-                    </div>
-                </div>
-                <div class="row d-block d-md-none">
-                    <div class="col text-left">
-                        <div class="card-body">
-                            <p>28 January 2015   /   No&nbsp;Comments</p>
-                            <p>Eodem modo typi, qui nunc nobis videntur parum</p>
-                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-                            <a href="#">Read More »</a>
-                            <div class="line"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="item">
-        <div class="card mb-3" >
-            <div class="row no-gutters">
-                <div class="col">
-                    <a href="#">
-                        <div class="square-box">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="24px" height="18px"  viewBox="0 0 24 18">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M14.740967,6.6430664 C12.943909,6.6430664 11.481628,8.106445 11.481628,9.905273 C11.481628,11.703613 12.943909,13.167969 14.740967,13.167969 C16.53772,13.167969 17.998901,11.703613 17.998901,9.905273 C17.998901,8.105957 16.53772,6.6430664 14.740967,6.6430664 ZM20.080444,2.6625977 C20.080444,2.6625977 18.687256,2.6625977 18.687256,2.6625977 C18.687256,2.6625977 16.91809,1.0029297 16.91809,1.0029297 C16.91809,1.0029297 12.006775,1.0029297 12.006775,1.0029297 C12.006775,1.0029297 10.5703125,2.6625977 10.5703125,2.6625977 C10.5703125,2.6625977 7.604492,2.6625977 7.604492,2.6625977 C7.471924,2.1142578 7.112732,1.7402344 6.682617,1.7402344 C6.682617,1.7402344 4.5863037,1.7402344 4.5863037,1.7402344 C4.1540527,1.7402344 3.7919922,2.1191406 3.6622925,2.6743164 C2.1774292,2.8041992 1.0093384,4.0561523 1.0093384,5.576172 C1.0093384,5.576172 1.0093384,14.080566 1.0093384,14.080566 C1.0093384,15.686523 2.3144531,16.993652 3.9192505,16.993652 C3.9192505,16.993652 20.080444,16.993652 20.080444,16.993652 C21.684937,16.993652 22.98944,15.686523 22.98944,14.080566 C22.98944,14.080566 22.98944,5.576172 22.98944,5.576172 C22.98944,3.9697266 21.684937,2.6625977 20.080444,2.6625977 ZM3.6411133,13.319824 C3.6411133,13.622559 3.394287,13.869141 3.0908203,13.869141 C2.7871704,13.869141 2.5411377,13.622559 2.5411377,13.319824 C2.5411377,13.319824 2.5411377,7.5131836 2.5411377,7.5131836 C2.5411377,7.2089844 2.7871704,6.9628906 3.0908203,6.9628906 C3.394287,6.9628906 3.6411133,7.2089844 3.6411133,7.5131836 C3.6411133,7.5131836 3.6411133,13.319824 3.6411133,13.319824 ZM6.9489746,4.8129883 C6.9489746,5.133301 6.6882324,5.3935547 6.3685303,5.3935547 C6.3685303,5.3935547 4.8775635,5.3935547 4.8775635,5.3935547 C4.557495,5.3935547 4.297119,5.133301 4.297119,4.8129883 C4.297119,4.8129883 4.297119,4.4716797 4.297119,4.4716797 C4.297119,4.1503906 4.557495,3.8901367 4.8775635,3.8901367 C4.8775635,3.8901367 6.3685303,3.8901367 6.3685303,3.8901367 C6.6885986,3.8901367 6.9489746,4.1503906 6.9489746,4.4716797 C6.9489746,4.4716797 6.9489746,4.8129883 6.9489746,4.8129883 ZM14.740967,14.55957 C12.177307,14.55957 10.091248,12.471191 10.091248,9.904785 C10.091248,7.338867 12.177307,5.2504883 14.740967,5.2504883 C17.30426,5.2504883 19.389038,7.338867 19.389038,9.904785 C19.389038,12.471191 17.30426,14.55957 14.740967,14.55957 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="bg-box owl-lupa">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="17px" height="17px"  viewBox="0 0 17 17">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M14.977051,13.501709 C14.977051,13.501709 12.182617,10.707275 12.182617,10.707275 C12.856079,9.735107 13.192993,8.651611 13.192993,7.456787 C13.192993,6.6796875 13.042236,5.937256 12.740723,5.2282715 C12.439331,4.519287 12.03186,3.9084473 11.518677,3.3947754 C11.005371,2.8815918 10.394531,2.4746094 9.685669,2.1728516 C8.976685,1.871582 8.233887,1.7209473 7.4571533,1.7209473 C6.68042,1.7209473 5.937622,1.871582 5.228882,2.1728516 C4.5198975,2.4746094 3.9089355,2.8815918 3.39563,3.3947754 C2.8822021,3.9084473 2.4749756,4.519287 2.173462,5.2282715 C1.8720703,5.937256 1.7213135,6.6796875 1.7213135,7.456787 C1.7213135,8.233154 1.8720703,8.976318 2.173462,9.684814 C2.4749756,10.393799 2.8822021,11.004639 3.39563,11.517822 C3.9089355,12.031006 4.5200195,12.438965 5.228882,12.73999 C5.937744,13.041748 6.68042,13.192627 7.4571533,13.192627 C8.652222,13.192627 9.73584,12.855469 10.708008,12.182129 C10.708008,12.182129 13.502441,14.968018 13.502441,14.968018 C13.697998,15.174561 13.942139,15.277832 14.235718,15.277832 C14.518066,15.277832 14.762695,15.174561 14.96875,14.968018 C15.175293,14.761963 15.278442,14.517334 15.278442,14.234863 C15.278564,13.947266 15.178223,13.702637 14.977051,13.501709 ZM10.035889,10.035156 C9.321533,10.749512 8.462036,11.106201 7.4571533,11.106201 C6.4523926,11.106201 5.5927734,10.749512 4.87854,10.035156 C4.1641846,9.320801 3.8070068,8.461426 3.8070068,7.456787 C3.8070068,6.45166 4.1643066,5.592285 4.87854,4.8779297 C5.5926514,4.1638184 6.4523926,3.8066406 7.4571533,3.8066406 C8.461914,3.8066406 9.321411,4.1638184 10.035889,4.8779297 C10.75,5.592285 11.1073,6.45166 11.1073,7.456787 C11.1073,8.461426 10.75,9.320801 10.035889,10.035156 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="bg-box owl-link">
-                            <svg   xmlns="http://www.w3.org/2000/svg"
-                                   xmlns:xlink="http://www.w3.org/1999/xlink"
-                                   width="18px" height="18px"  viewBox="0 0 18 18">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M14.966675,8.202881 C14.966675,8.202881 12.396362,10.772217 12.396362,10.772217 C10.977539,12.19165 8.676025,12.19165 7.257324,10.772217 C7.0336914,10.549316 6.859009,10.29834 6.7055664,10.039307 C6.7055664,10.039307 7.899658,8.845215 7.899658,8.845215 C7.956421,8.788086 8.026611,8.755127 8.093628,8.716309 C8.176025,8.998535 8.3203125,9.265869 8.542114,9.487549 C9.25061,10.196533 10.403564,10.195801 11.111572,9.487549 C11.111572,9.487549 13.68103,6.918213 13.68103,6.918213 C14.389893,6.2092285 14.389893,5.0563965 13.68103,4.3481445 C12.973022,3.6396484 11.820435,3.6396484 11.111572,4.3481445 C11.111572,4.3481445 10.197632,5.2626953 10.197632,5.2626953 C9.456421,4.974121 8.657471,4.89624 7.8796387,5.010254 C7.8796387,5.010254 9.826782,3.0632324 9.826782,3.0632324 C11.24646,1.644043 13.546997,1.644043 14.966675,3.0632324 C16.385376,4.482666 16.385376,6.7834473 14.966675,8.202881 ZM8.171631,12.4279785 C8.171631,12.4279785 7.257324,13.342529 7.257324,13.342529 C6.548828,14.050293 5.395874,14.050293 4.6875,13.342529 C3.979004,12.633545 3.979004,11.481201 4.6875,10.772217 C4.6875,10.772217 7.257324,8.202881 7.257324,8.202881 C7.9663086,7.4938965 9.118408,7.4938965 9.826782,8.202881 C10.048218,8.424072 10.192383,8.690918 10.275757,8.9729 C10.343262,8.933838 10.412476,8.901855 10.469238,8.845215 C10.469238,8.845215 11.663452,7.651123 11.663452,7.651123 C11.510864,7.3916016 11.335205,7.1413574 11.111572,6.918213 C9.692871,5.4987793 7.3913574,5.4987793 5.972168,6.918213 C5.972168,6.918213 3.40271,9.487549 3.40271,9.487549 C1.9835205,10.906982 1.9835205,13.207764 3.40271,14.627197 C4.8217773,16.045898 7.123047,16.045898 8.542114,14.627197 C8.542114,14.627197 10.489624,12.6796875 10.489624,12.6796875 C9.711548,12.794189 8.912476,12.716064 8.171631,12.4279785 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <img src="images/card/bg_photo_2368.png" class="card-img" alt="...">
-                </div>
-                <div class="col d-none d-md-block text-left">
-                    <div class="card-body">
-                        <p>28 January 2015   /   No&nbsp;Comments</p>
-                        <p>Eodem modo typi, qui nunc nobis videntur parum</p>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-                        <a href="#">Read More »</a>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row d-block d-md-none">
-                <div class="col text-left">
-                    <div class="card-body">
-                        <p>28 January 2015   /   No&nbsp;Comments</p>
-                        <p>Eodem modo typi, qui nunc nobis videntur parum</p>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-                        <a href="#">Read More »</a>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="item">
-        <div class="card mb-3" >
-            <div class="row no-gutters">
-                <div class="col ">
-                    <a href="#">
-                        <div class="square-box">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="24px" height="19px"  viewBox="0 0 24 19">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M17.63031,9.23877 C16.654907,9.694824 15.860016,11.07959 14.929962,10.166016 C14.364746,9.563477 13.694092,8.60498 12.923584,7.5200195 C12.090454,6.354492 11.02832,5.352051 9.778748,6.496582 C8.383606,7.786133 7.4252625,11.28418 7.342163,13.084961 C7.342163,13.084961 20.524841,13.088379 20.524841,13.088379 C20.223206,12.03125 19.051544,8.574219 17.63031,9.23877 ZM17.568726,4.022949 C18.46399,4.022949 19.189667,4.736328 19.189667,5.614746 C19.189667,6.494629 18.46399,7.2075195 17.568726,7.2075195 C16.673584,7.2075195 15.947784,6.494629 15.947784,5.614746 C15.947784,4.736328 16.673584,4.022949 17.568726,4.022949 ZM22.509949,1.980957 C22.509949,1.980957 5.357422,1.980957 5.357422,1.980957 C5.091461,1.980957 4.875519,2.192871 4.875519,2.4545898 C4.875519,2.4545898 4.875519,4.8476562 4.875519,4.8476562 C4.875519,4.8476562 2.4690552,4.8476562 2.4690552,4.8476562 C2.2030945,4.8476562 1.9871521,5.0595703 1.9871521,5.321289 C1.9871521,5.321289 1.9871521,17.52295 1.9871521,17.52295 C1.9871521,17.784668 2.2030945,17.996582 2.4690552,17.996582 C2.4690552,17.996582 19.621704,17.996582 19.621704,17.996582 C19.887634,17.996582 20.103607,17.784668 20.103607,17.52295 C20.103607,17.52295 20.103607,15.130371 20.103607,15.130371 C20.103607,15.130371 22.509949,15.130371 22.509949,15.130371 C22.77591,15.130371 22.991974,14.917969 22.991974,14.657227 C22.991974,14.657227 22.991974,2.4545898 22.991974,2.4545898 C22.991974,2.192871 22.77591,1.980957 22.509949,1.980957 ZM18.810059,16.726074 C18.810059,16.726074 3.280548,16.726074 3.280548,16.726074 C3.280548,16.726074 3.280548,6.1186523 3.280548,6.1186523 C3.280548,6.1186523 4.875519,6.1186523 4.875519,6.1186523 C4.875519,6.1186523 4.875519,13.493652 4.875519,13.493652 C4.633484,14.412109 4.484375,15.294922 4.4540405,15.95166 C4.4540405,15.95166 17.636719,15.955078 17.636719,15.955078 C17.57904,15.753418 17.488861,15.462891 17.371552,15.130371 C17.371552,15.130371 18.810059,15.130371 18.810059,15.130371 C18.810059,15.130371 18.810059,16.726074 18.810059,16.726074 ZM21.698456,13.859863 C21.698456,13.859863 6.1689453,13.859863 6.1689453,13.859863 C6.1689453,13.859863 6.1689453,3.2519531 6.1689453,3.2519531 C6.1689453,3.2519531 21.698456,3.2519531 21.698456,3.2519531 C21.698456,3.2519531 21.698456,13.859863 21.698456,13.859863 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="bg-box owl-lupa">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="17px" height="17px"  viewBox="0 0 17 17">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M14.977051,13.501709 C14.977051,13.501709 12.182617,10.707275 12.182617,10.707275 C12.856079,9.735107 13.192993,8.651611 13.192993,7.456787 C13.192993,6.6796875 13.042236,5.937256 12.740723,5.2282715 C12.439331,4.519287 12.03186,3.9084473 11.518677,3.3947754 C11.005371,2.8815918 10.394531,2.4746094 9.685669,2.1728516 C8.976685,1.871582 8.233887,1.7209473 7.4571533,1.7209473 C6.68042,1.7209473 5.937622,1.871582 5.228882,2.1728516 C4.5198975,2.4746094 3.9089355,2.8815918 3.39563,3.3947754 C2.8822021,3.9084473 2.4749756,4.519287 2.173462,5.2282715 C1.8720703,5.937256 1.7213135,6.6796875 1.7213135,7.456787 C1.7213135,8.233154 1.8720703,8.976318 2.173462,9.684814 C2.4749756,10.393799 2.8822021,11.004639 3.39563,11.517822 C3.9089355,12.031006 4.5200195,12.438965 5.228882,12.73999 C5.937744,13.041748 6.68042,13.192627 7.4571533,13.192627 C8.652222,13.192627 9.73584,12.855469 10.708008,12.182129 C10.708008,12.182129 13.502441,14.968018 13.502441,14.968018 C13.697998,15.174561 13.942139,15.277832 14.235718,15.277832 C14.518066,15.277832 14.762695,15.174561 14.96875,14.968018 C15.175293,14.761963 15.278442,14.517334 15.278442,14.234863 C15.278564,13.947266 15.178223,13.702637 14.977051,13.501709 ZM10.035889,10.035156 C9.321533,10.749512 8.462036,11.106201 7.4571533,11.106201 C6.4523926,11.106201 5.5927734,10.749512 4.87854,10.035156 C4.1641846,9.320801 3.8070068,8.461426 3.8070068,7.456787 C3.8070068,6.45166 4.1643066,5.592285 4.87854,4.8779297 C5.5926514,4.1638184 6.4523926,3.8066406 7.4571533,3.8066406 C8.461914,3.8066406 9.321411,4.1638184 10.035889,4.8779297 C10.75,5.592285 11.1073,6.45166 11.1073,7.456787 C11.1073,8.461426 10.75,9.320801 10.035889,10.035156 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="bg-box owl-link">
-                            <svg   xmlns="http://www.w3.org/2000/svg"
-                                   xmlns:xlink="http://www.w3.org/1999/xlink"
-                                   width="18px" height="18px"  viewBox="0 0 18 18">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M14.966675,8.202881 C14.966675,8.202881 12.396362,10.772217 12.396362,10.772217 C10.977539,12.19165 8.676025,12.19165 7.257324,10.772217 C7.0336914,10.549316 6.859009,10.29834 6.7055664,10.039307 C6.7055664,10.039307 7.899658,8.845215 7.899658,8.845215 C7.956421,8.788086 8.026611,8.755127 8.093628,8.716309 C8.176025,8.998535 8.3203125,9.265869 8.542114,9.487549 C9.25061,10.196533 10.403564,10.195801 11.111572,9.487549 C11.111572,9.487549 13.68103,6.918213 13.68103,6.918213 C14.389893,6.2092285 14.389893,5.0563965 13.68103,4.3481445 C12.973022,3.6396484 11.820435,3.6396484 11.111572,4.3481445 C11.111572,4.3481445 10.197632,5.2626953 10.197632,5.2626953 C9.456421,4.974121 8.657471,4.89624 7.8796387,5.010254 C7.8796387,5.010254 9.826782,3.0632324 9.826782,3.0632324 C11.24646,1.644043 13.546997,1.644043 14.966675,3.0632324 C16.385376,4.482666 16.385376,6.7834473 14.966675,8.202881 ZM8.171631,12.4279785 C8.171631,12.4279785 7.257324,13.342529 7.257324,13.342529 C6.548828,14.050293 5.395874,14.050293 4.6875,13.342529 C3.979004,12.633545 3.979004,11.481201 4.6875,10.772217 C4.6875,10.772217 7.257324,8.202881 7.257324,8.202881 C7.9663086,7.4938965 9.118408,7.4938965 9.826782,8.202881 C10.048218,8.424072 10.192383,8.690918 10.275757,8.9729 C10.343262,8.933838 10.412476,8.901855 10.469238,8.845215 C10.469238,8.845215 11.663452,7.651123 11.663452,7.651123 C11.510864,7.3916016 11.335205,7.1413574 11.111572,6.918213 C9.692871,5.4987793 7.3913574,5.4987793 5.972168,6.918213 C5.972168,6.918213 3.40271,9.487549 3.40271,9.487549 C1.9835205,10.906982 1.9835205,13.207764 3.40271,14.627197 C4.8217773,16.045898 7.123047,16.045898 8.542114,14.627197 C8.542114,14.627197 10.489624,12.6796875 10.489624,12.6796875 C9.711548,12.794189 8.912476,12.716064 8.171631,12.4279785 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <img src="images/card/bg_photo_2365.png" class="card-img" alt="...">
-                </div>
-                <div class="col d-none d-md-block text-left">
-                    <div class="card-body">
-                        <p>04 February 2015   /   26&nbsp;Comments</p>
-                        <p>Claritas est processus dynamicus mutationem</p>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
-                        <a href="#">Read More »</a>
-                        <div class="line"></div>
-                    </div>
-                </div>
-                <div class="row d-block d-md-none">
-                    <div class="col text-left">
-                        <div class="card-body">
-                            <p>28 January 2015   /   No&nbsp;Comments</p>
-                            <p>Eodem modo typi, qui nunc nobis videntur parum</p>
-                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-                            <a href="#">Read More »</a>
-                            <div class="line"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="item">
-        <div class="card mb-3" >
-            <div class="row no-gutters">
-                <div class="col">
-                    <a href="#">
-                        <div class="square-box">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="24px" height="18px"  viewBox="0 0 24 18">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M14.740967,6.6430664 C12.943909,6.6430664 11.481628,8.106445 11.481628,9.905273 C11.481628,11.703613 12.943909,13.167969 14.740967,13.167969 C16.53772,13.167969 17.998901,11.703613 17.998901,9.905273 C17.998901,8.105957 16.53772,6.6430664 14.740967,6.6430664 ZM20.080444,2.6625977 C20.080444,2.6625977 18.687256,2.6625977 18.687256,2.6625977 C18.687256,2.6625977 16.91809,1.0029297 16.91809,1.0029297 C16.91809,1.0029297 12.006775,1.0029297 12.006775,1.0029297 C12.006775,1.0029297 10.5703125,2.6625977 10.5703125,2.6625977 C10.5703125,2.6625977 7.604492,2.6625977 7.604492,2.6625977 C7.471924,2.1142578 7.112732,1.7402344 6.682617,1.7402344 C6.682617,1.7402344 4.5863037,1.7402344 4.5863037,1.7402344 C4.1540527,1.7402344 3.7919922,2.1191406 3.6622925,2.6743164 C2.1774292,2.8041992 1.0093384,4.0561523 1.0093384,5.576172 C1.0093384,5.576172 1.0093384,14.080566 1.0093384,14.080566 C1.0093384,15.686523 2.3144531,16.993652 3.9192505,16.993652 C3.9192505,16.993652 20.080444,16.993652 20.080444,16.993652 C21.684937,16.993652 22.98944,15.686523 22.98944,14.080566 C22.98944,14.080566 22.98944,5.576172 22.98944,5.576172 C22.98944,3.9697266 21.684937,2.6625977 20.080444,2.6625977 ZM3.6411133,13.319824 C3.6411133,13.622559 3.394287,13.869141 3.0908203,13.869141 C2.7871704,13.869141 2.5411377,13.622559 2.5411377,13.319824 C2.5411377,13.319824 2.5411377,7.5131836 2.5411377,7.5131836 C2.5411377,7.2089844 2.7871704,6.9628906 3.0908203,6.9628906 C3.394287,6.9628906 3.6411133,7.2089844 3.6411133,7.5131836 C3.6411133,7.5131836 3.6411133,13.319824 3.6411133,13.319824 ZM6.9489746,4.8129883 C6.9489746,5.133301 6.6882324,5.3935547 6.3685303,5.3935547 C6.3685303,5.3935547 4.8775635,5.3935547 4.8775635,5.3935547 C4.557495,5.3935547 4.297119,5.133301 4.297119,4.8129883 C4.297119,4.8129883 4.297119,4.4716797 4.297119,4.4716797 C4.297119,4.1503906 4.557495,3.8901367 4.8775635,3.8901367 C4.8775635,3.8901367 6.3685303,3.8901367 6.3685303,3.8901367 C6.6885986,3.8901367 6.9489746,4.1503906 6.9489746,4.4716797 C6.9489746,4.4716797 6.9489746,4.8129883 6.9489746,4.8129883 ZM14.740967,14.55957 C12.177307,14.55957 10.091248,12.471191 10.091248,9.904785 C10.091248,7.338867 12.177307,5.2504883 14.740967,5.2504883 C17.30426,5.2504883 19.389038,7.338867 19.389038,9.904785 C19.389038,12.471191 17.30426,14.55957 14.740967,14.55957 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="bg-box owl-lupa">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="17px" height="17px"  viewBox="0 0 17 17">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M14.977051,13.501709 C14.977051,13.501709 12.182617,10.707275 12.182617,10.707275 C12.856079,9.735107 13.192993,8.651611 13.192993,7.456787 C13.192993,6.6796875 13.042236,5.937256 12.740723,5.2282715 C12.439331,4.519287 12.03186,3.9084473 11.518677,3.3947754 C11.005371,2.8815918 10.394531,2.4746094 9.685669,2.1728516 C8.976685,1.871582 8.233887,1.7209473 7.4571533,1.7209473 C6.68042,1.7209473 5.937622,1.871582 5.228882,2.1728516 C4.5198975,2.4746094 3.9089355,2.8815918 3.39563,3.3947754 C2.8822021,3.9084473 2.4749756,4.519287 2.173462,5.2282715 C1.8720703,5.937256 1.7213135,6.6796875 1.7213135,7.456787 C1.7213135,8.233154 1.8720703,8.976318 2.173462,9.684814 C2.4749756,10.393799 2.8822021,11.004639 3.39563,11.517822 C3.9089355,12.031006 4.5200195,12.438965 5.228882,12.73999 C5.937744,13.041748 6.68042,13.192627 7.4571533,13.192627 C8.652222,13.192627 9.73584,12.855469 10.708008,12.182129 C10.708008,12.182129 13.502441,14.968018 13.502441,14.968018 C13.697998,15.174561 13.942139,15.277832 14.235718,15.277832 C14.518066,15.277832 14.762695,15.174561 14.96875,14.968018 C15.175293,14.761963 15.278442,14.517334 15.278442,14.234863 C15.278564,13.947266 15.178223,13.702637 14.977051,13.501709 ZM10.035889,10.035156 C9.321533,10.749512 8.462036,11.106201 7.4571533,11.106201 C6.4523926,11.106201 5.5927734,10.749512 4.87854,10.035156 C4.1641846,9.320801 3.8070068,8.461426 3.8070068,7.456787 C3.8070068,6.45166 4.1643066,5.592285 4.87854,4.8779297 C5.5926514,4.1638184 6.4523926,3.8066406 7.4571533,3.8066406 C8.461914,3.8066406 9.321411,4.1638184 10.035889,4.8779297 C10.75,5.592285 11.1073,6.45166 11.1073,7.456787 C11.1073,8.461426 10.75,9.320801 10.035889,10.035156 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="bg-box owl-link">
-                            <svg   xmlns="http://www.w3.org/2000/svg"
-                                   xmlns:xlink="http://www.w3.org/1999/xlink"
-                                   width="18px" height="18px"  viewBox="0 0 18 18">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M14.966675,8.202881 C14.966675,8.202881 12.396362,10.772217 12.396362,10.772217 C10.977539,12.19165 8.676025,12.19165 7.257324,10.772217 C7.0336914,10.549316 6.859009,10.29834 6.7055664,10.039307 C6.7055664,10.039307 7.899658,8.845215 7.899658,8.845215 C7.956421,8.788086 8.026611,8.755127 8.093628,8.716309 C8.176025,8.998535 8.3203125,9.265869 8.542114,9.487549 C9.25061,10.196533 10.403564,10.195801 11.111572,9.487549 C11.111572,9.487549 13.68103,6.918213 13.68103,6.918213 C14.389893,6.2092285 14.389893,5.0563965 13.68103,4.3481445 C12.973022,3.6396484 11.820435,3.6396484 11.111572,4.3481445 C11.111572,4.3481445 10.197632,5.2626953 10.197632,5.2626953 C9.456421,4.974121 8.657471,4.89624 7.8796387,5.010254 C7.8796387,5.010254 9.826782,3.0632324 9.826782,3.0632324 C11.24646,1.644043 13.546997,1.644043 14.966675,3.0632324 C16.385376,4.482666 16.385376,6.7834473 14.966675,8.202881 ZM8.171631,12.4279785 C8.171631,12.4279785 7.257324,13.342529 7.257324,13.342529 C6.548828,14.050293 5.395874,14.050293 4.6875,13.342529 C3.979004,12.633545 3.979004,11.481201 4.6875,10.772217 C4.6875,10.772217 7.257324,8.202881 7.257324,8.202881 C7.9663086,7.4938965 9.118408,7.4938965 9.826782,8.202881 C10.048218,8.424072 10.192383,8.690918 10.275757,8.9729 C10.343262,8.933838 10.412476,8.901855 10.469238,8.845215 C10.469238,8.845215 11.663452,7.651123 11.663452,7.651123 C11.510864,7.3916016 11.335205,7.1413574 11.111572,6.918213 C9.692871,5.4987793 7.3913574,5.4987793 5.972168,6.918213 C5.972168,6.918213 3.40271,9.487549 3.40271,9.487549 C1.9835205,10.906982 1.9835205,13.207764 3.40271,14.627197 C4.8217773,16.045898 7.123047,16.045898 8.542114,14.627197 C8.542114,14.627197 10.489624,12.6796875 10.489624,12.6796875 C9.711548,12.794189 8.912476,12.716064 8.171631,12.4279785 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <img src="images/card/bg_photo_2368.png" class="card-img" alt="...">
-                </div>
-                <div class="col d-none d-md-block text-left">
-                    <div class="card-body">
-                        <p>28 January 2015   /   No&nbsp;Comments</p>
-                        <p>Eodem modo typi, qui nunc nobis videntur parum</p>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-                        <a href="#">Read More »</a>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row d-block d-md-none">
-                <div class="col text-left">
-                    <div class="card-body">
-                        <p>28 January 2015   /   No&nbsp;Comments</p>
-                        <p>Eodem modo typi, qui nunc nobis videntur parum</p>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-                        <a href="#">Read More »</a>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="item">
-        <div class="card mb-3" >
-            <div class="row no-gutters">
-                <div class="col ">
-                    <a href="#">
-                        <div class="square-box">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="24px" height="19px"  viewBox="0 0 24 19">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M17.63031,9.23877 C16.654907,9.694824 15.860016,11.07959 14.929962,10.166016 C14.364746,9.563477 13.694092,8.60498 12.923584,7.5200195 C12.090454,6.354492 11.02832,5.352051 9.778748,6.496582 C8.383606,7.786133 7.4252625,11.28418 7.342163,13.084961 C7.342163,13.084961 20.524841,13.088379 20.524841,13.088379 C20.223206,12.03125 19.051544,8.574219 17.63031,9.23877 ZM17.568726,4.022949 C18.46399,4.022949 19.189667,4.736328 19.189667,5.614746 C19.189667,6.494629 18.46399,7.2075195 17.568726,7.2075195 C16.673584,7.2075195 15.947784,6.494629 15.947784,5.614746 C15.947784,4.736328 16.673584,4.022949 17.568726,4.022949 ZM22.509949,1.980957 C22.509949,1.980957 5.357422,1.980957 5.357422,1.980957 C5.091461,1.980957 4.875519,2.192871 4.875519,2.4545898 C4.875519,2.4545898 4.875519,4.8476562 4.875519,4.8476562 C4.875519,4.8476562 2.4690552,4.8476562 2.4690552,4.8476562 C2.2030945,4.8476562 1.9871521,5.0595703 1.9871521,5.321289 C1.9871521,5.321289 1.9871521,17.52295 1.9871521,17.52295 C1.9871521,17.784668 2.2030945,17.996582 2.4690552,17.996582 C2.4690552,17.996582 19.621704,17.996582 19.621704,17.996582 C19.887634,17.996582 20.103607,17.784668 20.103607,17.52295 C20.103607,17.52295 20.103607,15.130371 20.103607,15.130371 C20.103607,15.130371 22.509949,15.130371 22.509949,15.130371 C22.77591,15.130371 22.991974,14.917969 22.991974,14.657227 C22.991974,14.657227 22.991974,2.4545898 22.991974,2.4545898 C22.991974,2.192871 22.77591,1.980957 22.509949,1.980957 ZM18.810059,16.726074 C18.810059,16.726074 3.280548,16.726074 3.280548,16.726074 C3.280548,16.726074 3.280548,6.1186523 3.280548,6.1186523 C3.280548,6.1186523 4.875519,6.1186523 4.875519,6.1186523 C4.875519,6.1186523 4.875519,13.493652 4.875519,13.493652 C4.633484,14.412109 4.484375,15.294922 4.4540405,15.95166 C4.4540405,15.95166 17.636719,15.955078 17.636719,15.955078 C17.57904,15.753418 17.488861,15.462891 17.371552,15.130371 C17.371552,15.130371 18.810059,15.130371 18.810059,15.130371 C18.810059,15.130371 18.810059,16.726074 18.810059,16.726074 ZM21.698456,13.859863 C21.698456,13.859863 6.1689453,13.859863 6.1689453,13.859863 C6.1689453,13.859863 6.1689453,3.2519531 6.1689453,3.2519531 C6.1689453,3.2519531 21.698456,3.2519531 21.698456,3.2519531 C21.698456,3.2519531 21.698456,13.859863 21.698456,13.859863 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="bg-box owl-lupa">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="17px" height="17px"  viewBox="0 0 17 17">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M14.977051,13.501709 C14.977051,13.501709 12.182617,10.707275 12.182617,10.707275 C12.856079,9.735107 13.192993,8.651611 13.192993,7.456787 C13.192993,6.6796875 13.042236,5.937256 12.740723,5.2282715 C12.439331,4.519287 12.03186,3.9084473 11.518677,3.3947754 C11.005371,2.8815918 10.394531,2.4746094 9.685669,2.1728516 C8.976685,1.871582 8.233887,1.7209473 7.4571533,1.7209473 C6.68042,1.7209473 5.937622,1.871582 5.228882,2.1728516 C4.5198975,2.4746094 3.9089355,2.8815918 3.39563,3.3947754 C2.8822021,3.9084473 2.4749756,4.519287 2.173462,5.2282715 C1.8720703,5.937256 1.7213135,6.6796875 1.7213135,7.456787 C1.7213135,8.233154 1.8720703,8.976318 2.173462,9.684814 C2.4749756,10.393799 2.8822021,11.004639 3.39563,11.517822 C3.9089355,12.031006 4.5200195,12.438965 5.228882,12.73999 C5.937744,13.041748 6.68042,13.192627 7.4571533,13.192627 C8.652222,13.192627 9.73584,12.855469 10.708008,12.182129 C10.708008,12.182129 13.502441,14.968018 13.502441,14.968018 C13.697998,15.174561 13.942139,15.277832 14.235718,15.277832 C14.518066,15.277832 14.762695,15.174561 14.96875,14.968018 C15.175293,14.761963 15.278442,14.517334 15.278442,14.234863 C15.278564,13.947266 15.178223,13.702637 14.977051,13.501709 ZM10.035889,10.035156 C9.321533,10.749512 8.462036,11.106201 7.4571533,11.106201 C6.4523926,11.106201 5.5927734,10.749512 4.87854,10.035156 C4.1641846,9.320801 3.8070068,8.461426 3.8070068,7.456787 C3.8070068,6.45166 4.1643066,5.592285 4.87854,4.8779297 C5.5926514,4.1638184 6.4523926,3.8066406 7.4571533,3.8066406 C8.461914,3.8066406 9.321411,4.1638184 10.035889,4.8779297 C10.75,5.592285 11.1073,6.45166 11.1073,7.456787 C11.1073,8.461426 10.75,9.320801 10.035889,10.035156 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="bg-box owl-link">
-                            <svg   xmlns="http://www.w3.org/2000/svg"
-                                   xmlns:xlink="http://www.w3.org/1999/xlink"
-                                   width="18px" height="18px"  viewBox="0 0 18 18">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M14.966675,8.202881 C14.966675,8.202881 12.396362,10.772217 12.396362,10.772217 C10.977539,12.19165 8.676025,12.19165 7.257324,10.772217 C7.0336914,10.549316 6.859009,10.29834 6.7055664,10.039307 C6.7055664,10.039307 7.899658,8.845215 7.899658,8.845215 C7.956421,8.788086 8.026611,8.755127 8.093628,8.716309 C8.176025,8.998535 8.3203125,9.265869 8.542114,9.487549 C9.25061,10.196533 10.403564,10.195801 11.111572,9.487549 C11.111572,9.487549 13.68103,6.918213 13.68103,6.918213 C14.389893,6.2092285 14.389893,5.0563965 13.68103,4.3481445 C12.973022,3.6396484 11.820435,3.6396484 11.111572,4.3481445 C11.111572,4.3481445 10.197632,5.2626953 10.197632,5.2626953 C9.456421,4.974121 8.657471,4.89624 7.8796387,5.010254 C7.8796387,5.010254 9.826782,3.0632324 9.826782,3.0632324 C11.24646,1.644043 13.546997,1.644043 14.966675,3.0632324 C16.385376,4.482666 16.385376,6.7834473 14.966675,8.202881 ZM8.171631,12.4279785 C8.171631,12.4279785 7.257324,13.342529 7.257324,13.342529 C6.548828,14.050293 5.395874,14.050293 4.6875,13.342529 C3.979004,12.633545 3.979004,11.481201 4.6875,10.772217 C4.6875,10.772217 7.257324,8.202881 7.257324,8.202881 C7.9663086,7.4938965 9.118408,7.4938965 9.826782,8.202881 C10.048218,8.424072 10.192383,8.690918 10.275757,8.9729 C10.343262,8.933838 10.412476,8.901855 10.469238,8.845215 C10.469238,8.845215 11.663452,7.651123 11.663452,7.651123 C11.510864,7.3916016 11.335205,7.1413574 11.111572,6.918213 C9.692871,5.4987793 7.3913574,5.4987793 5.972168,6.918213 C5.972168,6.918213 3.40271,9.487549 3.40271,9.487549 C1.9835205,10.906982 1.9835205,13.207764 3.40271,14.627197 C4.8217773,16.045898 7.123047,16.045898 8.542114,14.627197 C8.542114,14.627197 10.489624,12.6796875 10.489624,12.6796875 C9.711548,12.794189 8.912476,12.716064 8.171631,12.4279785 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <img src="images/card/bg_photo_2365.png" class="card-img" alt="...">
-                </div>
-                <div class="col d-none d-md-block text-left">
-                    <div class="card-body">
-                        <p>04 February 2015   /   26&nbsp;Comments</p>
-                        <p>Claritas est processus dynamicus mutationem</p>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
-                        <a href="#">Read More »</a>
-                        <div class="line"></div>
-                    </div>
-                </div>
-                <div class="row d-block d-md-none">
-                    <div class="col text-left">
-                        <div class="card-body">
-                            <p>28 January 2015   /   No&nbsp;Comments</p>
-                            <p>Eodem modo typi, qui nunc nobis videntur parum</p>
-                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-                            <a href="#">Read More »</a>
-                            <div class="line"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="item">
-        <div class="card mb-3" >
-            <div class="row no-gutters">
-                <div class="col">
-                    <a href="#">
-                        <div class="square-box">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="24px" height="18px"  viewBox="0 0 24 18">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M14.740967,6.6430664 C12.943909,6.6430664 11.481628,8.106445 11.481628,9.905273 C11.481628,11.703613 12.943909,13.167969 14.740967,13.167969 C16.53772,13.167969 17.998901,11.703613 17.998901,9.905273 C17.998901,8.105957 16.53772,6.6430664 14.740967,6.6430664 ZM20.080444,2.6625977 C20.080444,2.6625977 18.687256,2.6625977 18.687256,2.6625977 C18.687256,2.6625977 16.91809,1.0029297 16.91809,1.0029297 C16.91809,1.0029297 12.006775,1.0029297 12.006775,1.0029297 C12.006775,1.0029297 10.5703125,2.6625977 10.5703125,2.6625977 C10.5703125,2.6625977 7.604492,2.6625977 7.604492,2.6625977 C7.471924,2.1142578 7.112732,1.7402344 6.682617,1.7402344 C6.682617,1.7402344 4.5863037,1.7402344 4.5863037,1.7402344 C4.1540527,1.7402344 3.7919922,2.1191406 3.6622925,2.6743164 C2.1774292,2.8041992 1.0093384,4.0561523 1.0093384,5.576172 C1.0093384,5.576172 1.0093384,14.080566 1.0093384,14.080566 C1.0093384,15.686523 2.3144531,16.993652 3.9192505,16.993652 C3.9192505,16.993652 20.080444,16.993652 20.080444,16.993652 C21.684937,16.993652 22.98944,15.686523 22.98944,14.080566 C22.98944,14.080566 22.98944,5.576172 22.98944,5.576172 C22.98944,3.9697266 21.684937,2.6625977 20.080444,2.6625977 ZM3.6411133,13.319824 C3.6411133,13.622559 3.394287,13.869141 3.0908203,13.869141 C2.7871704,13.869141 2.5411377,13.622559 2.5411377,13.319824 C2.5411377,13.319824 2.5411377,7.5131836 2.5411377,7.5131836 C2.5411377,7.2089844 2.7871704,6.9628906 3.0908203,6.9628906 C3.394287,6.9628906 3.6411133,7.2089844 3.6411133,7.5131836 C3.6411133,7.5131836 3.6411133,13.319824 3.6411133,13.319824 ZM6.9489746,4.8129883 C6.9489746,5.133301 6.6882324,5.3935547 6.3685303,5.3935547 C6.3685303,5.3935547 4.8775635,5.3935547 4.8775635,5.3935547 C4.557495,5.3935547 4.297119,5.133301 4.297119,4.8129883 C4.297119,4.8129883 4.297119,4.4716797 4.297119,4.4716797 C4.297119,4.1503906 4.557495,3.8901367 4.8775635,3.8901367 C4.8775635,3.8901367 6.3685303,3.8901367 6.3685303,3.8901367 C6.6885986,3.8901367 6.9489746,4.1503906 6.9489746,4.4716797 C6.9489746,4.4716797 6.9489746,4.8129883 6.9489746,4.8129883 ZM14.740967,14.55957 C12.177307,14.55957 10.091248,12.471191 10.091248,9.904785 C10.091248,7.338867 12.177307,5.2504883 14.740967,5.2504883 C17.30426,5.2504883 19.389038,7.338867 19.389038,9.904785 C19.389038,12.471191 17.30426,14.55957 14.740967,14.55957 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="bg-box owl-lupa">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="17px" height="17px"  viewBox="0 0 17 17">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M14.977051,13.501709 C14.977051,13.501709 12.182617,10.707275 12.182617,10.707275 C12.856079,9.735107 13.192993,8.651611 13.192993,7.456787 C13.192993,6.6796875 13.042236,5.937256 12.740723,5.2282715 C12.439331,4.519287 12.03186,3.9084473 11.518677,3.3947754 C11.005371,2.8815918 10.394531,2.4746094 9.685669,2.1728516 C8.976685,1.871582 8.233887,1.7209473 7.4571533,1.7209473 C6.68042,1.7209473 5.937622,1.871582 5.228882,2.1728516 C4.5198975,2.4746094 3.9089355,2.8815918 3.39563,3.3947754 C2.8822021,3.9084473 2.4749756,4.519287 2.173462,5.2282715 C1.8720703,5.937256 1.7213135,6.6796875 1.7213135,7.456787 C1.7213135,8.233154 1.8720703,8.976318 2.173462,9.684814 C2.4749756,10.393799 2.8822021,11.004639 3.39563,11.517822 C3.9089355,12.031006 4.5200195,12.438965 5.228882,12.73999 C5.937744,13.041748 6.68042,13.192627 7.4571533,13.192627 C8.652222,13.192627 9.73584,12.855469 10.708008,12.182129 C10.708008,12.182129 13.502441,14.968018 13.502441,14.968018 C13.697998,15.174561 13.942139,15.277832 14.235718,15.277832 C14.518066,15.277832 14.762695,15.174561 14.96875,14.968018 C15.175293,14.761963 15.278442,14.517334 15.278442,14.234863 C15.278564,13.947266 15.178223,13.702637 14.977051,13.501709 ZM10.035889,10.035156 C9.321533,10.749512 8.462036,11.106201 7.4571533,11.106201 C6.4523926,11.106201 5.5927734,10.749512 4.87854,10.035156 C4.1641846,9.320801 3.8070068,8.461426 3.8070068,7.456787 C3.8070068,6.45166 4.1643066,5.592285 4.87854,4.8779297 C5.5926514,4.1638184 6.4523926,3.8066406 7.4571533,3.8066406 C8.461914,3.8066406 9.321411,4.1638184 10.035889,4.8779297 C10.75,5.592285 11.1073,6.45166 11.1073,7.456787 C11.1073,8.461426 10.75,9.320801 10.035889,10.035156 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="bg-box owl-link">
-                            <svg   xmlns="http://www.w3.org/2000/svg"
-                                   xmlns:xlink="http://www.w3.org/1999/xlink"
-                                   width="18px" height="18px"  viewBox="0 0 18 18">
-                                <path fill-rule="evenodd"  fill="#ffffff"
-                                      d="M14.966675,8.202881 C14.966675,8.202881 12.396362,10.772217 12.396362,10.772217 C10.977539,12.19165 8.676025,12.19165 7.257324,10.772217 C7.0336914,10.549316 6.859009,10.29834 6.7055664,10.039307 C6.7055664,10.039307 7.899658,8.845215 7.899658,8.845215 C7.956421,8.788086 8.026611,8.755127 8.093628,8.716309 C8.176025,8.998535 8.3203125,9.265869 8.542114,9.487549 C9.25061,10.196533 10.403564,10.195801 11.111572,9.487549 C11.111572,9.487549 13.68103,6.918213 13.68103,6.918213 C14.389893,6.2092285 14.389893,5.0563965 13.68103,4.3481445 C12.973022,3.6396484 11.820435,3.6396484 11.111572,4.3481445 C11.111572,4.3481445 10.197632,5.2626953 10.197632,5.2626953 C9.456421,4.974121 8.657471,4.89624 7.8796387,5.010254 C7.8796387,5.010254 9.826782,3.0632324 9.826782,3.0632324 C11.24646,1.644043 13.546997,1.644043 14.966675,3.0632324 C16.385376,4.482666 16.385376,6.7834473 14.966675,8.202881 ZM8.171631,12.4279785 C8.171631,12.4279785 7.257324,13.342529 7.257324,13.342529 C6.548828,14.050293 5.395874,14.050293 4.6875,13.342529 C3.979004,12.633545 3.979004,11.481201 4.6875,10.772217 C4.6875,10.772217 7.257324,8.202881 7.257324,8.202881 C7.9663086,7.4938965 9.118408,7.4938965 9.826782,8.202881 C10.048218,8.424072 10.192383,8.690918 10.275757,8.9729 C10.343262,8.933838 10.412476,8.901855 10.469238,8.845215 C10.469238,8.845215 11.663452,7.651123 11.663452,7.651123 C11.510864,7.3916016 11.335205,7.1413574 11.111572,6.918213 C9.692871,5.4987793 7.3913574,5.4987793 5.972168,6.918213 C5.972168,6.918213 3.40271,9.487549 3.40271,9.487549 C1.9835205,10.906982 1.9835205,13.207764 3.40271,14.627197 C4.8217773,16.045898 7.123047,16.045898 8.542114,14.627197 C8.542114,14.627197 10.489624,12.6796875 10.489624,12.6796875 C9.711548,12.794189 8.912476,12.716064 8.171631,12.4279785 Z"/>
-                            </svg>
-                        </div>
-                    </a>
-                    <img src="images/card/bg_photo_2368.png" class="card-img" alt="...">
-                </div>
-                <div class="col d-none d-md-block text-left">
-                    <div class="card-body">
-                        <p>28 January 2015   /   No&nbsp;Comments</p>
-                        <p>Eodem modo typi, qui nunc nobis videntur parum</p>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-                        <a href="#">Read More »</a>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row d-block d-md-none">
-                <div class="col text-left">
-                    <div class="card-body">
-                        <p>28 January 2015   /   No&nbsp;Comments</p>
-                        <p>Eodem modo typi, qui nunc nobis videntur parum</p>
-                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-                        <a href="#">Read More »</a>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</section>
-
-    <section class="many-theme">
-<div class="container-fluid text-center">
-    <p class="dark-title">
-        Many Theme Options
-    </p>
-    <p class="undertitle">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-    </p>
-    <div class="line"></div>
-</div>
-        <div class="container-fluid themes">
-            <div class="row justify-content-center  align-items-end">
-                <div class="col-12 col-lg-7 pr-5">
-                    <img id="screens" src="images/themes/screens.png" alt="screens">
-                </div>
-                <div class="col-12 col-lg-4">
-                    <div class="row right-theme-caption" style="margin-top: 40px">
-                        <div class="col-3 mr-3">
-                            <div class="bg-circle1">
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                     xmlns:xlink="http://www.w3.org/1999/xlink"
-                                     width="41px" height="42px"  viewBox="0 0 41 42">
-                                    <path
-                                          d="M34.213745,1.3979492 C34.213745,1.3979492 30.961304,4.5268555 27.444214,5.7890625 C1.3978271,15.1328125 12.38269,33.34131 12.741089,33.401367 C12.741089,33.401367 14.20166,30.878906 16.17456,29.44043 C28.694336,20.311523 31.239014,9.8046875 31.239014,9.8046875 C31.239014,9.8046875 28.429688,22.447754 17.291382,30.314941 C14.831543,32.052246 13.1657715,36.328125 12.460693,40.601074 C12.460693,40.601074 14.204346,39.90381 14.954346,39.71338 C15.246704,37.82129 15.858032,36.00879 16.891724,34.390625 C32.45862,36.228516 37.557007,23.787598 38.223145,19.449219 C39.794556,9.204102 34.213745,1.3979492 34.213745,1.3979492 Z"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <p>Clean Design</p>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing diam.</p>
-                        </div>
-                    </div>
-                    <div class="row right-theme-caption">
-                        <div class="col-3 mr-3">
-                           <div class="bg-circle2">
-                               <svg xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    width="43px" height="36px"  viewBox="0 0 43 36">
-                                   <path
-                                         d="M17.32837,1.0625 C15.054077,1.0625 13.202637,2.887207 13.202637,5.1293945 C13.202637,5.92041 13.859009,6.5654297 14.664551,6.5654297 C15.468018,6.5654297 16.12146,5.92041 16.12146,5.1293945 C16.12146,4.4731445 16.662476,3.9389648 17.327637,3.9389648 C17.327637,3.9389648 25.625366,3.9389648 25.625366,3.9389648 C26.288208,3.9389648 26.828247,4.4731445 26.828247,5.1293945 C26.828247,5.92041 27.483643,6.5654297 28.290527,6.5654297 C29.095825,6.5654297 29.75122,5.92041 29.75122,5.1293945 C29.75122,2.887207 27.900513,1.0625 25.625366,1.0625 C25.625366,1.0625 17.32837,1.0625 17.32837,1.0625 ZM5.9093018,34.984375 C5.9093018,34.984375 37.044556,34.984375 37.044556,34.984375 C39.230347,34.984375 41.003906,33.237305 41.003906,31.07959 C41.003906,31.07959 41.003906,11.914551 41.003906,11.914551 C41.003906,9.758789 39.229736,8.010742 37.044556,8.010742 C37.044556,8.010742 5.9093018,8.010742 5.9093018,8.010742 C3.7215576,8.010742 1.949585,9.759277 1.949585,11.914551 C1.949585,11.914551 1.949585,31.07959 1.949585,31.07959 C1.949585,33.237305 3.72229,34.984375 5.9093018,34.984375 ZM34.86084,28.557617 C34.86084,28.557617 8.202026,28.557617 8.202026,28.557617 C7.668457,28.557617 7.2369385,28.134277 7.2369385,27.60791 C7.2369385,27.083496 7.668457,26.655762 8.202026,26.655762 C8.202026,26.655762 34.86084,26.655762 34.86084,26.655762 C35.391846,26.655762 35.82373,27.083496 35.82373,27.60791 C35.825195,28.134277 35.391846,28.557617 34.86084,28.557617 ZM34.833862,22.448242 C34.833862,22.448242 8.175415,22.448242 8.175415,22.448242 C7.6414795,22.448242 7.209961,22.02539 7.209961,21.5 C7.209961,20.975586 7.6414795,20.546875 8.175415,20.546875 C8.175415,20.546875 34.833862,20.546875 34.833862,20.546875 C35.364746,20.546875 35.796753,20.975586 35.796753,21.5 C35.798218,22.02539 35.364746,22.448242 34.833862,22.448242 ZM8.148315,14.437012 C8.148315,14.437012 34.806885,14.437012 34.806885,14.437012 C35.33777,14.437012 35.770508,14.865234 35.770508,15.390137 C35.770508,15.915527 35.33777,16.338867 34.806885,16.338867 C34.806885,16.338867 8.148315,16.338867 8.148315,16.338867 C7.614868,16.338867 7.1833496,15.915527 7.1833496,15.390137 C7.1833496,14.865723 7.614868,14.437012 8.148315,14.437012 Z"/>
-                               </svg>
-                           </div>
-                        </div>
-                        <div class="col">
-                            <p>Multipurpose</p>
-                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate esse.</p>
-                        </div>
-                    </div>
-                    <div class="row right-theme-caption">
-                        <div class="col-3 mr-3">
-                           <div class="bg-circle3">
-                               <svg xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    width="27px" height="43px"  viewBox="0 0 27 43">
-                                   <path
-                                         d="M22.739868,1.8925781 C22.739868,1.8925781 4.268799,1.8925781 4.268799,1.8925781 C2.470337,1.8925781 1.0090332,3.3310547 1.0090332,5.100586 C1.0090332,5.100586 1.0090332,38.786133 1.0090332,38.786133 C1.0090332,40.55664 2.470337,41.99414 4.268799,41.99414 C4.268799,41.99414 22.739868,41.99414 22.739868,41.99414 C24.538452,41.99414 25.99939,40.55664 25.99939,38.786133 C25.99939,38.786133 25.99939,5.100586 25.99939,5.100586 C25.99939,3.3310547 24.538452,1.8925781 22.739868,1.8925781 ZM10.516724,4.8222656 C10.516724,4.383301 10.874756,4.0302734 11.321167,4.0302734 C11.321167,4.0302734 15.688477,4.0302734 15.688477,4.0302734 C16.13379,4.0302734 16.49231,4.383301 16.49231,4.8222656 C16.49231,4.8222656 16.49231,4.84375 16.49231,4.84375 C16.49231,5.2817383 16.13379,5.635254 15.688477,5.635254 C15.688477,5.635254 11.321167,5.635254 11.321167,5.635254 C10.874756,5.635254 10.516724,5.2817383 10.516724,4.84375 C10.516724,4.84375 10.516724,4.8222656 10.516724,4.8222656 ZM13.504272,40.791504 C12.532227,40.791504 11.738525,40.01123 11.738525,39.0542 C11.738525,38.097168 12.53186,37.315918 13.504272,37.315918 C14.4765625,37.315918 15.270386,38.097168 15.270386,39.0542 C15.270386,40.01123 14.4765625,40.791504 13.504272,40.791504 ZM23.282715,35.577637 C23.282715,35.87207 23.038818,36.112305 22.739868,36.112305 C22.739868,36.112305 4.268799,36.112305 4.268799,36.112305 C3.9702148,36.112305 3.72583,35.87207 3.72583,35.577637 C3.72583,35.577637 3.72583,8.308594 3.72583,8.308594 C3.72583,8.014648 3.9702148,7.774414 4.268799,7.774414 C4.268799,7.774414 22.739868,7.774414 22.739868,7.774414 C23.038818,7.774414 23.282715,8.014648 23.282715,8.308594 C23.282715,8.308594 23.282715,35.577637 23.282715,35.577637 ZM20.5719,19.53711 C20.5719,19.53711 6.4365234,19.53711 6.4365234,19.53711 C6.1394043,19.53711 5.8988037,19.773926 5.8988037,20.066406 C5.8988037,20.066406 5.8988037,20.07666 5.8988037,20.07666 C5.8988037,20.370117 6.13916,20.606445 6.4365234,20.606445 C6.4365234,20.606445 20.5719,20.606445 20.5719,20.606445 C20.869263,20.606445 21.109863,20.370117 21.109863,20.07666 C21.109863,20.07666 21.109863,20.066406 21.109863,20.066406 C21.109863,19.773926 20.869629,19.53711 20.5719,19.53711 ZM20.567383,10.982422 C20.567383,10.982422 18.937622,10.982422 18.937622,10.982422 C18.637451,10.982422 18.39441,11.222168 18.39441,11.51709 C18.39441,11.51709 18.39441,13.120605 18.39441,13.120605 C18.39441,13.416016 18.637451,13.655273 18.937622,13.655273 C18.937622,13.655273 20.567383,13.655273 20.567383,13.655273 C20.8667,13.655273 21.109863,13.415527 21.109863,13.120605 C21.109863,13.120605 21.109863,11.51709 21.109863,11.51709 C21.109863,11.22168 20.8667,10.982422 20.567383,10.982422 ZM14.591309,13.655762 C14.591309,13.655762 16.22107,13.655762 16.22107,13.655762 C16.520386,13.655762 16.763306,13.416016 16.763306,13.121094 C16.763306,13.121094 16.763306,11.51709 16.763306,11.51709 C16.763306,11.222168 16.520386,10.98291 16.22107,10.98291 C16.22107,10.98291 14.591309,10.98291 14.591309,10.98291 C14.291504,10.98291 14.047974,11.222656 14.047974,11.51709 C14.047974,11.51709 14.047974,13.121094 14.047974,13.121094 C14.047241,13.416016 14.291504,13.655762 14.591309,13.655762 ZM20.5719,22.745117 C20.5719,22.745117 6.4365234,22.745117 6.4365234,22.745117 C6.1394043,22.745117 5.8988037,22.982422 5.8988037,23.274902 C5.8988037,23.274902 5.8988037,23.285156 5.8988037,23.285156 C5.8988037,23.578125 6.13916,23.814941 6.4365234,23.814941 C6.4365234,23.814941 20.5719,23.814941 20.5719,23.814941 C20.869263,23.814941 21.109863,23.578125 21.109863,23.285156 C21.109863,23.285156 21.109863,23.274902 21.109863,23.274902 C21.109863,22.982422 20.869629,22.745117 20.5719,22.745117 ZM6.4365234,17.398926 C6.4365234,17.398926 15.683105,17.398926 15.683105,17.398926 C15.979614,17.398926 16.22107,17.161621 16.22107,16.86914 C16.22107,16.86914 16.22107,16.858887 16.22107,16.858887 C16.22107,16.566406 15.97998,16.32959 15.683105,16.32959 C15.683105,16.32959 6.4365234,16.32959 6.4365234,16.32959 C6.1394043,16.32959 5.8988037,16.566406 5.8988037,16.858887 C5.8988037,16.858887 5.8988037,16.86914 5.8988037,16.86914 C5.89917,17.161621 6.1394043,17.398926 6.4365234,17.398926 ZM20.5719,25.954102 C20.5719,25.954102 6.4365234,25.954102 6.4365234,25.954102 C6.1394043,25.954102 5.8988037,26.19043 5.8988037,26.483398 C5.8988037,26.483398 5.8988037,26.493164 5.8988037,26.493164 C5.8988037,26.786133 6.13916,27.02246 6.4365234,27.02246 C6.4365234,27.02246 20.5719,27.02246 20.5719,27.02246 C20.869263,27.02246 21.109863,26.786133 21.109863,26.493164 C21.109863,26.493164 21.109863,26.483398 21.109863,26.483398 C21.109863,26.19043 20.869629,25.954102 20.5719,25.954102 ZM6.4421387,13.655762 C6.4421387,13.655762 8.071655,13.655762 8.071655,13.655762 C8.371094,13.655762 8.614746,13.416016 8.614746,13.121094 C8.614746,13.121094 8.614746,11.51709 8.614746,11.51709 C8.614746,11.222168 8.371094,10.98291 8.071655,10.98291 C8.071655,10.98291 6.4421387,10.98291 6.4421387,10.98291 C6.141968,10.98291 5.89917,11.222656 5.89917,11.51709 C5.89917,11.51709 5.89917,13.121094 5.89917,13.121094 C5.89917,13.416016 6.141968,13.655762 6.4421387,13.655762 ZM10.78833,13.655762 C10.78833,13.655762 12.417969,13.655762 12.417969,13.655762 C12.717651,13.655762 12.9609375,13.416016 12.9609375,13.121094 C12.9609375,13.121094 12.9609375,11.51709 12.9609375,11.51709 C12.9609375,11.222168 12.717651,10.98291 12.417969,10.98291 C12.417969,10.98291 10.78833,10.98291 10.78833,10.98291 C10.488525,10.98291 10.245239,11.222656 10.245239,11.51709 C10.245239,11.51709 10.245239,13.121094 10.245239,13.121094 C10.244873,13.416016 10.488525,13.655762 10.78833,13.655762 ZM20.5719,32.370117 C20.5719,32.370117 6.4365234,32.370117 6.4365234,32.370117 C6.1394043,32.370117 5.8988037,32.606445 5.8988037,32.899414 C5.8988037,32.899414 5.8988037,32.910156 5.8988037,32.910156 C5.8988037,33.20215 6.13916,33.439453 6.4365234,33.439453 C6.4365234,33.439453 20.5719,33.439453 20.5719,33.439453 C20.869263,33.439453 21.109863,33.20215 21.109863,32.910156 C21.109863,32.910156 21.109863,32.899414 21.109863,32.899414 C21.109863,32.606445 20.869629,32.370117 20.5719,32.370117 ZM20.5719,29.16211 C20.5719,29.16211 6.4365234,29.16211 6.4365234,29.16211 C6.1394043,29.16211 5.8988037,29.398926 5.8988037,29.691406 C5.8988037,29.691406 5.8988037,29.70166 5.8988037,29.70166 C5.8988037,29.99414 6.13916,30.231445 6.4365234,30.231445 C6.4365234,30.231445 20.5719,30.231445 20.5719,30.231445 C20.869263,30.231445 21.109863,29.99414 21.109863,29.70166 C21.109863,29.70166 21.109863,29.691406 21.109863,29.691406 C21.109863,29.398926 20.869629,29.16211 20.5719,29.16211 Z"/>
-                               </svg>
-                           </div>
-                        </div>
-                        <div class="col">
-                            <p>Ultra Responsive</p>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing diam.</p>
-                        </div>
-                    </div>
-                    <div class="row right-theme-caption">
-                        <div class="col-3 mr-3">
-                            <div class="bg-circle4">
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                     xmlns:xlink="http://www.w3.org/1999/xlink"
-                                     width="44px" height="37px"  viewBox="0 0 44 37">
-                                    <path
-                                          d="M25.788208,24.168457 C28.325684,23.074707 30.328735,21.58545 31.79663,19.701172 C33.264404,17.816406 33.998413,15.765137 33.998413,13.54541 C33.998413,11.325684 33.264404,9.2734375 31.796265,7.38916 C30.328491,5.504883 28.325684,4.015625 25.787964,2.9213867 C23.250122,1.8276367 20.489868,1.2807617 17.506836,1.2807617 C14.524048,1.2807617 11.763672,1.8276367 9.22583,2.9213867 C6.6881104,4.015625 4.6853027,5.504883 3.2174072,7.38916 C1.7492676,9.2734375 1.0151367,11.325684 1.0151367,13.54541 C1.0151367,15.4453125 1.5704346,17.234375 2.6790771,18.911621 C3.7878418,20.58789 5.310547,22.001465 7.2470703,23.150879 C7.0909424,23.534668 6.930786,23.885254 6.7668457,24.205566 C6.602783,24.524414 6.407715,24.831543 6.1811523,25.127441 C5.954712,25.422852 5.779175,25.654297 5.654175,25.821777 C5.529175,25.989746 5.326172,26.225586 5.044922,26.52832 C4.763672,26.831543 4.5839844,27.03125 4.5061035,27.126953 C4.5061035,27.110352 4.4748535,27.146973 4.4123535,27.234863 C4.3497314,27.322754 4.314575,27.362305 4.306885,27.35498 C4.2990723,27.34668 4.2677,27.385742 4.213135,27.473633 C4.1584473,27.561523 4.1311035,27.605469 4.1311035,27.605469 C4.1311035,27.605469 4.07251,27.725098 4.07251,27.725098 C4.0490723,27.773438 4.0334473,27.8208 4.025635,27.868652 C4.0178223,27.916504 4.013916,27.96875 4.013916,28.024414 C4.013916,28.080078 4.0216064,28.131836 4.0374756,28.179688 C4.0688477,28.387695 4.1584473,28.554688 4.306885,28.683105 C4.455078,28.810547 4.61499,28.874512 4.7869873,28.874512 C4.7869873,28.874512 4.857422,28.874512 4.857422,28.874512 C5.6380615,28.762695 6.3098145,28.634766 6.8719482,28.490723 C9.276978,27.85205 11.447876,26.830566 13.384277,25.424805 C14.789673,25.680176 16.164062,25.808105 17.50708,25.808105 C20.489868,25.809082 23.250488,25.262207 25.788208,24.168457 ZM41.330566,25.054688 C42.439697,23.385742 42.993896,21.59375 42.993896,19.677246 C42.993896,17.71289 42.407593,15.875488 41.236816,14.166992 C40.06543,12.458496 38.472168,11.037109 36.457886,9.90332 C36.81665,11.101074 36.996338,12.314453 36.996338,13.544434 C36.996338,15.684082 36.473755,17.711914 35.426758,19.628418 C34.380493,21.544434 32.881104,23.237305 30.929077,24.707031 C29.117554,26.047852 27.055908,27.077637 24.744507,27.796387 C22.433594,28.515137 20.020752,28.874512 17.506226,28.874512 C17.037964,28.874512 16.350708,28.842285 15.445068,28.778809 C18.583862,30.886719 22.269653,31.94043 26.501587,31.94043 C27.84497,31.94043 29.219116,31.812988 30.624756,31.557129 C32.561035,32.96289 34.732056,33.984375 37.137085,34.623535 C37.69922,34.76709 38.37085,34.89502 39.151733,35.006836 C39.338867,35.02246 39.510986,34.966797 39.667236,34.838867 C39.823364,34.711426 39.924927,34.536133 39.971924,34.3125 C39.964355,34.216797 39.971924,34.16455 39.995117,34.15674 C40.01819,34.149414 40.01416,34.097168 39.983276,34.000977 C39.952393,33.905273 39.936768,33.85742 39.936768,33.85742 C39.936768,33.85742 39.878418,33.73828 39.878418,33.73828 C39.86206,33.706055 39.835693,33.66211 39.796387,33.606445 C39.757324,33.55078 39.726196,33.510742 39.702637,33.48633 C39.679565,33.46289 39.644653,33.42285 39.597534,33.367188 C39.551025,33.31201 39.51953,33.27539 39.503784,33.259766 C39.42566,33.163574 39.246338,32.964355 38.96521,32.660645 C38.683838,32.35742 38.4812,32.12207 38.3562,31.954102 C38.2312,31.786621 38.05542,31.555176 37.829224,31.259766 C37.602783,30.964355 37.40735,30.657227 37.24353,30.337402 C37.079468,30.018066 36.919434,29.666992 36.763306,29.283691 C38.699585,28.1333 40.222046,26.723633 41.330566,25.054688 Z"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <p>Online Support</p>
-                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate esse.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="clients">
         <div class="container">
             <div class="owl-carousel owl-theme owl" id="owl3">
@@ -2529,7 +1523,7 @@
     <div class="col links">
         <div class="row">
 
-                <a class="active-link" href="#" >
+                <a  href="index.html" >
                     Home
             </a>
 
@@ -2546,7 +1540,7 @@
                     Features
             </a>
 
-                <a href="portfolio.html">
+                <a class="active-link" href="portfolio.html">
                     Portfolio
             </a>
 
