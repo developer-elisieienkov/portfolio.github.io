@@ -10,7 +10,7 @@ $dark-bg:#363636;
 $info-link-color:#8dc63f;
 $exe-font:axis;
 $red-bg:#e5493a;
-$gray:#959595;
+$grey:#959595;
 $white:#fff;
 $littleDarkerThenWhite:#fafafa;
 $darkerThenWhite:#f2f2f2;
@@ -22,6 +22,8 @@ $secondary-footer-font-color:#636363;
 $formBg:#171717;
 $footer-navbar-bg: #111111;
 $for-sec-active:#f4897e;
+$for-some-button:#8dc63f;
+$svg-link-color2:#e1e1e1;
 
 @mixin navbar-text(){
 font-family: Raleway;
@@ -58,36 +60,36 @@ a{text-decoration:none;
 }
 a:hover{text-decoration: none
 }
+.header-link-1{
+	color: $info-color;
+	fill: $nav-color;
+	transition: $unitrans;
+}
 
+.header-link-2{
+	color: $grey;
+	fill: $svg-link-color2;
+	transition: $unitrans;
+}
+.header-link-2:hover,.header-link-1:hover{
+	color: $info-link-color;
+	fill: $info-link-color;
+}
 .header-info{
-	fill: $info-color;
+
 	font-family: roboto;
 	font-size: 13px;
 	line-height: 20px;
 	font-weight: 400;
-	color: $info-color;
+
 	background: $dark-bg;
 	padding-top: 3px;
 	padding-bottom: 3px;
+ul{
+	list-style: none;
+	margin-right: -500px;
+}
 
-	a{
-		color:$info-color;
-		transition: $unitrans;
-	}
-	a:hover{
-		color:$info-link-color;
-		fill: $info-link-color;
-	}
-	svg{
-		margin-bottom: 4px;
-		fill: inherit;
-	}
-
-	.social-networks a:hover{
-		fill: $red-bg;
-	}
-	span{
-		color:$info-color;}
 }
 .nav-bg{
 	background:$white;
@@ -119,7 +121,7 @@ a:hover{text-decoration: none
 						font-weight: 800;
 						color: $nav-color;
 						transition: $unitrans;
-						fill: $gray;
+						fill: $grey;
 					}
 					.nav-link:hover{color:$red-bg ;
 						fill: $red-bg;
@@ -275,7 +277,7 @@ a:hover{text-decoration: none
 			font-size: 32px;
 			line-height: 30px;
 			font-weight: 700;
-			color: $gray;
+			color: $grey;
 		}
 		.under-car-2{
 			font-family: Raleway;
@@ -376,7 +378,7 @@ a:hover{text-decoration: none
 	}
 	.card-text{
 		@include small-text;
-		color: $gray;
+		color: $grey;
 	}
 }
 .dark-title{
@@ -387,7 +389,7 @@ a:hover{text-decoration: none
 }
 .undertitle{
 	@include small-text;
-	color:$gray;
+	color:$grey;
 	
 }
 .portfolio-title{
@@ -402,12 +404,18 @@ a:hover{text-decoration: none
 	}
 
 
-	.col:hover{
+	[class*="col"]:hover{
 		.bg-box{
 			display: block;
 		}
 		img{
 			filter:brightness(0.5);
+		}
+		.upper-text{
+			display: block;
+		}
+		.upper-line{
+			display: block;
 		}
 	}
 	img {
@@ -438,14 +446,7 @@ a:hover{text-decoration: none
 		}
 	}
 
-	.col:hover {
-		.upper-text{
-			display: block;
-		}
-		.upper-line{
-			display: block;
-		}
-		}
+
 		svg {
 			display: block;
 		}
@@ -468,7 +469,7 @@ a:hover{text-decoration: none
 		line-height: 1.04vw;
 		color: #959595;
 		font-weight: 400;
-		color: $gray;
+		color: $grey;
 		font-weight: 400;
 	}
 	@media (max-width: 767px) {
@@ -540,7 +541,7 @@ a:hover{text-decoration: none
 		}
 		p:nth-child(2) {
 			@include small-text;
-			color: $gray;
+			color: $grey;
 		}
 
 
@@ -564,7 +565,7 @@ a:hover{text-decoration: none
 	}
 	.circle-caption{
 		@include small-text;
-		color: $gray;
+		color: $grey;
 	}
 	.undercircle-line{
 		box-sizing: border-box;
@@ -664,7 +665,7 @@ a:hover{text-decoration: none
 	}
 	[id*="collapse-row"]{
 		@include small-text;
-		color: $gray;
+		color: $grey;
 	}
 }
 
@@ -736,7 +737,7 @@ a:hover{text-decoration: none
 		}
 		p:nth-child(3){
 			@include small-text;
-			color: $gray;
+			color: $grey;
 		}
 		a{
 			@include small-text;
@@ -859,7 +860,7 @@ a:hover{text-decoration: none
 
 			p:nth-child(2) {
 				@include small-text;
-				color: $gray;
+				color: $grey;
 				transition: $unitrans;
 			}
 		}
@@ -1102,7 +1103,7 @@ footer {
 
 	.caption {
 		@include small-text;
-		color: $gray;
+		color: $grey;
 		margin: 0 0 0 0px;
 		transition: $unitrans;
 	}
@@ -1154,7 +1155,7 @@ footer {
 		}
 
 		.contacts {
-			color: $gray;
+			color: $grey;
 		}
 	}
 
@@ -1232,7 +1233,7 @@ footer {
 			color: $secondaryBrandColor;
 
 			span {
-				color: $gray;
+				color: $grey;
 			}
 		}
 	}
@@ -1252,8 +1253,11 @@ footer {
 	font-weight: 700;
 	color: $dark-bg;
 }
-.portfolio-details-projects{
-	padding: 40px 0px 0 70px;
+.text-like-in-nav{
+@include navbar-text;
+	text-transform: uppercase;
+	color: $white;
+	font-weight: 800;
 }
 
 //styles for other pages
@@ -1261,6 +1265,111 @@ footer {
 	color: $for-sec-active!important;
 }
 	//portfolio
+.portfolio-details-projects{
+	padding: 40px 0px 0 30px;
+	#portfolioDetails{
+		width: 57vw;
+		.item{
+			width: 57vw;
+		}
+	}
+	.owl-dots{
+		.owl-dot{
+			width: 9.5vw;
+			height: 5.24vw;
+			margin: 0;
+			transition: $unitrans;
+		}
+		.owl-dot:first-child{
+			background: url("../images/dots/bg_photo_2523.png");
+		}
+		.owl-dot:nth-child(2){
+			background: url("../images/dots/bg_photo_2719.png");
+		}
+		.owl-dot:nth-child(3){
+			background: url("../images/dots/bg_photo_2532.png");
+		}
+		.owl-dot:nth-child(4){
+			background: url("../images/dots/bg_photo_2720.png");
+		}
+		.owl-dot:nth-child(5){
+			background: url("../images/dots/bg_photo_2538.png");
+		}
+		.owl-dot:nth-child(6){
+			background: url("../images/dots/bg_photo_2721.png");
+		}
+		.owl-dot:focus{
+			outline: none;
+		}
+		.active{
+			transform: scale(1.05);
+		}
+	}
+	.secondary-title{
+		margin-bottom: 20px;
+	}
+	.undertitle{
+		margin-bottom: 20px;
+	}
+	.buy{
+		width: 170px;
+		height: 54px;
+		background-color: $for-some-button;
+		border: none;
+		border-radius: 5px;
+		outline: none;
+		margin-bottom: 50px;
+	}
+	.buy:focus{
+		transform: scale(1.05);
+	}
+	.left{
+		color: $dark-bg;
+		padding-left: 30px;
+		p{
+			position: relative;
+			margin-bottom: 10px;
+		}
+	}
+
+	.right{
+		color: $muchMoreDarkerThenWhite;
+		transition: $unitrans;
+	}
+	a.right:hover{
+		color: $red-bg;
+	}
+}
+#categorySvg::before{
+	position: absolute;
+	left: -30px;
+	top: 3px;
+	content: url("../images/svgBefore/icon_2180.svg");
+}
+#clientSvg::before{
+	position: absolute;
+	left: -30px;
+	top: 2px;
+	content: url("../images/svgBefore/icon_2185.svg");
+}
+#linkSvg::before{
+	position: absolute;
+	left: -30px;
+	top: 2px;
+	content: url("../images/svgBefore/icon_2378.svg");
+}
+#dateSvg::before{
+	position: absolute;
+	left: -30px;
+	top: 3px;
+	content: url("../images/svgBefore/icon_2190.svg");
+}
+#shareSvg::before{
+	position: absolute;
+	left: -30px;
+	top: 3px;
+	content: url("../images/svgBefore/icon_2392.svg");
+}
 .pages-head{
 margin-top: 155px;
 	background: url("../images/bg/slimest.jpg");
@@ -1291,6 +1400,17 @@ margin-top: 155px;
 	.pages-head{
 		background: $red-bg;
 	}
+}
+.linksSvg1{
+	fill: $nav-color;
+	transition: $unitrans;
+}
+.linksSvg2{
+	fill: $svg-link-color2;
+	transition: $unitrans;
+}
+.linksSvg1:hover,.linksSvg2:hover{
+	fill: $red-bg;
 }
 
 //all media-styles
