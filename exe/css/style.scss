@@ -369,17 +369,17 @@ ul{
 
 		padding-top: 65px;
 	}
-	.card-title{
-		font-family: Raleway;
-		font-size: 24px;
-		line-height: 20px;
-		font-weight: 700;
-		color: inherit;
-	}
 	.card-text{
 		@include small-text;
 		color: $grey;
 	}
+}
+.card-title{
+	font-family: Raleway;
+	font-size: 24px;
+	line-height: 20px;
+	font-weight: 700;
+	color: inherit;
 }
 .dark-title{
 	@include title-font;
@@ -470,7 +470,6 @@ ul{
 		color: #959595;
 		font-weight: 400;
 		color: $grey;
-		font-weight: 400;
 	}
 	@media (max-width: 767px) {
 		img {
@@ -489,17 +488,19 @@ ul{
 .lupa{
 	left: 65%;
 	top: 65%;
+	background: url("../images/lupaLink/icon_2672.svg") no-repeat center;
 }
 .link{
 	left: 80%;
 	top: 65%;
+	background: url("../images/lupaLink/icon_2676.svg") no-repeat center;
 }
 .bg-box{
 	display: none;
 	position: absolute;
 	box-sizing: padding-box;
 	padding: 9px;
-	background: $footer-bg;
+	background-color: $footer-bg;
 	height: 35px;
 	width: 35px;
 	z-index: 9;
@@ -507,7 +508,7 @@ ul{
 	transition: $unitrans;
 }
 .bg-box:hover{
-	background: $red-bg;
+	background-color: $red-bg;
 }
 .loadmore{
 	margin-top: 41px;
@@ -954,41 +955,7 @@ ul{
 	}
 }
 }
-#portfolioDetails{
 
-	.owl-prev:hover, .owl-next:hover{
-		background-color: $red-bg;
-	}
-	.owl-prev:focus, .owl-next:focus{
-		outline: none;
-	}
-	.owl-next{
-		right: 20px;
-		background: url("../images/carousel/arrow_1511.svg") no-repeat;
-		background-position: center;
-		i{
-			height: 42px;
-			width: 42px;
-		}
-	}
-	.owl-prev{
-		left: 20px;
-		background: url("../images/carousel/arrow_1507.svg") no-repeat;
-		background-position: center;
-		i{
-			height: 42px;
-			width: 42px;
-		}
-	}
-	.owl-prev, .owl-next{
-		width: 42px;
-		height:42px;
-		position: absolute;
-		top: 40%;
-		border-radius: 3px;
-		background-color: $dark-bg;
-	}
-}
 footer {
 	.footer-title {
 		font-family: Raleway;
@@ -1265,10 +1232,57 @@ footer {
 	color: $for-sec-active!important;
 }
 	//portfolio
+.other-portfolio{
+	background: $littleDarkerThenWhite;
+	margin-bottom: -20px;
+	.portfolio{
+		button{
+			margin-bottom: 80px;
+		}
+	}
+	.portfolio-desk{
+		img{
+			width: 25vw;
+		}
+	}
+}
 .portfolio-details-projects{
-	padding: 40px 0px 0 30px;
+	padding: 40px 90px 0 100px;
 	#portfolioDetails{
 		width: 57vw;
+		margin-bottom: 80px;
+		.owl-prev:hover, .owl-next:hover{
+			background-color: $red-bg;
+		}
+		.owl-prev:focus, .owl-next:focus{
+			outline: none;
+		}
+		.owl-next{
+			right: 20px;
+			background: url("../images/carousel/arrow_1511.svg") no-repeat;
+			background-position: center;
+			i{
+				height: 42px;
+				width: 42px;
+			}
+		}
+		.owl-prev{
+			left: 20px;
+			background: url("../images/carousel/arrow_1507.svg") no-repeat;
+			background-position: center;
+			i{
+				height: 42px;
+				width: 42px;
+			}
+		}
+		.owl-prev, .owl-next{
+			width: 42px;
+			height:42px;
+			position: absolute;
+			top: 40%;
+			border-radius: 3px;
+			background-color: $dark-bg;
+		}
 		.item{
 			width: 57vw;
 		}
@@ -1282,27 +1296,39 @@ footer {
 		}
 		.owl-dot:first-child{
 			background: url("../images/dots/bg_photo_2523.png");
+			background-size: cover;
+			background-position: center;
 		}
 		.owl-dot:nth-child(2){
 			background: url("../images/dots/bg_photo_2719.png");
+			background-size: cover;
+			background-position: center;
 		}
 		.owl-dot:nth-child(3){
 			background: url("../images/dots/bg_photo_2532.png");
+			background-size: cover;
+			background-position: center;
 		}
 		.owl-dot:nth-child(4){
 			background: url("../images/dots/bg_photo_2720.png");
+			background-size: cover;
+			background-position: center;
 		}
 		.owl-dot:nth-child(5){
 			background: url("../images/dots/bg_photo_2538.png");
+			background-size: cover;
+			background-position: center;
 		}
 		.owl-dot:nth-child(6){
 			background: url("../images/dots/bg_photo_2721.png");
+			background-size: cover;
+			background-position: center;
 		}
 		.owl-dot:focus{
 			outline: none;
 		}
 		.active{
-			transform: scale(1.05);
+			transform: scale(1.1);
 		}
 	}
 	.secondary-title{
@@ -1339,6 +1365,56 @@ footer {
 	a.right:hover{
 		color: $red-bg;
 	}
+}
+.prev-next{
+	padding: 0px 0 60px 0;
+	.caption{
+		color: $muchMoreDarkerThenWhite;
+	}
+	svg{
+		fill: $svg-link-color2;
+		transition: $unitrans;
+	}
+}
+.prev-next-project{
+	font-family: Raleway;
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 600;
+	color: $dark-bg;
+	margin-bottom: 0;
+	transition: $unitrans;
+}
+.arrow:hover{
+	svg{
+		fill: $red-bg;
+	}
+	.prev-next-project{
+		color: $red-bg;
+	}
+}
+.over-footer{
+	background: $red-bg;
+	padding: 50px 0 40px 50px;
+	.card-title{
+		font-weight: 400;
+		color: $white;
+	}
+	button{
+		width: 170px;
+		height: 54px;
+		background: $dark-bg;
+		border-radius: 5px;
+		border: none;
+		outline: none;
+	}
+}
+.large-title{
+	font-family: Raleway;
+	font-size: 32px;
+	line-height: 20px;
+	font-weight: 700;
+	color: $white;
 }
 #categorySvg::before{
 	position: absolute;
@@ -1427,6 +1503,9 @@ margin-top: 155px;
 	}
 	.footer-nav {
 		padding: 30px 0px 15px 100px;
+	}
+	.prev-next {
+		padding: 0px 50px 40px 40px;
 	}
 }
 	@media (max-width: 767px) {
@@ -1545,6 +1624,20 @@ margin-top: 155px;
 				}
 			}
 		}
+		#portfolioDetails{
+			.active{
+				transform: scale(1.2);
+			}
+		}
+		.portfolio-details{
+			.portfolio-desk{
+				.col-12{
+					img{
+						width: 100vw;
+					}
+				}
+			}
+		}
 	}
 @media (orientation:landscape) and (max-width: 767px){
 	#carousel {
@@ -1595,6 +1688,53 @@ margin-top: 155px;
 	.active-nav{
 		.li-line{
 			width: 0% !important;
+		}
+	}
+	.portfolio-details {
+		.portfolio-details-projects {
+			max-width: 100vw;
+			padding: 20px 20px 0 20px;
+			#portfolioDetails {
+				width: 110%;
+				margin: 0 0 20px 0;
+
+				.item {
+					width: 100vw;
+				}
+				.owl-dot{
+					width: 16.66%;
+					height: 9.35vw!important;
+				}
+			}
+		}
+		.upper-text:first-child {
+			top:30px;
+			left:40px;
+			font-family: Raleway;
+			font-size: 24px;
+			line-height: 20px;
+			font-weight: 700;
+			color: $white;
+		}
+
+		.upper-text {
+
+			top:55px;
+			left:40px;
+			font-family: Roboto;
+			font-size: 14px;
+			line-height: 20px;
+			font-weight: 400;
+			color: $grey;
+
+		}
+		.lupa{
+			left: 65%;
+			top: 65%;
+		}
+		.link{
+			left: 80%;
+			top: 65%;
 		}
 	}
 }

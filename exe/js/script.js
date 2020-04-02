@@ -130,8 +130,15 @@ $(function(){
         autoplay:true,
         margin:0,
         autoplayHoverPause:true,
-        nav:true,
         navText:false,
+        responsive:{
+            1:{
+                nav:false,
+            },
+            700:{
+                nav:true
+            }
+        }
     });
 });
 
