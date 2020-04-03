@@ -1091,7 +1091,8 @@ footer {
 	}
 
 	.footer-media {
-		margin-bottom: 40px;
+		padding: 20px 0 20px 0;
+		border-bottom: 1px solid $dark-bg;
 
 		img {
 			transition: $unitrans;
@@ -1125,6 +1126,12 @@ footer {
 			color: $grey;
 		}
 	}
+	.second-footer-col{
+		.footer-media:last-child{
+			border-bottom: transparent;
+			margin-bottom: 20px;
+		}
+	}
 
 	.footer-media:hover {
 		svg {
@@ -1154,6 +1161,7 @@ footer {
 	}
 
 	.follow {
+		padding-top: 20px;
 		svg:hover {
 			fill: $red-bg;
 		}
@@ -1165,7 +1173,7 @@ footer {
 		}
 	}
 
-	.third-footer-col {
+	 .third-footer-col{
 		.date {
 			font-size: 14px;
 		}
@@ -1367,7 +1375,7 @@ footer {
 	}
 }
 .prev-next{
-	padding: 0px 0 60px 0;
+	padding: 0px 50px 60px 20px;
 	.caption{
 		color: $muchMoreDarkerThenWhite;
 	}
@@ -1379,7 +1387,7 @@ footer {
 .prev-next-project{
 	font-family: Raleway;
 	font-size: 18px;
-	line-height: 20px;
+	line-height: 30px;
 	font-weight: 600;
 	color: $dark-bg;
 	margin-bottom: 0;
@@ -1399,6 +1407,7 @@ footer {
 	.card-title{
 		font-weight: 400;
 		color: $white;
+		line-height: 24px;
 	}
 	button{
 		width: 170px;
@@ -1412,7 +1421,7 @@ footer {
 .large-title{
 	font-family: Raleway;
 	font-size: 32px;
-	line-height: 20px;
+	line-height: 30px;
 	font-weight: 700;
 	color: $white;
 }
@@ -1475,6 +1484,16 @@ margin-top: 155px;
 	}
 	.pages-head{
 		background: $red-bg;
+	}
+	.portfolio-desk{
+		.upper-text:nth-child(2){
+			font-size: 1vw;
+			margin-top: 0.5vw;
+		}
+		.upper-text:first-child{
+			font-size: 1.5vw;
+
+		}
 	}
 }
 .linksSvg1{
@@ -1635,6 +1654,24 @@ margin-top: 155px;
 					img{
 						width: 100vw;
 					}
+				}
+			}
+			.other-portfolio{
+				.portfolio{
+					.portfolio-desk{
+						.upper-text:first-child{
+							font-size: 6vw;
+						}
+						.upper-text:nth-child(2){
+							font-size: 4vw;
+						}
+					}
+				}
+			}
+			.prev-next {
+				.prev-next-project {
+					font-size: 5vw;
+					line-height: 6vw;
 				}
 			}
 		}

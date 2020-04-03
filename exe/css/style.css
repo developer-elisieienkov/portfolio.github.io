@@ -923,7 +923,8 @@ footer svg {
   transition: ease 0.3s; }
 
 footer .footer-media {
-  margin-bottom: 40px; }
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid #363636; }
   footer .footer-media img {
     -webkit-transition: ease 0.3s;
     -o-transition: ease 0.3s;
@@ -952,6 +953,10 @@ footer .footer-media {
   footer .footer-media .contacts {
     color: #959595; }
 
+footer .second-footer-col .footer-media:last-child {
+  border-bottom: transparent;
+  margin-bottom: 20px; }
+
 footer .footer-media:hover svg {
   fill: #e5493a; }
 
@@ -972,8 +977,10 @@ footer .footer-media:hover .date {
 footer .footer-media:hover .contacts {
   color: #e5493a; }
 
-footer .follow svg:hover {
-  fill: #e5493a; }
+footer .follow {
+  padding-top: 20px; }
+  footer .follow svg:hover {
+    fill: #e5493a; }
 
 footer .follow:hover .date {
   color: #fff; }
@@ -1145,7 +1152,7 @@ footer .anchor {
     color: #e5493a; }
 
 .prev-next {
-  padding: 0px 0 60px 0; }
+  padding: 0px 50px 60px 20px; }
   .prev-next .caption {
     color: #ccc; }
   .prev-next svg {
@@ -1157,7 +1164,7 @@ footer .anchor {
 .prev-next-project {
   font-family: Raleway;
   font-size: 18px;
-  line-height: 20px;
+  line-height: 30px;
   font-weight: 600;
   color: #363636;
   margin-bottom: 0;
@@ -1176,7 +1183,8 @@ footer .anchor {
   padding: 50px 0 40px 50px; }
   .over-footer .card-title {
     font-weight: 400;
-    color: #fff; }
+    color: #fff;
+    line-height: 24px; }
   .over-footer button {
     width: 170px;
     height: 54px;
@@ -1188,7 +1196,7 @@ footer .anchor {
 .large-title {
   font-family: Raleway;
   font-size: 32px;
-  line-height: 20px;
+  line-height: 30px;
   font-weight: 700;
   color: #fff; }
 
@@ -1246,6 +1254,13 @@ footer .anchor {
 
 .portfolio-details .pages-head {
   background: #e5493a; }
+
+.portfolio-details .portfolio-desk .upper-text:nth-child(2) {
+  font-size: 1vw;
+  margin-top: 0.5vw; }
+
+.portfolio-details .portfolio-desk .upper-text:first-child {
+  font-size: 1.5vw; }
 
 .linksSvg1 {
   fill: #555;
@@ -1340,7 +1355,14 @@ footer .anchor {
     -ms-transform: scale(1.2);
     transform: scale(1.2); }
   .portfolio-details .portfolio-desk .col-12 img {
-    width: 100vw; } }
+    width: 100vw; }
+  .portfolio-details .other-portfolio .portfolio .portfolio-desk .upper-text:first-child {
+    font-size: 6vw; }
+  .portfolio-details .other-portfolio .portfolio .portfolio-desk .upper-text:nth-child(2) {
+    font-size: 4vw; }
+  .portfolio-details .prev-next .prev-next-project {
+    font-size: 5vw;
+    line-height: 6vw; } }
 
 @media (orientation: landscape) and (max-width: 767px) {
   #carousel {
