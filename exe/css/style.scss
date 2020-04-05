@@ -1,3 +1,4 @@
+@import "app/bootstrap/scss/bootstrap.scss";
 @import url('https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap');
 @font-face {
 font-family: axis;
@@ -1418,6 +1419,11 @@ footer {
 		outline: none;
 	}
 }
+.blog{
+	.over-footer{
+		background: $info-link-color;
+	}
+}
 .large-title{
 	font-family: Raleway;
 	font-size: 32px;
@@ -1478,12 +1484,14 @@ margin-top: 155px;
 		margin-right: 15px;
 	}
 }
+.portfolio-details,.blog{
+	.pages-head{
+		background: $red-bg;
+	}
+}
 .portfolio-details{
 	.header-info{
 		background: $littleDarkerThenWhite;
-	}
-	.pages-head{
-		background: $red-bg;
 	}
 	.portfolio-desk{
 		.upper-text:nth-child(2){
