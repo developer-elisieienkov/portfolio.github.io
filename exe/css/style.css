@@ -4270,13 +4270,13 @@ input[type="button"].btn-block {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   min-height: 1px;
-  padding: 1.25rem; }
+  padding: 1.25rem 1.25rem 0px 1.25rem; }
 
 .card-title {
-  margin-bottom: 0.75rem; }
+  margin-bottom: 0px; }
 
 .card-subtitle {
-  margin-top: -0.375rem;
+  margin-top: 0px;
   margin-bottom: 0; }
 
 .card-text:last-child {
@@ -4289,7 +4289,7 @@ input[type="button"].btn-block {
   margin-left: 1.25rem; }
 
 .card-header {
-  padding: 0.75rem 1.25rem;
+  padding: 0px 1.25rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
@@ -4300,7 +4300,7 @@ input[type="button"].btn-block {
     border-top: 0; }
 
 .card-footer {
-  padding: 0.75rem 1.25rem;
+  padding: 0px 1.25rem;
   background-color: rgba(0, 0, 0, 0.03);
   border-top: 1px solid rgba(0, 0, 0, 0.125); }
   .card-footer:last-child {
@@ -4309,7 +4309,7 @@ input[type="button"].btn-block {
 
 .card-header-tabs {
   margin-right: -0.625rem;
-  margin-bottom: -0.75rem;
+  margin-bottom: 0px;
   margin-left: -0.625rem;
   border-bottom: 0; }
 
@@ -4415,7 +4415,7 @@ input[type="button"].btn-block {
           border-bottom-left-radius: 0; } }
 
 .card-columns .card {
-  margin-bottom: 0.75rem; }
+  margin-bottom: 0px; }
 
 @media (min-width: 576px) {
   .card-columns {
@@ -10042,6 +10042,99 @@ footer .anchor {
 .blog .over-footer {
   background: #8dc63f; }
 
+.blog .other-portfolio {
+  background: #fff;
+  padding-top: 50px; }
+
+.blog .card-columns .card {
+  margin: 0 10px 30px 10px;
+  border: none; }
+  .blog .card-columns .card .lupa {
+    top: 23%;
+    left: 33%; }
+  .blog .card-columns .card .link {
+    top: 23%;
+    left: 53%; }
+  .blog .card-columns .card video {
+    margin-bottom: -10px; }
+  .blog .card-columns .card .card-img-top {
+    -webkit-transition: ease 0.3s;
+    -o-transition: ease 0.3s;
+    transition: ease 0.3s;
+    position: relative; }
+  .blog .card-columns .card .card-body {
+    background: #fafafa; }
+    .blog .card-columns .card .card-body .card-title {
+      font-family: Raleway;
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: 600;
+      color: #363636;
+      -webkit-transition: ease 0.3s;
+      -o-transition: ease 0.3s;
+      transition: ease 0.3s; }
+    .blog .card-columns .card .card-body .muted-card-text {
+      font-family: Roboto;
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 400;
+      color: #ccc;
+      margin-top: 10px; }
+    .blog .card-columns .card .card-body .card-text {
+      font-family: Roboto;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      color: #959595; }
+    .blog .card-columns .card .card-body .read-more {
+      font-family: Roboto;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      color: #363636;
+      -webkit-transition: ease 0.3s;
+      -o-transition: ease 0.3s;
+      transition: ease 0.3s; }
+    .blog .card-columns .card .card-body .line {
+      width: 30%;
+      margin: 0px;
+      margin-bottom: -5px;
+      -webkit-transition: ease 0.3s;
+      -o-transition: ease 0.3s;
+      transition: ease 0.3s;
+      color: #e5493a; }
+  .blog .card-columns .card:hover .card-img-top {
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5); }
+  .blog .card-columns .card:hover .card-title {
+    color: #e5493a; }
+  .blog .card-columns .card:hover .read-more {
+    color: #e5493a; }
+  .blog .card-columns .card:hover .line {
+    width: 100%; }
+  .blog .card-columns .card:hover .bg-box {
+    display: block; }
+
+.blog .card-columns .text-card .card-body {
+  background: #6dcff6;
+  padding: 50px 25px 50px 25px; }
+
+.blog .card-columns .text-card .text {
+  font-family: Raleway;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #ffffff; }
+  .blog .card-columns .text-card .text span {
+    font-weight: 800; }
+
+.blog .card-columns .text-card a b {
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #c7efff; }
+
 .large-title {
   font-family: Raleway;
   font-size: 32px;
@@ -10101,7 +10194,7 @@ footer .anchor {
 .portfolio-details .pages-head, .blog .pages-head {
   background: #e5493a; }
 
-.portfolio-details .header-info {
+.portfolio-details .header-info, .blog .header-info {
   background: #fafafa; }
 
 .portfolio-details .portfolio-desk .upper-text:nth-child(2) {

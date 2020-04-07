@@ -25,6 +25,7 @@ $footer-navbar-bg: #111111;
 $for-sec-active:#f4897e;
 $for-some-button:#8dc63f;
 $svg-link-color2:#e1e1e1;
+$color-of-text-card:#6dcff6;
 
 @mixin navbar-text(){
 font-family: Raleway;
@@ -1423,6 +1424,106 @@ footer {
 	.over-footer{
 		background: $info-link-color;
 	}
+	.other-portfolio{
+		background: $white;
+		padding-top: 50px;
+	}
+	.card-columns{
+		.card{
+			margin: 0 10px 30px 10px;
+			border: none;
+			.lupa{
+				top: 23%;
+				left: 33%;
+			}
+			.link{
+				top: 23%;
+				left: 53%;
+			}
+			video{
+				margin-bottom: -10px;
+			}
+			.card-img-top{
+				transition: $unitrans;
+				position: relative;
+			}
+			.card-body {
+				background: $littleDarkerThenWhite;
+				.card-title {
+					font-family: Raleway;
+					font-size: 20px;
+					line-height: 20px;
+					font-weight: 600;
+					color: $dark-bg;
+					transition: $unitrans;
+				}
+
+				.muted-card-text {
+					font-family: Roboto;
+					font-size: 12px;
+					line-height: 20px;
+					font-weight: 400;
+					color: $muchMoreDarkerThenWhite;
+					margin-top: 10px;
+				}
+
+				.card-text {
+					@include small-text;
+					color: $grey;
+				}
+
+				.read-more {
+					@include small-text;
+					color: $dark-bg;
+					transition: $unitrans;
+				}
+
+				.line {
+					width: 30%;
+					margin: 0px;
+					margin-bottom: -5px;
+					transition: $unitrans;
+					color: $red-bg;				}
+			}
+			&:hover{
+				.card-img-top{
+					filter: brightness(0.5);
+				}
+				.card-title{
+					color: $red-bg;
+				}
+				.read-more{
+					color: $red-bg;
+				}
+				.line{
+					width: 100%;
+				}
+				.bg-box{
+					display: block;
+				}
+			}
+		}
+		.text-card{
+			.card-body{
+				background: $color-of-text-card;
+				padding: 50px 25px 50px 25px;
+			}
+			.text{
+				font-family: Raleway;
+				font-size: 20px;
+				line-height: 24px;
+				font-weight: 500;
+				color: #ffffff;
+				span{
+					font-weight: 800;
+				}
+			}
+			a b{
+				@include small-text;
+				color: #c7efff;
+			}
+		}
+	}
 }
 .large-title{
 	font-family: Raleway;
@@ -1488,11 +1589,12 @@ margin-top: 155px;
 	.pages-head{
 		background: $red-bg;
 	}
-}
-.portfolio-details{
 	.header-info{
 		background: $littleDarkerThenWhite;
 	}
+}
+.portfolio-details{
+
 	.portfolio-desk{
 		.upper-text:nth-child(2){
 			font-size: 1vw;
