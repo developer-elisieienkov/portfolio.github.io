@@ -4414,22 +4414,40 @@ input[type="button"].btn-block {
         .card-group > .card:not(:first-child) .card-footer {
           border-bottom-left-radius: 0; } }
 
-.card-columns .card {
-  margin-bottom: 0px; }
-
-@media (min-width: 576px) {
-  .card-columns {
-    -webkit-column-count: 4;
-    -moz-column-count: 4;
-    column-count: 4;
-    -webkit-column-gap: 1.25rem;
-    -moz-column-gap: 1.25rem;
-    column-gap: 1.25rem;
-    orphans: 1;
-    widows: 1; }
-    .card-columns .card {
-      display: inline-block;
-      width: 100%; } }
+.card-columns {
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  column-count: 1;
+  -webkit-column-gap: 1.25rem;
+  -moz-column-gap: 1.25rem;
+  column-gap: 1.25rem;
+  orphans: 1;
+  widows: 1; }
+  .card-columns .card {
+    margin-bottom: 0px; }
+  .card-columns .card {
+    display: inline-block;
+    width: 100%; }
+  @media (min-width: 576px) {
+    .card-columns {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+      -webkit-column-gap: 1.25rem;
+      -moz-column-gap: 1.25rem;
+      column-gap: 1.25rem;
+      orphans: 1;
+      widows: 1; } }
+  @media (min-width: 992px) {
+    .card-columns {
+      -webkit-column-count: 4;
+      -moz-column-count: 4;
+      column-count: 4;
+      -webkit-column-gap: 1.25rem;
+      -moz-column-gap: 1.25rem;
+      column-gap: 1.25rem;
+      orphans: 1;
+      widows: 1; } }
 
 .accordion > .card {
   overflow: hidden; }
@@ -8953,8 +8971,24 @@ a:hover {
   height: 3px;
   display: block; }
 
-.progress-bar {
+.video-progress-container {
+  width: 100%;
+  background: transparent;
+  position: relative;
+  top: -3px;
+  left: 0;
+  height: 20px;
+  display: block;
+  cursor: pointer; }
+
+.progress-bar, .video-progress-bar {
   background: #e5493a;
+  width: 0%;
+  display: block;
+  height: inherit; }
+
+.video-buffer-bar {
+  background: #959595;
   width: 0%;
   display: block;
   height: inherit; }
@@ -9898,6 +9932,40 @@ footer .anchor {
   .other-portfolio .portfolio-desk img {
     width: 25vw; }
 
+#owl4 {
+  margin-bottom: 0px; }
+  #owl4 .owl-prev:focus, #owl4 .owl-next:focus {
+    outline: none; }
+  #owl4 .owl-next {
+    right: 20px;
+    background: url("../images/carousel/arrow_1511.svg") no-repeat;
+    background-position: center; }
+    #owl4 .owl-next i {
+      height: 42px;
+      width: 42px; }
+  #owl4 .owl-prev {
+    right: 45px;
+    background: url("../images/carousel/arrow_1507.svg") no-repeat;
+    background-position: center; }
+    #owl4 .owl-prev i {
+      height: 42px;
+      width: 42px; }
+  #owl4 .owl-prev, #owl4 .owl-next {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 80%;
+    border-radius: 3px;
+    background-color: #363636;
+    opacity: 0.3;
+    -webkit-transition: ease 0.3s;
+    -o-transition: ease 0.3s;
+    transition: ease 0.3s; }
+  #owl4 .owl-prev:hover, #owl4 .owl-next:hover {
+    background-color: #e5493a;
+    opacity: 1 !important;
+    opacity: 0.5; }
+
 .portfolio-details-projects {
   padding: 40px 90px 0 100px; }
   .portfolio-details-projects #portfolioDetails {
@@ -9930,43 +9998,43 @@ footer .anchor {
       background-color: #363636; }
     .portfolio-details-projects #portfolioDetails .item {
       width: 57vw; }
-  .portfolio-details-projects .owl-dots .owl-dot {
-    width: 9.5vw;
-    height: 5.24vw;
-    margin: 0;
-    -webkit-transition: ease 0.3s;
-    -o-transition: ease 0.3s;
-    transition: ease 0.3s; }
-  .portfolio-details-projects .owl-dots .owl-dot:first-child {
-    background: url("../images/dots/bg_photo_2523.png");
-    background-size: cover;
-    background-position: center; }
-  .portfolio-details-projects .owl-dots .owl-dot:nth-child(2) {
-    background: url("../images/dots/bg_photo_2719.png");
-    background-size: cover;
-    background-position: center; }
-  .portfolio-details-projects .owl-dots .owl-dot:nth-child(3) {
-    background: url("../images/dots/bg_photo_2532.png");
-    background-size: cover;
-    background-position: center; }
-  .portfolio-details-projects .owl-dots .owl-dot:nth-child(4) {
-    background: url("../images/dots/bg_photo_2720.png");
-    background-size: cover;
-    background-position: center; }
-  .portfolio-details-projects .owl-dots .owl-dot:nth-child(5) {
-    background: url("../images/dots/bg_photo_2538.png");
-    background-size: cover;
-    background-position: center; }
-  .portfolio-details-projects .owl-dots .owl-dot:nth-child(6) {
-    background: url("../images/dots/bg_photo_2721.png");
-    background-size: cover;
-    background-position: center; }
-  .portfolio-details-projects .owl-dots .owl-dot:focus {
-    outline: none; }
-  .portfolio-details-projects .owl-dots .active {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1); }
+    .portfolio-details-projects #portfolioDetails .owl-dots .owl-dot {
+      width: 9.5vw;
+      height: 5.24vw;
+      margin: 0;
+      -webkit-transition: ease 0.3s;
+      -o-transition: ease 0.3s;
+      transition: ease 0.3s; }
+    .portfolio-details-projects #portfolioDetails .owl-dots .owl-dot:first-child {
+      background: url("../images/dots/bg_photo_2523.png");
+      background-size: cover;
+      background-position: center; }
+    .portfolio-details-projects #portfolioDetails .owl-dots .owl-dot:nth-child(2) {
+      background: url("../images/dots/bg_photo_2719.png");
+      background-size: cover;
+      background-position: center; }
+    .portfolio-details-projects #portfolioDetails .owl-dots .owl-dot:nth-child(3) {
+      background: url("../images/dots/bg_photo_2532.png");
+      background-size: cover;
+      background-position: center; }
+    .portfolio-details-projects #portfolioDetails .owl-dots .owl-dot:nth-child(4) {
+      background: url("../images/dots/bg_photo_2720.png");
+      background-size: cover;
+      background-position: center; }
+    .portfolio-details-projects #portfolioDetails .owl-dots .owl-dot:nth-child(5) {
+      background: url("../images/dots/bg_photo_2538.png");
+      background-size: cover;
+      background-position: center; }
+    .portfolio-details-projects #portfolioDetails .owl-dots .owl-dot:nth-child(6) {
+      background: url("../images/dots/bg_photo_2721.png");
+      background-size: cover;
+      background-position: center; }
+    .portfolio-details-projects #portfolioDetails .owl-dots .owl-dot:focus {
+      outline: none; }
+    .portfolio-details-projects #portfolioDetails .owl-dots .active {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1); }
   .portfolio-details-projects .secondary-title {
     margin-bottom: 20px; }
   .portfolio-details-projects .undertitle {
@@ -10039,6 +10107,12 @@ footer .anchor {
     border: none;
     outline: none; }
 
+.card-without-carousel {
+  z-index: 99; }
+
+.blog #owl1 {
+  background: #fafafa; }
+
 .blog .over-footer {
   background: #8dc63f; }
 
@@ -10103,7 +10177,7 @@ footer .anchor {
       -o-transition: ease 0.3s;
       transition: ease 0.3s;
       color: #e5493a; }
-  .blog .card-columns .card:hover .card-img-top {
+  .blog .card-columns .card:hover .shade-on-hover {
     -webkit-filter: brightness(0.5);
     filter: brightness(0.5); }
   .blog .card-columns .card:hover .card-title {
@@ -10134,6 +10208,37 @@ footer .anchor {
   line-height: 20px;
   font-weight: 400;
   color: #c7efff; }
+
+.controls .paused {
+  background: url("../images/player/pause_3599.svg") no-repeat;
+  background-color: #363636;
+  background-position: center; }
+
+.play {
+  -webkit-box-sizing: padding-box;
+  box-sizing: padding-box;
+  width: 40px;
+  height: 40px;
+  background: url("../images/player/07_blog_light.jpg") no-repeat;
+  background-color: #363636;
+  background-position: center;
+  cursor: pointer; }
+
+.sound {
+  -webkit-box-sizing: padding-box;
+  box-sizing: padding-box;
+  width: 40px;
+  height: 40px;
+  fill: #e5493a;
+  background-color: #363636;
+  background-position: center;
+  cursor: pointer;
+  -webkit-transition: ease 0.3s;
+  -o-transition: ease 0.3s;
+  transition: ease 0.3s; }
+
+.controls .off {
+  fill: #959595; }
 
 .large-title {
   font-family: Raleway;

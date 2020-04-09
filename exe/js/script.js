@@ -141,4 +141,93 @@ $(function(){
         }
     });
 });
+$(function(){
+    $('#owl4').owlCarousel({
+        items:1,
+        loop:true,
+        autoplay:true,
+        margin:0,
+        autoplayHoverPause:true,
+        dots:false,
+        nav:true,
+        navText:false,
+    });
+});
+//player
+$(function(){
+    var controls = {
+        video: $(".myvideo"),
+        playpause: $(".play"),
+        total:$(".video-progress-container"),
+        progress: $(".video-progress-bar"),
+        buffer: $(".video-buffer-bar"),
+        showCurrent: $(".current-time"),
+        showDuration: $(".duration"),
+        dynamic: $(".sound")
+    };
+
+    var video = controls.video[0];
+
+    controls.video.click(function(){
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    });
+    controls.playpause.click(function(){
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    });
+    video.addEventListener("ended", function() {
+        video.pause();
+        controls.playpause.toggleClass("paused");
+    });
+    video.addEventListener("play", function() {
+        controls.playpause.toggleClass("paused");
+    });
+
+    video.addEventListener("pause", function() {
+        controls.playpause.toggleClass("paused");
+    });
+    function videoTime(time) {
+        var mm = Math.floor((time / 60));
+        var ss = Math.floor((time % 60));
+        var processTime = mm + ":" + ss;
+        return processTime;
+    };
+    $(video).on("timeupdate", function() {
+        var o = video.currentTime / video.duration;
+
+        controls.progress.css({
+            "width": (100 * o | 0) + "%"
+        });
+        controls.showCurrent.text(videoTime(this.currentTime));
+    });
+    $(video).on("canplay", function() {
+        controls.showDuration.text(videoTime(this.duration));
+    });
+    $(controls.total).click(function (e) {
+        var elem = document.querySelector('.elem-with-media')
+        var x = (e.pageX-elem.offsetLeft)/$(this).width();
+
+        video.currentTime = x * video.duration;
+    });
+
+    $(video).on("progress", function() {
+        var o = video.buffered.end(0)/ video.duration;
+
+        controls.buffer.css({
+            "width": (100 * o | 0) + "%"
+        });
+    });
+
+    controls.dynamic.click(function() {
+        video.muted = !video.muted;
+        controls.dynamic.toggleClass("off")
+    });
+});
 
