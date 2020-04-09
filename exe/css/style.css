@@ -8974,14 +8974,13 @@ a:hover {
 .video-progress-container {
   position: relative;
   width: 100%;
-  background: transparent;
   position: relative;
   top: -3px;
   left: 0;
   height: 9px;
   display: block;
   cursor: pointer;
-  background: #363636; }
+  background: #464646; }
 
 .progress-bar, .video-progress-bar {
   background: #e5493a;
