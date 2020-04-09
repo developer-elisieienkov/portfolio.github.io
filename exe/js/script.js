@@ -211,10 +211,12 @@ $(function(){
         controls.showDuration.text(videoTime(this.duration));
     });
     $(controls.total).click(function (e) {
-        var elem = document.querySelector('.elem-with-media')
-        var x = (e.pageX-elem.offsetLeft)/$(this).width();
+        var otherWidth =(controls.playpause.width()+controls.showCurrent.width());
+        var elem = document.querySelector('.elem-with-media');
+        var x = (e.pageX-elem.offsetLeft-otherWidth)/$(this).width();
 
         video.currentTime = x * video.duration;
+
     });
 
     $(video).on("progress", function() {

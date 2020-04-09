@@ -173,24 +173,31 @@ ul{
   display:block;
 }
 .video-progress-container{
+	position: relative;
 	width:100%;
 	background:transparent;
 	position:relative;
 	top:-3px;
 	left:0;
-	height:20px;
+	height:9px;
 	display:block;
 	cursor: pointer;
+	background: $dark-bg;
 }
 .progress-bar,.video-progress-bar{
-  
+
   background:$red-bg;
   width:0%;
   display:block;
   height:inherit;
 }
+.video-progress-bar{
+	position: absolute;
+	z-index: 9;
+}
 .video-buffer-bar{
-	background:$grey;
+	position: absolute;
+	background: $nav-color;
 	width:0%;
 	display:block;
 	height:inherit;
@@ -1610,29 +1617,39 @@ footer {
 		}
 	}
 }
+.controls{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background: $dark-bg;
+	height: 38px;
+}
 .controls .paused{
 	background: url("../images/player/pause_3599.svg") no-repeat;
 	background-color: $dark-bg;
 	background-position: center;
 }
 .play{
-	box-sizing: padding-box;
+	box-sizing: content-box;
 	width: 40px;
-	height: 40px;
-	background: url("../images/player/07_blog_light.jpg") no-repeat;
+	height: 38px;
+	background: url("../images/player/play-button-svgrepo-com.svg") no-repeat;
 	background-color: $dark-bg;
 	background-position: center;
 	cursor: pointer;
 }
 .sound{
-	box-sizing: padding-box;
+	box-sizing: content-box;
 	width: 40px;
-	height: 40px;
 	fill: $red-bg;
 	background-color: $dark-bg;
 	background-position: center;
 	cursor: pointer;
 	transition: $unitrans;
+}
+.duration,.current-time{
+	box-sizing: border-box;
+	min-width: 30px;
 }
 .controls .off{
 	fill: $grey;

@@ -8972,14 +8972,16 @@ a:hover {
   display: block; }
 
 .video-progress-container {
+  position: relative;
   width: 100%;
   background: transparent;
   position: relative;
   top: -3px;
   left: 0;
-  height: 20px;
+  height: 9px;
   display: block;
-  cursor: pointer; }
+  cursor: pointer;
+  background: #363636; }
 
 .progress-bar, .video-progress-bar {
   background: #e5493a;
@@ -8987,8 +8989,13 @@ a:hover {
   display: block;
   height: inherit; }
 
+.video-progress-bar {
+  position: absolute;
+  z-index: 9; }
+
 .video-buffer-bar {
-  background: #959595;
+  position: absolute;
+  background: #555;
   width: 0%;
   display: block;
   height: inherit; }
@@ -10209,26 +10216,42 @@ footer .anchor {
   font-weight: 400;
   color: #c7efff; }
 
+.controls {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #363636;
+  height: 38px; }
+
 .controls .paused {
   background: url("../images/player/pause_3599.svg") no-repeat;
   background-color: #363636;
   background-position: center; }
 
 .play {
-  -webkit-box-sizing: padding-box;
-  box-sizing: padding-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
   width: 40px;
-  height: 40px;
-  background: url("../images/player/07_blog_light.jpg") no-repeat;
+  height: 38px;
+  background: url("../images/player/play-button-svgrepo-com.svg") no-repeat;
   background-color: #363636;
   background-position: center;
   cursor: pointer; }
 
 .sound {
-  -webkit-box-sizing: padding-box;
-  box-sizing: padding-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
   width: 40px;
-  height: 40px;
   fill: #e5493a;
   background-color: #363636;
   background-position: center;
@@ -10236,6 +10259,11 @@ footer .anchor {
   -webkit-transition: ease 0.3s;
   -o-transition: ease 0.3s;
   transition: ease 0.3s; }
+
+.duration, .current-time {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  min-width: 30px; }
 
 .controls .off {
   fill: #959595; }
