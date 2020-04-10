@@ -1,4 +1,4 @@
-
+//use strict
 
 $(function() {
        $(window).on("scroll resize", function() {
@@ -80,7 +80,7 @@ $(function(){
 });
 
 $(function(){
-    // second carousel for grid
+
     $('#owl2,#portfolioOwl').owlCarousel({
         items:1,
         loop:true,
@@ -154,16 +154,20 @@ $(function(){
     });
 });
 //player
-$(function(){
+
+$(".elem-with-media").hover(function(){
+    var playerParent = "#"+this.id;
+
+
     var controls = {
-        video: $(".myvideo"),
-        playpause: $(".play"),
-        total:$(".video-progress-container"),
-        progress: $(".video-progress-bar"),
-        buffer: $(".video-buffer-bar"),
-        showCurrent: $(".current-time"),
-        showDuration: $(".duration"),
-        dynamic: $(".sound")
+        video: $(playerParent + " .myvideo"),
+        playpause: $(playerParent +" .play"),
+        total:$(playerParent +" .video-progress-container"),
+        progress: $(playerParent +" .video-progress-bar"),
+        buffer: $(playerParent +" .video-buffer-bar"),
+        showCurrent: $(playerParent +" .current-time"),
+        showDuration: $(playerParent +" .duration"),
+        dynamic: $(playerParent +" .sound")
     };
 
     var video = controls.video[0];
