@@ -173,6 +173,7 @@ ul{
   display:block;
 }
 .video-progress-container{
+	margin-top: 4px;
 	position: relative;
 	width:100%;
 	position:relative;
@@ -1508,6 +1509,14 @@ footer {
 .card-without-carousel{
 	z-index: 99;
 }
+.poster{
+	position: absolute;
+	z-index: 9;
+}
+#video{
+	position: absolute;
+	opacity: 0;
+}
 .blog{
 	#owl1{
 		background: $littleDarkerThenWhite;
@@ -1521,14 +1530,15 @@ footer {
 	}
 	.card-columns{
 		.card{
-			margin: 0 10px 30px 10px;
+			position: relative;
+			margin: 0 20px 30px 0px;
 			border: none;
 			.lupa{
-				top: 23%;
+				top: 17%;
 				left: 33%;
 			}
 			.link{
-				top: 23%;
+				top: 17%;
 				left: 53%;
 			}
 			video{
@@ -1622,6 +1632,7 @@ footer {
 	align-items: center;
 	background: $dark-bg;
 	height: 38px;
+	padding: 10px;
 }
 .controls .paused{
 	background: url("../images/player/pause_3599.svg") no-repeat;
@@ -1640,6 +1651,7 @@ footer {
 .sound{
 	box-sizing: content-box;
 	width: 40px;
+	margin-bottom: 4px;
 	fill: $red-bg;
 	background-color: $dark-bg;
 	background-position: center;
@@ -1649,6 +1661,11 @@ footer {
 .duration,.current-time{
 	box-sizing: border-box;
 	min-width: 30px;
+	font-family: Roboto;
+	font-size: 12px;
+	line-height: 22px;
+	font-weight: 400;
+	color: $white;
 }
 .controls .off{
 	fill: $grey;

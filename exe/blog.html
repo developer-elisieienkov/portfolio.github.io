@@ -302,7 +302,7 @@
 <div class="container portfolio">
     <div class="card-columns">
         <div class="card card-without-carousel">
-            <img src="images/card/bg_photo_3545.jpg" class="card-img-top shade-on-hover" alt="...">
+            <img src="images/card/bg_photo_3545.jpg" class="card-img-top shade-on-hover" alt="some image">
             <div class="card-body">
                 <h5 class="card-title">Standard Post With Preview Image</h5>
                 <p class="muted-card-text">By Admin   /   In Photography</p>
@@ -314,18 +314,19 @@
 
         <div class="card card-without-carousel elem-with-media" id="player">
 
-            <video  class="card-img-top myvideo" width="100%">
+            <div id="video" >
+            <video  class=" myvideo" width="100%">
                 <source src="media/Fire25445.mp4">
             </video>
             <div class="controls">
                 <div class="play">
                 </div>
-                <div class="current-time">0:0</div>
+                <div class="current-time text-center">0:0</div>
                 <div class="video-progress-container" >
                     <span class="video-progress-bar"></span>
                     <span class="video-buffer-bar"></span>
                 </div>
-                <div class="duration">0:0</div>
+                <div class="duration text-center">0:0</div>
                 <div class="sound">
                     <svg xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -335,41 +336,8 @@
                     </svg>
                 </div>
             </div>
-
-
-            <div class="card-body">
-
-                <h5 class="card-title">Video Format Post</h5>
-                <p class="muted-card-text">By Admin   /   In Video</p>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
-                <a class="read-more" href="#">Read More »</a><br>
-                <div class="line"></div>
             </div>
-        </div>
-        <div class="card card-without-carousel elem-with-media" id="player1">
-            <video  class="card-img-top myvideo" width="100%">
-                <source src="media/Fire25445.mp4">
-            </video>
-            <div class="controls">
-                <div class="play">
-                </div>
-                <div class="current-time">0:0</div>
-                <div class="video-progress-container" >
-                    <span class="video-progress-bar"></span>
-                    <span class="video-buffer-bar"></span>
-                </div>
-                <div class="duration">0:0</div>
-                <div class="sound">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         xmlns:xlink="http://www.w3.org/1999/xlink"
-                         width="26px" height="20px"  viewBox="0 0 26 20">
-                        <path
-                                d="M13.254639,16.98172 C13.254639,17.378082 13.025635,17.738739 12.667358,17.907257 C12.528809,17.972382 12.380249,18.004517 12.232788,18.004517 C11.999268,18.004517 11.767822,17.92398 11.580933,17.769104 C11.580933,17.769104 5.9959717,13.135773 5.9959717,13.135773 C5.9959717,13.135773 3.0213623,13.135773 3.0213623,13.135773 C2.4572754,13.135773 1.9997559,12.677826 1.9997559,12.113007 C1.9997559,12.113007 1.9997559,8.038452 1.9997559,8.038452 C1.9997559,7.4736023 2.4572754,7.0156555 3.0213623,7.0156555 C3.0213623,7.0156555 5.996216,7.0156555 5.996216,7.0156555 C5.996216,7.0156555 11.581177,2.3823242 11.581177,2.3823242 C11.886353,2.1289978 12.309448,2.0751038 12.66748,2.2447815 C13.025635,2.4128418 13.254883,2.773346 13.254883,3.1701355 C13.254883,3.1701355 13.254883,16.98172 13.254883,16.98172 C13.254883,16.98172 13.254639,16.98172 13.254639,16.98172 ZM17.180786,15.383301 C17.156006,15.385223 17.131836,15.385956 17.107422,15.385956 C16.83728,15.385956 16.577148,15.279358 16.384888,15.086304 C16.384888,15.086304 16.248047,14.949188 16.248047,14.949188 C15.8897705,14.591034 15.848022,14.024139 16.149658,13.616516 C16.914429,12.584106 17.318481,11.359985 17.318481,10.075867 C17.318481,8.694489 16.859863,7.3992615 15.99231,6.3291016 C15.661987,5.922394 15.692383,5.3319397 16.062622,4.9613647 C16.062622,4.9613647 16.198975,4.824829 16.198975,4.824829 C16.403076,4.6203613 16.676514,4.5088806 16.972778,4.526947 C17.260986,4.541168 17.530151,4.676941 17.712646,4.900635 C18.916138,6.375 19.552002,8.164734 19.552002,10.076172 C19.552002,11.855957 18.989624,13.550781 17.925903,14.975555 C17.748169,15.213043 17.47644,15.361969 17.180786,15.383301 ZM21.404419,18.543884 C21.219727,18.762268 20.952515,18.893738 20.666382,18.905884 C20.652466,18.906189 20.638184,18.906494 20.623535,18.906494 C20.353027,18.906494 20.093384,18.799744 19.901123,18.607544 C19.901123,18.607544 19.766968,18.473114 19.766968,18.473114 C19.391968,18.09793 19.366577,17.497711 19.70752,17.09143 C21.355347,15.130127 22.262695,12.638306 22.262695,10.075867 C22.262695,7.4105225 21.29126,4.844696 19.527344,2.8509216 C19.169678,2.445984 19.187622,1.8334961 19.568237,1.4510498 C19.568237,1.4510498 19.702148,1.3167725 19.702148,1.3167725 C19.900879,1.1168823 20.158936,1.0065918 20.455322,1.0158997 C20.736572,1.0240479 21.002441,1.1485596 21.189697,1.3589478 C23.321655,3.7623901 24.496094,6.8582764 24.496094,10.075867 C24.49646,13.171753 23.39856,16.17926 21.404419,18.543884 Z"/>
-                    </svg>
-                </div>
-            </div>
-
-
+            <img src="images/posters/07_blog_light.jpg" class="card-img-top poster " alt="poster">
             <div class="card-body">
 
                 <h5 class="card-title">Video Format Post</h5>
@@ -418,6 +386,7 @@
             </div>
 
         </div>
+
         <div class="card-body">
             <h5 class="card-title">Standard Post With Preview Image</h5>
             <p class="muted-card-text">By Admin   /   In Photography</p>
@@ -426,6 +395,7 @@
             <div class="line"></div>
         </div>
     </div>
+
         <div class="card">
             <div class="owl-carousel text-center card-img-top owl-theme" id="owl4">
                 <div class="item">
@@ -453,7 +423,42 @@
                 <div class="line"></div>
             </div>
         </div>
-        <div class="card bg-primary text-white text-center p-3">
+        <div class="card card-without-carousel elem-with-media" id="audioPlayer">
+
+            <div>
+                <audio  class="myvideo" width="100%">
+                    <source src="media/Fire25445.mp4">
+                </audio>
+                <div class="controls">
+                    <div class="play">
+                    </div>
+                    <div class="current-time text-center">0:0</div>
+                    <div class="video-progress-container" >
+                        <span class="video-progress-bar"></span>
+                        <span class="video-buffer-bar"></span>
+                    </div>
+                    <div class="duration text-center">0:0</div>
+                    <div class="sound">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                             width="26px" height="20px"  viewBox="0 0 26 20">
+                            <path
+                                    d="M13.254639,16.98172 C13.254639,17.378082 13.025635,17.738739 12.667358,17.907257 C12.528809,17.972382 12.380249,18.004517 12.232788,18.004517 C11.999268,18.004517 11.767822,17.92398 11.580933,17.769104 C11.580933,17.769104 5.9959717,13.135773 5.9959717,13.135773 C5.9959717,13.135773 3.0213623,13.135773 3.0213623,13.135773 C2.4572754,13.135773 1.9997559,12.677826 1.9997559,12.113007 C1.9997559,12.113007 1.9997559,8.038452 1.9997559,8.038452 C1.9997559,7.4736023 2.4572754,7.0156555 3.0213623,7.0156555 C3.0213623,7.0156555 5.996216,7.0156555 5.996216,7.0156555 C5.996216,7.0156555 11.581177,2.3823242 11.581177,2.3823242 C11.886353,2.1289978 12.309448,2.0751038 12.66748,2.2447815 C13.025635,2.4128418 13.254883,2.773346 13.254883,3.1701355 C13.254883,3.1701355 13.254883,16.98172 13.254883,16.98172 C13.254883,16.98172 13.254639,16.98172 13.254639,16.98172 ZM17.180786,15.383301 C17.156006,15.385223 17.131836,15.385956 17.107422,15.385956 C16.83728,15.385956 16.577148,15.279358 16.384888,15.086304 C16.384888,15.086304 16.248047,14.949188 16.248047,14.949188 C15.8897705,14.591034 15.848022,14.024139 16.149658,13.616516 C16.914429,12.584106 17.318481,11.359985 17.318481,10.075867 C17.318481,8.694489 16.859863,7.3992615 15.99231,6.3291016 C15.661987,5.922394 15.692383,5.3319397 16.062622,4.9613647 C16.062622,4.9613647 16.198975,4.824829 16.198975,4.824829 C16.403076,4.6203613 16.676514,4.5088806 16.972778,4.526947 C17.260986,4.541168 17.530151,4.676941 17.712646,4.900635 C18.916138,6.375 19.552002,8.164734 19.552002,10.076172 C19.552002,11.855957 18.989624,13.550781 17.925903,14.975555 C17.748169,15.213043 17.47644,15.361969 17.180786,15.383301 ZM21.404419,18.543884 C21.219727,18.762268 20.952515,18.893738 20.666382,18.905884 C20.652466,18.906189 20.638184,18.906494 20.623535,18.906494 C20.353027,18.906494 20.093384,18.799744 19.901123,18.607544 C19.901123,18.607544 19.766968,18.473114 19.766968,18.473114 C19.391968,18.09793 19.366577,17.497711 19.70752,17.09143 C21.355347,15.130127 22.262695,12.638306 22.262695,10.075867 C22.262695,7.4105225 21.29126,4.844696 19.527344,2.8509216 C19.169678,2.445984 19.187622,1.8334961 19.568237,1.4510498 C19.568237,1.4510498 19.702148,1.3167725 19.702148,1.3167725 C19.900879,1.1168823 20.158936,1.0065918 20.455322,1.0158997 C20.736572,1.0240479 21.002441,1.1485596 21.189697,1.3589478 C23.321655,3.7623901 24.496094,6.8582764 24.496094,10.075867 C24.49646,13.171753 23.39856,16.17926 21.404419,18.543884 Z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+
+                <h5 class="card-title">Zhu – Cocaine Model</h5>
+                <p class="muted-card-text">By Admin   /   In Music</p>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                <a class="read-more" href="#">Read More »</a><br>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="card card-without-carousel bg-primary text-white text-center p-3">
             <blockquote class="blockquote mb-0">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
                 <footer class="blockquote-footer text-white">

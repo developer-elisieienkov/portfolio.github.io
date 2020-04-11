@@ -8972,6 +8972,7 @@ a:hover {
   display: block; }
 
 .video-progress-container {
+  margin-top: 4px;
   position: relative;
   width: 100%;
   position: relative;
@@ -10116,6 +10117,14 @@ footer .anchor {
 .card-without-carousel {
   z-index: 99; }
 
+.poster {
+  position: absolute;
+  z-index: 9; }
+
+#video {
+  position: absolute;
+  opacity: 0; }
+
 .blog #owl1 {
   background: #fafafa; }
 
@@ -10127,13 +10136,14 @@ footer .anchor {
   padding-top: 50px; }
 
 .blog .card-columns .card {
-  margin: 0 10px 30px 10px;
+  position: relative;
+  margin: 0 20px 30px 0px;
   border: none; }
   .blog .card-columns .card .lupa {
-    top: 23%;
+    top: 17%;
     left: 33%; }
   .blog .card-columns .card .link {
-    top: 23%;
+    top: 17%;
     left: 53%; }
   .blog .card-columns .card video {
     margin-bottom: -10px; }
@@ -10230,7 +10240,8 @@ footer .anchor {
   -ms-flex-align: center;
   align-items: center;
   background: #363636;
-  height: 38px; }
+  height: 38px;
+  padding: 10px; }
 
 .controls .paused {
   background: url("../images/player/pause_3599.svg") no-repeat;
@@ -10251,6 +10262,7 @@ footer .anchor {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   width: 40px;
+  margin-bottom: 4px;
   fill: #e5493a;
   background-color: #363636;
   background-position: center;
@@ -10262,7 +10274,12 @@ footer .anchor {
 .duration, .current-time {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  min-width: 30px; }
+  min-width: 30px;
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #fff; }
 
 .controls .off {
   fill: #959595; }
