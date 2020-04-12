@@ -229,8 +229,6 @@ $(".elem-with-media").hover(function(){
         controls.showDuration.text(videoTime(this.duration));
     });
     $(controls.total).click(function (e) {
-        var otherWidth =(controls.playpause.width()+controls.showCurrent.width());
-        var elem = $('.elem-with-media');
         var x = (e.pageX-controls.total.offset().left)/$(this).width();
         video.currentTime = x * video.duration;
 

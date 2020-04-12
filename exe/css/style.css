@@ -10125,6 +10125,20 @@ footer .anchor {
   position: absolute;
   opacity: 0; }
 
+.card-with-blockquote {
+  background: url("../images/card/bg_photo_3678.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 40px; }
+
+.card-blockquote {
+  font-family: Raleway;
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 40px; }
+
 .blog #owl1 {
   background: #fafafa; }
 
@@ -10138,7 +10152,8 @@ footer .anchor {
 .blog .card-columns .card {
   position: relative;
   margin: 0 20px 30px 0px;
-  border: none; }
+  border: none;
+  border-radius: 0; }
   .blog .card-columns .card .lupa {
     top: 17%;
     left: 33%; }
@@ -10151,7 +10166,8 @@ footer .anchor {
     -webkit-transition: ease 0.3s;
     -o-transition: ease 0.3s;
     transition: ease 0.3s;
-    position: relative; }
+    position: relative;
+    border-radius: 0; }
   .blog .card-columns .card .card-body {
     background: #fafafa; }
     .blog .card-columns .card .card-body .card-title {
@@ -10170,12 +10186,6 @@ footer .anchor {
       font-weight: 400;
       color: #ccc;
       margin-top: 10px; }
-    .blog .card-columns .card .card-body .card-text {
-      font-family: Roboto;
-      font-size: 14px;
-      line-height: 20px;
-      font-weight: 400;
-      color: #959595; }
     .blog .card-columns .card .card-body .read-more {
       font-family: Roboto;
       font-size: 14px;
@@ -10193,6 +10203,14 @@ footer .anchor {
       -o-transition: ease 0.3s;
       transition: ease 0.3s;
       color: #e5493a; }
+  .blog .card-columns .card .card-text {
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #959595; }
+  .blog .card-columns .card .blockquote-author {
+    margin-bottom: 40px; }
   .blog .card-columns .card:hover .shade-on-hover {
     -webkit-filter: brightness(0.5);
     filter: brightness(0.5); }

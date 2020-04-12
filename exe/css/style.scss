@@ -1517,6 +1517,20 @@ footer {
 	position: absolute;
 	opacity: 0;
 }
+.card-with-blockquote{
+	background: url("../images/card/bg_photo_3678.png") no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 40px;
+}
+.card-blockquote{
+	font-family: Raleway;
+	font-size: 22px;
+	line-height: 24px;
+	font-weight: 600;
+	color: $white;
+	margin-top: 40px;
+}
 .blog{
 	#owl1{
 		background: $littleDarkerThenWhite;
@@ -1533,6 +1547,7 @@ footer {
 			position: relative;
 			margin: 0 20px 30px 0px;
 			border: none;
+			border-radius: 0;
 			.lupa{
 				top: 17%;
 				left: 33%;
@@ -1547,6 +1562,7 @@ footer {
 			.card-img-top{
 				transition: $unitrans;
 				position: relative;
+				border-radius: 0;
 			}
 			.card-body {
 				background: $littleDarkerThenWhite;
@@ -1568,10 +1584,7 @@ footer {
 					margin-top: 10px;
 				}
 
-				.card-text {
-					@include small-text;
-					color: $grey;
-				}
+
 
 				.read-more {
 					@include small-text;
@@ -1585,6 +1598,13 @@ footer {
 					margin-bottom: -5px;
 					transition: $unitrans;
 					color: $red-bg;				}
+			}
+			.card-text {
+				@include small-text;
+				color: $grey;
+			}
+			.blockquote-author{
+				margin-bottom: 40px;
 			}
 			&:hover{
 				.shade-on-hover{
