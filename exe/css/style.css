@@ -10121,7 +10121,7 @@ footer .anchor {
   position: absolute;
   z-index: 9; }
 
-#video {
+.video {
   position: absolute;
   opacity: 0; }
 
@@ -10242,6 +10242,36 @@ footer .anchor {
   line-height: 20px;
   font-weight: 400;
   color: #c7efff; }
+
+.header-bg {
+  background: url("../images/bg/bg_photo_549.jpg") no-repeat;
+  background-position: center;
+  background-size: cover; }
+  .header-bg .row {
+    height: 661px; }
+
+.blog-details-title {
+  font-family: Raleway;
+  font-size: 70px;
+  line-height: 80px;
+  font-weight: 200;
+  color: #fff; }
+
+.blog-details-subtitle {
+  font-family: Raleway;
+  font-size: 50px;
+  line-height: 80px;
+  font-weight: 700;
+  color: #fff; }
+
+.blog-details .nav-bg {
+  background: transparent;
+  position: absolute; }
+  .blog-details .nav-bg .my-navbar-brand {
+    color: #fff; }
+  .blog-details .nav-bg .nav-item .nav-link {
+    color: #fff;
+    fill: #fff; }
 
 .controls {
   display: -webkit-box;
@@ -10535,7 +10565,9 @@ footer .anchor {
     top: 65%; }
   .portfolio-details .link {
     left: 80%;
-    top: 65%; } }
+    top: 65%; }
+  .blog-details .nav-bg {
+    background: #fff; } }
 
 #screens {
   width: 105%; }

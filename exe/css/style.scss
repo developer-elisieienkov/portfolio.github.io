@@ -1513,7 +1513,7 @@ footer {
 	position: absolute;
 	z-index: 9;
 }
-#video{
+.video{
 	position: absolute;
 	opacity: 0;
 }
@@ -1645,6 +1645,44 @@ footer {
 			}
 		}
 	}
+}
+.header-bg {
+	background: url("../images/bg/bg_photo_549.jpg") no-repeat;
+	background-position: center;
+	background-size: cover;
+	.row {
+		height: 661px;
+	}
+}
+.blog-details-title{
+	font-family: Raleway;
+	font-size: 70px;
+	line-height: 80px;
+	font-weight: 200;
+	color: $white;
+}
+.blog-details-subtitle{
+	font-family: Raleway;
+	font-size: 50px;
+	line-height: 80px;
+	font-weight: 700;
+	color: $white;
+}
+.blog-details{
+	.nav-bg{
+		background: transparent;
+		position: absolute;
+		.my-navbar-brand{
+			color: $white;
+		}
+		.nav-item{
+			.nav-link{
+				color: $white;
+				fill: $white;
+			}
+		}
+	}
+
 }
 .controls{
 	display: flex;
@@ -2048,6 +2086,11 @@ margin-top: 155px;
 		.link{
 			left: 80%;
 			top: 65%;
+		}
+	}
+	.blog-details{
+		.nav-bg{
+			background: $white;
 		}
 	}
 }
