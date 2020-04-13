@@ -174,7 +174,7 @@ $(".elem-with-media").hover(function(){
     var video = controls.video[0];
 
     $(".poster").click(function () {
-        $("#video").css({
+        $(".video").css({
             "z-index": 99,
             "opacity": 1
         });
