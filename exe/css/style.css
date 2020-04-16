@@ -10434,7 +10434,8 @@ footer .anchor {
       -webkit-box-align: start;
       -webkit-align-items: flex-start;
       -ms-flex-align: start;
-      align-items: flex-start; }
+      align-items: flex-start;
+      position: relative; }
       .blog-details .main-section .content .comments .comment-form input, .blog-details .main-section .content .comments .comment-form textarea {
         border: none;
         border-radius: 2px;
@@ -10442,6 +10443,7 @@ footer .anchor {
         padding: 0 20px 0 20px; }
       .blog-details .main-section .content .comments .comment-form input {
         height: 47px;
+        width: 440px;
         margin-bottom: 10px; }
       .blog-details .main-section .content .comments .comment-form textarea {
         resize: none;
@@ -10449,6 +10451,24 @@ footer .anchor {
         width: 100%;
         padding-top: 10px;
         margin-bottom: 30px; }
+      .blog-details .main-section .content .comments .comment-form #name + label {
+        position: absolute;
+        left: 410px;
+        top: 10px; }
+        .blog-details .main-section .content .comments .comment-form #name + label img {
+          width: 15px; }
+      .blog-details .main-section .content .comments .comment-form #email + label {
+        position: absolute;
+        left: 410px;
+        top: 68px; }
+        .blog-details .main-section .content .comments .comment-form #email + label img {
+          width: 17px; }
+      .blog-details .main-section .content .comments .comment-form #textOfComment + label {
+        position: absolute;
+        left: 96%;
+        top: 120px; }
+        .blog-details .main-section .content .comments .comment-form #textOfComment + label img {
+          width: 17px; }
   .blog-details .main-section .sidebar form {
     position: relative; }
     .blog-details .main-section .sidebar form input {
@@ -10539,6 +10559,47 @@ footer .anchor {
     .blog-details .main-section .sidebar .sidebar-section .active-link + .sidebar-count {
       background: #e5493a;
       color: #fff; }
+  .blog-details .main-section .sidebar .collapse-card .ring {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 19px;
+    height: 19px;
+    border-radius: 19px;
+    background: transparent;
+    border: 2px solid #d7d7d7;
+    margin-right: 10px;
+    position: relative;
+    -webkit-transition: ease 0.3s;
+    -o-transition: ease 0.3s;
+    transition: ease 0.3s; }
+    .blog-details .main-section .sidebar .collapse-card .ring div {
+      position: absolute;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 11px;
+      height: 2px;
+      background: #d7d7d7;
+      -webkit-transition: ease 0.3s;
+      -o-transition: ease 0.3s;
+      transition: ease 0.3s; }
+  .blog-details .main-section .sidebar .collapse-card button {
+    border-bottom: 1px solid #f2f2f2;
+    background: #fafafa;
+    color: #636363;
+    width: 210px;
+    padding: 0; }
+  .blog-details .main-section .sidebar .collapse-card .container:last-child button {
+    border-bottom: transparent; }
+  .blog-details .main-section .sidebar .collapse-card .clickbg-1 button {
+    background: transparent !important; }
+    .blog-details .main-section .sidebar .collapse-card .clickbg-1 button .ring {
+      border-color: #e5493a; }
+      .blog-details .main-section .sidebar .collapse-card .clickbg-1 button .ring div {
+        background: #e5493a; }
+      .blog-details .main-section .sidebar .collapse-card .clickbg-1 button .ring div:last-child {
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg); }
 
 .blog-details-title {
   font-family: Raleway;

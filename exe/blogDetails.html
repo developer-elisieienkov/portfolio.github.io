@@ -279,14 +279,14 @@
                 <div class="comment">
 
     <div class="row align-items-center justify-content-start comment-header">
-        <div class="col-1">
+        <div class="col-12 col-md-2 col-lg-1">
             <img src="images/blogDetails/bg_photo_3620.png" alt="">
         </div>
-        <div class="col-4 ml-3">
+        <div class="col-12 col-md-4 ml-3">
             <p class="form-title">Frank Doe</p>
             <b class="muted-card-text"><nobr>Posted on December 25, 2013 at 6:57 am</nobr></b>
         </div>
-        <div class="col-2 ml-auto">
+        <div class="col-3 col-md-2 ml-auto">
             <button type="button" class="muted-card-text">
                 Reply
             </button>
@@ -303,14 +303,14 @@
                 <div class="comment">
 
                     <div class="row align-items-center justify-content-start comment-header">
-                        <div class="col-1">
+                        <div class="col-12 col-md-2 col-lg-1">
                             <img src="images/blogDetails/bg_photo_3625.png" alt="">
                         </div>
-                        <div class="col-4 ml-3">
+                        <div class="col-12 col-md-4 ml-3">
                             <p class="form-title">Britney Doe</p>
                             <b class="muted-card-text"><nobr>Posted on December 25, 2013 at 6:57 am</nobr></b>
                         </div>
-                        <div class="col-2 ml-auto">
+                        <div class="col-3 col-md-2 ml-auto">
                             <button type="button" class="muted-card-text">
                                 Reply
                             </button>
@@ -326,14 +326,14 @@
                 <div class="comment ">
 
                     <div class="row align-items-center justify-content-start comment-header">
-                        <div class="col-1">
+                        <div class="col-12 col-md-2 col-lg-1">
                             <img src="images/blogDetails/bg_photo_3643.png" alt="">
                         </div>
-                        <div class="col-4 ml-3">
+                        <div class="col-12 col-md-4 ml-3">
                             <p class="form-title">Jonathan Doe</p>
                             <b class="muted-card-text"><nobr>Posted on December 25, 2013 at 6:57 am</nobr></b>
                         </div>
-                        <div class="col-2 ml-auto">
+                        <div class="col-3 col-md-2 ml-auto">
                             <button type="button" class="muted-card-text">
                                 Reply
                             </button>
@@ -351,14 +351,14 @@
 
 
                     <div class="row align-items-center justify-content-start comment-header">
-                        <div class="col-1">
+                        <div class="col-12 col-md-2 col-lg-1">
                             <img src="images/blogDetails/bg_photo_3661.png" alt="">
                         </div>
-                        <div class="col-4 ml-3">
+                        <div class="col-12 col-md-4 ml-3">
                             <p class="form-title">Lisa Doe</p>
                             <b class="muted-card-text"><nobr>Posted on December 25, 2013 at 6:57 am</nobr></b>
                         </div>
-                        <div class="col-2 ml-auto">
+                        <div class="col-3 col-md-2 ml-auto">
                             <button type="button" class="muted-card-text">
                                 Reply
                             </button>
@@ -375,9 +375,9 @@
                     Leave a Comment
                 </p>
                 <form class="comment-form" action="#">
-                    <input placeholder="Full Name" type="text">
-                    <input placeholder="Email Address" type="text">
-                    <textarea name="commemt" placeholder="Type Here Message"></textarea>
+                    <input id="name" placeholder="Full Name" type="text"><label for="name"><img src="images/blogDetails/icon_3685.svg"></label>
+                    <input id="email" placeholder="Email Address" type="text"><label for="email"><img src="images/blogDetails/icon_3707.svg"></label>
+                    <textarea id="textOfComment" name="commemt" placeholder="Type Here Message"></textarea><label for="textOfComment"><img src="images/blogDetails/icon_3721.svg"></label>
                     <button type="submit" class="text-like-in-nav buy">Post Comment</button>
                 </form>
             </div>
@@ -518,6 +518,82 @@
                         <b class="muted-card-text">04 February 2015</b>
                     </div>
                 </a>
+            </div>
+            <div class="sidebar-title">
+                <div class="col">Accordions Widget</div>
+            </div>
+            <div class="sidebar-section collapse-card" id="accordion1">
+
+
+                <div class="container" >
+                    <div class="row justify-content-between 1" >
+                        <div class="col-1">
+                            <button id="1" class="btn undertitle d-flex justify-content-start collapse-card-toggler" type="button" data-toggle="collapse" data-target="#collapse-row1" aria-expanded="false" aria-controls="collapse-row1">
+                                <div class="ring d-flex justify-content-center">
+                                    <div class="align-self-center"></div>
+                                    <div class="align-self-center"></div>
+                                </div>
+                                Our Solution
+                            </button>
+                        </div>
+                    </div>
+                    <div class="collapse" id="collapse-row1"   data-parent="#accordion1">
+                        <p>
+                            Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in  nam liber tempor cum soluta nobis eleifend option.
+                        </p>
+                        <p>
+                            Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+                        </p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row justify-content-between 2">
+                        <div class="col-1" >
+                            <button id="2" class="btn collapse-card-toggler" type="button" data-toggle="collapse" data-target="#collapse-row2" aria-expanded="false" aria-controls="collapse-row2">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="collapse" id="collapse-row2" data-parent="#accordion1">
+                        <p>
+                            Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in  nam liber tempor cum soluta nobis eleifend option.
+                        </p>
+                        <p>
+                            Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+                        </p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row justify-content-between  3">
+                        <div class="col-1" >
+                            <button id="3" class="btn collapse-card-toggler" type="button" data-toggle="collapse" data-target="#collapse-row3" aria-expanded="false" aria-controls="collapse-row3">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="collapse" id="collapse-row3" data-parent="#accordion1">
+                        <p>
+                            Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in  nam liber tempor cum soluta nobis eleifend option.
+                        </p>
+                        <p>
+                            Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+                        </p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row justify-content-between 4">
+                        <div class="col-1" >
+                            <button id="4" class="btn collapse-card-toggler" type="button" data-toggle="collapse" data-target="#collapse-row4" aria-expanded="false" aria-controls="collapse-row4">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="collapse" id="collapse-row4" data-parent="#accordion1">
+                        <p>
+                            Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in  nam liber tempor cum soluta nobis eleifend option.
+                        </p>
+                        <p>
+                            Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -1810,6 +1810,7 @@ footer {
 					display: flex;
 					flex-direction: column;
 					align-items: flex-start;
+					position: relative;
 					input,textarea{
 						border: none;
 						border-radius: 2px;
@@ -1818,6 +1819,7 @@ footer {
 					}
 					input{
 						height: 47px;
+						width: 440px;
 						margin-bottom: 10px;
 					}
 					textarea{
@@ -1826,6 +1828,30 @@ footer {
 						width: 100%;
 						padding-top: 10px;
 						margin-bottom: 30px;
+					}
+					#name+label{
+						position: absolute;
+						left: 410px;
+						top: 10px;
+						img{
+							width: 15px;
+						}
+					}
+					#email+label{
+						position: absolute;
+						left: 410px;
+						top: 68px;
+						img{
+							width: 17px;
+						}
+					}
+					#textOfComment+label{
+						position: absolute;
+						left: 96%;
+						top: 120px;
+						img{
+							width: 17px;
+						}
 					}
 				}
 			}
@@ -1927,6 +1953,53 @@ footer {
 				.active-link + .sidebar-count{
 					background: $red-bg;
 					color: $white;
+				}
+			}
+			.collapse-card{
+				.ring{
+					box-sizing: border-box;
+					width: 19px;
+					height: 19px;
+					border-radius: 19px;
+					background: transparent;
+					border: 2px solid #d7d7d7;
+					margin-right: 10px;
+					position: relative;
+					transition: $unitrans;
+					div{
+						position: absolute;
+						box-sizing: border-box;
+						width: 11px;
+						height: 2px;
+						background:  #d7d7d7;
+						transition: $unitrans;
+					}
+				}
+				button{
+					border-bottom: 1px solid $darkerThenWhite;
+					background: $littleDarkerThenWhite;
+					color: $secondary-footer-font-color;
+					width: 210px;
+					padding: 0;
+				}
+				.container:last-child{
+					button{
+						border-bottom: transparent;
+					}
+				}
+				.clickbg-1{
+					button {
+						background: transparent !important;
+						.ring{
+							border-color: $red-bg;
+							div{
+								background: $red-bg;
+							}
+							div:last-child{
+								transform: rotate(90deg);
+							}
+						}
+					}
 				}
 			}
 		}
