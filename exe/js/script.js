@@ -248,3 +248,11 @@ $(".elem-with-media").hover(function(){
     });
 });
 
+/*
+$('#item1').click(function(){
+    if($('.owl-item').hasClass('active')){
+        alert('У этого блока есть класс test1');
+    }else{
+        alert('У этого блока нет класса test1');
+    }
+});*/

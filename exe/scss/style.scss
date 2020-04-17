@@ -1955,6 +1955,13 @@ footer {
 					color: $white;
 				}
 			}
+          .image-widget{
+			  padding: 30px;
+			  padding-bottom: 20px;
+			  img{
+				  margin-bottom: 10px;
+			  }
+          }
 			.collapse-card{
 				.ring{
 					box-sizing: border-box;
@@ -1974,6 +1981,9 @@ footer {
 						background:  #d7d7d7;
 						transition: $unitrans;
 					}
+                  div:last-child{
+                    transform: rotate(90deg);
+                  }
 				}
 				button{
 					border-bottom: 1px solid $darkerThenWhite;
@@ -1989,14 +1999,15 @@ footer {
 				}
 				.clickbg-1{
 					button {
-						background: transparent !important;
+                      background: transparent !important;
+                      color: $red-bg;
 						.ring{
 							border-color: $red-bg;
 							div{
 								background: $red-bg;
 							}
 							div:last-child{
-								transform: rotate(90deg);
+								transform: rotate(180deg);
 							}
 						}
 					}
@@ -2179,12 +2190,10 @@ margin-top: 155px;
 }
 	@media (max-width: 767px) {
 		header {
-			.fixed-top {
 				nav {
-					padding: 9px 0 6px 0;
+					padding: 9px 0 6px 0!important;
 
 				}
-			}
 		}
 		.pages-head{
 			margin-top: 50px;

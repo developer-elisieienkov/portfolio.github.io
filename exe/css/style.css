@@ -10559,6 +10559,8 @@ footer .anchor {
     .blog-details .main-section .sidebar .sidebar-section .active-link + .sidebar-count {
       background: #e5493a;
       color: #fff; }
+  .blog-details .main-section .sidebar .image-widget {
+    padding: 30px; }
   .blog-details .main-section .sidebar .collapse-card .ring {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -10582,6 +10584,10 @@ footer .anchor {
       -webkit-transition: ease 0.3s;
       -o-transition: ease 0.3s;
       transition: ease 0.3s; }
+    .blog-details .main-section .sidebar .collapse-card .ring div:last-child {
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg); }
   .blog-details .main-section .sidebar .collapse-card button {
     border-bottom: 1px solid #f2f2f2;
     background: #fafafa;
@@ -10591,15 +10597,16 @@ footer .anchor {
   .blog-details .main-section .sidebar .collapse-card .container:last-child button {
     border-bottom: transparent; }
   .blog-details .main-section .sidebar .collapse-card .clickbg-1 button {
-    background: transparent !important; }
+    background: transparent !important;
+    color: #e5493a; }
     .blog-details .main-section .sidebar .collapse-card .clickbg-1 button .ring {
       border-color: #e5493a; }
       .blog-details .main-section .sidebar .collapse-card .clickbg-1 button .ring div {
         background: #e5493a; }
       .blog-details .main-section .sidebar .collapse-card .clickbg-1 button .ring div:last-child {
-        -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        transform: rotate(90deg); }
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg); }
 
 .blog-details-title {
   font-family: Raleway;
