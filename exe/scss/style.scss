@@ -1665,9 +1665,9 @@ footer {
 	.container{
 		height: 100vh;
 	}
-		.line{
-			background: $red-bg;
-		}
+.line{
+	background: $red-bg;
+}
 }
 
 
@@ -2012,6 +2012,57 @@ footer {
 						}
 					}
 				}
+			}
+			.line{
+				width: 135px;
+			}
+		}
+
+	}
+	.carousel-head{
+		.item-1,.item-2{
+			font-family: Roboto;
+			font-size: 14px;
+			line-height: 20px;
+			font-weight: 400;
+			text-transform: uppercase;
+			color: #c2c2c2;
+			transition: $unitrans;
+			&.active{
+				color: $red-bg;
+				font-weight: 900;
+				.indicator {
+					div {
+						width: 100%;
+					}
+				}
+			}
+			.indicator {
+				box-sizing: border-box;
+				height: 4px;
+				background: $grey;
+				width: 105px;
+				div{
+					box-sizing: border-box;
+					height: 3px;
+					background: $red-bg;
+					width: 0%;
+					transition: $unitrans;
+				}
+
+			}
+		}
+	}
+	#owl1{
+		.owl-dots{
+			position: absolute;
+			top: -30px;
+			.owl-dot{
+				width: 105px;
+				height: 30px;
+				margin: 0;
+				border-radius: 0;
+				opacity: 0;
 			}
 		}
 	}

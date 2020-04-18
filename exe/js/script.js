@@ -68,6 +68,14 @@ $(function(){
 
 
 //carousels
+$(function(){
+    $('.blog-details #owl1').owlCarousel({
+        items:1,
+        loop:false,
+        autoplay:false,
+        margin:20,
+    });
+});
 
 $(function(){
     $('#owl1').owlCarousel({
@@ -78,6 +86,7 @@ $(function(){
         autoplayHoverPause:true,
     });
 });
+
 
 $(function(){
 
@@ -140,6 +149,17 @@ $(function(){
             }
         }
     });
+});
+$(document).on("mouseover click",function () {
+    if ($(".owl-item:last-child").hasClass("active"))
+    {
+        $('.carousel-head .item-2').addClass('active');
+        $('.carousel-head .item-1').removeClass('active');
+    }
+    else{
+        $('.carousel-head .item-2').removeClass('active');
+        $('.carousel-head .item-1').addClass('active');
+    }
 });
 $(function(){
     $('#owl4').owlCarousel({
@@ -211,10 +231,16 @@ $(".elem-with-media").hover(function(){
     video.addEventListener("pause", function() {
         controls.playpause.toggleClass("paused");
     });
+    function plusZero(timeToString) {
+        var timeString = String(timeToString);
+        while (timeString.length < 2)
+            timeString = "0"+timeString;
+        return timeString;
+    };
     function videoTime(time) {
         var mm = Math.floor((time / 60));
         var ss = Math.floor((time % 60));
-        var processTime = mm + ":" + ss;
+        var processTime = plusZero(mm) + ":" + plusZero(ss);
         return processTime;
     };
     $(video).on("timeupdate", function() {
@@ -224,10 +250,9 @@ $(".elem-with-media").hover(function(){
             "width": (100 * o | 0) + "%"
         });
         controls.showCurrent.text(videoTime(this.currentTime));
-    });
-    $(video).on("canplay", function() {
         controls.showDuration.text(videoTime(this.duration));
     });
+
     $(controls.total).click(function (e) {
         var x = (e.pageX-controls.total.offset().left)/$(this).width();
         video.currentTime = x * video.duration;
@@ -248,11 +273,7 @@ $(".elem-with-media").hover(function(){
     });
 });
 
-/*
-$('#item1').click(function(){
-    if($('.owl-item').hasClass('active')){
-        alert('У этого блока есть класс test1');
-    }else{
-        alert('У этого блока нет класса test1');
-    }
-});*/
+//owl for blogDetails
+
+
+
