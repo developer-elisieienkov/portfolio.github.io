@@ -76,8 +76,8 @@ $(function(){
         margin:20,
     });
 });
-$(document).on("mouseover hover click",function () {
-    if ($(".owl-item:last-child").hasClass("active"))
+$("#sidebar-owl").on("changed.owl.carousel",function () {
+    if ($(".owl-item:first-child").hasClass("active"))
     {
         $('.carousel-head .item-2').addClass('active');
         $('.carousel-head .item-1').removeClass('active');
