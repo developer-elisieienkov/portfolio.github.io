@@ -2433,6 +2433,31 @@ margin-top: 155px;
 			left: 90%!important;
 		}
 	}
+	#sidebar{
+		&.show {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			width: 100%;
+			opacity: 1;
+		}
+		width: 0px;
+		opacity: 0;
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		padding-top: 115vh;
+		right: 0px;
+		background: rgba(59, 59, 59, 0.5);
+		z-index: 99;
+		transition: $unitrans;
+	}
+	.sidebar-toggler{
+		position: fixed;
+		top: 15px;
+		right: 30px;
+		z-index: 99999;
+	}
 	}
 @media (orientation:landscape) and (max-width: 767px){
 	#carousel {
