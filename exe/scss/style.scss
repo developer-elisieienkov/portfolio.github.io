@@ -2455,8 +2455,42 @@ margin-top: 155px;
 	.sidebar-toggler{
 		position: fixed;
 		top: 15px;
-		right: 30px;
+		right: 10px;
 		z-index: 99999;
+		border: none;
+		background: transparent;
+		div{
+			box-sizing: border-box;
+			height: 4px;
+			width: 25px;
+			border-radius: 3px;
+			background: $svg-link-color2;
+			transition: $unitrans;
+		}
+		div:first-child{
+			margin-bottom: 11px;
+			transform: rotate(-45deg);
+		}
+		div:last-child{
+			transform: rotate(45deg);
+		}
+		&:focus {
+			outline: none;
+			box-shadow: none;
+		}
+		&:hover{
+			div{
+				background: $red-bg;
+			}
+		}
+		&.open{
+			div:first-child{
+				transform: rotate(45deg);
+			}
+			div:last-child{
+				transform: rotate(-45deg);
+			}
+		}
 	}
 	}
 @media (orientation:landscape) and (max-width: 767px){

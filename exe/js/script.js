@@ -275,7 +275,12 @@ $(".elem-with-media").hover(function(){
     });
 });
 
-//owl for blogDetails
-
+$('#sidebar').on("show.bs.collapse",function () {
+    $('.sidebar-toggler').addClass("open");
+    $('#sidebar').removeClass("d-none");
+});
+$('#sidebar').on("hide.bs.collapse",function () {
+    $('.sidebar-toggler').removeClass("open");
+});
 
 
