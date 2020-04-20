@@ -1904,7 +1904,7 @@ footer {
 				padding: 30px 30px 30px 30px;
 				a:first-child{
 					.sidebar-item{
-						padding-top: 0px;
+						padding-top:0px;
 					}
 				}
 				a:last-child{
@@ -1952,6 +1952,9 @@ footer {
 				}
 			}
           .image-widget{
+			  &.show, &.collapsing {
+				  display: flex;
+			  }
 			  padding: 30px;
 			  padding-bottom: 20px;
 			  img{
@@ -2434,6 +2437,9 @@ margin-top: 155px;
 		}
 	}
 	#sidebar{
+		a[type="button"]{
+			background: transparent;
+		}
 		&.show {
 			display: flex;
 			flex-direction: column;
@@ -2443,10 +2449,11 @@ margin-top: 155px;
 		}
 		width: 0px;
 		opacity: 0;
-		position: absolute;
+		position: fixed;
+		overflow: scroll;
 		top: 0px;
+		padding-top: 60px;
 		bottom: 0px;
-		padding-top: 115vh;
 		right: 0px;
 		background: rgba(59, 59, 59, 0.5);
 		z-index: 99;
@@ -2489,6 +2496,38 @@ margin-top: 155px;
 			}
 			div:last-child{
 				transform: rotate(-45deg);
+			}
+		}
+	}
+	.search{
+		margin-right: 4px;
+	}
+	.sidebar-title{
+		margin: 2px!important;
+		padding: 10px!important;
+		border-radius: 30px;
+	}
+	.sidebar-section{
+		border-radius: 30px;
+		padding: 0!important;
+	}
+	.padding-container{
+			margin: 30px 30px 30px 30px;
+		}
+
+	.image-widget{
+		padding: 0!important;
+	}
+	#tab-widget{
+		.padding-container{
+			padding-top: 12px;
+		}
+		.indicator{
+			margin-top: 5px;
+		}
+		.owl-carousel{
+			.item{
+				padding: 0;
 			}
 		}
 	}

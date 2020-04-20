@@ -157,7 +157,7 @@
     </div>
 </section>
 <div class="container main-section">
-    <button  type="button" class="d-block d-md-none sidebar-toggler" data-toggle="collapse" href="#sidebar" role="button" aria-expanded="false" aria-controls="sideba">
+    <button  type="button" class="d-block d-md-none sidebar-toggler" data-toggle="collapse" href="#sidebar" role="button" aria-expanded="false" aria-controls="sidebar">
         <div></div>
         <div></div>
     </button>
@@ -428,15 +428,18 @@
             </div>
         </div>
 
-        <div class="col-12 col-md-3 d-none d-md-block  sidebar" id="sidebar">
-            <form>
+        <div class="col-12 col-md-3 collapse d-none d-md-block  sidebar" id="sidebar">
+            <form class="search">
                 <input type="search" placeholder="Search...">
                 <button type="button"></button>
             </form>
+            <a data-toggle="collapse" href="#categories" role="button" aria-expanded="false" aria-controls="categories">
             <div class="sidebar-title">
                 Categories
             </div>
-            <div class="sidebar-section categories">
+            </a>
+            <div class="sidebar-section collapse d-md-block categories" id="categories" data-parent="#sidebar">
+                <div class="padding-container">
                 <a href="#">
                     <div  class="sidebar-item">
                     <div class="undertitle">
@@ -493,12 +496,15 @@
                     <div class="sidebar-count">3</div>
                 </div>
                 </a>
-
             </div>
+            </div>
+            <a data-toggle="collapse" href="#posts" role="button" aria-expanded="false" aria-controls="posts">
             <div class="sidebar-title">
                 Recent Posts
             </div>
-            <div class="sidebar-section">
+            </a>
+            <div class="sidebar-section d-md-block collapse" id="posts" data-parent="#sidebar">
+                <div class="padding-container">
                 <a href="#">
                     <div  class="sidebar-item">
                         <div class="undertitle">
@@ -524,25 +530,30 @@
                     </div>
                 </a>
             </div>
-
+            </div>
+            <a  data-toggle="collapse" href="#flickr" role="button" aria-expanded="false" aria-controls="flickr">
             <div class="sidebar-title">
                 Flickr Widget
             </div>
-            <div class="sidebar-section d-flex justify-content-between flex-wrap image-widget">
-                <a href="#"><img src="images/blogDetails/bg_photo_3504.png" alt="some image"></a>
+            </a>
+            <div class="sidebar-section d-md-block justify-content-between flex-wrap image-widget collapse" id="flickr" data-parent="#sidebar">
+               <div class="padding-container">
+                   <a href="#"><img src="images/blogDetails/bg_photo_3504.png" alt="some image"></a>
                 <a href="#"><img src="images/blogDetails/bg_photo_3508.png" alt="some image"></a>
                 <a href="#"><img src="images/blogDetails/bg_photo_3512.png" alt="some image"></a>
                 <a href="#"><img src="images/blogDetails/bg_photo_3516.png" alt="some image"></a>
                 <a href="#"><img src="images/blogDetails/bg_photo_3520.png" alt="some image"></a>
                 <a href="#"><img src="images/blogDetails/bg_photo_3524.png" alt="some image"></a>
+               </div>
             </div>
-
+            <a  data-toggle="collapse" href="#accordion1" role="button" aria-expanded="false" aria-controls="accordion1">
             <div class="sidebar-title">
                 Accordions Widget
             </div>
-            <div class="sidebar-section collapse-card" id="accordion1">
+            </a>
+            <div class="sidebar-section d-md-block collapse collapse-card" id="accordion1" data-parent="#sidebar">
 
-
+<div class="padding-container">
                 <div class="container" >
                     <div class="row justify-content-between 1" >
                         <div class="col-1">
@@ -616,12 +627,15 @@
                     </div>
                 </div>
             </div>
+            </div>
 
-
+            <a  data-toggle="collapse" href="#tab-widget" role="button" aria-expanded="false" aria-controls="tab-widget">
             <div class="sidebar-title">
                 Tab Widget Style
             </div>
-            <div class="sidebar-section">
+            </a>
+            <div class="sidebar-section collapse d-md-block" id="tab-widget" data-parent="#sidebar">
+                <div class="padding-container">
                 <div class="d-flex carousel-head">
                     <div class="item-1 text-center  active">
                         Recent
@@ -733,17 +747,21 @@
                 </div>
             </div>
             </div>
-
+            </div>
+            <a   data-toggle="collapse" href="#text-widget" role="button" aria-expanded="false" aria-controls="text-widget">
             <div class="sidebar-title">
                 Text Widget
             </div>
-            <div class="sidebar-section text-widget">
+            </a>
+            <div class="sidebar-section collapse d-md-block text-widget" id="text-widget" data-parent="#sidebar">
+                <div class="padding-container">
                 <div class="caption">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
                 </div>
                 <a href="#" class="read-more">
                     Read More »
                 </a>
+            </div>
             </div>
         </div>
     </div>
