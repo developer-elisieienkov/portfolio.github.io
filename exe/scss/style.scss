@@ -121,9 +121,13 @@ ul{
 					fill: iherit;
 				}
 				.nav-item{
+                  position: relative;
 					ul{
 						list-style: none;
-						margin-right: 50px;
+                        position: absolute;
+                      width: 100%;
+                      background: $white;
+                      padding: 0;
 					}
 					.nav-link{
 						@include navbar-text;
@@ -1715,7 +1719,22 @@ footer {
 		}
 	}
 }
+.blockquote{
+	padding: 60px 100px 60px 100px;
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: 600;
+	color: $dark-bg;
+
+}
 .blog-details{
+  .navbar{
+    .nav-item{
+      ul{
+        background: transparent;
+      }
+    }
+  }
 	.main-section{
 		padding-top: 90px;
 		input::placeholder,textarea::placeholder{
@@ -1751,14 +1770,7 @@ footer {
 					color: $red-bg;
 				}
 			}
-			.blockquote{
-				padding: 60px 100px 60px 100px;
-				font-size: 24px;
-				line-height: 30px;
-				font-weight: 600;
-				color: $dark-bg;
 
-			}
 			.tags,.share{
 				display: flex;
 				flex-direction: row;
@@ -1821,7 +1833,7 @@ footer {
 				}
 				.comment-header,.comment-body{
 					background: $sidebar-header-color;
-					padding: 20px 30px 20px 30px;
+					padding: 20px 30px 10px 30px;
 					transition: $unitrans;
 					border-left: 2px solid $sidebar-header-color;
 				}
@@ -1831,6 +1843,7 @@ footer {
 				}
 				img{
 					width: 58px;
+					margin-bottom: 10px;
 				}
 				.form-title{
 					color: $dark-bg;
@@ -2286,7 +2299,11 @@ margin-top: 155px;
 		header {
 				nav {
 					padding: 9px 0 6px 0!important;
-
+                  .nav-item{
+                    ul{
+                        position: relative!important;
+                    }
+                  }
 				}
 		}
 		.pages-head{
@@ -2529,6 +2546,14 @@ margin-top: 155px;
 			.item{
 				padding: 0;
 			}
+		}
+	}
+	.blockquote{
+		padding: 60px 35px 60px 10px;
+	}
+	.tags{
+		p{
+			width: 100%;
 		}
 	}
 	}
