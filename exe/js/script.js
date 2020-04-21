@@ -90,7 +90,7 @@ $("#sidebar-owl").on("translated.owl.carousel",function () {
 
 
 $(function(){
-    $('#owl1').owlCarousel({
+    $('[id*="owl1"]').owlCarousel({
         items:1,
         loop:true,
         autoplay:true,
@@ -164,7 +164,7 @@ $(function(){
 });
 
 $(function(){
-    $('#owl4').owlCarousel({
+    $('[id*="owl4"]').owlCarousel({
         items:1,
         loop:true,
         autoplay:true,

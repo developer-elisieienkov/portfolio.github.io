@@ -1294,7 +1294,7 @@ footer {
 		}
 	}
 }
-#owl4{
+[id*="owl4"]{
 	margin-bottom: 0px;
 
 	.owl-prev:focus, .owl-next:focus {
@@ -2518,13 +2518,15 @@ margin-top: 155px;
 	}
 	.search{
 		margin-right: 4px;
+		margin-bottom: 15px;
 	}
 	.sidebar-title{
-		margin: 2px!important;
+		margin-top: 15px!important;
 		padding: 10px!important;
 		border-radius: 30px;
 	}
 	.sidebar-section{
+		margin-top: 5px;
 		border-radius: 30px;
 		padding: 0!important;
 	}
