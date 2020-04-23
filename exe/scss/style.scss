@@ -2320,7 +2320,7 @@ footer {
     margin-top: 25px;
     margin-botom: 25px;
   }
-  .col:hover {
+  .col-12:hover {
     .line {
       background: $red-bg;
     }
@@ -2450,6 +2450,11 @@ footer {
         }
       }
     }
+    &:hover {
+      .line {
+        background: $red-bg;
+      }
+    }
   }
 }
 .our-team {
@@ -2571,6 +2576,11 @@ footer {
       width: 30px;
       height: 30px;
       top: 20%;
+    }
+  }
+  &:hover {
+    .line {
+      background: $red-bg;
     }
   }
 }
