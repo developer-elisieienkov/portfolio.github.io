@@ -270,7 +270,17 @@ $(".sidebar-toggler").click(function () {
 });*/
 
 $(document).ready(function () {
-  if (document.documentElement.clientWidth > 768) {
+  if ($(window).width() > 768) {
     $(".sidebar-section").removeAttr("id");
   }
+});
+
+$(function () {
+  $(window).on("scroll resize", function () {
+    if ($(window).scrollTop() >= $(window).height() - 50) {
+      $(".nav-bg").addClass("navbar-on-skroll");
+    } else {
+      $(".nav-bg").removeClass("navbar-on-skroll");
+    }
+  });
 });

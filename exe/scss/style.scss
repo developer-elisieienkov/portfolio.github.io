@@ -103,6 +103,7 @@ a:hover {
 }
 .nav-bg {
   background: $white;
+  transition: $unitrans;
 }
 .li-line {
   box-sizing: margin-box;
@@ -1753,6 +1754,17 @@ footer {
   margin-top: 40px;
 }
 .blog-details {
+  .navbar-on-skroll {
+    background: $white !important;
+    .my-navbar-brand,
+    .nav-link {
+      color: $dark-bg !important;
+      fill: $dark-bg !important;
+    }
+    li {
+      background: $white !important;
+    }
+  }
   .navbar {
     .nav-item {
       ul {
@@ -2830,6 +2842,10 @@ footer {
     border-radius: 30px;
     padding: 0 !important;
   }
+  .sidebar-item {
+    padding: 0 !important;
+    margin: 20px 20px 20px 20px;
+  }
   .padding-container {
     margin: 30px 30px 30px 30px;
   }
@@ -2908,12 +2924,12 @@ footer {
       position: relative !important;
     }
   }
-  .blog-details {
+  /*  .blog-details {
     .nav-bg {
       position: fixed;
       z-index: 999;
     }
-  }
+  }*/
   li.nav-item:hover {
     .li-line {
       margin-left: 0px;
@@ -2978,7 +2994,6 @@ footer {
   .blog-details {
     .nav-bg {
       background: transparent;
-      position: absolute;
       .my-navbar-brand {
         color: $white;
       }
