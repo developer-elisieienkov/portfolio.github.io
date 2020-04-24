@@ -277,7 +277,7 @@ $(document).ready(function () {
 
 $(function () {
   $(window).on("scroll resize", function () {
-    if ($(window).scrollTop() >= $(window).height() - 50) {
+    if ($(window).scrollTop() >= $(window).height() - 100) {
       $(".nav-bg").addClass("navbar-on-skroll");
     } else {
       $(".nav-bg").removeClass("navbar-on-skroll");

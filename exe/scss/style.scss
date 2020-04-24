@@ -1756,13 +1756,16 @@ footer {
 .blog-details {
   .navbar-on-skroll {
     background: $white !important;
+    .nav-item {
+      background: initial;
+    }
     .my-navbar-brand,
     .nav-link {
       color: $dark-bg !important;
       fill: $dark-bg !important;
     }
     li {
-      background: $white !important;
+      background: $white;
     }
   }
   .navbar {
