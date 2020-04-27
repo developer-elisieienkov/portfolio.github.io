@@ -372,18 +372,56 @@ a.carousel-control-next:hover {
 
 .underheader-card {
   background: $littleDarkerThenWhite;
-  fill: $dark-bg;
   padding-bottom: 80px;
-
+  .design {
+    background: url("../images/card/icon_786.svg");
+  }
+  .branding {
+    background: url("../images/card/icon_787.svg");
+  }
+  .responsive {
+    background: url("../images/card/icon_788.svg");
+  }
+  .development {
+    background: url("../images/card/icon_789.svg");
+  }
+  .card-circle {
+    position: absolute;
+    box-sizing: border-box;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $dark-bg;
+    left: 50%;
+    margin-left: -35px;
+    top: -35px;
+    transition: $unitrans;
+  }
+  .header-card-line {
+    display: inline-flex;
+    box-sizing: border-box;
+    width: 70px;
+    height: 2px;
+    background: $dark-bg;
+    transition: $unitrans;
+  }
   .card {
     color: $dark-bg;
     border: none;
     margin-top: 45px;
     padding-bottom: 30px;
-  }
-  .card:hover {
-    color: $red-bg;
-    fill: $red-bg;
+    &:hover {
+      color: $red-bg;
+      .card-circle,
+      .header-card-line {
+        background-color: $red-bg;
+      }
+      .card-text {
+        color: $dark-bg;
+      }
+    }
   }
   .card-img-top {
     position: absolute;
@@ -402,9 +440,11 @@ a.carousel-control-next:hover {
   .card-body {
     padding-top: 65px;
   }
-  .card-text {
+  .card-text,
+  a {
     @include small-text;
     color: $grey;
+    transition: $unitrans;
   }
 }
 .card-title {
@@ -413,6 +453,8 @@ a.carousel-control-next:hover {
   line-height: 20px;
   font-weight: 700;
   color: inherit;
+  margin-bottom: 20px;
+  transition: $unitrans;
 }
 .dark-title {
   @include title-font;
@@ -1672,7 +1714,7 @@ footer {
   background: url("../images/bg/bg_photo_549.jpg") no-repeat;
   background-position: center;
   background-size: cover;
-  .container {
+  .inner {
     height: 100vh;
   }
   .line {
@@ -2599,6 +2641,122 @@ footer {
     }
   }
 }
+.contact-us {
+  .bg {
+    background: url("../images/bg/bg_photo_3828.png") no-repeat;
+    background-size: cover;
+    height: 100%;
+    min-height: 100vh;
+    padding-top: 100px;
+    .underheader-card {
+      background: transparent;
+      padding: 0;
+      margin: 0;
+      .card {
+        position: relative;
+        background: $footer-bg;
+        margin-bottom: 20px;
+        .card-title {
+          color: $white;
+        }
+        .card-text {
+          transition: $unitrans;
+          span {
+            color: $secondary-footer-font-color;
+          }
+        }
+        a {
+          fill: $dark-bg;
+          transition: $unitrans;
+          &:hover {
+            fill: $red-bg;
+          }
+        }
+        &:hover {
+          .card-text,
+          a {
+            color: $red-bg;
+          }
+        }
+      }
+      .address {
+        background: url("../images/contact-us/icon_3930.svg");
+      }
+      .phones {
+        background: url("../images/contact-us/icon_3931.svg");
+      }
+      .email {
+        background: url("../images/contact-us/icon_3932.svg");
+      }
+      .follow-us {
+        background: url("../images/contact-us/icon_3933.svg");
+      }
+      .card-circle {
+        position: absolute;
+        box-sizing: border-box;
+        width: 70px;
+        height: 70px;
+        border-radius: 70px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: $red-bg;
+        left: 50%;
+        margin-left: -35px;
+        top: -35px;
+      }
+      .header-card-line {
+        display: inline-flex;
+        box-sizing: border-box;
+        width: 70px;
+        height: 2px;
+        background: $red-bg;
+      }
+    }
+  }
+  .message-to-us:hover {
+    .line {
+      background: $red-bg;
+    }
+  }
+  .comment-form {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    input,
+    textarea {
+      background: $littleDarkerThenWhite;
+    }
+    .input-box {
+      position: relative;
+      width: 30%;
+      input {
+        width: 100%;
+      }
+    }
+    label {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    }
+    .text-box {
+      position: relative;
+      width: 100%;
+      label {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+      }
+    }
+    .buy {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+#map {
+  width: 100%;
+  height: 485px;
+}
 //all media-styles
 @media (max-height: 470px) {
   #carousel {
@@ -2927,12 +3085,6 @@ footer {
       position: relative !important;
     }
   }
-  /*  .blog-details {
-    .nav-bg {
-      position: fixed;
-      z-index: 999;
-    }
-  }*/
   li.nav-item:hover {
     .li-line {
       margin-left: 0px;
@@ -2990,6 +3142,9 @@ footer {
       left: 80%;
       top: 65%;
     }
+  }
+  .input-box {
+    width: 100% !important;
   }
 }
 

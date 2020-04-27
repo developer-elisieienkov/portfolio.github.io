@@ -24,8 +24,7 @@ var app = new Vue({
 
 $(".collapse-card-toggler").click(function () {
   var collapseId = "#collapse-row" + this.id,
-    clickClass = "." + this.id,
-    clickId = "#" + this.id;
+    clickClass = "." + this.id;
 
   $(collapseId).on("show.bs.collapse", function () {
     $(clickClass).addClass("clickbg-1");
@@ -284,3 +283,19 @@ $(function () {
     }
   });
 });
+
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 32.922082, lng: 130.623257 },
+    zoom: 16,
+  });
+  var marker = new google.maps.Marker({
+    position: { lat: 32.922082, lng: 130.623257 },
+    map: map,
+    title: "Наш маркер: Большой театр",
+    icon: {
+      url: "../images/contact-us/location.png",
+    },
+  });
+}
