@@ -424,7 +424,7 @@ function initMap() {
     map: map,
     title: "Наш маркер: Большой театр",
     icon: {
-      url: "../images/contact-us/location.png",
+      url: "./images/contact-us/location.png",
     },
   });
 }
