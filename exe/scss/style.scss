@@ -369,7 +369,14 @@ a.carousel-control-next:hover {
     background: $red-bg;
   }
 }
-
+.header-card-line {
+  display: inline-flex;
+  box-sizing: border-box;
+  width: 70px;
+  height: 2px;
+  background: $dark-bg;
+  transition: $unitrans;
+}
 .underheader-card {
   background: $littleDarkerThenWhite;
   padding-bottom: 80px;
@@ -397,14 +404,6 @@ a.carousel-control-next:hover {
     left: 50%;
     margin-left: -35px;
     top: -35px;
-    transition: $unitrans;
-  }
-  .header-card-line {
-    display: inline-flex;
-    box-sizing: border-box;
-    width: 70px;
-    height: 2px;
-    background: $dark-bg;
     transition: $unitrans;
   }
   .card {
@@ -895,6 +894,20 @@ a.carousel-control-next:hover {
     }
   }
 }
+[class*="bg-circle"] {
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background: $white;
+  border: 2px solid $white;
+  fill: $dark-bg;
+  transition: $unitrans;
+
+  svg {
+    fill: inherit;
+  }
+}
 .many-theme {
   background: url("../images/bg/themeBg.jpg") no-repeat;
   background-size: cover;
@@ -913,21 +926,6 @@ a.carousel-control-next:hover {
 
     .bg-circle4 {
       padding: 32px 0 0 27px;
-    }
-
-    [class*="bg-circle"] {
-      box-sizing: border-box;
-      width: 100px;
-      height: 100px;
-      border-radius: 100px;
-      background: $white;
-      border: 2px solid $white;
-      fill: $dark-bg;
-      transition: $unitrans;
-
-      svg {
-        fill: inherit;
-      }
     }
 
     .right-theme-caption {
@@ -2368,6 +2366,7 @@ footer {
 .our-abilities {
   .dark-title {
     margin-bottom: 0px;
+    line-height: 30px;
   }
   .undertitle {
     color: $dark-bg;
@@ -2404,6 +2403,18 @@ footer {
     }
 
     .clickbg-1 {
+      .col-11,
+      .btn {
+        background: $dark-bg;
+        svg {
+          fill: $white;
+        }
+        p {
+          color: $white;
+        }
+      }
+    }
+    .collapse-card-toggler:hover {
       .col-11,
       .btn {
         background: $dark-bg;
@@ -2750,12 +2761,101 @@ footer {
     .buy {
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: 80px;
     }
   }
 }
 #map {
   width: 100%;
   height: 485px;
+}
+.features {
+  .pages-head {
+    background: $dark-bg;
+  }
+  .underheader-card {
+    padding-top: 80px;
+  }
+}
+[class*="card-row"] {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  .card-text {
+    color: $grey;
+    transition: $unitrans;
+  }
+  .bg-circle {
+    background: $littleDarkerThenWhite;
+    display: inline-flex;
+    border: solid 3px $littleDarkerThenWhite;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    svg {
+      fill: $dark-bg;
+      transition: $unitrans;
+    }
+  }
+  .my-card {
+    .card-text {
+      height: 60px;
+    }
+  }
+  .my-card:hover {
+    .bg-circle {
+      border: solid 3px $red-bg;
+      background: transparent;
+      svg {
+        fill: $red-bg;
+      }
+    }
+    .card-text {
+      color: $dark-bg;
+    }
+    .header-card-line {
+      background: $red-bg;
+    }
+  }
+}
+.card-row-2 {
+  background: $red-bg;
+  .my-card {
+    .card-title {
+      color: $white;
+    }
+    .card-text {
+      color: $for-sec-active;
+    }
+    .bg-circle {
+      background: #f05d4f;
+      border-color: #f05d4f;
+
+      svg {
+        fill: $white;
+      }
+    }
+    .header-card-line {
+      background: $white;
+    }
+
+    &:hover {
+      .bg-circle {
+        background: transparent;
+        border-color: $white;
+
+        svg {
+          fill: $white;
+        }
+      }
+      .header-card-line {
+        background: $white;
+      }
+      .card-text {
+        color: $white;
+      }
+    }
+  }
 }
 //all media-styles
 @media (max-height: 470px) {
