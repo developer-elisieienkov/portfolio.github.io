@@ -2778,7 +2778,10 @@ footer {
 }
 [class*="card-row"] {
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
+  .my-card {
+    margin-bottom: 20px;
+  }
   .card-text {
     color: $grey;
     transition: $unitrans;
@@ -2948,8 +2951,10 @@ footer {
 [class*="gradient-card-row"] {
   padding-left: 80px;
   padding-right: 80px;
+  padding-bottom: 80px;
   .my-card {
     padding: 40px 20px 40px 20px;
+    margin-bottom: 0;
     svg {
       fill: $dark-bg;
       margin-bottom: 30px;
