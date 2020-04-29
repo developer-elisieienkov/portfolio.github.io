@@ -125,6 +125,7 @@ a:hover {
     .nav-item {
       position: relative;
       ul {
+        z-index: 99999999;
         list-style: none;
         position: absolute;
         width: 100%;
@@ -927,48 +928,46 @@ a.carousel-control-next:hover {
     .bg-circle4 {
       padding: 32px 0 0 27px;
     }
-
-    .right-theme-caption {
-      margin-top: 20px;
-
-      p:first-child {
-        font-family: Raleway;
-        font-size: 20px;
-        line-height: 20px;
-        font-weight: 700;
-        color: $dark-bg;
-        margin: 15px 0 10px 0;
-        transition: $unitrans;
-      }
-
-      p:nth-child(2) {
-        @include small-text;
-        color: $grey;
-        transition: $unitrans;
-      }
-    }
     .right-theme-caption:last-child {
       margin-bottom: 80px;
     }
+  }
+}
+.right-theme-caption {
+  margin-top: 20px;
 
-    .right-theme-caption:hover {
-      [class*="bg-circle"] {
-        background: transparent;
-        border: 2px solid $red-bg;
-        fill: $red-bg;
-      }
+  p:first-child {
+    font-family: Raleway;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    color: $dark-bg;
+    margin: 15px 0 10px 0;
+    transition: $unitrans;
+  }
 
-      p:first-child {
-        color: $red-bg;
-      }
-
-      p:nth-child(2) {
-        color: $dark-bg;
-      }
-    }
+  p:nth-child(2) {
+    @include small-text;
+    color: $grey;
+    transition: $unitrans;
   }
 }
 
+.right-theme-caption:hover {
+  [class*="bg-circle"] {
+    background: transparent;
+    border: 2px solid $red-bg;
+    fill: $red-bg;
+  }
+
+  p:first-child {
+    color: $red-bg;
+  }
+
+  p:nth-child(2) {
+    color: $dark-bg;
+  }
+}
 .many-theme:hover {
   .line {
     background: $red-bg;
@@ -2787,7 +2786,7 @@ footer {
   .bg-circle {
     background: $littleDarkerThenWhite;
     display: inline-flex;
-    border: solid 3px $littleDarkerThenWhite;
+    border: transparent;
     position: relative;
     justify-content: center;
     align-items: center;
@@ -2855,6 +2854,163 @@ footer {
         color: $white;
       }
     }
+  }
+}
+.card-row-3,
+.card-row-4 {
+  background: $footer-bg;
+  .card-title {
+    color: $secondary-footer-font-color;
+  }
+  .card-text {
+    color: $nav-color;
+  }
+  .bg-circle {
+    background: transparent;
+    border: 1px solid $dark-bg;
+    svg {
+      fill: $secondary-footer-font-color;
+    }
+  }
+  .my-card:hover {
+    .card-text {
+      color: $white;
+    }
+    .card-title {
+      color: $red-bg;
+    }
+    .bg-circle {
+      border-width: 2px;
+    }
+  }
+}
+.card-row-4 {
+  background: #1d1d1d;
+  .bg-circle {
+    margin-bottom: 0;
+    border: none;
+  }
+  .my-card:hover {
+    .bg-circle {
+      border: none;
+    }
+  }
+}
+[class*="gorizontal-card-row"] {
+  .card-text {
+    line-height: 20px;
+  }
+  .my-card {
+    &:hover {
+      .bg-circle {
+        background-color: $red-bg;
+        svg {
+          fill: $white;
+        }
+      }
+      .card-title {
+        color: $red-bg;
+      }
+    }
+  }
+  .bg-circle {
+    margin-right: 20px;
+  }
+  .card-title {
+    margin: 20px 0 20px 0;
+  }
+}
+.gorizontal-card-row-1 {
+  .card-title {
+    text-transform: uppercase;
+  }
+  .bg-circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 52px;
+  }
+  .my-card:hover {
+    .card-text {
+      color: $grey;
+    }
+  }
+}
+.gorizontal-card-row-2 {
+  padding-bottom: 20px;
+  background: $littleDarkerThenWhite;
+  .my-card {
+    margin-bottom: 60px;
+  }
+  .card-title {
+    margin-top: 0;
+  }
+}
+[class*="gradient-card-row"] {
+  padding-left: 80px;
+  padding-right: 80px;
+  .my-card {
+    padding: 40px 20px 40px 20px;
+    svg {
+      fill: $dark-bg;
+      margin-bottom: 30px;
+    }
+    .card-text {
+      line-height: 20px;
+    }
+    &:hover {
+      .card-text {
+        color: $grey;
+      }
+    }
+  }
+}
+.gradient-card-row-1 {
+  .my-card {
+    background: #f3f3f3;
+  }
+  .my-card:first-child {
+    background: $littleDarkerThenWhite;
+  }
+  .my-card:last-child {
+    background: $some-border-color-for-blogDetails;
+  }
+  .bg-circle {
+    background: transparent;
+  }
+  .header-card-line {
+    background: $red-bg;
+  }
+}
+.gradient-card-row-2 {
+  background: $littleDarkerThenWhite;
+  .my-card {
+    background: linear-gradient(45deg, #8560a8 12%, #f26d7d 87%);
+    .card-text,
+    .card-title,
+    svg {
+      color: $white;
+      fill: $white;
+    }
+    .header-card-line {
+      background: $white;
+    }
+    &:hover {
+      .card-text,
+      .card-title,
+      svg {
+        color: $white;
+        fill: $white;
+      }
+      .header-card-line {
+        background: $white;
+      }
+    }
+  }
+  .my-card:first-child {
+    background: linear-gradient(45deg, #00aeef 12%, #82ca9c 87%);
+  }
+  .my-card:last-child {
+    background: linear-gradient(45deg, #f68e56 12%, #f69679 87%);
   }
 }
 //all media-styles
