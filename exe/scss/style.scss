@@ -29,6 +29,10 @@ $color-of-text-card: #6dcff6;
 $some-border-color-for-blogDetails: #ebebeb;
 $sidebar-header-color: #f5f5f5;
 $border-radius-forButton: 4px;
+$help-message-color: #00aeef;
+$information-message-color: #605ca8;
+$notice-message-color: #fecc17;
+$general-message-color: #e1e1e1;
 @mixin navbar-text() {
   font-family: Raleway;
   font-size: 14px;
@@ -739,6 +743,9 @@ a.carousel-control-next:hover {
       width: 43px;
       height: 43px;
       border-radius: 0 3px 3px 0;
+      svg {
+        transition: $unitrans;
+      }
     }
     button:hover {
       box-shadow: none;
@@ -2120,7 +2127,7 @@ footer {
       line-height: 20px;
       font-weight: 400;
       text-transform: uppercase;
-      color: #c2c2c2;
+      color: $general-message-color;
       transition: $unitrans;
       &.active {
         color: $red-bg;
@@ -2945,7 +2952,7 @@ footer {
     margin-bottom: 60px;
   }
   .card-title {
-    margin-top: 0;
+    margin-top: -20px;
   }
 }
 [class*="gradient-card-row"] {
@@ -3016,6 +3023,205 @@ footer {
   }
   .my-card:last-child {
     background: linear-gradient(45deg, #f68e56 12%, #f69679 87%);
+  }
+}
+.alerts {
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+.alerts.bg {
+  background: $littleDarkerThenWhite;
+}
+[class*="message"] {
+  height: 42px;
+  margin-bottom: 20px;
+  .left-icon,
+  button {
+    box-sizing: border-box;
+    width: 42px;
+    height: 42px;
+  }
+  .left-icon {
+    div {
+      width: 42px;
+      height: 42px;
+    }
+  }
+  .left-icon {
+    border-radius: 4px 0 0 4px;
+  }
+  button {
+    border-radius: 0 4px 4px 0;
+    @include forButton;
+  }
+  .message-text {
+    font-weight: 400;
+    font-family: Roboto;
+    font-size: 13px;
+    line-height: 20px;
+    width: 100%;
+    span {
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-left: 25px;
+    }
+  }
+}
+.error-message {
+  .left-icon {
+    background: #d4392a;
+    border: 1px solid $red-bg;
+  }
+  .message-text,
+  button {
+    background: $red-bg;
+    border: 1px solid $red-bg;
+  }
+  .message-text {
+    color: $red-bg;
+  }
+  svg {
+    fill: $red-bg;
+  }
+}
+.success-message {
+  .left-icon {
+    background: #83bc35;
+    border: 1px solid $info-link-color;
+  }
+  .message-text,
+  button {
+    background: $info-link-color;
+    border: 1px solid $info-link-color;
+  }
+  .message-text {
+    color: $info-link-color;
+  }
+  svg {
+    fill: $info-link-color;
+  }
+}
+.help-message {
+  .left-icon {
+    background: #009ed9;
+    border: 1px solid $help-message-color;
+  }
+  .message-text,
+  button {
+    background: $help-message-color;
+    border: 1px solid $help-message-color;
+  }
+  .message-text {
+    color: $help-message-color;
+  }
+  svg {
+    fill: $help-message-color;
+  }
+}
+.information-message {
+  .left-icon {
+    background: #534f9f;
+    border: 1px solid $information-message-color;
+  }
+  .message-text,
+  button {
+    background: $information-message-color;
+    border: 1px solid $information-message-color;
+  }
+  .message-text {
+    color: $information-message-color;
+  }
+  svg {
+    fill: $information-message-color;
+  }
+}
+.notice-message {
+  .left-icon {
+    background: #f8c50b;
+    border: 1px solid $notice-message-color;
+  }
+  .message-text,
+  button {
+    background: $notice-message-color;
+    border: 1px solid $notice-message-color;
+  }
+  .message-text {
+    color: $notice-message-color;
+  }
+  svg {
+    fill: $notice-message-color;
+  }
+}
+.general-message {
+  .left-icon {
+    background: #c2c2c2;
+    border: 1px solid $general-message-color;
+  }
+  .message-text,
+  button {
+    background: $general-message-color;
+    border: 1px solid $general-message-color;
+  }
+  .message-text {
+    color: $general-message-color;
+  }
+  svg {
+    fill: $general-message-color;
+  }
+}
+.transparent-message {
+  .left-icon,
+  .message-text,
+  button {
+    background: transparent;
+  }
+  .message-text {
+    border-right: transparent;
+  }
+  .message-text,
+  button {
+    border-left: transparent;
+  }
+}
+.filled-message {
+  .message-text {
+    color: $white;
+  }
+  svg {
+    fill: $white;
+  }
+}
+.gradient-message {
+  border-radius: 4px;
+  .message-text {
+    color: $white;
+  }
+  svg {
+    fill: $white;
+  }
+  .left-icon,
+  .message-text,
+  button {
+    background: transparent;
+    border: transparent;
+  }
+  &.error-message {
+    background: linear-gradient(90deg, #e5493a 0%, #f7941d 100%);
+  }
+  &.success-message {
+    background: linear-gradient(90deg, #1cbbb4 0%, #8dc63f 100%);
+  }
+  &.help-message {
+    background: linear-gradient(90deg, #00aeef 0%, #82ca9c 100%);
+  }
+  &.information-message {
+    background: linear-gradient(90deg, #8560a8 0%, #f26d7d 100%);
+  }
+  &.notice-message {
+    background: linear-gradient(90deg, #fecc17 0%, #fdc689 100%);
+  }
+  &.general-message {
+    background: linear-gradient(90deg, #e1e1e1 0%, #ebebeb 100%);
   }
 }
 //all media-styles
@@ -3206,7 +3412,7 @@ footer {
     padding-top: 60px;
     bottom: 0px;
     right: 0px;
-    background: rgba(59, 59, 59, 0.5);
+    background: rgba(59, 59, 59, 0.7);
     z-index: 99;
     transition: $unitrans;
   }
@@ -3264,16 +3470,22 @@ footer {
     border-radius: 30px;
     padding: 0 !important;
   }
-  .sidebar-item {
-    padding: 0 !important;
-    margin: 20px 20px 20px 20px;
-  }
   .padding-container {
     margin: 30px 30px 30px 30px;
   }
 
   .image-widget {
-    padding: 0 !important;
+    margin-top: 25px;
+    background: transparent !important;
+    border-radius: 0;
+    a {
+      width: 30%;
+    }
+    .padding-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 0 10px;
+    }
   }
   #tab-widget {
     .padding-container {
@@ -3354,6 +3566,11 @@ footer {
   .li-line {
     margin-left: 50%;
   }
+  .portfolio {
+    .li-line {
+      margin-left: 0;
+    }
+  }
   .active-nav {
     .li-line {
       width: 0% !important;
@@ -3406,6 +3623,10 @@ footer {
   }
   .input-box {
     width: 100% !important;
+  }
+  [class*="gradient-card-row"] {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 

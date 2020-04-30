@@ -423,12 +423,6 @@ function initMap() {
     position: { lat: 32.922082, lng: 130.623257 },
     map: map,
     title: "Наш маркер: Большой театр",
-<<<<<<< HEAD
     icon: "./images/contact-us/location.png",
-=======
-    icon: {
-      url: "./images/contact-us/location.png",
-    },
->>>>>>> 3800a0a0311e0ea66080a644aea542b68846cac1
   });
 }
