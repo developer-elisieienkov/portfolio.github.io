@@ -3032,7 +3032,7 @@ footer {
 .alerts.bg {
   background: $littleDarkerThenWhite;
 }
-[class*="message"] {
+.alerts [class*="-message"] {
   height: 42px;
   margin-bottom: 20px;
   .left-icon,
