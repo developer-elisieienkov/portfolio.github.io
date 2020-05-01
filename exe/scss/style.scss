@@ -579,8 +579,8 @@ a.carousel-control-next:hover {
   box-sizing: padding-box;
   padding: 9px;
   background-color: $footer-bg;
-  height: 35px;
-  width: 35px;
+  height: 36px;
+  width: 36px;
   z-index: 9;
   border-radius: 20px;
   transition: $unitrans;
@@ -763,6 +763,7 @@ a.carousel-control-next:hover {
 }
 
 #owl1,
+#owl1-1,
 #owl2,
 #portfolioOwl {
   .owl-dot {
@@ -1619,7 +1620,7 @@ footer {
   transition: $unitrans;
 }
 .blog {
-  #owl1 {
+  [id*="owl1"] {
     background: $littleDarkerThenWhite;
   }
   .over-footer {
@@ -1635,13 +1636,20 @@ footer {
       margin: 0 20px 30px 0px;
       border: none;
       border-radius: 0;
+      .card-img-wrapper {
+        position: relative;
+      }
       .lupa {
-        top: 17%;
-        left: 33%;
+        top: 50%;
+        left: 40%;
+        margin-left: -18px;
+        margin-top: -16px;
       }
       .link {
-        top: 17%;
-        left: 53%;
+        top: 50%;
+        left: 60%;
+        margin-left: -18px;
+        margin-top: -16px;
       }
       video {
         margin-bottom: -10px;
