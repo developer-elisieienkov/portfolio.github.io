@@ -3623,7 +3623,7 @@ footer {
     overflow: hidden;
 
     .carousel-caption {
-      top: 15px;
+      bottom: 15px;
 
       .string1 {
         font-size: 8vh;
@@ -3649,6 +3649,12 @@ footer {
     .under-car-2 {
       font-size: 7vh;
     }
+  }
+}
+@media (max-height: 485px) {
+  .navbar-collapse {
+    height: 100vh;
+    overflow: scroll;
   }
 }
 @media (max-width: 991px) {
