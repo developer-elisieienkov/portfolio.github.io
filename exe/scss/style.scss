@@ -32,7 +32,6 @@ $border-radius-forButton: 4px;
 $help-message-color: #00aeef;
 $information-message-color: #605ca8;
 $notice-message-color: #fecc17;
-$general-message-color: #e1e1e1;
 @mixin navbar-text() {
   font-family: Raleway;
   font-size: 14px;
@@ -626,19 +625,22 @@ a.carousel-control-next:hover {
   padding-top: 80px;
   background: url("../images/bg/stuffBg.jpg") no-repeat;
   background-size: cover;
-  p:first-child {
+  .dark-title {
     color: $white;
     @include title-font;
   }
-  p:nth-child(2) {
+  .undertitle {
     @include small-text;
     color: $grey;
   }
 
   .circle-numb {
     position: absolute;
-    top: 55px;
-    left: 41%;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    width: 100px;
+    margin-left: -50px;
     font-family: Raleway;
     font-size: 36px;
     line-height: 20px;
@@ -2127,7 +2129,7 @@ footer {
       line-height: 20px;
       font-weight: 400;
       text-transform: uppercase;
-      color: $general-message-color;
+      color: $svg-link-color2;
       transition: $unitrans;
       &.active {
         color: $red-bg;
@@ -3032,7 +3034,7 @@ footer {
 .alerts.bg {
   background: $littleDarkerThenWhite;
 }
-.alerts [class*="-message"] {
+[class*="-message"] {
   height: 42px;
   margin-bottom: 20px;
   .left-icon,
@@ -3155,18 +3157,18 @@ footer {
 .general-message {
   .left-icon {
     background: #c2c2c2;
-    border: 1px solid $general-message-color;
+    border: 1px solid $svg-link-color2;
   }
   .message-text,
   button {
-    background: $general-message-color;
-    border: 1px solid $general-message-color;
+    background: $svg-link-color2;
+    border: 1px solid $svg-link-color2;
   }
   .message-text {
-    color: $general-message-color;
+    color: $svg-link-color2;
   }
   svg {
-    fill: $general-message-color;
+    fill: $svg-link-color2;
   }
 }
 .transparent-message {
@@ -3182,6 +3184,11 @@ footer {
   button {
     border-left: transparent;
   }
+  &.general-message {
+    .message-text {
+      color: #c2c2c2;
+    }
+  }
 }
 .filled-message {
   .message-text {
@@ -3189,6 +3196,11 @@ footer {
   }
   svg {
     fill: $white;
+  }
+  &.general-message {
+    .message-text {
+      color: $info-color;
+    }
   }
 }
 .gradient-message {
@@ -3222,6 +3234,101 @@ footer {
   }
   &.general-message {
     background: linear-gradient(90deg, #e1e1e1 0%, #ebebeb 100%);
+    .message-text {
+      color: $info-color;
+    }
+  }
+}
+.soft-style-message {
+  border-radius: 4px;
+  .left-icon,
+  .message-text,
+  button {
+    background: transparent;
+  }
+  .left-icon,
+  .message-text {
+    border-right: transparent;
+  }
+  .message-text,
+  button {
+    border-left: transparent;
+  }
+  &.error-message {
+    background: rgba(229, 73, 58, 0.04);
+  }
+  &.success-message {
+    background: rgba(141, 198, 63, 0.1);
+  }
+  &.help-message {
+    background: rgba(0, 174, 239, 0.04);
+  }
+  &.information-message {
+    background: rgba(96, 92, 168, 0.1);
+  }
+  &.notice-message {
+    background: rgba(254, 204, 23, 0.1);
+  }
+  &.general-message {
+    background: #fafafa;
+    svg {
+      fill: $info-color;
+    }
+    .message-text {
+      color: $info-color;
+    }
+  }
+}
+.transparent-text-style-message {
+  button,
+  .message-text {
+    background: transparent;
+  }
+  .left-icon {
+    svg {
+      fill: $white;
+    }
+  }
+  .left-icon,
+  .message-text {
+    border-right: transparent;
+  }
+  .message-text,
+  button {
+    border-left: transparent;
+  }
+  &.error-message {
+    .left-icon {
+      background: $red-bg;
+    }
+  }
+  &.success-message {
+    .left-icon {
+      background: $info-link-color;
+    }
+  }
+  &.help-message {
+    .left-icon {
+      background: $help-message-color;
+    }
+  }
+  &.information-message {
+    .left-icon {
+      background: $information-message-color;
+    }
+  }
+  &.notice-message {
+    .left-icon {
+      background: $notice-message-color;
+    }
+  }
+  &.general-message {
+    .left-icon {
+      background: $svg-link-color2;
+    }
+    .message-text {
+      color: #c2c2c2;
+    }
   }
 }
 //all media-styles

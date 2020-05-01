@@ -23,10 +23,10 @@ var app = new Vue({
 });
 
 $(".collapse-card-toggler").click(function () {
+  $(".clickbg-1").removeClass("clickbg-1");
   var collapseId = "#collapse-row" + this.id,
     clickClass = "." + this.id;
-
-  $(collapseId).on("show.bs.collapse", function () {
+  $(collapseId).on("show.bs.collapse shown.bs.collapse", function () {
     $(clickClass).addClass("clickbg-1");
   });
 
@@ -34,6 +34,7 @@ $(".collapse-card-toggler").click(function () {
     $(clickClass).removeClass("clickbg-1");
   });
 });
+
 /*
 
 var anchor = new Vue({
