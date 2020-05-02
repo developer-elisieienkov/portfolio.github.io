@@ -32,6 +32,7 @@ $border-radius-forButton: 4px;
 $help-message-color: #00aeef;
 $information-message-color: #605ca8;
 $notice-message-color: #fecc17;
+$shop-navbar-link: #707070;
 @mixin navbar-text() {
   font-family: Raleway;
   font-size: 14px;
@@ -322,7 +323,7 @@ a.carousel-control-next:hover {
     font-size: 24px;
     line-height: 20px;
     font-weight: 400;
-    color: #707070;
+    color: $shop-navbar-link;
   }
 }
 .with-triangle {
@@ -1333,7 +1334,6 @@ footer {
 .you-here {
   color: $for-sec-active !important;
 }
-//portfolio
 .other-portfolio {
   background: $littleDarkerThenWhite;
   margin-bottom: -20px;
@@ -1831,336 +1831,335 @@ footer {
       }
     }
   }
-  .main-section {
-    padding-top: 90px;
-    input::placeholder,
-    textarea::placeholder {
+}
+.main-section {
+  padding-top: 90px;
+  input::placeholder,
+  textarea::placeholder {
+    @include small-text;
+    color: $muchMoreDarkerThenWhite;
+  }
+  input,
+  textarea {
+    @include small-text;
+    color: $secondaryBrandColor;
+  }
+  .content {
+    background: $littleDarkerThenWhite;
+    padding: 30px 30px 10px 30px;
+    margin-bottom: 60px;
+    img {
+      width: 100%;
+    }
+    .dark-title {
+      padding-top: 30px;
+    }
+    .muted-text {
       @include small-text;
       color: $muchMoreDarkerThenWhite;
+      span {
+        color: $some-border-color-for-blogDetails;
+      }
+      .highlighted {
+        color: $red-bg;
+      }
     }
-    input,
-    textarea {
-      @include small-text;
-      color: $secondaryBrandColor;
-    }
-    .content {
-      background: $littleDarkerThenWhite;
-      padding: 30px 30px 10px 30px;
-      margin-bottom: 60px;
-      img {
-        width: 100%;
-      }
-      .dark-title {
-        padding-top: 30px;
-      }
-      .muted-text {
-        @include small-text;
-        color: $muchMoreDarkerThenWhite;
-        span {
-          color: $some-border-color-for-blogDetails;
-        }
-        .highlighted {
-          color: $red-bg;
-        }
-      }
 
-      .tags,
-      .share {
+    .tags,
+    .share {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      p {
+        font-family: Raleway;
+        font-size: 14px;
+        line-height: 40px;
+        font-weight: 800;
+        color: $dark-bg;
+        margin-right: 35px;
+        margin-bottom: 0px;
+      }
+      button {
+        margin-right: 10px;
+        height: 31px;
+        padding: 3px 30px 0 30px;
+        border: 1px solid $some-border-color-for-blogDetails;
+        border-radius: 31px;
+        @include forButton;
+        transition: $unitrans;
+        &.active,
+        &:hover {
+          background: $red-bg;
+          color: $white;
+        }
+      }
+    }
+    .tags {
+      margin: 60px 0 20px 0;
+    }
+    .share {
+      p {
+        margin-right: 30px;
+      }
+      a {
+        fill: $svg-link-color2;
+        transition: $unitrans;
+        &:hover {
+          fill: $red-bg;
+        }
+      }
+    }
+    .comments {
+      .dark-title {
+        font-weight: 600;
+        margin: 80px 0 35px 0;
+      }
+      .comment {
+        margin-bottom: 30px;
+        transition: $unitrans;
+        &:hover {
+          margin-left: 40px;
+          .comment-header,
+          .comment-body {
+            border-left: 2px solid $red-bg;
+          }
+        }
+      }
+      .comment-header,
+      .comment-body {
+        background: $sidebar-header-color;
+        padding: 20px 30px 10px 30px;
+        transition: $unitrans;
+        border-left: 2px solid $sidebar-header-color;
+      }
+      .comment-body {
+        background: #fdfdfd;
+        border-left: 2px solid #fdfdfd;
+      }
+      img {
+        width: 58px;
+        margin-bottom: 10px;
+      }
+      .form-title {
+        color: $dark-bg;
+        margin-bottom: 0px;
+      }
+      button.muted-card-text {
+        color: $white;
+        text-transform: uppercase;
+        font-weight: 800;
+        @include forButton;
+        width: 70px;
+        height: 26px;
+        border-radius: $border-radius-forButton;
+        background: $dark-bg;
+        transition: $unitrans;
+        &:hover {
+          background: $red-bg;
+        }
+      }
+    }
+  }
+  .sidebar {
+    .categories {
+      .sidebar-item {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        flex-wrap: wrap;
-        p {
-          font-family: Raleway;
-          font-size: 14px;
-          line-height: 40px;
-          font-weight: 800;
-          color: $dark-bg;
-          margin-right: 35px;
-          margin-bottom: 0px;
+        justify-content: space-between;
+      }
+    }
+    .sidebar-section {
+      width: 270px;
+      background: $littleDarkerThenWhite;
+      padding: 30px 30px 30px 30px;
+      a:first-child {
+        .sidebar-item {
+          padding-top: 0px;
         }
-        button {
-          margin-right: 10px;
-          height: 31px;
-          padding: 3px 30px 0 30px;
-          border: 1px solid $some-border-color-for-blogDetails;
-          border-radius: 31px;
-          @include forButton;
+      }
+      a:last-child {
+        .sidebar-item {
+          padding-bottom: 0px;
+          border: transparent;
+        }
+      }
+      .sidebar-item {
+        padding: 20px 20px 20px 20px;
+        border-bottom: 0.5px solid $darkerThenWhite;
+        .undertitle {
+          color: $secondary-footer-font-color;
           transition: $unitrans;
-          &.active,
-          &:hover {
+          line-height: 20px;
+        }
+        &:hover {
+          .undertitle {
+            color: $red-bg;
+          }
+          .sidebar-count {
             background: $red-bg;
             color: $white;
           }
         }
       }
-      .tags {
-        margin: 60px 0 20px 0;
+      .sidebar-count {
+        box-sizing: padding-box;
+        background: $sidebar-header-color;
+        border-radius: 2px;
+        padding: 0 5px 0 5px;
+        text-align: center;
+        height: 21px;
+        min-width: 21px;
+        font-family: Roboto;
+        font-size: 11px;
+        line-height: 25px;
+        font-weight: 400;
+        color: #d7d7d7;
+        transition: $unitrans;
       }
-      .share {
-        p {
-          margin-right: 30px;
-        }
-        a {
-          fill: $svg-link-color2;
-          transition: $unitrans;
-          &:hover {
-            fill: $red-bg;
-          }
+      .active-link + .sidebar-count {
+        background: $red-bg;
+        color: $white;
+      }
+    }
+    .image-widget {
+      &.show,
+      &.collapsing {
+        display: flex;
+      }
+      padding: 30px;
+      padding-bottom: 20px;
+      img {
+        margin-bottom: 10px;
+        transition: $unitrans;
+        &:hover {
+          transform: scale(1.2);
         }
       }
-      .comments {
-        .dark-title {
-          font-weight: 600;
-          margin: 80px 0 35px 0;
-        }
-        .comment {
-          margin-bottom: 30px;
+    }
+    .collapse-card {
+      .ring {
+        box-sizing: border-box;
+        width: 19px;
+        height: 19px;
+        border-radius: 19px;
+        background: transparent;
+        border: 2px solid #d7d7d7;
+        margin-right: 10px;
+        position: relative;
+        transition: $unitrans;
+        div {
+          position: absolute;
+          box-sizing: border-box;
+          width: 11px;
+          height: 2px;
+          background: #d7d7d7;
           transition: $unitrans;
-          &:hover {
-            margin-left: 40px;
-            .comment-header,
-            .comment-body {
-              border-left: 2px solid $red-bg;
+        }
+        div:last-child {
+          transform: rotate(90deg);
+        }
+      }
+      button {
+        border-bottom: 1px solid $darkerThenWhite;
+        background: $littleDarkerThenWhite;
+        color: $secondary-footer-font-color;
+        width: 210px;
+        padding: 0;
+      }
+      .container:last-child {
+        button {
+          border-bottom: transparent;
+        }
+      }
+      .clickbg-1 {
+        button {
+          background: transparent !important;
+          color: $red-bg;
+          .ring {
+            border-color: $red-bg;
+            div {
+              background: $red-bg;
             }
-          }
-        }
-        .comment-header,
-        .comment-body {
-          background: $sidebar-header-color;
-          padding: 20px 30px 10px 30px;
-          transition: $unitrans;
-          border-left: 2px solid $sidebar-header-color;
-        }
-        .comment-body {
-          background: #fdfdfd;
-          border-left: 2px solid #fdfdfd;
-        }
-        img {
-          width: 58px;
-          margin-bottom: 10px;
-        }
-        .form-title {
-          color: $dark-bg;
-          margin-bottom: 0px;
-        }
-        button.muted-card-text {
-          color: $white;
-          text-transform: uppercase;
-          font-weight: 800;
-          @include forButton;
-          width: 70px;
-          height: 26px;
-          border-radius: $border-radius-forButton;
-          background: $dark-bg;
-          transition: $unitrans;
-          &:hover {
-            background: $red-bg;
+            div:last-child {
+              transform: rotate(180deg);
+            }
           }
         }
       }
     }
-    .sidebar {
-      form {
-        position: relative;
-        input {
-          height: 48px;
-          width: 270px;
-          border-radius: 48px;
-          outline: none;
-          border: 1px solid $some-border-color-for-blogDetails;
-          padding: 0 33px 0 30px;
-        }
-
-        button {
-          top: 1px;
-          left: 222px;
-          position: absolute;
-          width: 46px;
-          height: 46px;
-          background: url("../images/blogDetails/icon_3424.svg") no-repeat;
-          background-position: center;
-          background-color: $white;
-          border: none;
-          border-radius: 46px;
-          outline: none;
-          box-shadow: none;
-        }
+    .line {
+      width: 135px;
+    }
+    .text-widget {
+      .caption {
+        margin-bottom: 30px;
+        color: $secondary-footer-font-color;
       }
-
-      .categories {
-        .sidebar-item {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-        }
-      }
-      .sidebar-section {
-        width: 270px;
-        background: $littleDarkerThenWhite;
-        padding: 30px 30px 30px 30px;
-        a:first-child {
-          .sidebar-item {
-            padding-top: 0px;
-          }
-        }
-        a:last-child {
-          .sidebar-item {
-            padding-bottom: 0px;
-            border: transparent;
-          }
-        }
-        .sidebar-item {
-          padding: 20px 20px 20px 20px;
-          border-bottom: 0.5px solid $darkerThenWhite;
-          .undertitle {
-            color: $secondary-footer-font-color;
-            transition: $unitrans;
-            line-height: 20px;
-          }
-          &:hover {
-            .undertitle {
-              color: $red-bg;
-            }
-            .sidebar-count {
-              background: $red-bg;
-              color: $white;
-            }
-          }
-        }
-        .sidebar-count {
-          box-sizing: padding-box;
-          background: $sidebar-header-color;
-          border-radius: 2px;
-          padding: 0 5px 0 5px;
-          text-align: center;
-          height: 21px;
-          min-width: 21px;
-          font-family: Roboto;
-          font-size: 11px;
-          line-height: 25px;
-          font-weight: 400;
-          color: #d7d7d7;
-          transition: $unitrans;
-        }
-        .active-link + .sidebar-count {
-          background: $red-bg;
-          color: $white;
-        }
-      }
-      .image-widget {
-        &.show,
-        &.collapsing {
-          display: flex;
-        }
-        padding: 30px;
-        padding-bottom: 20px;
-        img {
-          margin-bottom: 10px;
-          transition: $unitrans;
-          &:hover {
-            transform: scale(1.2);
-          }
-        }
-      }
-      .collapse-card {
-        .ring {
-          box-sizing: border-box;
-          width: 19px;
-          height: 19px;
-          border-radius: 19px;
-          background: transparent;
-          border: 2px solid #d7d7d7;
-          margin-right: 10px;
-          position: relative;
-          transition: $unitrans;
-          div {
-            position: absolute;
-            box-sizing: border-box;
-            width: 11px;
-            height: 2px;
-            background: #d7d7d7;
-            transition: $unitrans;
-          }
-          div:last-child {
-            transform: rotate(90deg);
-          }
-        }
-        button {
-          border-bottom: 1px solid $darkerThenWhite;
-          background: $littleDarkerThenWhite;
-          color: $secondary-footer-font-color;
-          width: 210px;
-          padding: 0;
-        }
-        .container:last-child {
-          button {
-            border-bottom: transparent;
-          }
-        }
-        .clickbg-1 {
-          button {
-            background: transparent !important;
-            color: $red-bg;
-            .ring {
-              border-color: $red-bg;
-              div {
-                background: $red-bg;
-              }
-              div:last-child {
-                transform: rotate(180deg);
-              }
-            }
-          }
-        }
-      }
-      .line {
-        width: 135px;
-      }
-      .text-widget {
-        .caption {
-          margin-bottom: 30px;
-          color: $secondary-footer-font-color;
-        }
-      }
-      .read-more {
-        color: $red-bg;
-      }
+    }
+    .read-more {
+      color: $red-bg;
     }
   }
-  .carousel-head {
-    .item-1,
-    .item-2 {
-      font-family: Roboto;
-      font-size: 14px;
-      line-height: 20px;
-      font-weight: 400;
-      text-transform: uppercase;
-      color: $svg-link-color2;
-      transition: $unitrans;
-      &.active {
-        color: $red-bg;
-        font-weight: 900;
-        .indicator {
-          div {
-            width: 100%;
-          }
+}
+.search {
+  position: relative;
+  input {
+    height: 48px;
+    width: 270px;
+    border-radius: 48px;
+    outline: none;
+    border: 1px solid $some-border-color-for-blogDetails;
+    padding: 0 33px 0 30px;
+  }
+
+  button {
+    top: 1px;
+    left: 222px;
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    background: url("../images/blogDetails/icon_3424.svg") no-repeat;
+    background-position: center;
+    background-color: $white;
+    border: none;
+    border-radius: 46px;
+    outline: none;
+    box-shadow: none;
+  }
+}
+.carousel-head {
+  .item-1,
+  .item-2 {
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $svg-link-color2;
+    transition: $unitrans;
+    &.active {
+      color: $red-bg;
+      font-weight: 900;
+      .indicator {
+        div {
+          width: 100%;
         }
       }
-      .indicator {
+    }
+    .indicator {
+      box-sizing: border-box;
+      height: 2px;
+      background: $some-border-color-for-blogDetails;
+      width: 105px;
+      margin-top: 10px;
+      div {
         box-sizing: border-box;
         height: 2px;
-        background: $some-border-color-for-blogDetails;
-        width: 105px;
-        margin-top: 10px;
-        div {
-          box-sizing: border-box;
-          height: 2px;
-          background: $red-bg;
-          width: 0%;
-          transition: $unitrans;
-        }
+        background: $red-bg;
+        width: 0%;
+        transition: $unitrans;
       }
     }
   }
@@ -2332,9 +2331,26 @@ footer {
   }
 }
 .portfolio-details,
-.blog {
+.blog,
+.shop {
   .pages-head {
     background: $red-bg;
+    form {
+      input {
+        background: $dark-bg;
+        border: transparent;
+      }
+      input::placeholder {
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: $shop-navbar-link;
+      }
+      button {
+        background: url("../images/shop/icon_2008.svg") center no-repeat;
+      }
+    }
   }
   .header-info {
     background: $littleDarkerThenWhite;
@@ -2362,6 +2378,46 @@ footer {
 .linksSvg1:hover,
 .linksSvg2:hover {
   fill: $red-bg;
+}
+.about-us,
+.shop {
+  .collapse-card {
+    .col-11,
+    .btn {
+      background: $littleDarkerThenWhite;
+      p {
+        color: $info-color;
+      }
+      svg {
+        fill: $svg-link-color2;
+      }
+    }
+
+    .clickbg-1 {
+      .col-11,
+      .btn {
+        background: $dark-bg;
+        svg {
+          fill: $white;
+        }
+        p {
+          color: $white;
+        }
+      }
+    }
+    .collapse-card-toggler:hover {
+      .col-11,
+      .btn {
+        background: $dark-bg;
+        svg {
+          fill: $white;
+        }
+        p {
+          color: $white;
+        }
+      }
+    }
+  }
 }
 .agency {
   padding-bottom: 50px;
@@ -2406,43 +2462,7 @@ footer {
       margin-top: 15px;
     }
   }
-  .collapse-card {
-    .col-11,
-    .btn {
-      background: $littleDarkerThenWhite;
-      p {
-        color: $info-color;
-      }
-      svg {
-        fill: $svg-link-color2;
-      }
-    }
 
-    .clickbg-1 {
-      .col-11,
-      .btn {
-        background: $dark-bg;
-        svg {
-          fill: $white;
-        }
-        p {
-          color: $white;
-        }
-      }
-    }
-    .collapse-card-toggler:hover {
-      .col-11,
-      .btn {
-        background: $dark-bg;
-        svg {
-          fill: $white;
-        }
-        p {
-          color: $white;
-        }
-      }
-    }
-  }
   .capabilities {
     .undertitle {
       font-weight: 700;
@@ -3337,6 +3357,122 @@ footer {
     .message-text {
       color: #c2c2c2;
     }
+  }
+}
+.shop {
+  .navbar {
+    width: 83vw;
+    .nav-item {
+      .nav-link {
+        font-family: Roboto;
+        font-weight: 400;
+        color: $shop-navbar-link;
+      }
+    }
+  }
+  main {
+    [x-placement="bottom-start"] {
+      top: -40px !important;
+    }
+    .dropdown-card-toggler {
+      .dropdown-button-text {
+        width: 100%;
+        height: 42px;
+        background: $littleDarkerThenWhite;
+        border-radius: 4px 0 0 4px;
+        padding: 11px 0 0 20px;
+        margin-right: 0px;
+        p {
+          font-family: Roboto;
+          font-size: 14px;
+          font-weight: 400;
+          color: $muchMoreDarkerThenWhite;
+          span {
+            color: $nav-color;
+            margin-left: 0;
+          }
+        }
+      }
+      button {
+        width: 43px;
+        height: 42px;
+        @include forButton;
+        border-radius: 0 4px 4px 0;
+        background: $darkerThenWhite;
+      }
+    }
+  }
+}
+.product-categories {
+  background: $footer-bg;
+  a {
+    margin: 0;
+  }
+  .container {
+    padding: 0 !important;
+  }
+  .text-like-in-nav {
+    height: 67px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .active-category {
+    background: $red-bg;
+  }
+}
+.pages-breadcrumb {
+  background: $littleDarkerThenWhite;
+  .container {
+    height: 69px;
+  }
+  .container,
+  a,
+  span {
+    color: $grey;
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}
+.grid,
+.list {
+  @include forButton;
+  width: 42px;
+  height: 42px;
+  border-radius: $border-radius-forButton;
+  background-color: $darkerThenWhite;
+  transition: $unitrans;
+  padding-bottom: 4px;
+  svg {
+    fill: #b7b7b7;
+  }
+  &:hover,
+  &.active {
+    background-color: $red-bg;
+    svg {
+      fill: $white;
+    }
+  }
+}
+#main-shop-owl {
+  .owl-stage {
+    width: 100% !important;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .card {
+    width: 250px;
+    margin-bottom: 40px;
+  }
+  .owl-item {
+    width: 250px !important;
   }
 }
 //all media-styles

@@ -427,3 +427,12 @@ function initMap() {
     icon: "./images/contact-us/location.png",
   });
 }
+//shop
+$(function () {
+  $("#main-shop-owl").owlCarousel({
+    items: 12,
+    loop: false,
+    autoplay: false,
+    margin: 20,
+  });
+});
