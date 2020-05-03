@@ -151,7 +151,7 @@ $(function () {
 });
 
 $(function () {
-  $('[id*="owl4"]').owlCarousel({
+  $("[id*=owl4]").owlCarousel({
     items: 1,
     loop: true,
     autoplay: true,
@@ -162,6 +162,7 @@ $(function () {
     navText: false,
   });
 });
+
 //player
 
 $(".elem-with-media").hover(function () {
@@ -427,12 +428,3 @@ function initMap() {
     icon: "./images/contact-us/location.png",
   });
 }
-//shop
-$(function () {
-  $("#main-shop-owl").owlCarousel({
-    items: 12,
-    loop: false,
-    autoplay: false,
-    margin: 20,
-  });
-});
