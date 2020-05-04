@@ -33,6 +33,7 @@ $help-message-color: #00aeef;
 $information-message-color: #605ca8;
 $notice-message-color: #fecc17;
 $shop-navbar-link: #707070;
+$sale-mark-fill: #f7941d;
 @mixin navbar-text() {
   font-family: Raleway;
   font-size: 14px;
@@ -3389,16 +3390,16 @@ footer {
   .dropdown-card-toggler {
     .dropdown-button-text {
       width: 100%;
-      height: 42px;
       background: $littleDarkerThenWhite;
       border-radius: 4px 0 0 4px;
-      padding: 11px 0 0 20px;
+      padding: 11px 0 10px 20px;
       margin-right: 0px;
       p {
         font-family: Roboto;
         font-size: 14px;
         font-weight: 400;
         color: $muchMoreDarkerThenWhite;
+        margin-bottom: 0;
         span {
           color: $nav-color;
           margin-left: 0;
@@ -3406,33 +3407,121 @@ footer {
       }
     }
     button {
-      width: 43px;
-      height: 42px;
       @include forButton;
       border-radius: 0 4px 4px 0;
       background: $darkerThenWhite;
     }
   }
   .card {
+    transition: $unitrans;
+    border: transparent;
+    border-radius: 0;
+    background: $littleDarkerThenWhite;
     width: 270px;
-    .card-img-top {
-      width: 100%;
-    }
-    [id*="owl4"] {
+    [id*="owl-shop"] {
+      .owl-prev {
+        left: 0px;
+        background: url("../images/shop/arrow_3224.svg") no-repeat center;
+      }
+      .owl-next {
+        right: 0px;
+        background: url("../images/shop/arrow_3220.svg") no-repeat center;
+      }
       .owl-prev,
       .owl-next {
+        position: absolute;
+        box-sizing: border-box;
         top: 50%;
         margin-top: -33px;
         width: 26px;
         height: 66px;
-        border-radius: 0;
         opacity: 0.05;
+        background-color: $dark-bg;
+        border-radius: 0;
+        z-index: 999;
+        display: none;
+        transition: $unitrans;
+        @include forButton;
+        i {
+          width: 26px;
+          height: 66px;
+        }
+        &:hover {
+          opacity: 1;
+          background-color: $red-bg;
+        }
       }
-      .owl-prev {
-        left: 0;
+    }
+    .to-cart {
+      width: 130px;
+      height: 34px;
+      border: 1px solid;
+      border-color: $dark-bg;
+      font-family: Raleway;
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: $dark-bg;
+      margin-bottom: 30px;
+      @include forButton;
+      transition: $unitrans;
+      &:hover,
+      &.active {
+        background: $info-link-color;
+        color: $white;
       }
-      .owl-next {
-        right: 0;
+    }
+    .price {
+      font-size: 18px;
+      font-weight: 900;
+      color: $red-bg;
+      span {
+        text-decoration: line-through;
+      }
+    }
+    .like {
+      cursor: pointer;
+      fill: $muchMoreDarkerThenWhite;
+      transition: $unitrans;
+      position: absolute;
+      z-index: 999;
+      top: 30px;
+      right: 30px;
+      display: none;
+      &.active {
+        fill: $red-bg;
+      }
+    }
+    .marks {
+      position: absolute;
+      z-index: 999;
+      top: 30px;
+      left: -1px;
+    }
+    .mark-wrapper {
+      position: relative;
+      p {
+        position: absolute;
+        left: 20px;
+        top: -3px;
+        font-family: Roboto;
+        font-size: 11px;
+        line-height: 32px;
+        font-weight: 900;
+        font-style: italic;
+        text-transform: uppercase;
+        color: $white;
+      }
+    }
+    .sale-mark {
+      fill: $sale-mark-fill;
+    }
+    &:hover {
+      .owl-next,
+      .owl-prev,
+      .like {
+        display: block;
       }
     }
   }

@@ -151,7 +151,7 @@ $(function () {
 });
 
 $(function () {
-  $("[id*=owl4]").owlCarousel({
+  $("[id*=owl4],[id*=owl-shop]").owlCarousel({
     items: 1,
     loop: true,
     autoplay: true,
@@ -428,3 +428,9 @@ function initMap() {
     icon: "./images/contact-us/location.png",
   });
 }
+$(".like").click(function () {
+  $(this).toggleClass("active");
+});
+$(".to-cart").click(function () {
+  $(this).text("View Cart").addClass("active");
+});
