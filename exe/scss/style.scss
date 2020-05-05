@@ -3417,7 +3417,8 @@ footer {
     border: transparent;
     border-radius: 0;
     background: $littleDarkerThenWhite;
-    width: 270px;
+    width: 19vw;
+    margin-bottom: 40px;
     [id*="owl-shop"] {
       .owl-prev {
         left: 0px;
@@ -3475,10 +3476,14 @@ footer {
     .price {
       font-size: 18px;
       font-weight: 900;
-      color: $red-bg;
-      span {
+      color: $dark-bg;
+      .muted-card-text {
         text-decoration: line-through;
+        margin-right: 10px;
       }
+    }
+    .sale-price {
+      color: $red-bg;
     }
     .like {
       cursor: pointer;
@@ -3517,16 +3522,99 @@ footer {
     .sale-mark {
       fill: $sale-mark-fill;
     }
+    .new-product-mark {
+      fill: #00bff3;
+    }
+    .hot {
+      fill: $red-bg;
+    }
     &:hover {
       .owl-next,
       .owl-prev,
       .like {
         display: block;
       }
+      .card-title {
+        color: $red-bg;
+      }
+    }
+  }
+  .clients {
+    background: $littleDarkerThenWhite;
+    &:hover {
+      .line {
+        background: $red-bg;
+      }
     }
   }
 }
-
+.products-pagination {
+  box-sizing: border-box;
+  width: 35px;
+  height: 35px;
+  border-radius: $border-radius-forButton;
+  background: #f3f3f3;
+  margin: 2.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f3f3f3;
+  transition: $unitrans;
+  &.muted-card-text {
+    color: $dark-bg;
+  }
+  &.active,
+  &:hover {
+    color: $red-bg;
+    border: 1px solid $red-bg;
+    background: transparent;
+  }
+}
+.next-product-page,
+.prev-product-page {
+  .pagination-arrow {
+    width: 35px;
+    transition: $unitrans;
+  }
+  .pagination-arrow,
+  .caption {
+    box-sizing: content-box;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius-forButton;
+  }
+  .caption {
+    background: $red-bg;
+    @include navbar-text;
+    color: $white;
+    width: 0;
+    transition: $unitrans;
+    opacity: 0;
+  }
+  &:hover {
+    .pagination-arrow {
+      background-color: #d4392a;
+    }
+    .caption {
+      width: 70px;
+      opacity: 1;
+    }
+  }
+}
+.prev-product-page {
+  .pagination-arrow {
+    background: url("../images/shop/products/arrow_2953.svg") no-repeat center;
+    background-color: $dark-bg;
+  }
+}
+.next-product-page {
+  .pagination-arrow {
+    background: url("../images/shop/products/arrow_2928.svg") no-repeat center;
+    background-color: $dark-bg;
+  }
+}
 .product-categories {
   background: $footer-bg;
   a {
@@ -3562,6 +3650,9 @@ footer {
     font-weight: 400;
     text-transform: uppercase;
   }
+}
+.grid-list-controls {
+  margin-bottom: 40px;
 }
 .grid,
 .list {
