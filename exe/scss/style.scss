@@ -1808,7 +1808,6 @@ footer {
   font-weight: 500;
   color: $dark-bg;
   padding: 20px 30px 20px 30px;
-  margin-top: 40px;
 }
 .blog-details {
   .navbar-on-skroll {
@@ -1975,6 +1974,7 @@ footer {
       width: 270px;
       background: $littleDarkerThenWhite;
       padding: 30px 30px 30px 30px;
+      margin-bottom: 40px;
       a:first-child {
         .sidebar-item {
           padding-top: 0px;
@@ -2068,6 +2068,14 @@ footer {
         color: $secondary-footer-font-color;
         width: 210px;
         padding: 0;
+        &:hover {
+          .ring {
+            border-color: $red-bg;
+            div {
+              background: $red-bg;
+            }
+          }
+        }
       }
       .container:last-child {
         button {
@@ -3547,6 +3555,68 @@ footer {
       }
     }
   }
+  #sidebar {
+    .sidebar-section {
+      button {
+        .ring {
+          border: transparent;
+          border-radius: $border-radius-forButton;
+          background: $darkerThenWhite;
+          div {
+            width: 9px;
+            height: 1px;
+            background: #b7b7b7;
+          }
+        }
+        &:hover {
+          .ring {
+            background: $red-bg;
+            div {
+              background: $white;
+            }
+          }
+        }
+      }
+      .clickbg-1 {
+        button {
+          .ring {
+            background: $red-bg;
+            div {
+              background: $white;
+            }
+          }
+        }
+      }
+      [id*="collapse-row"] {
+        list-style: none;
+        li {
+          position: relative;
+          margin-left: -35px;
+          &:hover::before {
+            content: url("../images/shop/03_3164.svg");
+          }
+        }
+        li::before {
+          position: absolute;
+          transition: $unitrans;
+          content: url("../images/shop/02_3163.svg");
+          top: 3px;
+          left: -20px;
+        }
+        a {
+          font-family: Roboto;
+          font-size: 14px;
+          line-height: 25px;
+          font-weight: 400;
+          color: $grey;
+          transition: $unitrans;
+          &:hover {
+            color: $red-bg;
+          }
+        }
+      }
+    }
+  }
 }
 .products-pagination {
   box-sizing: border-box;
@@ -3673,6 +3743,112 @@ footer {
       fill: $white;
     }
   }
+}
+#slider-range {
+  height: 10px;
+  border: none;
+  border-radius: 10px;
+  background: $darkerThenWhite;
+  margin-bottom: 30px;
+  .ui-slider-range {
+    background: $red-bg;
+  }
+  .ui-slider-handle {
+    width: 6px;
+    height: 16px;
+    top: -3px;
+    margin-left: -3px;
+    border: none;
+    background: $dark-bg;
+    @include forButton;
+  }
+}
+.price-filter {
+  label {
+    margin-right: 5px;
+  }
+  input {
+    background: $littleDarkerThenWhite;
+    @include forButton;
+    color: $nav-color;
+    width: 100%;
+  }
+  button {
+    @include forButton;
+    width: 80px;
+    height: 28px;
+    border: 1px solid $dark-bg;
+    font-family: Raleway;
+    font-size: 11px;
+    line-height: 20px;
+    font-weight: 700;
+    color: $dark-bg;
+    background: $littleDarkerThenWhite;
+  }
+}
+#new-colection {
+  padding: 0;
+  .wrapper {
+    box-sizing: content-box;
+    height: 331px;
+    .line {
+      width: 30px;
+      height: 1px;
+      background: $white;
+      left: 50%;
+      margin-left: -15px;
+      margin-top: 0px;
+      top: 100px;
+    }
+    .line:first-child {
+      top: 195px;
+    }
+  }
+  img,
+  .line,
+  p {
+    position: absolute;
+  }
+  .line,
+  .dark-title {
+    z-index: 9;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: $white;
+    line-height: 35px;
+  }
+  .dark-title {
+    top: 30px;
+  }
+  span {
+    background: $red-bg;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+.discount {
+  width: 170px;
+  position: absolute;
+  z-index: 9;
+  top: 250px;
+  left: 50%;
+  margin-left: -85px;
+  image,
+  p {
+    position: absolute;
+    left: 35px;
+    z-index: 99;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: $white;
+    top: 10px;
+  }
+}
+.wrapper {
+  position: relative;
 }
 //all media-styles
 @media (max-height: 470px) {
@@ -3917,6 +4093,7 @@ footer {
   }
   .sidebar-section {
     margin-top: 5px;
+    margin-bottom: 0 !important;
     border-radius: 30px;
     padding: 0 !important;
   }

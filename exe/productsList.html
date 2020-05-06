@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="owl.carousel/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body class="shop " style="position: relative">
@@ -796,123 +797,7 @@
         </div>
 
         <div class="col-12 col-md-3 collapse d-none d-md-block  sidebar" id="sidebar">
-            <form class="search">
-                <input type="search" placeholder="Search...">
-                <button type="button"></button>
-            </form>
-            <a data-toggle="collapse" href="#categories" role="button" aria-expanded="false" aria-controls="categories">
-                <div class="sidebar-title">
-                    Categories
-                </div>
-            </a>
-            <div class="sidebar-section collapse d-md-block categories" id="categories" data-parent="#sidebar">
-                <div class="padding-container">
-                    <a href="#">
-                        <div  class="sidebar-item">
-                            <div class="undertitle">
-                                Web Design
-                            </div>
-                            <div class="sidebar-count">389</div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="sidebar-item" >
-                            <div class="undertitle">
-                                Marketing
-                            </div>
-                            <div class="sidebar-count">256</div>
-                        </div>
-                    </a>
-                    <a href="#" >
-                        <div class="sidebar-item">
-                            <div class="undertitle active-link">
-                                Wordpress
-                            </div>
-                            <div class="sidebar-count">56</div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="sidebar-item">
-                            <div class="undertitle">
-                                <nobr>Graphic Design</nobr>
-                            </div>
-                            <div class="sidebar-count">43</div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="sidebar-item">
-                            <div class="undertitle">
-                                Photography
-                            </div>
-                            <div class="sidebar-count">38</div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="sidebar-item">
-                            <div class="undertitle">
-                                eCommerce
-                            </div>
-                            <div class="sidebar-count">26</div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="sidebar-item">
-                            <div class="undertitle">
-                                Html
-                            </div>
-                            <div class="sidebar-count">3</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <a data-toggle="collapse" href="#posts" role="button" aria-expanded="false" aria-controls="posts">
-                <div class="sidebar-title">
-                    Recent Posts
-                </div>
-            </a>
-            <div class="sidebar-section d-md-block collapse" id="posts" data-parent="#sidebar">
-                <div class="padding-container">
-                    <a href="#">
-                        <div  class="sidebar-item">
-                            <div class="undertitle">
-                                Claritas est etiam processus dynamicus, qui sequitur...
-                            </div>
-                            <b class="muted-card-text">04 February 2015</b>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="sidebar-item" >
-                            <div class="undertitle">
-                                Duis aytem eum iriure dolor...
-                            </div>
-                            <b class="muted-card-text">04 February 2015</b>
-                        </div>
-                    </a>
-                    <a href="#" >
-                        <div class="sidebar-item">
-                            <div class="undertitle ">
-                                Nam liber tempor cum soluta nobis eleifend option...
-                            </div>
-                            <b class="muted-card-text">04 February 2015</b>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <a  data-toggle="collapse" href="#flickr" role="button" aria-expanded="false" aria-controls="flickr">
-                <div class="sidebar-title">
-                    Flickr Widget
-                </div>
-            </a>
-            <div class="sidebar-section d-md-block justify-content-between  image-widget collapse" id="flickr" data-parent="#sidebar">
-                <div class="padding-container flex-wrap">
-                    <a href="#"><img src="images/blogDetails/bg_photo_3504.png" alt="some image"></a>
-                    <a href="#"><img src="images/blogDetails/bg_photo_3508.png" alt="some image"></a>
-                    <a href="#"><img src="images/blogDetails/bg_photo_3512.png" alt="some image"></a>
-                    <a href="#"><img src="images/blogDetails/bg_photo_3516.png" alt="some image"></a>
-                    <a href="#"><img src="images/blogDetails/bg_photo_3520.png" alt="some image"></a>
-                    <a href="#"><img src="images/blogDetails/bg_photo_3524.png" alt="some image"></a>
-                </div>
-            </div>
+
             <a  data-toggle="collapse" href="#accordion1" role="button" aria-expanded="false" aria-controls="accordion1">
                 <div class="sidebar-title">
                     Accordions Widget
@@ -924,196 +809,176 @@
                     <div class="container" >
                         <div class="row justify-content-between 1" >
                             <div class="col-1">
-                                <button id="1" class="btn undertitle d-flex justify-content-start collapse-card-toggler" type="button" data-toggle="collapse" data-target="#collapse-row1" aria-expanded="false" aria-controls="collapse-row1">
+                                <button id="1" class="btn undertitle d-flex justify-content-between collapse-card-toggler" type="button" data-toggle="collapse" data-target="#collapse-row1" aria-expanded="false" aria-controls="collapse-row1">
+                                    Clothing
                                     <div class="ring d-flex justify-content-center">
                                         <div class="align-self-center"></div>
                                         <div class="align-self-center"></div>
                                     </div>
-                                    Our Solution
                                 </button>
                             </div>
                         </div>
-                        <div class="collapse" id="collapse-row1"   data-parent="#accordion1">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                            </p>
-                        </div>
+                        <ul class="collapse" id="collapse-row1"   data-parent="#accordion1">
+                            <li><a href="#">All Products</a></li>
+                            <li><a href="#">Shorts</a></li>
+                            <li><a href="#">Jeans & Trousers</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Jackets & Coats</a></li>
+                        </ul>
                     </div>
                     <div class="container">
                         <div class="row justify-content-between 2">
                             <div class="col-1" >
-                                <button id="2" class="btn undertitle d-flex justify-content-start collapse-card-toggler" type="button" data-toggle="collapse" data-target="#collapse-row2" aria-expanded="false" aria-controls="collapse-row2">
+                                <button id="2" class="btn undertitle d-flex justify-content-between collapse-card-toggler" type="button" data-toggle="collapse" data-target="#collapse-row2" aria-expanded="false" aria-controls="collapse-row2">
+                                    Shoes
                                     <div class="ring d-flex justify-content-center">
                                         <div class="align-self-center"></div>
                                         <div class="align-self-center"></div>
                                     </div>
-                                    Our Mission
                                 </button>
                             </div>
                         </div>
-                        <div class="collapse" id="collapse-row2" data-parent="#accordion1">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                            </p>
-                        </div>
+                        <ul class="collapse" id="collapse-row2"   data-parent="#accordion1">
+                            <li><a href="#">All Products</a></li>
+                            <li><a href="#">Shorts</a></li>
+                            <li><a href="#">Jeans & Trousers</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Jackets & Coats</a></li>
+                        </ul>
                     </div>
                     <div class="container">
                         <div class="row justify-content-between  3">
                             <div class="col-1" >
-                                <button id="3" class="btn undertitle d-flex justify-content-start collapse-card-toggler" type="button" data-toggle="collapse" data-target="#collapse-row3" aria-expanded="false" aria-controls="collapse-row3">
+                                <button id="3" class="btn undertitle d-flex justify-content-between collapse-card-toggler" type="button" data-toggle="collapse" data-target="#collapse-row3" aria-expanded="false" aria-controls="collapse-row3">
+                                    Accessories
                                     <div class="ring d-flex justify-content-center">
                                         <div class="align-self-center"></div>
                                         <div class="align-self-center"></div>
                                     </div>
-                                    Our Technology
                                 </button>
                             </div>
                         </div>
-                        <div class="collapse" id="collapse-row3" data-parent="#accordion1">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                            </p>
-                        </div>
+                        <ul class="collapse" id="collapse-row3"   data-parent="#accordion1">
+                            <li><a href="#">All Products</a></li>
+                            <li><a href="#">Shorts</a></li>
+                            <li><a href="#">Jeans & Trousers</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Jackets & Coats</a></li>
+                        </ul>
                     </div>
                     <div class="container">
                         <div class="row justify-content-between 4">
                             <div class="col-1" >
-                                <button id="4" class="btn undertitle d-flex justify-content-start collapse-card-toggler" type="button" data-toggle="collapse" data-target="#collapse-row4" aria-expanded="false" aria-controls="collapse-row4">
+                                <button id="4" class="btn undertitle d-flex justify-content-between collapse-card-toggler" type="button" data-toggle="collapse" data-target="#collapse-row4" aria-expanded="false" aria-controls="collapse-row4">
+                                    Sports
                                     <div class="ring d-flex justify-content-center">
                                         <div class="align-self-center"></div>
                                         <div class="align-self-center"></div>
                                     </div>
-                                    Our Specification
                                 </button>
                             </div>
                         </div>
-                        <div class="collapse" id="collapse-row4" data-parent="#accordion1">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                            </p>
+                        <ul class="collapse" id="collapse-row4"   data-parent="#accordion1">
+                            <li><a href="#">All Products</a></li>
+                            <li><a href="#">Shorts</a></li>
+                            <li><a href="#">Jeans & Trousers</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Jackets & Coats</a></li>
+                        </ul>
+                    </div>
+                    <div class="container" >
+                        <div class="row justify-content-between 5" >
+                            <div class="col-1">
+                                <button id="5" class="btn undertitle d-flex justify-content-between collapse-card-toggler" type="button" data-toggle="collapse" data-target="#collapse-row5" aria-expanded="false" aria-controls="collapse-row5">
+                                    Sale Off
+                                    <div class="ring d-flex justify-content-center">
+                                        <div class="align-self-center"></div>
+                                        <div class="align-self-center"></div>
+                                    </div>
+                                </button>
+                            </div>
                         </div>
+                        <ul class="collapse" id="collapse-row5"   data-parent="#accordion1">
+                            <li><a href="#">All Products</a></li>
+                            <li><a href="#">Shorts</a></li>
+                            <li><a href="#">Jeans & Trousers</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Jackets & Coats</a></li>
+                        </ul>
+                    </div>
+                    <div class="container">
+                        <div class="row justify-content-between 6">
+                            <div class="col-1" >
+                                <button id="6" class="btn undertitle d-flex justify-content-between collapse-card-toggler" type="button" data-toggle="collapse" data-target="#collapse-row6" aria-expanded="false" aria-controls="collapse-row6">
+                                    Featured
+                                    <div class="ring d-flex justify-content-center">
+                                        <div class="align-self-center"></div>
+                                        <div class="align-self-center"></div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <ul class="collapse" id="collapse-row6"   data-parent="#accordion1">
+                            <li><a href="#">All Products</a></li>
+                            <li><a href="#">Shorts</a></li>
+                            <li><a href="#">Jeans & Trousers</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Jackets & Coats</a></li>
+                        </ul>
+                    </div>
+                    <div class="container">
+                        <div class="row justify-content-between  7">
+                            <div class="col-1" >
+                                <button id="7" class="btn undertitle d-flex justify-content-between collapse-card-toggler" type="button" data-toggle="collapse" data-target="#collapse-row7" aria-expanded="false" aria-controls="collapse-row7">
+                                    Collections
+                                    <div class="ring d-flex justify-content-center">
+                                        <div class="align-self-center"></div>
+                                        <div class="align-self-center"></div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <ul class="collapse" id="collapse-row7"   data-parent="#accordion1">
+                            <li><a href="#">All Products</a></li>
+                            <li><a href="#">Shorts</a></li>
+                            <li><a href="#">Jeans & Trousers</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Jackets & Coats</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
             <a  data-toggle="collapse" href="#tab-widget" role="button" aria-expanded="false" aria-controls="tab-widget">
                 <div class="sidebar-title">
-                    Tab Widget Style
+                    Filter by Price
                 </div>
             </a>
             <div class="sidebar-section collapse d-md-block" id="tab-widget" data-parent="#sidebar">
                 <div class="padding-container">
-                    <div class="d-flex carousel-head">
-                        <div class="item-1 text-center  active">
-                            Recent
-                            <div class="indicator d-flex flex-row-reverse">
-                                <div></div>
-                            </div>
-                        </div>
-                        <div class="item-2 text-center ">
-                            Popular
-                            <div class="indicator d-flex flex-row">
-                                <div></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="owl-carousel  owl-theme" id="sidebar-owl">
-                        <div class="item">
-                            <div class="footer-media d-flex flex-row">
-                                <div class="media-image">
-                                    <a href="#">
-                                        <div class="footer-lupa">
-                                            <div></div>
-                                        </div>
-                                    </a>
-                                    <img src="images/footer/bg_photo_1599.png" alt="">
-                                </div>
-                                <div>
-                                    <p class="caption">Claritas etiam processus equitur...<br>
-                                        <span class="date">04 February 2015</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="footer-media d-flex flex-row">
-                                <div class="media-image">
-                                    <a href="#">
-                                        <div class="footer-lupa">
-                                            <div></div>
-                                        </div>
-                                    </a>
-                                    <img src="images/footer/bg_photo_1599.png" alt="">
-                                </div>
-                                <div>
-                                    <p class="caption">Eodem modo typi, qui nunc...<br>
-                                        <span class="date">04 February 2015</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="footer-media d-flex flex-row">
-                                <div class="media-image">
-                                    <a href="#">
-                                        <div class="footer-lupa">
-                                            <div></div>
-                                        </div>
-                                    </a>
-                                    <img src="images/footer/bg_photo_1599.png" alt="">
-                                </div>
-                                <div>
-                                    <p class="caption">Mirum est notare littera gothica...<br>
-                                        <span class="date">04 February 2015</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="footer-media d-flex flex-row">
-                                <div class="media-image">
-                                    <a href="#">
-                                        <div class="footer-lupa">
-                                            <div></div>
-                                        </div>
-                                    </a>
-                                    <img src="images/footer/bg_photo_1599.png" alt="">
-                                </div>
-                                <div>
-                                    <p class="caption">Claritas etiam processus equitur...<br>
-                                        <span class="date">04 February 2015</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="footer-media d-flex flex-row">
-                                <div class="media-image">
-                                    <a href="#">
-                                        <div class="footer-lupa">
-                                            <div></div>
-                                        </div>
-                                    </a>
-                                    <img src="images/footer/bg_photo_1599.png" alt="">
-                                </div>
-                                <div>
-                                    <p class="caption">Eodem modo typi, qui nunc...<br>
-                                        <span class="date">04 February 2015</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="footer-media d-flex flex-row">
-                                <div class="media-image">
-                                    <a href="#">
-                                        <div class="footer-lupa">
-                                            <div></div>
-                                        </div>
-                                    </a>
-                                    <img src="images/footer/bg_photo_1599.png" alt="">
-                                </div>
-                                <div>
-                                    <p class="caption">Mirum est notare littera gothica...<br>
-                                        <span class="date">04 February 2015</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div id="slider-range"></div>
+                    <form class="d-flex align-items-start price-filter" action="#">
+                        <label class="muted-card-text" for="amount">Price:</label>
+                        <input class="muted-card-text" type="text" id="amount" />
+                        <button class="align-self-center" type="submit"> FILTER</button>
+                </form>
                 </div>
+            </div>
+            <div class="sidebar-section collapse d-md-block text-widget" id="new-colection" data-parent="#sidebar">
+                <a href="#">
+                <div class="wrapper">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <p class="dark-title text-center">New Men<span> Collection</span></p>
+                    <div class="discount">
+                        <div class="wrapper">
+                            <p class="text-center"> <nobr>Up to 50% Off</nobr></p>
+                            <img src="images/shop/ribbon_3541.svg" alt="">
+                        </div>
+                    </div>
+                    <img src="images/shop/bg_photo_3530.png" alt="">
+                </div>
+                </a>
             </div>
             <a   data-toggle="collapse" href="#text-widget" role="button" aria-expanded="false" aria-controls="text-widget">
                 <div class="sidebar-title">
@@ -1158,56 +1023,54 @@
         <div class="owl-carousel owl-theme owl" id="owl3">
             <div class="item">
                 <div>
-                    <img class="item-img-1" src="images/clients/01_1517.png" alt="brand-logo">
+                    <img class="item-img-1" src="images/shop/carousel/01_2705.png" alt="brand-logo">
                 </div>
             </div>
             <div class="item">
                 <div>
-                    <img class="item-img-2" src="images/clients/02_1519.png" alt="brand-logo">
+                    <img class="item-img-2" src="images/shop/carousel/02_2706.png" alt="brand-logo">
                 </div>
             </div>
             <div class="item">
                 <div>
-                    <img class="item-img-3" src="images/clients/03_1522.png" alt="brand-logo">
+                    <img class="item-img-3" src="images/shop/carousel/03_2707.png" alt="brand-logo">
                 </div>
             </div>
             <div class="item">
                 <div>
-                    <img class="item-img-4" src="images/clients/04_1524.png" alt="brand-logo">
+                    <img class="item-img-4" src="images/shop/carousel/04_2708.png" alt="brand-logo">
                 </div>
             </div>
             <div class="item">
                 <div>
-                    <img class="item-img-5" src="images/clients/05_1525.png" alt="brand-logo">
+                    <img class="item-img-5" src="images/shop/carousel/05_2709.png" alt="brand-logo">
                 </div>
             </div>
             <div class="item">
                 <div>
-                    <img class="item-img-1" src="images/clients/01_1517.png" alt="brand-logo">
+                    <img class="item-img-1" src="images/shop/carousel/01_2705.png" alt="brand-logo">
                 </div>
             </div>
             <div class="item">
                 <div>
-                    <img class="item-img-2" src="images/clients/02_1519.png" alt="brand-logo">
+                    <img class="item-img-2" src="images/shop/carousel/02_2706.png" alt="brand-logo">
                 </div>
             </div>
             <div class="item">
                 <div>
-                    <img class="item-img-3" src="images/clients/03_1522.png" alt="brand-logo">
+                    <img class="item-img-3" src="images/shop/carousel/03_2707.png" alt="brand-logo">
                 </div>
             </div>
             <div class="item">
                 <div>
-                    <img class="item-img-4" src="images/clients/04_1524.png" alt="brand-logo">
+                    <img class="item-img-4" src="images/shop/carousel/04_2708.png" alt="brand-logo">
                 </div>
             </div>
             <div class="item">
                 <div>
-                    <img class="item-img-5" src="images/clients/05_1525.png" alt="brand-logo">
+                    <img class="item-img-5" src="images/shop/carousel/05_2709.png" alt="brand-logo">
                 </div>
             </div>
-
-
         </div>
     </div>
 </section>
@@ -1585,9 +1448,10 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
 <script src="owl.carousel/dist/owl.carousel.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

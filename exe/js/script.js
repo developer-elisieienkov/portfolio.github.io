@@ -272,7 +272,7 @@ $(".sidebar-toggler").click(function () {
 
 $(document).ready(function () {
   if ($(window).width() > 768) {
-    $(".sidebar-section").removeAttr("id");
+    $("#sidebar>a").removeAttr("href");
   }
 });
 
@@ -434,3 +434,21 @@ $(".like").click(function () {
 $(".to-cart").click(function () {
   $(this).text("View Cart").addClass("active");
 });
+
+//pricefilter
+
+$("#slider-range").slider({
+  range: true,
+  min: 0,
+  max: 500,
+  values: [47, 228],
+  slide: function (event, ui) {
+    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+  },
+});
+$("#amount").val(
+  "$" +
+    $("#slider-range").slider("values", 0) +
+    " - $" +
+    $("#slider-range").slider("values", 1)
+);
