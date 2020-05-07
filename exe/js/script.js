@@ -435,6 +435,35 @@ $(".to-cart").click(function () {
   $(this).text("View Cart").addClass("active");
 });
 
+$(".rating")
+  .hover(function () {
+    var star = $("#" + this.id + " div");
+    star
+      .hover(function () {
+        var starPosition = $(this).attr("class");
+        for (var i = 0; i < 5; i++) {
+          if (i < starPosition[0]) {
+            star[i].classList.add("selected");
+          } else {
+            star[i].classList.remove("selected");
+          }
+        }
+      })
+      .click(function () {
+        var starPosition = $(this).attr("class");
+        for (var i = 0; i < 5; i++) {
+          if (i < starPosition[0]) {
+            star[i].classList.add("rated");
+          } else {
+            star[i].classList.remove("rated");
+          }
+        }
+      });
+  })
+  .mouseleave(function () {
+    $("#" + this.id + " div").removeClass("selected");
+  });
+
 //pricefilter
 
 $("#slider-range").slider({

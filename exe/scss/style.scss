@@ -1059,7 +1059,7 @@ a.carousel-control-next:hover {
   color: $white;
 }
 .footer-media {
-  padding: 20px 0 20px 0;
+  padding: 20px 0;
   border-bottom: 1px solid $dark-bg;
 
   img {
@@ -1250,6 +1250,7 @@ footer {
   }
 
   .second-footer-col {
+    padding-right: 40px;
     .footer-media:last-child {
       border-bottom: transparent;
       margin-bottom: 20px;
@@ -1580,6 +1581,46 @@ footer {
     border: none;
     outline: none;
     margin-top: 10px;
+  }
+  form {
+    .form-title {
+      text-align: right;
+      margin-bottom: 5px;
+      margin-right: 30px;
+    }
+    label {
+      position: absolute;
+      top: 13px;
+      left: 20px;
+    }
+    .line {
+      position: absolute;
+      margin-top: -13.5px;
+      width: 1px;
+      height: 27px;
+      left: 50px;
+      top: 50%;
+      background: $some-border-color-for-blogDetails;
+    }
+    .wrapper {
+      width: 570px;
+      height: 51px;
+    }
+    input {
+      width: 100%;
+      height: 100%;
+      padding-left: 70px;
+      @include forButton;
+      border-radius: 2px 0 0 2px;
+      &::placeholder {
+        @include small-text;
+        color: $some-border-color-for-blogDetails;
+      }
+    }
+    button {
+      height: 51px;
+      border-radius: 0 2px 2px 0;
+    }
   }
 }
 .card-without-carousel {
@@ -3420,6 +3461,18 @@ footer {
       background: $darkerThenWhite;
     }
   }
+  .price {
+    font-size: 18px;
+    font-weight: 900;
+    color: $dark-bg;
+    .muted-card-text {
+      text-decoration: line-through;
+      margin-right: 10px;
+    }
+  }
+  .sale-price {
+    color: $red-bg !important;
+  }
   .card {
     transition: $unitrans;
     border: transparent;
@@ -3481,18 +3534,6 @@ footer {
         color: $white;
       }
     }
-    .price {
-      font-size: 18px;
-      font-weight: 900;
-      color: $dark-bg;
-      .muted-card-text {
-        text-decoration: line-through;
-        margin-right: 10px;
-      }
-    }
-    .sale-price {
-      color: $red-bg;
-    }
     .like {
       cursor: pointer;
       fill: $muchMoreDarkerThenWhite;
@@ -3549,6 +3590,7 @@ footer {
   }
   .clients {
     background: $littleDarkerThenWhite;
+    margin-top: 80px;
     &:hover {
       .line {
         background: $red-bg;
@@ -3614,6 +3656,29 @@ footer {
             color: $red-bg;
           }
         }
+      }
+    }
+  }
+  footer {
+    .line {
+      margin-bottom: 10px;
+    }
+    .information {
+      .footer-media {
+        padding: 10px 0;
+      }
+    }
+    .second-footer-col {
+      a.caption::before {
+        content: url("../images/shop/06_2742.svg");
+      }
+      .footer-media:hover {
+        a.caption::before {
+          content: url("../images/shop/02_2738.svg");
+        }
+      }
+      .date {
+        margin-bottom: 10px;
       }
     }
   }
@@ -3788,22 +3853,22 @@ footer {
 }
 #new-colection {
   padding: 0;
-  .wrapper {
-    box-sizing: content-box;
-    height: 331px;
-    .line {
-      width: 30px;
-      height: 1px;
-      background: $white;
-      left: 50%;
-      margin-left: -15px;
-      margin-top: 0px;
-      top: 100px;
-    }
-    .line:first-child {
-      top: 195px;
-    }
+
+  box-sizing: content-box;
+  height: 331px;
+  .line {
+    width: 30px;
+    height: 1px;
+    background: $white;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: 0px;
+    top: 100px;
   }
+  .line:first-child {
+    top: 195px;
+  }
+
   img,
   .line,
   p {
@@ -3850,6 +3915,37 @@ footer {
 .wrapper {
   position: relative;
 }
+.rating {
+  fill: #f3f3f3;
+  svg {
+    transition: $unitrans;
+  }
+  & ~ .caption {
+    width: 114px;
+    color: $nav-color;
+  }
+}
+.selected {
+  fill: $sale-mark-fill;
+}
+.rated {
+  fill: $sale-mark-fill;
+}
+.caption ~ .price {
+  color: $nav-color;
+}
+.featured-product-image {
+  margin-left: -10px;
+  margin-right: 20px;
+}
+.featured-products {
+  .sidebar-item:hover {
+    .caption {
+      color: $red-bg;
+    }
+  }
+}
+
 //all media-styles
 @media (max-height: 470px) {
   #carousel {
@@ -4137,6 +4233,11 @@ footer {
   }
   .category-select {
     flex-wrap: wrap;
+  }
+  .shop {
+    .card {
+      width: 100%;
+    }
   }
 }
 @media (orientation: landscape) and (max-width: 767px) {
