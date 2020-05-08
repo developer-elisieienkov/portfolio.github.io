@@ -424,7 +424,7 @@ function initMap() {
   var marker = new google.maps.Marker({
     position: { lat: 32.922082, lng: 130.623257 },
     map: map,
-    title: "Наш маркер: Большой театр",
+    title: "We Are Here",
     icon: "./images/contact-us/location.png",
   });
 }

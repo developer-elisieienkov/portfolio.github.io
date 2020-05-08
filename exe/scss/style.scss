@@ -2271,7 +2271,6 @@ footer {
   font-weight: 700;
   color: $white;
 }
-
 .controls {
   display: flex;
   flex-direction: row;
@@ -2395,6 +2394,7 @@ footer {
         background: $dark-bg;
         border: transparent;
       }
+      input,
       input::placeholder {
         font-family: Roboto;
         font-size: 14px;
@@ -2404,6 +2404,7 @@ footer {
       }
       button {
         background: url("../images/shop/icon_2008.svg") center no-repeat;
+        background-color: $dark-bg;
       }
     }
   }
@@ -3478,7 +3479,7 @@ footer {
     border: transparent;
     border-radius: 0;
     background: $littleDarkerThenWhite;
-    width: 19vw;
+    width: 260px;
     margin-bottom: 40px;
     [id*="owl-shop"] {
       .owl-prev {
@@ -3596,6 +3597,16 @@ footer {
         background: $red-bg;
       }
     }
+    .owl-prev,
+    .owl-next {
+      background-color: $dark-bg !important;
+      opacity: 0.1;
+      transition: $unitrans;
+      &:hover {
+        background-color: $red-bg !important;
+        opacity: 1;
+      }
+    }
   }
   #sidebar {
     .sidebar-section {
@@ -3679,6 +3690,38 @@ footer {
       }
       .date {
         margin-bottom: 10px;
+      }
+    }
+    .follow {
+      margin-bottom: 30px;
+    }
+  }
+  .third-footer-col {
+    background: url("../images/shop/world_map_2780.png") no-repeat;
+    background-size: contain;
+    background-position: center 65%;
+    .footer-mail-links {
+      border-bottom: none;
+    }
+    .line + .footer-media {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .footer-media:hover {
+      img {
+        filter: none;
+      }
+    }
+  }
+  .footer-nav {
+    .links {
+      a {
+        fill: $dark-bg;
+        transition: $unitrans;
+        margin-bottom: 10px;
+        &:hover {
+          fill: $red-bg;
+        }
       }
     }
   }
@@ -3766,7 +3809,11 @@ footer {
     align-items: center;
     padding: 20px;
   }
-  .active-category {
+  .category {
+    transition: $unitrans;
+  }
+  .active-category,
+  .category:hover {
     background: $red-bg;
   }
 }
@@ -4237,6 +4284,9 @@ footer {
   .shop {
     .card {
       width: 100%;
+    }
+    .over-footer {
+      padding: 30px;
     }
   }
 }
