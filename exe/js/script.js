@@ -1,29 +1,26 @@
 //use strict
 var lastScroll;
-$(window)
-  .on("scroll resize", function () {
-    if ($(window).scrollTop() >= $(window).height() - 100) {
-      $(".nav-bg").addClass("navbar-on-skroll");
+$(window).on("scroll resize", function () {
+  if ($(window).scrollTop() >= $(window).height() - 100) {
+    $(".nav-bg").addClass("navbar-on-skroll");
+  } else {
+    $(".nav-bg").removeClass("navbar-on-skroll");
+  }
+  $(".fixed-top").removeClass("hide");
+  var secondScroll = window.pageYOffset;
+  if (!$(".navbar-collapse").hasClass("show")) {
+    if (lastScroll > secondScroll) {
+      $(".fixed-top").removeClass("hide");
     } else {
-      $(".nav-bg").removeClass("navbar-on-skroll");
+      $(".fixed-top").addClass("hide");
     }
-    var o = $(window).scrollTop() / ($(document).height() - $(window).height());
-    $(".progress-bar").css({
-      width: ((100 * o) | 0) + "%",
-    });
-  })
-  .on("scroll", function () {
-    $(".fixed-top").removeClass("hide");
-    var secondScroll = window.pageYOffset;
-    if (!$(".navbar-collapse").hasClass("show")) {
-      if (lastScroll > secondScroll) {
-        $(".fixed-top").removeClass("hide");
-      } else {
-        $(".fixed-top").addClass("hide");
-      }
-    }
-    lastScroll = secondScroll;
+  }
+  lastScroll = secondScroll;
+  var o = $(window).scrollTop() / ($(document).height() - $(window).height());
+  $(".progress-bar").css({
+    width: ((100 * o) | 0) + "%",
   });
+});
 
 var app = new Vue({
   el: "#app",
