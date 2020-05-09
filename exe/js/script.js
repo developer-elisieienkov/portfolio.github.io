@@ -1,5 +1,5 @@
 //use strict
-var lastScroll = 0;
+var lastScroll;
 $(window).on("scroll resize", function () {
   if ($(window).scrollTop() >= $(window).height() - 100) {
     $(".nav-bg").addClass("navbar-on-skroll");

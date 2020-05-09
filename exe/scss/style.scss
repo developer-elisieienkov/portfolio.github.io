@@ -68,9 +68,13 @@ $sale-mark-fill: #f7941d;
   outline: none;
   box-shadow: none;
 }
+
 @function toVW($pixels) {
-  @return ($pixels / 19.2) vw;
+  $vwWidth: ($pixels / 19.2);
+  $rounded: round($vwWidth);
+  @return $rounded + vw;
 }
+
 a {
   text-decoration: none;
 }
@@ -4018,10 +4022,166 @@ footer {
     max-width: 370px;
     input {
       width: 370px;
+      border: none;
+      background: $littleDarkerThenWhite;
+      color: $muchMoreDarkerThenWhite;
+      &::placeholder {
+        color: $muchMoreDarkerThenWhite;
+      }
     }
     button {
       left: 100%;
       margin-left: -50px;
+      background-color: $littleDarkerThenWhite;
+    }
+  }
+  .navbar {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    .nav-item {
+      .li-line {
+        height: 1px;
+        margin-bottom: 20px;
+        margin-left: 50%;
+      }
+      .nav-link {
+        @include navbar-text;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: $nav-color;
+        margin: 0 15px;
+      }
+      &:hover,
+      &.active-nav {
+        .li-line {
+          margin-left: 0px;
+          width: 100%;
+        }
+      }
+    }
+    .nav-item:first-child {
+      .li-line {
+        margin-left: 0;
+      }
+      .nav-link {
+        margin-left: 0px;
+      }
+    }
+    .basket {
+      svg {
+        fill: $dark-bg;
+      }
+    }
+  }
+  .pages-breadcrumb {
+    margin-top: 210px;
+    .active {
+      color: $white;
+      background: $red-bg;
+      padding: 0 10px;
+    }
+  }
+  #portfolioDetails {
+    width: toVW(470) !important;
+    margin-bottom: 80px;
+
+    .owl-prev:hover,
+    .owl-next:hover {
+      background-color: $red-bg;
+    }
+
+    .owl-prev:focus,
+    .owl-next:focus {
+      outline: none;
+    }
+
+    .owl-next {
+      right: 20px;
+      background: url("../images/carousel/arrow_1511.svg") no-repeat;
+      background-position: center;
+
+      i {
+        height: 42px;
+        width: 42px;
+      }
+    }
+
+    .owl-prev {
+      left: 20px;
+      background: url("../images/carousel/arrow_1507.svg") no-repeat;
+      background-position: center;
+
+      i {
+        height: 42px;
+        width: 42px;
+      }
+    }
+
+    .owl-prev,
+    .owl-next {
+      width: 42px;
+      height: 42px;
+      position: absolute;
+      top: 40%;
+      border-radius: $border-radius-forButton;
+      background-color: $dark-bg;
+    }
+
+    .item {
+      width: toVW(470) !important;
+    }
+
+    .owl-dots {
+      .owl-dot {
+        width: 9.5vw;
+        height: 5.24vw;
+        margin: 0;
+        transition: $unitrans;
+      }
+
+      .owl-dot:first-child {
+        background: url("../images/dots/bg_photo_2523.png");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .owl-dot:nth-child(2) {
+        background: url("../images/dots/bg_photo_2719.png");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .owl-dot:nth-child(3) {
+        background: url("../images/dots/bg_photo_2532.png");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .owl-dot:nth-child(4) {
+        background: url("../images/dots/bg_photo_2720.png");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .owl-dot:nth-child(5) {
+        background: url("../images/dots/bg_photo_2538.png");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .owl-dot:nth-child(6) {
+        background: url("../images/dots/bg_photo_2721.png");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .owl-dot:focus {
+        outline: none;
+      }
+
+      .active {
+        transform: scale(1.1);
+      }
     }
   }
 }
@@ -4030,6 +4190,9 @@ footer {
   &.hide {
     transform: translate(0px, -90%);
   }
+}
+#wishlist-count {
+  font-weight: 900;
 }
 //all media-styles
 @media (max-height: 470px) {
@@ -4470,6 +4633,10 @@ footer {
         }
       }
     }
+  }
+  .first-navbar-row {
+    width: 100%;
+    margin-bottom: 30px;
   }
 }
 @media (orientation: portrait) and (min-width: 767px) {
