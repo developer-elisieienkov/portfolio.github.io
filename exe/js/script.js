@@ -1,26 +1,31 @@
 //use strict
 var lastScroll;
-$(window).on("scroll resize", function () {
-  if ($(window).scrollTop() >= $(window).height() - 100) {
-    $(".nav-bg").addClass("navbar-on-skroll");
-  } else {
-    $(".nav-bg").removeClass("navbar-on-skroll");
-  }
-  $(".fixed-top").removeClass("hide");
-  var secondScroll = window.pageYOffset;
-  if (!$(".navbar-collapse").hasClass("show")) {
-    if (lastScroll > secondScroll) {
-      $(".fixed-top").removeClass("hide");
+$(window)
+  .on("scroll resize", function () {
+    if ($(window).scrollTop() >= $(window).height() - 100) {
+      $(".nav-bg").addClass("navbar-on-skroll");
     } else {
-      $(".fixed-top").addClass("hide");
+      $(".nav-bg").removeClass("navbar-on-skroll");
     }
-  }
-  lastScroll = secondScroll;
-  var o = $(window).scrollTop() / ($(document).height() - $(window).height());
-  $(".progress-bar").css({
-    width: ((100 * o) | 0) + "%",
+    var o = $(window).scrollTop() / ($(document).height() - $(window).height());
+    $(".progress-bar").css({
+      width: ((100 * o) | 0) + "%",
+    });
+  })
+  .on("resize", function () {
+    $(".fixed-top").removeClass("hide");
+  })
+  .on("scroll", function () {
+    var secondScroll = window.pageYOffset;
+    if (!$(".navbar-collapse").hasClass("show")) {
+      if (lastScroll > secondScroll) {
+        $(".fixed-top").removeClass("hide");
+      } else {
+        $(".fixed-top").addClass("hide");
+      }
+    }
+    lastScroll = secondScroll;
   });
-});
 
 var app = new Vue({
   el: "#app",
