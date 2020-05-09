@@ -17,6 +17,8 @@ $(window).on("scroll resize", function () {
     } else {
       $(".fixed-top").addClass("hide");
     }
+  } else {
+    $(".fixed-top").addClass("hide");
   }
   lastScroll = secondScroll;
 });
