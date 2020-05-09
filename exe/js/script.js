@@ -1,12 +1,24 @@
 //use strict
-
-$(function () {
-  $(window).on("scroll resize", function () {
-    var o = $(window).scrollTop() / ($(document).height() - $(window).height());
-    $(".progress-bar").css({
-      width: ((100 * o) | 0) + "%",
-    });
+var lastScroll = 0;
+$(window).on("scroll resize", function () {
+  if ($(window).scrollTop() >= $(window).height() - 100) {
+    $(".nav-bg").addClass("navbar-on-skroll");
+  } else {
+    $(".nav-bg").removeClass("navbar-on-skroll");
+  }
+  var o = $(window).scrollTop() / ($(document).height() - $(window).height());
+  $(".progress-bar").css({
+    width: ((100 * o) | 0) + "%",
   });
+  var secondScroll = window.pageYOffset;
+  if (!$(".navbar-collapse").hasClass("show")) {
+    if (lastScroll > secondScroll) {
+      $(".fixed-top").removeClass("hide");
+    } else {
+      $(".fixed-top").addClass("hide");
+    }
+  }
+  lastScroll = secondScroll;
 });
 
 var app = new Vue({
@@ -34,23 +46,6 @@ $(".collapse-card-toggler").click(function () {
     $(clickClass).removeClass("clickbg-1");
   });
 });
-
-/*
-
-var anchor = new Vue({
-    el: '#anchor',
-    data:{
-
-    },
-    methods: {
-        onTop: function () {
-            let topHere = this.$refs['anchorTarget']
-            let top = window.scrollY + topHere.getBoundingClientRect().y;
-            window.scrollTo(0, top)
-        }
-    }
-})*/
-
 $(function () {
   $("#anchor-link").on("click", "a", function (event) {
     event.preventDefault();
@@ -276,15 +271,7 @@ $(document).ready(function () {
   }
 });
 
-$(function () {
-  $(window).on("scroll resize", function () {
-    if ($(window).scrollTop() >= $(window).height() - 100) {
-      $(".nav-bg").addClass("navbar-on-skroll");
-    } else {
-      $(".nav-bg").removeClass("navbar-on-skroll");
-    }
-  });
-});
+$(window).on("scroll resize", function () {});
 
 var map;
 function initMap() {
@@ -432,7 +419,11 @@ $(".like").click(function () {
   $(this).toggleClass("active");
 });
 $(".to-cart").click(function () {
-  $(this).text("View Cart").addClass("active");
+  $(this)
+    .html(
+      '<a href="productDetails.html"> <div class="active ">View Cart </div></a>'
+    )
+    .addClass("active");
 });
 
 $(".rating")
