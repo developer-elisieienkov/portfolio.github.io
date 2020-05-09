@@ -13,6 +13,7 @@ $(window)
     });
   })
   .on("scroll", function () {
+    $(".fixed-top").removeClass("hide");
     var secondScroll = window.pageYOffset;
     if (!$(".navbar-collapse").hasClass("show")) {
       if (lastScroll > secondScroll) {
@@ -20,8 +21,6 @@ $(window)
       } else {
         $(".fixed-top").addClass("hide");
       }
-    } else {
-      $(".fixed-top").removeClass("hide");
     }
     lastScroll = secondScroll;
   });
